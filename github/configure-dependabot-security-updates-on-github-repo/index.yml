@@ -1,0 +1,47 @@
+### YamlMime:Module
+uid: learn.configure-dependabot-security-updates-on-github-repo
+metadata:
+  moduleType: standard
+  title: Configure Dependabot security updates on your GitHub repo
+  description: Learn how to configure Dependabot security updates on your GitHub repo.
+  ms.date: 1/5/2022
+  author: sterling463
+  ms.author: csterling
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: Configure Dependabot security updates on your GitHub repo
+summary: Manage your dependencies with GitHub Dependabot
+abstract: | 
+ By the end of this module, you'll be able to:
+ - Describe the available tools for managing vulnerable dependencies on GitHub.
+ - Enable and configure Dependabot alerts.
+ - Identify the permissions and roles required to view and enable Dependabot alerts.
+ - Enable and configure Dependabot security updates.
+ - Identify, review, and address vulnerable dependencies.
+ - Explain how to use GraphQL API to retrieve vulnerability information.
+ - Explain how to configure notifications for vulnerable dependencies.
+prerequisites: | 
+ - A GitHub account.
+ - Administrative access to a repository.
+ - Familiarity with managing GitHub administrative settings.
+ - Working knowledge of the GitHub pull request workflow.
+iconUrl: /learn/achievements/generic-badge.svg
+levels: 
+- intermediate 
+roles: 
+- developer 
+products:
+- github 
+subjects:
+- security
+units:
+- learn.configure-dependabot-security-updates-on-github-repo.introduction
+- learn.configure-dependabot-security-updates-on-github-repo.manage-your-dependencies-github
+- learn.configure-dependabot-security-updates-on-github-repo.dependabot-alerts
+- learn.configure-dependabot-security-updates-on-github-repo.dependabot-security-updates
+- learn.configure-dependabot-security-updates-on-github-repo.manage-dependabot-notifications-reporting
+- learn.configure-dependabot-security-updates-on-github-repo.exercise
+- learn.configure-dependabot-security-updates-on-github-repo.knowledge-check
+- learn.configure-dependabot-security-updates-on-github-repo.summary
+badge:
+  uid: learn.configure-dependabot-security-updates-on-github-repo.badge

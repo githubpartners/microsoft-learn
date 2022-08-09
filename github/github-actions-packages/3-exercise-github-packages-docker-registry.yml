@@ -1,0 +1,15 @@
+### YamlMime:ModuleUnit
+uid: learn.github.github-actions-packages.exercise-github-packages-docker-registry
+title: Exercise - Publish to a GitHub Packages registry
+metadata:
+  title: Exercise - Publish to a GitHub Packages registry
+  description: Learn how to set up a CI pipeline that will build and push a container image into GitHub Packages
+  ms.date: 09/30/2021
+  author: a-a-ron
+  ms.author: aastewar
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 25
+azureSandbox: false
+content: |
+  [!include[](includes/3-exercise-github-packages-docker-registry.md)]

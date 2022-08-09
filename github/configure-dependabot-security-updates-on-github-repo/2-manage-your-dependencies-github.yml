@@ -1,0 +1,15 @@
+### YamlMime:ModuleUnit
+uid: learn.configure-dependabot-security-updates-on-github-repo.manage-your-dependencies-github
+title: Manage your dependencies on GitHub 
+metadata:
+  unitType: learning-content 
+  title: Manage your dependencies on GitHub
+  description: In this unit, you will learn about the GitHub tools for managing your dependencies.
+  ms.date: 1/5/2022
+  author: sterling463
+  ms.author: csterling 
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 4
+content: |
+  [!include[](includes/2-manage-your-dependencies-github.md)]

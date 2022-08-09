@@ -1,0 +1,15 @@
+### YamlMime:ModuleUnit
+uid: learn.configure-dependabot-security-updates-on-github-repo.manage-dependabot-notifications-reporting
+title: Manage Dependabot notifications and reports
+metadata:
+  unitType: learning-content 
+  title: Manage Dependabot notifications and reports
+  description: Properly managing Dependabot notifications help you better secure your repository. This practice also helps ensure that important issues are promptly noticed by the right people.
+  ms.date: 1/5/2022
+  author: sterling463
+  ms.author: csterling 
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 4
+content: |
+  [!include[](includes/5-manage-dependabot-notifications-reporting.md)]
