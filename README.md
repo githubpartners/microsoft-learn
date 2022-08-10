@@ -61,6 +61,21 @@ Modules:
 - [GitHub administration for GitHub Advanced Security](https://docs.microsoft.com/en-us/users/githubtraining/collections/rqymc6yw8q5rey#:~:text=GitHub%20administration%20for%20GitHub%20Advanced%20Security)
 - [Manage sensitive data and security policies within GitHub](https://docs.microsoft.com/en-us/learn/modules/manage-sensitive-data-security-policies/?ns-enrollment-type=Collection&ns-enrollment-id=rqymc6yw8q5rey)
 
+### GitHub Fundamentals
+[Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/p0ygh4erdrmkp7)
+
+Modules:
+
+- [Introduction to GitHub](https://docs.microsoft.com/en-us/learn/modules/introduction-to-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+- [Manage repository changes by using pull requests on GitHub](https://docs.microsoft.com/en-us/learn/modules/manage-changes-pull-requests-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+- [Manage software delivery by using a release based workflow on GitHub](https://docs.microsoft.com/en-us/learn/modules/release-based-workflow-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+- [Introduction to GitHub's Products](https://docs.microsoft.com/en-us/learn/modules/github-introduction-products/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+- [Introduction to GitHub administration](https://docs.microsoft.com/en-us/learn/modules/github-introduction-administration/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+- [Maintain a secure repository by using GitHub best practices](https://docs.microsoft.com/en-us/learn/modules/maintain-secure-repository-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
+
+
+
+
 
 
 
