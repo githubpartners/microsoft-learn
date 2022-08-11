@@ -20,11 +20,19 @@ If you want to enable only specific actions to be used within your enterprise, s
 
 :::image type="content" source="../media/policies-2.png" alt-text="Actions screen with Allow select actions option selected.":::
 
+### Share GitHub Actions within your enterprise
+
+You can innersource automation by sharing Actions only within your enterprise without publishing them publicly. You do this by storing the Action in an internal repository and then configure the repository settings to allow access to workflows in other repositories. The other repositories can be in the same organization or other organizations in the enterprise. These Actions can only be used by workflows defined in other private and internal repositories but cannot be used in workflows defined within any public repositories.
+
 ### Manually sync public actions for Enterprise Server
 
 Most official GitHub-authored actions come automatically bundled with Enterprise Server, and are captured at a point in time from the GitHub Marketplace. They include `actions/checkout`, `actions/upload-artifact`, `actions/download-artifact`, `actions/labeler` and various `actions/setup-` actions, among others. To see all the official actions included on your enterprise instance, browse to the actions organization on your instance: https://HOSTNAME/actions.
 
 As mentioned in the [Configure a GitHub Actions use policy](#configure-a-github-actions-use-policy) section, it is possible to configure Enterprise Server to automatically access the public actions available in the GitHub Marketplace and to configure a use policy for them. However, if you want stricter control over the public actions that should be made available in your enterprise, you have the possibility to manually download and sync actions into your enterprise instance using the `actions-sync` tool.
+
+### View cache usage
+
+Dependency caching is one of the most effective ways to make jobs faster on GitHub Actions. This gives you greater control over cache availability for your action workflows and monitor the storage usage of your existing caches. Actions users can use actions/cache to speed up their workflow execution times through GitHub's cache usage APIs. Doing so allows you to query the cache usage within each repository and monitor if the total size of all caches is reaching the upper limit of 10 GB. Additionally, you can monitor aggregate cache usage at organization level and at enterprise level, if your GitHub organization is owned by an enterprise account.
 
 ## At organization level
 
