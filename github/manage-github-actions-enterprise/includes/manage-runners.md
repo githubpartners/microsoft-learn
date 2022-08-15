@@ -68,7 +68,7 @@ It is possible to list, add, and remove runner labels for Actions self-hosted ru
 
 ### Restrict self-hosted runner groups to specific workflows
 
-Administrators can further control access by selecting specific workflow files and versions. This will restrict self-hosted runner groups to only be accessible from certain workflows. Combining this feature with reusable workflow will help you create more secure standard workflows in your organization.
+Administrators can further control access by selecting specific workflow files and versions. This will restrict self-hosted runner groups to only be accessible from certain workflows. Combining this feature with reusable workflows will help you create more secure standard workflows in your organization.
 
 ### Proxy servers
 
