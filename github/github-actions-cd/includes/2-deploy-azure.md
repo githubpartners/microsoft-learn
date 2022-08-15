@@ -169,4 +169,4 @@ Notice that you use GitHub actions to check out the repository and to sign in to
 
 ## Disable Actions workflows
 
-You can temporarily disable a GitHub Actions workflow either in the UI or through the API. This functionality allows you to stop a workflow from being triggered without having to delete the file from the repo. Later you can easily re-enable it again from the UI or through the API.
+You can temporarily disable a GitHub Actions workflow either in the UI or through the API. This functionality allows you to stop a workflow from being triggered without having to delete the file from the repo. Later, you can easily re-enable it again from the UI or through the API.
