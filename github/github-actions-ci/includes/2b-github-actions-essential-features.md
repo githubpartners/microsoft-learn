@@ -92,6 +92,8 @@ steps:
 
 In the preceding example, the `path` is set to `~/.npm` and the `key` includes the runner's operating system and the SHA-256 hash of the `package-lock.json` file. Prefixing the key with an ID (`npm-cache` in this example) is useful when you are using the `restore-keys` fallback and have multiple caches.
 
+Actions users who use actions/cache to speed up their workflow execution times can use the GitHub cache usage APIs. This allows you to query the cache usage within each repository and monitor if the total size of all caches is reaching the upper limit of 10 GB. Also, you can monitor aggregate cache usage at organization level or even at enterprise level, if your GitHub organization is owned by an enterprise account.
+
 ## Pass artifact data between jobs
 
 Similar to the idea of caching dependencies within your workflow, you can pass data between jobs within the same workflow. You can do this by using the `upload-artifact` and `download-artifact` actions. Jobs that are dependent on a previous job's artifacts must wait for the dependent job to complete successfully before they can run. This is useful if you have a series of jobs that need to run sequentially based on artifacts uploaded from a previous job. For example, `job_2` requires `job_1` by using the `needs: job_1` syntax.
@@ -129,6 +131,8 @@ In some cases, the default workflow logs won't provide enough detail to diagnose
 
 - To enable runner diagnostic logging, set the `ACTIONS_RUNNER_DEBUG` secret in the repository that contains the workflow to `true`.
 - To enable step diagnostic logging, set the `ACTIONS_STEP_DEBUG` secret in the repository that contains the workflow to `true`.
+
+You can even enable debug logging when you re-run jobs in a GitHub Actions workflow run. To enable debug logging, select *Enable debug logging* in the re-run dialog. You can also enable debug logging using the API or the command-line client.
 
 ## Access the workflow logs from the user interface
 
