@@ -162,6 +162,8 @@ When it comes to runners, there are two options to choose from: GitHub-hosted ru
 
 Each type of runner has its benefits, but GitHub-hosted runners offer a quicker, simpler way to run your workflows, albeit with limited options. Self-hosted runners are a highly configurable way to run workflows in your own custom local environment. Self-hosted runners can be run on-premises or in the cloud. You can also use self-hosted runners to create a custom hardware configuration with more processing power or memory to run larger jobs, install software available on your local network, and choose an operating system not offered by GitHub-hosted runners.
 
+You can now specify shell scripts that run before the runner starts running a job from a workflow, and after a job completes, when you are managing. self-hosted runners for GitHub Actions. Doing so allows you to perform a task on your self-hosted runner before a job starts and after a job ends. Allowing you to set up your execution environment and clean up after workflow runs to ensure a consistent state on the runner itself, without requiring users to add that to their workflows.
+
 ### GitHub Actions may have usage limits
 
 GitHub Actions has some usage limits, depending on whether your runner is GitHub-hosted or self-hosted and your GitHub plan. For more information on usage limits, check out [Usage limits, billing, and administration](https://docs.github.com/en/actions/reference/usage-limits-billing-and-administration) in the GitHub documentation.
