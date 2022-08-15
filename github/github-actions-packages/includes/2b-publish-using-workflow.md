@@ -52,7 +52,9 @@ Actions written in YAML can also reference other actions. This is in addition to
 
 ## Use GitHub Container Registry to host and manage Docker container images
 
-GitHub Packages support the use of containers, Kubernetes, and other cloud-native technologies to manage their entire application lifecycle including production operations, development, release, and deployment. GitHub Packages also offers a container registry designed to support the unique needs of container images. You can use GitHub Container Registry to seamlessly host and manage Docker container images in your GitHub organization or personal user account. GitHub Container Registry allows you to configure who can manage and access packages using fine-grained permissions. You can use images from public and private registries in job and service containers. In GitHub Actions job and service containers allow you to containerize your continuous integration environment and make databases, caches, or other services available to your tests.
+GitHub Packages support the use of containers, Kubernetes, and other cloud-native technologies to manage their entire application lifecycle including production operations, development, release, and deployment. GitHub Packages also offers a container registry designed to support the unique needs of container images. You can use GitHub Container Registry to seamlessly host and manage Docker container images in your GitHub organization or personal user account. GitHub Container Registry allows you to configure who can manage and access packages using fine-grained permissions. You can use images from public and private registries in job and service containers. 
+
+In GitHub Actions, job and service containers allow you to containerize your continuous integration environment and make databases, caches, or other services available to your tests.
 
 With the container registry, you can:
 
