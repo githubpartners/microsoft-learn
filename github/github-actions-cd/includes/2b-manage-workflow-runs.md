@@ -71,4 +71,8 @@ So, for example, let's say you need to create a workflow to a production environ
 2. Configure the required reviewers environment protection to require an approval from the specific dev team.
 3. Configure the specific job within the workflow to look for the production environment.
 
+GitHub Actions lets you control the permissions granted to the `GITHUB_TOKEN` secret. The `GITHUB_TOKEN` is an automatically generated secret letting you make authenticated calls to the GitHub API in your workflow runs. Actions generates a new token for each job and expires the token when a job completes. These new settings allow you to follow a principle of least privilege in your workflows. The token has `write` permissions to a number of API endpoints except in the case of pull requests from forks which are always `read`.
+
 You can create and configure new repository environments from the repository's **Settings** tab under **Environments**.
+
+GitHub Actions simplifies using secrets with reusable workflows with the secrets: `inherit keyword`. You can simply pass the `secrets: inherit` to the reusable workflow and the secrets will be inherited from the calling workflow.
