@@ -119,7 +119,7 @@ Storing an artifact helps to preserve it between jobs. Each job uses a fresh ins
 
 ## Artifact storage
 
-Artifacts are stored in storage space on GitHub. The space is free for public repositories and some amount is free for private repositories, depending on the account. GitHub stores your artifacts for 90 days.
+Artifacts are stored in storage space on GitHub. The space is free for public repositories and some amount is free for private repositories, depending on the account. GitHub stores your artifacts for 90 days. You can delete artifacts and logs sooner than the existing default of 90 days utilizing custom retention days. Additionally, for private, internal, and GitHub Enterprise repositories, you can retain artifacts and logs for over a year.
 
 In the following workflow snippet, notice that in the ```actions/upload-artifact@main``` action there is a ```path:``` attribute. This is the path to store the artifact. Here, we specify *public/* to upload everything to a directory. If it was just a file that we wanted to upload, we could use something like *public/mytext.txt*.
 
@@ -159,6 +159,24 @@ steps:
 
 For more information about using artifacts in workflows see [Persisting workflow data using artifacts](https://help.github.com/actions/configuring-and-managing-workflows/persisting-workflow-data-using-artifacts?azure-portal=true) in the GitHub documentation.
 
+You can use images from private registries in job and service containers. Job and Service containers in GitHub Actions allow you to containerize your CI environment and make databases, caches, or other services available to your tests. Here’s an example of using private images from Docker Hub and GitHub Container Registry:
+
+```
+jobs:
+  build:
+    container:
+      image: octocat/ci-image:latest
+      credentials:
+        username: mona
+        password: ${{ secrets.docker_hub_password}}
+    services:
+      db:
+        image:  ghcr.io/octocat/testdb:latest
+        credentials:
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.ghcr_password }}
+```
+
 ## Automate reviews in GitHub using workflows
 
 So far, we've described starting the workflow with GitHub events such as *push* or *pull-request*. We could also run a workflow on a schedule or on some event outside of GitHub.
@@ -177,6 +195,18 @@ Another action we could take is to add a label to the pull request. In this case
          ADD_LABEL: "approved"
 ```
 
-Notice the block called ```env:```. This is where you set the environment variables for this action. For example, you can set the number of approvers needed. Here, it's one. The ```GITHUB_TOKEN``` variable is required because the action must make changes to your repository by adding a label. Finally, you supply the name of the label to add.
+Notice the block called ```env:```. This is where you set the environment variables for this action. For example, you can set the number of approvers needed. Here, it's one. The ```GITHUB_TOKEN``` variable is required because the action must make changes to your repository by adding a label. GitHub Actions lets you control the permissions granted to the GITHUB_TOKEN secret. A `permissions` key supported at the workflow and job level enables you to specify which permissions you want for the token. Any permission that is absent from the list will be set to `none`. Finally, you supply the name of the label to add.
+
+GitHub actions now requires a collaborator with write access to take action to run workflows from first time users in pull requests.
 
 Adding a label could be an event that starts another workflow, such as a merge. We'll cover this in the next module on continuous delivery with GitHub Actions.
+
+## Simplify using secrets with reusable workflows
+
+GitHub Actions simplifies using secrets with reusable workflows with the `secrets: inherit` keyword. You can simply pass the `secrets: inherit` to the reusable workflow and the secrets will be inherited from the calling workflow.
+
+## Discover code scanning partner integrations
+
+You can discover and configure Actions workflow templates for partner integrations straight from their repository's *Actions* tab under a category called **Security**.  Workflows are recommended based on the repository's content. GitHub will suggest analysis engines that are compatible with the source code in your repository. You can also configure code scanning for organization-owned private repositories where GitHub Advanced Security is enabled.
+
+You can reference local reusable workflows easily. Rreusable workflows that are in the same repository as the calling repository can be referenced with just the path and filename: `{path}/{filename}`.
