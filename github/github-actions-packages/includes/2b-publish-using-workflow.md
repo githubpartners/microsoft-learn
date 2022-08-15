@@ -48,9 +48,13 @@ The preceding workflow does a few things after a new release is created:
 1. Once the `build` job succeeds, the job named `publish-gpr` publishes the package.
 1. The workflow publishes the package to the `registry-url: https://npm.pkg.github.com/` using an access token for authentication.
 
+Actions written in YAML can also reference other actions. This is in addition to using scripts. Being able to reference actions as well should help reduce duplication in your workflows. You can use setup-node action to cache dependencies for projects with monorepo and pnpm package manager. Additionally, you can now run Node.js projects faster on GitHub Actions by enabling dependency caching on the setup-node action. `setup-node` supports caching from both npm and yarn package managers.
+
 ## Use GitHub Container Registry to host and manage Docker container images
 
-GitHub Packages support the use of containers, Kubernetes, and other cloud-native technologies to manage their entire application lifecycle including production operations, development, release, and deployment. GitHub Packages also offers a container registry designed to support the unique needs of container images. You can use GitHub Container Registry to seamlessly host and manage Docker container images in your GitHub organization or personal user account. GitHub Container Registry allows you to configure who can manage and access packages using fine-grained permissions.
+GitHub Packages support the use of containers, Kubernetes, and other cloud-native technologies to manage their entire application lifecycle including production operations, development, release, and deployment. GitHub Packages also offers a container registry designed to support the unique needs of container images. You can use GitHub Container Registry to seamlessly host and manage Docker container images in your GitHub organization or personal user account. GitHub Container Registry allows you to configure who can manage and access packages using fine-grained permissions. You can use images from public and private registries in job and service containers. 
+
+In GitHub Actions, job and service containers allow you to containerize your continuous integration environment and make databases, caches, or other services available to your tests.
 
 With the container registry, you can:
 
