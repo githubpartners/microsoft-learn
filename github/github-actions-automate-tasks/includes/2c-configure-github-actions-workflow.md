@@ -132,7 +132,7 @@ Some references are safer than others. For example, referencing a specific branc
 
 ## Composite run steps
 
-You can create reusable actions using shell scripts and even mix multiple shell languages in the same action. You can turn muktiple shell scripts automating many tasks into an action and reuse them for different workflows. Sometimes it’s easier to write a shell script than JavaScript or Docker. Now you don’t have to worry about wrapping your scripts in Docker containers.
+You can create reusable actions using shell scripts and even mix multiple shell languages in the same action. You can turn multiple shell scripts automating many tasks into an action and reuse them for different workflows. Sometimes it’s easier to write a shell script than JavaScript or Docker. Now you don’t have to worry about wrapping your scripts in Docker containers.
 
 ## Prevent GitHub Actions from creating and approving pull requests
 
