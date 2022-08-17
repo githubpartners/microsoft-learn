@@ -28,6 +28,45 @@ Next you need to make sure that your organization's repositories have access to 
 
 Reusable workflows allow you to specify any number of things and customize them more to your liking. You can have multiple jobs and that gives you a lot of more granular control and power. The reusable workflow can be used in and across public repositories or within a single private repository. Reusable workflows from public repositories can be referenced using a SHA, a release tag, or a branch name. Re-running all jobs in a workflow will use the reusable workflow from the specified reference. You can have a reusable workflow call one reusable workflow. Reusable workflows don’t require individual folders for each workflow like composite actions do.
 
+### A real-world example with reusable workflows
+
+A GitHub developer used reusable workflows while developing hot.opensauced.pizza. The developer needed to centralize the GitHub Actions compliance workflows, while avoiding copying and pasting. Who wants to do that when they can avoid it? To do this, they added a `workflow_call` trigger to the original YAML workflow file in their open-sauced repository. You will see that here in the YAML file, code snippet below.
+
+```
+name: Compliance
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+      - reopened
+  workflow_call:
+```
+
+Next, the developer built a new YAML workflow in the hot.opensauced.pizza repository and had it call back to the reusable compliance workflow. Here is the snippet below.
+
+```
+name: "Compliance"
+
+on:
+  pull_request_target:
+    types:
+      - opened
+      - edited
+      - synchronize
+
+permissions:
+  pull-requests: write
+
+jobs:
+  compliance:
+    uses: open-sauced/open-sauced/.github/workflows/compliance.yml@main
+````
+
+This matters, because reusable workflows helped provide consistency across the developer's projects and made life easier. By copying and pasting a few key YAML files from one project to another, they could immediately be good to go on day one.
+
 ### Call a reusable workflow
 
 You call a reusable workflow using the `uses` keyword. You can call reusable workflows directly within a job, not from within job steps. This is unlike when using actions within a workflow. These two syntaxes reference reusable workflow files: 
