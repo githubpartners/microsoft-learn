@@ -61,21 +61,50 @@ permissions:
 jobs:
   compliance:
     uses: open-sauced/open-sauced/.github/workflows/compliance.yml@main
-````
+```
 
 Reusable workflows helped provide consistency across the developer's projects and made life easier by not having to duplicate work. By copying and pasting a few key YAML files from one project to another, they could immediately be good to go on day one.
 
-## Call a reusable workflow
+## Access resuable workflows
 
-You call a reusable workflow using the `uses` keyword. You can call reusable workflows directly within a job, not from within job steps. This is unlike when using actions within a workflow. These two syntaxes reference reusable workflow files: 
+Before a reusable workflow can be used by another workflow, at least one of the below conditions must be true:
+
+- Both workflows are in the same repository.
+- The called workflow is stored in a public repository.
+- The called workflow is stored in an internal repository and the settings for that repository allow it to be accessed.
+
+### Call a reusable workflow
+
+You can also call a reusable workflow using the `uses` keyword. Unlike when you are using actions within a workflow, you call reusable workflows directly within a job, and not from within the job steps. You can even call multiple workflows by referencing each workflow in a separate job.
+
 - `{owner}/{repo}/.github/workflows/{filename}@{ref}` for reusable workflows in public repositories
 - `./.github/workflows/{filename}` for reusable workflows in the same repository
 
+```
+jobs:
+  call-workflow-1-in-local-repo:
+    uses: octo-org/this-repo/.github/workflows/workflow-1.yml@172239021f7ba04fe7327647b213799853a9eb89
+  call-workflow-in-another-repo:
+    uses: octo-org/another-repo/.github/workflows/workflow.yml@v1
+```
+
 Using the commit SHA is the safest for stability and security. `{ref}` can be a SHA, a release tag, or a branch name. Using the second syntax option (without `{owner}/{repo}` and `@{ref}`) the called workflow is from the same commit as the caller workflow.
+
+### Limitations with using resuable workflows
+
+As you think about using resuable workflows, keep in mind that there are a couple limitations that you should be aware of. 
+
+- You can’t reference a reusable workflow that’s in a private repository. If you have a reusable workflow in a private repository, only other workflows in that private repository can use it.
+- Reusable workflows can’t be stacked on top of one another. You can only have a reusable workflow call another reusable workflow, but you can’t have it reference more than one.
 
 ## Monitor workflows in use
 
-You can use the GitHub REST API to monitor reusable workflows in use. The `prepared_workflow`_job audit log action is triggered when a workflow job is started. 
+You can use the GitHub REST API to monitor reusable workflows in use. The `prepared_workflow_job` audit log action is triggered when a workflow job is started. 
+
+- `repo` - the organization/repository where the workflow job is located. For a job that calls another workflow, this is the organization/repository of the caller workflow.
+- `@timestamp` - the date and time that the job was started, in Unix epoch format.
+- `job_name` - the name of the job that was run.
+- `job_workflow_ref` - the workflow file that was used, in the form {owner}/{repo}/{path}/{filename}@{ref}. For a job that calls another workflow, this identifies the called workflow.
 
 ## How do resuable workflows compare to composite actions
 
