@@ -3,7 +3,7 @@ Here, you'll learn the basics of using a workflow to publish to GitHub Packages,
 
 ## Use a workflow to publish to GitHub Packages
 
-GitHub Packages let you securely publish and consume packages, store your packages alongside your code, and share your packages privately with your team or publicly with the open-source community. You can also use GitHub Actions to automate your packages. 
+GitHub Packages let you securely publish and consume packages, store your packages alongside your code, and share your packages privately with your team or publicly with the open-source community. You can also use GitHub Actions to automate your packages. That means that for any developer or team using GitHub Packages, they have all of their packages right in their repository. There’s no need to source them from different places. They build automation workflows to consume and manage them at scale.
 
 Following is an example of a basic workflow that runs whenever a new release is created in a repository. If the tests pass, then the package is published to GitHub Packages.
 
@@ -77,3 +77,7 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 >
 >- For package registries at `PACKAGE-REGISTRY.pkg.github.com`.
 >- For the container registry at `ghcr.io/OWNER/IMAGE-NAME`.
+
+### Use GITHUB_TOKEN to secure how you manage packages and containers
+
+GITHUB_TOKEN is a special access token available with GitHub Actions. Each token is automatically generated for every job that needs authentication or installation access. Once that job is complete, the token automatically expires to reduce any possible risk exposure. Put more simply. When you run a workflow, the token only exists until that workflow is completed and then it’s deleted. In other solutions, you might have a token that exists for a longer period of time and if you don’t rotate that token, it may expire and break things. The GitHub token in an action workflow can by default publish to GitHub Packages. The net benefit is you have a much more secure system when you use GITHUB_TOKEN and reduce your attack surface area.
