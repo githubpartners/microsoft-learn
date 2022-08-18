@@ -207,6 +207,10 @@ You have the ability to re-run only the failed jobs or a single job in GitHub Ac
 
 You’ll see a confirmation dialog that lists all the jobs that will be re-run, including all jobs that are downstream dependencies when you initiate a partial re-run. When you have more than one attempt at a workflow run, you’ll see a navigation drop-down to let you easily move between attempts. This is helpful for debugging what occurred across the various attempts of that run.
 
+### Re-run jobs with debug logging
+
+You can enable debug logging when you re-run jobs in a GitHub Actions workflow run. This gives you additional information about the job's execution and its environment which can help you diagnose failures. To enable debug logging, select **Enable debug logging** in the re-run dialog. Also, you can enable debug logging using the API or the command-line client.
+
 ## Simplify using secrets with reusable workflows
 
 GitHub Actions simplifies using secrets with reusable workflows with the `secrets: inherit` keyword. You can simply pass the `secrets: inherit` to the reusable workflow and the secrets will be inherited from the calling workflow.
