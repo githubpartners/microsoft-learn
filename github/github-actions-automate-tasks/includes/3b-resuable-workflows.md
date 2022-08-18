@@ -1,10 +1,10 @@
-From automating repetitive tasks to building continuous integration and continuous deployment pipelines, you can do a lot with GitHub Actions. But until recently, you had to copy and paste YAML files from one repository to another if you wanted to use them in more than one place.
-
-Reusable workflows let you DRY (don’t repeat yourself) your Actions configurations. This means that you don’t need to copy and paste your workflows from one repository to another. As an example, if you have three different Node applications and you’re building them all the same way, you can use one reusable workflow for all three.
-
-Additionally, when combined with OpenID Connect (OIDC), reusable workflows let you enforce consistent deployments across your repository, organization, or enterprise. You can do this by defining trust conditions on cloud roles based on reusable workflows.
+Here, we'll introduce reusable workflows. You'll learn why about DRY (don’t repeat yourself) for your Actions configurations.
 
 ## Make any GitHub Actions workflow reusable
+
+When you DRY, this means that you don’t need to copy and paste your workflows from one repository to another. As an example, if you have three different Node applications and you’re building them all the same way, you can use one reusable workflow for all three.
+
+Additionally, when combined with OpenID Connect (OIDC), reusable workflows let you enforce consistent deployments across your repository, organization, or enterprise. You can do this by defining trust conditions on cloud roles based on reusable workflows.
 
 ### Step 1: Add a workflow_call trigger
 
@@ -24,7 +24,7 @@ You can pass data such as job information or passwords to a reusable workflow by
 
 ### Step 2: Make your actions accessible across your organization
 
-  After you've added the `workflow_call` trigger, you need to make sure that your organization's repositories have access to the trigger. To do this, go to your repository settings, select **Actions**, and enable access to repositories in your organization.
+After you've added the `workflow_call` trigger, you need to make sure that your organization's repositories have access to the trigger. To do this, go to your repository settings, select **Actions**, and enable access to repositories in your organization.
 
 ## A real-world example with reusable workflows
 
@@ -65,7 +65,7 @@ jobs:
 
 Reusable workflows helped provide consistency across the developer's projects and made life easier by not having to duplicate work. By copying and pasting a few key YAML files from one project to another, they could immediately be good to go on day one.
 
-## Access resuable workflows
+## Access reusable workflows
 
 Before a reusable workflow can be used by another workflow, at least one of the below conditions must be true:
 
@@ -90,9 +90,9 @@ jobs:
 
 Using the commit SHA is the safest for stability and security. `{ref}` can be a SHA, a release tag, or a branch name. Using the second syntax option (without `{owner}/{repo}` and `@{ref}`) the called workflow is from the same commit as the caller workflow.
 
-### Limitations with using resuable workflows
+### Limitations with using reusable workflows
 
-As you think about using resuable workflows, keep in mind that there are a couple limitations that you should be aware of. 
+As you think about using reusable workflows, keep in mind that there are a couple limitations that you should be aware of. 
 
 - You can’t reference a reusable workflow that’s in a private repository. If you have a reusable workflow in a private repository, only other workflows in that private repository can use it.
 - Reusable workflows can’t be stacked on top of one another. You can only have a reusable workflow call another reusable workflow, but you can’t have it reference more than one.
@@ -106,11 +106,11 @@ You can use the GitHub REST API to monitor reusable workflows in use. The `prepa
 - `job_name` - the name of the job that was run.
 - `job_workflow_ref` - the workflow file that was used, in the form {owner}/{repo}/{path}/{filename}@{ref}. For a job that calls another workflow, this identifies the called workflow.
 
-## How do resuable workflows compare to composite actions
+## How do reusable workflows compare to composite actions
 
 Composite actions enable you to combine multiple actions into a single action that you can then insert into any workflow. This means you can refactor long YAML workflow files into much smaller files. This saves a fair amount of copying and pasting. For example, if your job needs to run on a specific runner or machine, you need to use reusable workflows. Composite actions don’t specify this type of thing. Composite actions are intended to be more isolated and generic.
 
-Below are some key differences between resuable workflows and composite actions.
+Below are some key differences between reusable workflows and composite actions.
 
 |   Reusable workflows    |                                                                                                                   Composite actions                                                                                                                  
 |--------------|------------------|
