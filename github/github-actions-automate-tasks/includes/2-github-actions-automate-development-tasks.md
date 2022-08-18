@@ -43,6 +43,14 @@ However, beyond those GitHub Actions featured on the Actions tab, you can:
 - Search for open-source projects. For example, the [GitHub Actions](https://github.com/actions?azure-portal=true) organization features many popular open-source repos containing GitHub Actions you can use.
 - Write your own GitHub Actions from scratch. Furthermore, if you want, you could make them open source, or even publish them to the GitHub Marketplace.
 
+## New workflow experience
+
+When you want to create an Actions workflow in the Actions tab of your repository, the recommendations will be based on an analysis of repository content. The workflow recommendations are based on repository analysis that detects elements, such as programming language, build tools, frameworks, and package managers. If a repository contains a Node.js application that has been containerized, then the repository analysis will prioritize showing you both container and Node related workflows, as one example.
+
+Also recommendations have been extended to the deployment category. If a repository contains a Dockerfile, we’ll suggest a workflow that builds these containers and deploys them to a container-compatible cloud service, as an example. This enables our cloud partners to contribute workflows for each of their services and helps them recommend the right workflows to end users based on the language and framework used in the repository code.
+
+Get started by going to the **Actions** tab in your repository and select **New Workflow**.
+
 ## Using open-source GitHub Actions
 
 Many GitHub Actions are open source and available for anyone who wants to use them. However, just like with any open-source software, you need to carefully check them before using them in your project. Similar to recommended community standards with open-source software, such as including a README, code of conduct, contributing file, and issue templates, just to name a few, you can follow the following recommendations when using GitHub Actions:
