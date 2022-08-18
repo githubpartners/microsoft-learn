@@ -201,6 +201,12 @@ GitHub actions now requires a collaborator with write access to take action to r
 
 Adding a label could be an event that starts another workflow, such as a merge. We'll cover this in the next module on continuous delivery with GitHub Actions.
 
+## Use partial re-runs
+
+You have the ability to re-run only the failed jobs or a single job in GitHub Actions. In addition, navigation improvements enable you to see the full results of previous runs. You save time by re-running only failed jobs, skipping work that’s already been done. You’ll now see a new drop-down menu if you have failing jobs in a workflow run, where you can choose **Re-run failed jobs** in addition to the existing **Re-run all jobs**. Each job listed in the sidebar has a re-run icon when you hover over it for a completed run. Also, jobs can be re-run directly from the logs view.
+
+You’ll see a confirmation dialog that lists all the jobs that will be re-run, including all jobs that are downstream dependencies when you initiate a partial re-run. When you have more than one attempt at a workflow run, you’ll see a navigation drop-down to let you easily move between attempts. This is helpful for debugging what occurred across the various attempts of that run.
+
 ## Simplify using secrets with reusable workflows
 
 GitHub Actions simplifies using secrets with reusable workflows with the `secrets: inherit` keyword. You can simply pass the `secrets: inherit` to the reusable workflow and the secrets will be inherited from the calling workflow.
