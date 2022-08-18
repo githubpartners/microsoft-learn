@@ -1,4 +1,4 @@
-Here, we'll introduce reusable workflows. You'll learn why about DRY (don’t repeat yourself) for your Actions configurations.
+Here, we'll introduce reusable workflows. You'll learn about DRY (don’t repeat yourself) for your Actions configurations.
 
 ## Make any GitHub Actions workflow reusable
 
