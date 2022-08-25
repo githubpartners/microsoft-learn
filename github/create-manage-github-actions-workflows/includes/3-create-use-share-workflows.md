@@ -62,7 +62,7 @@ For example, this file named `octo-organization-ci.properties.json` contains the
 
 ### Add an action to your workflow
 
-You can add an action to your workflow by referencing the action in your workflow file. Additonally, you can view the actions referenced in your GitHub Actions workflows as dependencies in the dependency graph of the repository containing your workflows.
+You can add an action to your workflow by referencing the action in your workflow file. Additionally, you can view the actions referenced in your GitHub Actions workflows as dependencies in the dependency graph of the repository containing your workflows.
 
 Example repository file structure to add an action from the same repository:
 
@@ -118,36 +118,9 @@ Anyone with write permission to a repository can set up GitHub Actions starter w
 
 ## Share a GitHub Actions workflow
 
-You can create starter workflows in the .github repository and share them with other users in your organization.
+You can create starter workflows in the .github repository and share them with other users in your organization. Your organization can also share workflows by reusing the workflows exactly or by creating workflows that provide templates for new workflows.
 
-
-
-
-
-<!-- 4. Validation -------------------------------------------------------------------------------------------
-
-    Goal: Enables the learner to evaluate if they completed the exercise correctly. This feedback is critical for learning.
-
-    Structure:
-        1. H2 of "Check your work".
-        2. An introductory paragraph describing how they'll validate their work at a high level.
-        3. Numbered steps (if the learner needs to perform multiple steps to verify if they were successful).
-        4. Video of an expert performing the exact steps of the exercise (optional).
-
-    Example:
-         "At this point, the app is scanning Twitter every minute for tweets containing the search text. To verify the app is running and working correctly, we'll look at the Runs history table."
-             "1. Select Overview in the navigation menu.
-              2. Select Refresh once a minute until you see a row in the Runs history table.
-              ...
-              6. Examine the data in the OUTPUTS section. For example, locate the text of the matching tweet."
--->
-
-## Check your work
-<!-- Introduction paragraph -->
-1. <!-- Step 1 (if multiple steps are needed) -->
-1. <!-- Step 2 (if multiple steps are needed) -->
-1. <!-- Step n (if multiple steps are needed) -->
-Optional "exercise-solution" video
+We'll cover how to trigger a workflow in the next unit.
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
