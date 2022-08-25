@@ -8,88 +8,127 @@
 
     Example: "You'll be <building> a <Logic App> that <determines the sentiment of new tweets and reacts accordingly>. Here, we'll discuss the project <business logic and target behavior>. We'll also cover the <accounts and software> you'll need."
 -->
-TODO: add your topic sentences(s)
+Here you'll learn workflow syntax and commands. Creating a workflow is pretty straightforward as long as you can find the right actions for your steps.
 
-<!-- 2. Project overview -------------------------------------------------------------------------------------
+## YAML syntax for workflows
 
-    Goal: Describe the end state of the project and the tasks they'll need to do in their solution. Keep the discussion at a high level and avoid implementation details.
+Workflow files use YAML syntax, and must have either a `.yml` or `.yaml` file extension. You need to store workflow files in the `.github/workflows` directory of your repository.
 
-    Structure:
-        1. H2 of "Project overview"
-        1. Lead sentence summarizing project goal(s). Remainder of paragraph describing project behavior in 1-2 sentences.
-        1. One or both of the following:
-            1. Paragraph followed by conceptual diagram or flowchart that captures the conditions the finished project must satisfy.
-            1. Paragraph with a screenshot of the finished project. 
-        1. Lead sentence followed by numbered list of sub-tasks needed to complete the project. You can use the exercise-unit titles as the basis for the list.
+To automatically trigger a workflow, use `on` to define which events can cause the workflow to run. You can define single or multiple events that can a trigger workflow, or set a time schedule.
 
-    Example:
-        "The goal of the project is to design, build, and test a Logic App that processes tweets. Your app will check Twitter periodically for new tweets about your company. You'll determine whether the sentiment of tweet is positive or negative and branch the app based on the results.
+A workflow with the following `on` value will run when a push is made to any branch in the workflow's repository:
 
-        The following flowchart shows the business logic the app needs to perform:
-            <flowchart>
+```
+on:push
+```
 
-        You'll map each business rule to a Logic Apps connector and assemble the connectors into an app. The following diagram shows the mapping:
-            <diagram>
+` workflow with the following `on` value will run when a push is made to any branch in the repository or when someone forks the repository
 
-        The key tasks you'll need to do are:
-            1. Select the connectors you'll need to implement the business rules.
-            1. Create the app and add a trigger to launch the app when a new tweet is available.
-            1. Use the Azure machine learning analytics service to analyze the text of the tweet.
-            1. Based on the tweet sentiment, you'll either store the tweet in a database or email it to customer service.
--->
-## Project overview
-Strong lead sentence; remainder of paragraph.
-Visual (e.g. flowchart of business logic)
+```
+on: [push, fork]
+```
 
-Strong lead sentence; remainder of paragraph.
-Visual (e.g. screenshot of finished project)
+If you specify multiple events, only one of those events needs to occur to trigger your workflow.
 
-Lead sentence:
-List of sub-tasks
+### Activity types
 
-<!-- 3. Setup -------------------------------------------------------------------------------------
+Some events have activity types that give you more control over when your workflow should run. Use on.<event_name>.types to define the type of event activity that will trigger a workflow run. If your workflow triggers on the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the `created` activity type for the `label` event, your workflow will run when a label is created but not when a label is edited or deleted.
 
-    Goal: Guide the learner though any needed setup such as required accounts or local software installations.
+```
+on:
+  label:
+    types:
+      - created
+```
 
-    Structure:
-        1. H2 of "Setup"
-        2. 1 paragraph of text giving a conceptual overview of the needed setup
-        3. One H3 per setup item explaining the need and giving instructions.
-            - Use "Create <service> account" as the H3 for account creation.
-            - Use "Install <product>" as the H3 for software installation.
-            - For setup items beyond accounts and software, use an H3 that follows the "<verb> <item>" pattern.
+If you specify multiple activity types, only one event activity type needs to occur to trigger your workflow. If multiple triggering event activity types occur at the same time, multiple workflow runs will be triggered. The following workflow triggers when an issue is opened or labeled. If an issue with two labels is opened, three workflow runs will start: one for the issue opened event and two for the two issue labeled events.
 
-    Example:
-        "To complete the project, you'll need a Twitter account, an Azure account, and a local installation of Visual Studio Code.
+```
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+```
 
-        ### Create Twitter account
-            Your Logic App needs to pull new tweets from Twitter using the Twitter connector. Under the hood, the Twitter connector uses the Twitter API. The Twitter API requires authentication via a username and password, which means that you'll need a Twitter account.
-            1. Go to <link> and create an account.
-            1. Record your username and password, you'll need it later.
+### Pull requests
 
-        ...
+When using the `pull_request` and `pull_request_target` events, you can configure a workflow to run only for pull requests that target specific branches. Use the `branches` filter when you want to include branch name patterns or when you want to both include and exclude branch names patterns. Use the `branches-ignore` filter when you only want to exclude branch name patterns. You cannot use both the `branches` and `branches-ignore` filters for the same event in a workflow.
 
-        ### Install Visual Studio Code
-            You'll use Visual Studio Code to create your Logic App. All your work will be done directly in VS Code: connecting to your Azure account, selecting your Azure subscription, and building your app. This section guides you through the installation and setup of VS Code on your local machine.
-            1. Go to <link> and follow the installation steps for your platform.
-            1. Go to <link> and follow the steps to connect to your Azure account from VS Code.
-            1. Go to <link> and follow the steps to select your Azure subscription."
+The patterns defined in `branches` are evaluated against the Git ref's name. The following workflow would run whenever there is a `pull_request` event for a pull request targeting:
 
-    Note: The "Setup" section is optional. If the project doesn't require any setup, omit this entire section.
-    In that case, also remove the "Project overview" H2 (while leaving the content of that H2) to avoid a page
-    containing a single H2.
--->
-## Setup
-Strong lead sentence stating the categories of what's needed: accounts, software, etc.
-Remainder of paragraph if needed.
-### Create (service) account (repeat as needed)
-Strong lead sentence stating the required account.
-Remainder of paragraph explaining why this is needed and what it will be used for.
-Inline instructions or link to setup instructions.
-### Install (product) (repeat as needed)
-Strong lead sentence stating the product needing installation.
-Remainder of paragraph explaining why this is needed and what it will be used for.
-Inline instructions or link to setup instructions.
+- A branch named `main` (`refs/heads/main`)
+- A branch named `mona/octocat` (`refs/heads/mona/octocat`)
+- A branch whose name starts with `releases/`, like `releases/10` (`refs/heads/releases/10`)
+
+```
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+      - 'mona/octocat'
+      - 'releases/**'
+```
+
+### On schedule
+
+You can use `on.schedule` to define a time schedule for your workflows. Scheduled workflows run on the latest commit on the default or base branch. The shortest interval you can run scheduled workflows is once every 5 minutes. Using POSIX cron syntax for specific UTC times, this example triggers the workflow every day at 5:30 and 17:30 UTC:
+
+```
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 5,17 * * *'
+ ```
+ 
+## Workflow commands
+
+Creating a workflow is pretty straightforward as long as you can find the right actions for your steps. In some cases you may need to create your own actions to achieve your desired outcomes, but you can use workflow commands to add another level of customization to your workflows.
+
+Workflow commands enable you to communicate with the GitHub Actions runner machine by printing formatted lines of text to the console. These workflow commands can be used with shell commands or within your custom actions. Workflow commands are useful because they enable you to share information between workflow steps, print debug or error messages to the console, set environment variables, set output parameters, or add to the system path.
+
+Most workflow commands use the `echo` command in the below specific format, while others can be invoked by writing to a file.
+
+```bash
+echo "::workflow-command parameter1={data},parameter2={data}::{command value}"
+```
+
+Below are some basic message logging examples for printing a debug message, info message, error message, or warning message to the console.
+
+```yml
+- name: workflow commands logging messages
+  run: |
+    echo "::debug::This is a debug message"
+    echo "This is an info message"
+    echo "::error::This is an error message"
+    echo "::warning::This is a warning message"
+```
+
+You can also create a message to print to the log with a filename (file), line number (line), and column (col) number where the error occurred. Warning messages will appear in a yellow highlight with the text "warning", and error messages will appear in a red highlight with the text "error".
+
+```bash
+echo "::error file=app.js,line=10,col=15::Something went wrong"
+```
+
+It's important to note that these workflow commands need to be on a single line. Characters that interfere with parsing such as commas and line breaks will need to be URL-encoded.
+
+For example, the below text is a multi-line message.
+
+```yml
+This text spans
+across multiple lines
+```
+
+This message should be encoded as shown below.
+
+```yml
+This text spans%0Aacross multiple lines
+```
+
+In addition to workflow commands, you can set exit codes to set the status of an action. This is important because when you're working with jobs in a workflow, a failed exit code will halt all concurrent actions and cancel any future actions. If you are creating a JavaScript action, you can use the actions toolkit `@actions/core` package to log a message and set a failure exit code. If you are creating a Docker container action, you can set a failure exit code in your `entrypoint.sh` script.
+
+We'll cover create, use, and share starter workflows in the next unit.
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
