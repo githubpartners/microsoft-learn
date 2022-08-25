@@ -1,91 +1,165 @@
-<!-- 1. Scenario sub-task --------------------------------------------------------------------------------
+Here you'll learn about GitHub Actions workflow triggers. Workflow triggers are events that cause a workflow to run. 
 
-    Goal: Describe the part of the scenario covered in this exercise.
+## Trigger a GitHub Actions workflow
 
-    Heading: none
+Workflow triggers are events that cause a workflow to run. These events include the following.
 
-    Example: "Recall that in the chocolate-manufacturer example, there would be a separate storage account for the private business data. There were two key requirements for this account: geographically-redundant storage because the data is business-critical and at least one location close to the main factory."
+- Events that occur in your workflow's repository
+- Events that occur outside of GitHub and trigger a `repository_dispatch event` on GitHub
+- Scheduled times
+- Manual
 
-    Recommended: image that summarizes the entire scenario with a highlight of the area implemented in this exercise
--->
-TODO: add your scenario sub-task
-TODO: add your scenario image
+### Events in your workflow's repository
 
-<!-- 2. Task performed in the exercise ---------------------------------------------------------------------
+You can configure your workflow to run when a push is made to the default branch of your repository, when a release is created, or when an issue is opened. Workflow triggers are defined with the `on` key.
 
-    Goal: State concisely what they'll implement here; that is, describe the end-state after completion
+Use the following steps to trigger a workflow run:
 
-    Heading: a separate heading is optional; you can combine this with the scenario sub-task into a single paragraph
+1. An event occurs on your repository. The event has an associated commit SHA and Git ref
+2. GitHub searches the `.github/workflows` directory in your repository for workflow files that are present in the associated commit SHA or Git ref of the event.
+3. A workflow run is triggered for any workflows that have `on:` values that match the triggering event. Some events also require the workflow file to be present on the default branch of the repository in order to run
 
-    Example: "Here, you will create a storage account with settings appropriate to hold this mission-critical business data."
+Each workflow run uses the version of the workflow that is present in the associated commit SHA or Git ref of the event. When a workflow runs, GitHub sets the `GITHUB_SHA` (commit SHA) and `GITHUB_REF` (Git ref) environment variables in the runner environment.
 
-    Optional: a video that shows the end-state
--->
-TODO: describe the end-state
+### Available events and activity types
 
-<!-- 3. Chunked steps -------------------------------------------------------------------------------------
+Some events have multiple activity types. For these events, you can specify which activity types will trigger a workflow run.
 
-    Goal: List the steps they'll do to complete the exercise.
+`branch_protection_rule`: Runs your workflow when branch protection rules in the workflow repository are changed. Activity types include:
+- created
+- edited
+- deleted
 
-    Structure: Break the steps into 'chunks' where each chunk has three things:
-        1. A heading describing the goal of the chunk
-        2. An introductory paragraph describing the goal of the chunk at a high level
-        3. Numbered steps (target 7 steps or fewer in each chunk)
+For example, you can run a workflow when a branch protection rule has been `created` or `deleted`:
 
-    Example:
-        Heading:
-            "Use a template for your Azure logic app"
-        Introduction:
-             "When you create an Azure logic app in the Azure portal, you have the option of selecting a starter template. Let's select a blank template so that we can build our logic app from scratch."
-        Steps:
-             "1. In the left navigation bar, select Resource groups.
-              2. Select the existing Resource group [sandbox resource group name].
-              3. Select the ShoeTracker logic app.
-              4. Scroll down to the Templates section and select Blank Logic App."
--->
+```
+on:
+  branch_protection_rule:
+    types: [created, deleted]
+```
 
-## (Chunk 1 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+`fork`: Runs your workflow when someone forks a repository. The activity types are N/A.
 
-## (Chunk 2 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+For example, you can run a workflow when the `fork` event occurs.
 
-## (Chunk n heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+```
+on:
+  forkon:
+  fork
+```
 
-<!-- 4. Validation -------------------------------------------------------------------------------------------
+`issues`: Runs your workflow when an issue in the workflow's repository is created or modified. Activity types include:
+- opened
+- edited
+- deleted
+- transferred
+- pinned
+- unpinned
+- closed
+- reopened
+- assigned
+- unassigned
+- labeled
+- unlabeled
+- locked
+- unlocked
+- milestoned
+- demilestoned
 
-    Goal: Enables the learner to evaluate if they completed the exercise correctly. This feedback is critical for learning.
+For example, you can run a workflow when an issue has been `opened`, `edited`, or `milestoned`.
 
-    Structure:
-        1. H2 of "Check your work".
-        2. An introductory paragraph describing how they'll validate their work at a high level.
-        3. Numbered steps (if the learner needs to perform multiple steps to verify if they were successful).
-        4. Video of an expert performing the exact steps of the exercise (optional).
+```
+on:
+  issues:
+    types: [opened, edited, milestoned]
+```
 
-    Example:
-         "At this point, the app is scanning Twitter every minute for tweets containing the search text. To verify the app is running and working correctly, we'll look at the Runs history table."
-             "1. Select Overview in the navigation menu.
-              2. Select Refresh once a minute until you see a row in the Runs history table.
-              ...
-              6. Examine the data in the OUTPUTS section. For example, locate the text of the matching tweet."
--->
+`workflow run`: This event occurs when a workflow run is requested or completed. The event allows you to execute a workflow based on execution or completion of another workflow. The workflow started by the `workflow_run` event can access secrets and write tokens, even if the previous workflow could not. This is useful in cases where the previous workflow is intentionally not privileged, and now you need to take a privileged action in a later workflow.
 
-## Check your work
-<!-- Introduction paragraph -->
-1. <!-- Step 1 (if multiple steps are needed) -->
-1. <!-- Step 2 (if multiple steps are needed) -->
-1. <!-- Step n (if multiple steps are needed) -->
-Optional "exercise-solution" video
+For example, a workflow is configured to run after the separate *Run Tests* workflow completes:
+
+```
+on:
+  workflow_run:
+    workflows: [Run Tests]
+    types:
+      - completed
+ ```
+ 
+### Use filters
+
+Some events have filters that give you more control over when your GitHub Actions workflow should run. The `push` event has a `branches` filter that causes your workflow to run only when a push to a branch that matches the `branches` filter occurs, instead of when any push occurs.
+
+For example:
+
+```
+on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
+```
+
+You can use filters to target specific branches for pull request events. You can use the `pull_request` and `pull_request_target events` to configure a workflow to run only for pull requests that target specific branches. The `branches` filter can be used to include branch name patterns or when you want to both include and exclude branch names patterns. You can use the `branches-ignore` filter when you only want to exclude branch name patterns. You cannot use both the `branches` and `branches-ignore` filters for the same event in a workflow.
+
+The patterns defined in `branches` are evaluated against the Git ref's name. For example, the following workflow would run whenever there is a `pull_request` event for a pull request targeting.
+
+```
+on:
+  pull_request:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - main
+      - 'mona/octocat'
+      - 'releases/**'
+```
+
+### Manually triggered workflows
+
+When using the `workflow_dispatch` event, you can optionally specify inputs that are passed to the workflow. The triggered workflow receives the inputs in the `inputs` context.
+
+For example:
+
+```
+on:
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning' 
+        type: choice
+        options:
+        - info
+        - warning
+        - debug 
+      print_tags:
+        description: 'True to print to STDOUT'
+        required: true 
+        type: boolean 
+      tags:
+        description: 'Test scenario tags'
+        required: true 
+        type: string
+      environment:
+        description: 'Environment to run tests against'
+        type: environment
+        required: true 
+
+jobs:
+  print-tag:
+    runs-on: ubuntu-latest
+    if:  ${{ inputs.print_tags }} 
+    steps:
+      - name: Print the input tag to STDOUT
+        run: echo  The tags are ${{ inputs.tags }} 
+```
+
+### Further control how your workflow will run
+
+
+
+Next up is a quick knowledge check.
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
