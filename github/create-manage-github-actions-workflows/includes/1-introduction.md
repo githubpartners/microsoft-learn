@@ -8,7 +8,7 @@ In this module, you'll be introduced to GitHub Actions workflows.
 
 In this module, you'll
 - Learn workflow syntax and commands
-- Create, use, and share starter workflows
+- Create, use, and share workflows
 - Learn low to trigger a workflow
 - Learn reuse workflows
 - Customize your workflow with artifact data and environment variables
