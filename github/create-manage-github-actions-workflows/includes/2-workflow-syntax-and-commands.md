@@ -32,7 +32,7 @@ If you specify multiple events, only one of those events needs to occur to trigg
 
 ### Activity types
 
-Some events have activity types that give you more control over when your workflow should run. Use on.<event_name>.types to define the type of event activity that will trigger a workflow run. If your workflow triggers on the `label` event, it will run whenever a label is created, edited, or deleted. If you specify the `created` activity type for the `label` event, your workflow will run when a label is created but not when a label is edited or deleted.
+Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run. If your workflow triggers on the `label` event, it will run whenever a label is `created`, `edited`, or `deleted`. If you specify the `created` activity type for the `label` event, your workflow will run when a label is created but not when a label is edited or deleted.
 
 ```
 on:
