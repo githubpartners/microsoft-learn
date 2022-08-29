@@ -1,13 +1,3 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
-
-    Goal: briefly summarize the project and setup requirements in 1-3 sentences.
-
-    Heading: none
-
-    Pattern: "You'll be <doing> a <thing> that <goal>. Here, we'll discuss the project <big picture>. We'll also cover the <things> you'll need."
-
-    Example: "You'll be <building> a <Logic App> that <determines the sentiment of new tweets and reacts accordingly>. Here, we'll discuss the project <business logic and target behavior>. We'll also cover the <accounts and software> you'll need."
--->
 Here you'll learn workflow syntax and commands. Creating a workflow is pretty straightforward as long as you can find the right actions for your steps.
 
 ## YAML syntax for workflows
@@ -22,7 +12,7 @@ A workflow with the following `on` value will run when a push is made to any bra
 on:push
 ```
 
-` workflow with the following `on` value will run when a push is made to any branch in the repository or when someone forks the repository
+A workflow with the following `on` value will run when a push is made to any branch in the repository or when someone forks the repository:
 
 ```
 on: [push, fork]
