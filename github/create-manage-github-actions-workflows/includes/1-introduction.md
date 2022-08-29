@@ -20,7 +20,5 @@ In this module, you'll
   - (For more information about GitHub, see [Introduction to GitHub](https://docs.microsoft.com/en-us/learn/modules/introduction-to-github?azure-portal=true)
 - Familiarity with automated development tasks by using GitHub Actions
   - If you are unfamiliar with automated tasks, check out [Automate development tasks by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-automate-tasks?azure-portal=true)
-- Familiarity with continuous integration (CI) workflows by using GitHub Actions
-  - If you are unfamiliar with CI, check out [Build continuous integration (CI) workflows by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-ci?azure-portal=true)
 
 <!-- Do **not** include any other content like learning objectives, prerequisites, unit summary, "next unit" lead-in, or references. -->
