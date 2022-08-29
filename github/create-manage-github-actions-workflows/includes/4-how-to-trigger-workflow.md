@@ -13,10 +13,10 @@ Workflow triggers are events that cause a workflow to run. These events include 
 
 You can configure your workflow to run when a push is made to the default branch of your repository, when a release is created, or when an issue is opened. Workflow triggers are defined with the `on` key.
 
-Use the following steps to trigger a workflow run:
+Use the following steps to trigger a workflow run.
 
 1. An event occurs on your repository. The event has an associated commit SHA and Git ref
-2. GitHub searches the `.github/workflows` directory in your repository for workflow files that are present in the associated commit SHA or Git ref of the event.
+2. GitHub searches the `.github/workflows` directory in your repository for workflow files that are present in the associated commit SHA or Git ref of the event
 3. A workflow run is triggered for any workflows that have `on:` values that match the triggering event. Some events also require the workflow file to be present on the default branch of the repository in order to run
 
 Each workflow run uses the version of the workflow that is present in the associated commit SHA or Git ref of the event. When a workflow runs, GitHub sets the `GITHUB_SHA` (commit SHA) and `GITHUB_REF` (Git ref) environment variables in the runner environment.
@@ -25,7 +25,8 @@ Each workflow run uses the version of the workflow that is present in the associ
 
 Some events have multiple activity types. For these events, you can specify which activity types will trigger a workflow run.
 
-`branch_protection_rule`: Runs your workflow when branch protection rules in the workflow repository are changed. Activity types include:
+`branch_protection_rule`: Runs your workflow when branch protection rules in the workflow repository are changed. Activity types include.
+
 - created
 - edited
 - deleted
@@ -40,7 +41,7 @@ on:
 
 `fork`: Runs your workflow when someone forks a repository. The activity types are N/A.
 
-For example, you can run a workflow when the `fork` event occurs.
+For example, you can run a workflow when the `fork` event occurs:
 
 ```
 on:
@@ -48,7 +49,8 @@ on:
   fork
 ```
 
-`issues`: Runs your workflow when an issue in the workflow's repository is created or modified. Activity types include:
+`issues`: Runs your workflow when an issue in the workflow's repository is created or modified. Activity types include.
+
 - opened
 - edited
 - deleted
@@ -66,7 +68,7 @@ on:
 - milestoned
 - demilestoned
 
-For example, you can run a workflow when an issue has been `opened`, `edited`, or `milestoned`.
+For example, you can run a workflow when an issue has been `opened`, `edited`, or `milestoned`:
 
 ```
 on:
