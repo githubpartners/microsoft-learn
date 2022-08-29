@@ -1,4 +1,4 @@
-Here, you'll learn to Customize your workflow with artifact data and environment variables.
+Here, you'll learn to customize your workflow with artifact data and environment variables.
 
 ## Pass artifact data between jobs
 
@@ -47,4 +47,5 @@ jobs:
         env:
           First_Name: Mona
 ```
+
 Next up is a quick knowledge check.
