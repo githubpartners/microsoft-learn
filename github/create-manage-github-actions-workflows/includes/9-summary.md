@@ -1,6 +1,7 @@
 In this module, you learned about creating and managing GitHub Actions workflows.
 
 You can now:
+
 - Describe workflow syntax and commands
 - Create, use, and share workflows
 - Describe how to trigger a workflow
@@ -9,7 +10,7 @@ You can now:
 
 ## Next steps
 
-To continue your journey with GitHub Actions, check out the next module on this learning path, where you'll learn...
+To continue your journey with GitHub Actions, check out the next module on this learning path, where you'll learn how to [create workflows that enable you to use Continuous Integration (CI) for your projects](https://docs.microsoft.com/en-us/learn/modules/github-actions-ci/?ns-enrollment-type=Collection&ns-enrollment-id=n5p4a5z7keznp5?azure-portal=true).
 
 ## Learn more
 
