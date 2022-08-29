@@ -10,7 +10,7 @@ In this module, you'll
 - Learn workflow syntax and commands
 - Create, use, and share workflows
 - Learn how to trigger a workflow
-- Learn reuse workflows
+- Learn how to reuse workflows
 - Customize your workflow with artifact data and environment variables
 
 ## Prerequisites
@@ -21,6 +21,6 @@ In this module, you'll
 - Familiarity with automated development tasks by using GitHub Actions
   - If you are unfamiliar with automated tasks, check out [Automate development tasks by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-automate-tasks?azure-portal=true)
 - Familiarity with continuous integration (CI) workflows by using GitHub Actions
-  - If you are unfamiliar with CI, check out [Build continuous integration (CI) workflows by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-ci/?azure-portal=true)
+  - If you are unfamiliar with CI, check out [Build continuous integration (CI) workflows by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-ci?azure-portal=true)
 
 <!-- Do **not** include any other content like learning objectives, prerequisites, unit summary, "next unit" lead-in, or references. -->
