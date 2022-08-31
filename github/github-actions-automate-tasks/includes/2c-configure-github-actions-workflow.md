@@ -130,10 +130,6 @@ steps:
 
 Some references are safer than others. For example, referencing a specific branch will run that action off of the latest changes from that branch, which you may or may not want. By referencing a specific version number or commit SHA hash, you're being more specific about the version of the action you're running. For more stability and security, we recommend that you use the commit SHA of a released action within your workflows. 
 
-## Composite run steps
-
-You can create reusable actions using shell scripts and even mix multiple shell languages in the same action. You can turn multiple shell scripts automating many tasks into an action and reuse them for different workflows. Sometimes it’s easier to write a shell script than JavaScript or Docker. Now you don’t have to worry about wrapping your scripts in Docker containers.
-
 ## Prevent GitHub Actions from creating and approving pull requests
 
 To further reduce the risk of a user using Actions to merge a change into a protected branch that was not reviewed by another person, the organization setting to disallow Actions from approving pull requests has been extended to also limit Actions from creating pull requests. The Allow GitHub Actions to create and approve pull requests setting can be managed by admins in organization settings under **Actions** > *General* > *Workflow permissions*.
