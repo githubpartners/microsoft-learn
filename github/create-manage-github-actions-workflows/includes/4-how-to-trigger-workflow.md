@@ -159,7 +159,76 @@ jobs:
 
 ### Further control how your workflow will run
 
+You can use conditionals and environments to control whether individual jobs or steps in your workflow will run, if you want more granular control than events, event activity types, or event filters provide.
 
+Conditionals will further control whether jobs or steps in your workflow will run. For example, you want the workflow to run when a specific label is added to an issue. You can trigger on the `issues labeled` event activity type and use a conditional to check what label triggered the workflow. The following workflow runs when any label is added to an issue in the workflow's repository, but the `run_if_label_matches` job will only execute if the label is named bug.
+
+```
+on:
+  issues:
+    types:
+      - labeled
+
+jobs:
+  run_if_label_matches:
+    if: github.event.label.name == 'bug'
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo 'The label was bug'
+```
+
+You can use an environment that requires approval from a specific team or user to manually trigger a specific job in a workflow. First, configure an environment with required reviewers. Second, reference the environment name in a job in your workflow using the `environment:` key. Any job referencing the environment will not run until at least one reviewer approves the job.
+
+For example, the following workflow will run whenever there is a push to main. The `build` job will always run. The `publish` job will only run after the `build` job successfully completes (due to `needs: [build]`) and after all of the rules (including required reviewers) for the environment called `production` pass (due to `environment: production`).
+
+```
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        echo 'building'
+
+  publish:
+    needs: [build]
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: publish
+        echo 'publishing'
+```
+
+You can use a conditional to check whether a specific event type exists in the event context. Use this if you want to run different jobs or steps depending on what event triggered the workflow.
+
+For example, the following workflow will run whenever an issue or pull request is closed. If the workflow ran because an issue was closed, the `github.event` context will contain a value for `issue` but not for `pull_request`. Therefore, the `if_issue` step will run but the `if_pr` step will not run. Conversely, if the workflow ran because a pull request was closed, the `if_pr` step will run but the `if_issue` step will not run.
+
+```
+on:
+  issues:
+    types:
+      - closed
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  state_event_type:
+    runs-on: ubuntu-latest
+    steps:
+    - name: if_issue
+      if: github.event.issue
+      run: |
+        echo An issue was closed
+    - name: if_pr
+      if: github.event.pull_request
+      run: |
+        echo A pull request was closed
+```
 
 We'll cover reusing workflows in the next unit.
 
