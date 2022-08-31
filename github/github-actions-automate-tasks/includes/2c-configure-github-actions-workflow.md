@@ -112,12 +112,6 @@ You can find these workflows by navigating to the **Actions** tab of a repositor
 
 :::image type="content" source="../media/mona-workflow.png" alt-text="Picture of a template organization workflow called greet and triage by Mona.":::
 
-## Composite run steps
-
-You can create reusable actions using shell scripts and even mix multiple shell languages in the same action. You can turn multiple shell scripts automating many tasks into an action and reuse them for different workflows. Sometimes it’s easier to write a shell script than JavaScript or Docker. Now you don’t have to worry about wrapping your scripts in Docker containers.
-
-:::image type="content" source="https://i0.wp.com/user-images.githubusercontent.com/8660827/89449714-7bdd0480-d727-11ea-9863-7486fe666fd5.png?ssl=1" alt-text="Picture of a template organization workflow called greet and triage by Mona.":::
-
 ## Use specific versions of an action
 
 When referencing actions in your workflow, we recommended that you refer to a specific version of that action rather than just the action itself. By referencing a specific version, you are placing a safeguard from unexpected changes pushed to the action that could potentially break your workflow. Below are several ways you can reference a specific version of an action.
