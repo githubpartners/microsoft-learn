@@ -46,6 +46,24 @@ GitHub Enterprise customers can also enable Dependabot alerts. If you're a GitHu
 
 For more information, see [Connect your enterprise account to GitHub Enterprise Cloud](https://docs.github.com/enterprise-server@3.1/admin/configuration/managing-connections-between-your-enterprise-accounts/connecting-your-enterprise-account-to-github-enterprise-cloud).
 
+### Set up Dependabot alerts for GitHub Actions
+
+GitHub will send a Dependabot alert for vulnerable GitHub Actions, making it even easier to stay up to date and fix security vulnerabilities in your actions workflows. When a security vulnerability is reported in an action, GitHub's team of security researchers will create an advisory to document the vulnerability, which will trigger an alert to impacted repositories. These alerts are powered by the GitHub Advisory Database.
+
+#### Use Dependabot alerts for GitHub Actions
+
+If you already use Dependabot, you’re covered with no additional step required. To receive alerts on GitHub Actions and vulnerabilities impacting your code, you can enable Dependabot by selecting **Enable all** under the Code security and analysis tab.
+
+#### Submit an advisory for GitHub Actions
+
+After discovering a vulnerability, the owner of a GitHub Action can start the process of creating an advisory from the security tab in your repository. Once the repository advisory is created and tagged within the GitHub Action ecosystem, the GitHub curation team will review the repository advisory and create a global advisory when appropriate.
+
+Please ensure to disclosure process, when creating a GitHub Action advisory:
+- The GitHub Action uses semantic versioning.
+- You own the repository of the action you are creating the alert for.
+- Package names are formatted as a user or organization name followed by the repository name with a slash in between: `org-name/repo-name`. An example would be `GitHub/GitHub’s-favorite-action`
+- There is only one action in the repository, so it is distinguishable from other actions
+
 ## View Dependabot alerts 
 
 Dependabot alerts are displayed in the **Security** tab for the repository and in the repository's dependency graph. The alert includes a link to the affected file in the project, and information about a fixed version, if available. 
