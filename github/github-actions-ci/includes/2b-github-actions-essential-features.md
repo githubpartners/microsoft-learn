@@ -26,23 +26,6 @@ jobs:
 
 This example is using the `github.ref` context to check the branch that triggered the workflow. If the branch is `main`, the runner is executed and prints out "Deploying to production server on branch $GITHUB_REF". The default environment variable `$GITHUB_REF` is used in the runner to refer to the branch. Notice that default environment variables are all uppercase where context variables are all lowercase.
 
-## Custom environment variables
-
-Similar to using default environment variables, you can use custom environment variables in your workflow file. To create a custom variable, you need to define it in your workflow file using the `env` context. If you want to use the value of an environment variable inside a runner, you can use the runner operating system's normal method for reading environment variables.
-
-```yml
-name: CI
-on: push
-jobs:
-  prod-check:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Nice work, $First_Name. Deploying to production server on branch $GITHUB_REF"
-        env:
-          First_Name: Mona
-```
-
 ## Scripts in your workflow
 
 In the preceding workflow snippet examples, the `run` keyword is used to simply print a string of text. Because the `run` keyword tells the job to execute a command on the runner, you use the `run` keyword to run actions or scripts.
@@ -93,37 +76,6 @@ steps:
 In the preceding example, the `path` is set to `~/.npm` and the `key` includes the runner's operating system and the SHA-256 hash of the `package-lock.json` file. Prefixing the key with an ID (`npm-cache` in this example) is useful when you are using the `restore-keys` fallback and have multiple caches.
 
 Actions users who use actions/cache to speed up their workflow execution times can use the GitHub cache usage APIs. This allows you to query the cache usage within each repository and monitor if the total size of all caches is reaching the upper limit of 10 GB. Also, you can monitor aggregate cache usage at organization level or even at enterprise level, if your GitHub organization is owned by an enterprise account.
-
-## Pass artifact data between jobs
-
-Similar to the idea of caching dependencies within your workflow, you can pass data between jobs within the same workflow. You can do this by using the `upload-artifact` and `download-artifact` actions. Jobs that are dependent on a previous job's artifacts must wait for the dependent job to complete successfully before they can run. This is useful if you have a series of jobs that need to run sequentially based on artifacts uploaded from a previous job. For example, `job_2` requires `job_1` by using the `needs: job_1` syntax.
-
-```yml
-name: Share data between jobs
-on: push
-jobs:
-  job_1:
-    name: Upload File
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Hello World" > file.txt
-      - uses: actions/upload-artifact@v2
-        with:
-          name: file
-          path: file.txt
-
-  job_2:
-    name: Download File
-    runs-on: ubuntu-latest
-    needs: job_1
-    steps:
-      - uses: actions/download-artifact@v2
-        with:
-          name: file
-      - run: cat file.txt
-```
-
-The preceding example has two jobs. `job_1` writes some text into the file `file.txt` and then uses the `actions/upload-artifact@v2` action to upload this artifact and store the data for future use within the workflow. `job_2` requires `job_1` to complete by using the `needs: job_1` syntax, then uses the `actions/download-artifact@v2` action to download that artifact and then print the contents of `file.txt`.
 
 ## Enable step debug logging in a workflow
 
