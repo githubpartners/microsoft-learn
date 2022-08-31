@@ -1,7 +1,7 @@
 GitHub Packages is a package-management service that makes it easy to publish public or private packages next to your source code.
 
 > [!NOTE]
-> If you are not already familiar with GitHub, check out the [Introduction to GitHub](/learn/modules/introduction-to-github/) Learn module.
+> If you are not already familiar with GitHub, check out the [Introduction to GitHub](https://docs.microsoft.com/en-us/learn/modules/introduction-to-github?azure-portal=true) Learn module.
 
 ## GitHub Packages is a package registry
 
