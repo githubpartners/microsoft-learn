@@ -81,3 +81,5 @@ docker push ghcr.io/OWNER/IMAGE_NAME:latest
 ### Use GITHUB_TOKEN to secure how you manage packages and containers
 
 GITHUB_TOKEN is a special access token available with GitHub Actions. Each token is automatically generated for every job that needs authentication or installation access. Once that job is complete, the token automatically expires to reduce any possible risk exposure. Put more simply. When you run a workflow, the token only exists until that workflow is completed and then it’s deleted. In other solutions, you might have a token that exists for a longer period of time and if you don’t rotate that token, it may expire and break things. The GitHub token in an action workflow can by default publish to GitHub Packages. The net benefit is you have a much more secure system when you use GITHUB_TOKEN and reduce your attack surface area.
+
+In the next exercise, you'll navigate to a GitHub repository to validate your ability to publish to a GitHub Packages registry.
