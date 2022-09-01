@@ -105,3 +105,5 @@ GitHub Actions lets you control the permissions granted to the `GITHUB_TOKEN` se
 You can create and configure new repository environments from the repository's **Settings** tab under **Environments**.
 
 GitHub Actions simplifies using secrets with reusable workflows with the secrets: `inherit keyword`. You can simply pass the `secrets: inherit` to the reusable workflow and the secrets will be inherited from the calling workflow.
+
+Next, we'll do an exercise that checks your knowledge on content covered in this module by using GitHub Actions and Microsoft Azure to create two deployment workflows.
