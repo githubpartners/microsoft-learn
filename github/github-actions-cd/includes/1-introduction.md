@@ -29,3 +29,5 @@ This module assumes you've completed the [Automate development tasks by using Gi
   - If you're unfamiliar with continuous integration using GitHub Actions and workflows, check out [Build continuous integration workflows by using GitHub Actions](/learn/modules/github-actions-ci/)
 - An [Azure subscription](https://azure.microsoft.com/free/?azure-portal=true).
 - An understanding of [Microsoft Azure Fundamentals](../../../paths/az-900-describe-cloud-concepts/index.yml)
+
+We'll cover how to use GitHub actions to deploy a container-based web app to Microsoft Azure Web Apps.
