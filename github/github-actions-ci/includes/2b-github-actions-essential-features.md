@@ -107,3 +107,5 @@ For example, a `GET` request to view a specific workflow run log would follow th
 ```http
 GET /repos/{owner}/{repo}/actions/runs/{run_id}/logs
 ```
+
+Next, the exercise checks your knowledge on how to create, customize and test a continuous integration workflow for a project.
