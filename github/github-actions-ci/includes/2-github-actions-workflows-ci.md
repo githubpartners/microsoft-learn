@@ -220,3 +220,5 @@ GitHub Actions simplifies using secrets with reusable workflows with the `secret
 You can discover and configure Actions workflow templates for partner integrations straight from their repository's *Actions* tab under a category called **Security**.  Workflows are recommended based on the repository's content. GitHub will suggest analysis engines that are compatible with the source code in your repository. You can also configure code scanning for organization-owned private repositories where GitHub Advanced Security is enabled.
 
 You can reference local reusable workflows easily. Reusable workflows that are in the same repository as the calling repository can be referenced with just the path and filename: `{path}/{filename}`.
+
+Next, we'll cover how to use default and custom environment variables, custom scripts, cache dependencies, and pass artifact data between jobs. 
