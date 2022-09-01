@@ -1,4 +1,4 @@
-GitHub Packages is a package-management service that makes it easy to publish public or private packages next to your source code.
+Next, you'll learn what a Package Repository is and when to use it. GitHub Packages is a package-management service that makes it easy to publish public or private packages next to your source code.
 
 > [!NOTE]
 > If you are not already familiar with GitHub, check out the [Introduction to GitHub](/learn/modules/introduction-to-github/) Learn module.
