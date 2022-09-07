@@ -69,6 +69,12 @@ steps:
     - uses: actions/javascript-action@2522385f6f7ba04fe7327647b213799853a8f55c
 ```
 
+## Use dependency graph
+
+The dependency graph helps you understand the software you depend on. Developers and maintainers can benefit from seeing who depends upon their actions. From any repository which uses Actions, you can see your Actions workflows listed alongside any other dependencies in the Insights/Dependency Graph experience. You can configure Dependabot version updates to keep your Actions dependencies up to date automatically.
+
+Additionally, you can view a list of repositories that depend on your action under the Dependencies tab. Alternatively, you can look at the **Used By** count on your repository homepage. This count does not include any private repositories that might use your action.
+
 ## Publish an action to the GitHub Marketplace
 
 :::image type="content" source="../media/marketplace.png" alt-text="Image that says GitHub Marketplace, tools to build on and improve your workflow." border="false":::
