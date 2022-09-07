@@ -18,3 +18,5 @@ By the end of this module, you'll:
 
 - A GitHub account
 - Basic knowledge of GitHub Actions
+
+Next, you'll learn what a Package Repository is and when to use it.
