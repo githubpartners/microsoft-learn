@@ -1,6 +1,7 @@
+1-introduction.md
 GitHub Actions allows you to customize your workflows to meet your unique needs. You can configure a GitHub Actions workflow to be triggered when an event occurs in your repository, such as an issue being created or a pull request being opened.
 
-Suppose your team has to build and test pull requests for your application. In addition, they want to deploy the application every time a release is created. On top of that they want to label issues every time one is opened. The team wants to automate all of these processes. In order to do so, you decide to use GitHub Actions workflows.
+Imagine your team wants to automate processes like build and test pull requests, deploy your application every time a release is created, and label issues every time one is opened. Github Actions workflows allow you to do all of these things and more! 
 
 In this module, you'll be introduced to GitHub Actions workflows.
 
