@@ -2,9 +2,9 @@ Here, you'll learn the basics about creating, using, and sharing GitHub Actions 
 
 ## Create a GitHub Actions workflow
 
-Workflows can be created by users with *write* access to the organization's `.github` repository. Those workflows can then be used by organization members who have permission to create workflows. Workflows created by users can only be used to create workflows in public repositories. Organizations using GitHub Enterprise Cloud can also use workflows to create workflows in private repositories.
+Workflows can be created by users with *write* access to your organization's `.github` repository. Those workflows can then be used by your organization’s members who have permission to create workflows. Workflows created by users can only be used to create workflows in public repositories. If your organization utilizes GitHub Enterprise Cloud, you can also use workflows to create workflows in private repositories.
 
-Use these steps to create a workflow and metadata file. The metadata file describes how the workflows will be presented to users when they are creating a new workflow.
+Here are the steps to create a workflow and metadata file. The metadata file describes how the workflows will be presented to users when they are creating a new workflow.
 1. Create a new public repository named `.github` in your organization, if it doesn't already exist
 2. Create a directory named `workflow-templates`
 3. Create your new workflow file inside the `workflow-templates` directory
@@ -34,7 +34,7 @@ jobs:
 ```
 
 4. Create a metadata file inside the `workflow-templates` directory
-  - The metadata file must have the same name as the workflow file, but instead of the `.yml extension` it must be appended with `.properties.json`
+   - The metadata file must have the same name as the workflow file, but instead of the `.yml extension` it must be appended with `.properties.json`
 
 For example, this file named `octo-organization-ci.properties.json` contains the metadata for a workflow file named `octo-organization-ci.yml`.
 
@@ -105,14 +105,14 @@ GitHub provides ready-to-use workflows for the following high level categories:
 
 You can also create your own workflows to share with your organization. These workflows will appear alongside the GitHub-provided workflows.
 
-Anyone with write permission to a repository can set up GitHub Actions workflows for CI/CD or other automation.
+Anyone with write permission to a repository can set up GitHub Actions workflows for CI/CD or other automation with the following steps:
 1. On GitHub.com, navigate to the main page of the repository
 2. Under your repository name, click **Actions**
 3. Click **New workflow**
 4. The *Choose a workflow* page shows a selection of recommended workflows. Find the workflow that you want to use, then click **Configure**
-  - If the workflow contains comments detailing additional setup steps, follow these steps. Many of the workflow have corresponding guides
-  - Some workflows use secrets. For example, `${{ secrets.npm_token }}`. If the workflow uses a secret, store the value described in the secret name as a secret in your repository
-  - Optionally, make additional changes. For example, you might want to change the value of `on` to change when the workflow runs
+   - If the workflow contains comments detailing additional setup steps, follow these steps. Many of the workflow have corresponding guides
+   - Some workflows use secrets. For example, `${{ secrets.npm_token }}`. If the workflow uses a secret, store the value described in the secret name as a secret in your repository
+   - Optionally, make additional changes. For example, you might want to change the value of `on` to change when the workflow runs
 5. Click **Start commit**
 6. Write a commit message and decide whether to commit directly to the default branch or to open a pull request
 
@@ -121,7 +121,3 @@ Anyone with write permission to a repository can set up GitHub Actions workflows
 You can create starter workflows in the .github repository and share them with other users in your organization. Your organization can also share workflows by reusing the workflows exactly or by creating workflows that provide templates for new workflows.
 
 We'll cover how to trigger a workflow in the next unit.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
