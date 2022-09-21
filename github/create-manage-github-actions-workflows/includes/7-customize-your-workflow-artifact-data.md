@@ -2,7 +2,9 @@ Here, you'll learn to customize your workflow with artifact data and environment
 
 ## Pass artifact data between jobs
 
-Similar to the idea of caching dependencies within your workflow, you can pass data between jobs within the same workflow. You can do this by using the `upload-artifact` and `download-artifact` actions. Jobs that are dependent on a previous job's artifacts must wait for the dependent job to complete successfully before they can run. This is useful if you have a series of jobs that need to run sequentially based on artifacts uploaded from a previous job. For example, `job_2` requires `job_1` by using the `needs: job_1` syntax.
+Similar to the idea of caching dependencies within your workflow, you can pass data between jobs within the same workflow. You can do this by using the `upload-artifact` and `download-artifact` actions. 
+
+Jobs that are dependent on a previous job's artifacts must wait for the dependent job to complete successfully before they can run. This is useful if you have a series of jobs that need to run sequentially based on artifacts uploaded from a previous job. For example, `job_2` requires `job_1` by using the `needs: job_1` syntax. Below is an example of passing artifact data between 2 jobs. 
 
 ```yml
 name: Share data between jobs
