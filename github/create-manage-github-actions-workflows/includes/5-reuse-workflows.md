@@ -108,7 +108,7 @@ You can use the GitHub REST API to monitor reusable workflows in use. The `prepa
 - `job_name` - the name of the job that was run
 - `job_workflow_ref` - the workflow file that was used, in the form {owner}/{repo}/{path}/{filename}@{ref}. For a job that calls another workflow, this identifies the called workflow
 
-## How do reusable workflows compare to composite actions
+## Reusable workflows versus composite actions
 
 Composite actions enable you to combine multiple actions into a single action that you can then insert into any workflow. This means you can refactor long YAML workflow files into much smaller files. This saves a fair amount of copying and pasting. For example, if your job needs to run on a specific runner or machine, you need to use reusable workflows. Composite actions don’t specify this type of thing. Composite actions are intended to be more isolated and generic.
 
@@ -123,12 +123,8 @@ Below are some key differences between reusable workflows and composite actions.
 | Can use multiple jobs |                                                       Cannot use multiple jobs
 | Each step is logged in real-time |                                                      Logged as one step even if it contains multiple steps
 
-Reusable workflows allow you to specify any number of things and customize them more to your liking. You can have multiple jobs and that gives you a lot more granular control and power. The reusable workflow can be used in and across public repositories or within a single private repository, and reusable workflows from public repositories can be referenced using a SHA, a release tag, or a branch name. 
+Reusable workflows allow you to specify any number of things and customize them more to your liking. You can have multiple jobs which gives you precise control and power. The reusable workflow can be used in and across public repositories or within a single private repository, and reusable workflows from public repositories can be referenced using a SHA, a release tag, or a branch name. 
 
-Re-running all jobs in a workflow will use the reusable workflow from the specified reference. You can have a reusable workflow call one reusable workflow and reusable workflows don’t require individual folders for each workflow like composite actions do.
+Re-running all jobs in a workflow will use the reusable workflow from the specified reference. You can have a reusable workflow call another reusable workflow and without requiring individual folders for each workflow like composite actions do.
 
 We'll cover how to customize your workflow with artifact data and environment variables.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
