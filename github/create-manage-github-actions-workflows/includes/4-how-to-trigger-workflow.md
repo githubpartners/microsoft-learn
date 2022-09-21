@@ -13,7 +13,7 @@ Workflow triggers are events that cause a workflow to run. These events include 
 
 You can configure your workflow to run when a push is made to the default branch of your repository, when a release is created, or when an issue is opened. Workflow triggers are defined with the `on` key.
 
-Use the following steps to trigger a workflow run.
+Here are steps to trigger a workflow run.
 
 1. An event occurs on your repository. The event has an associated commit SHA and Git ref
 2. GitHub searches the `.github/workflows` directory in your repository for workflow files that are present in the associated commit SHA or Git ref of the event
@@ -118,7 +118,7 @@ on:
 
 ### Manually triggered workflows
 
-When using the `workflow_dispatch` event, you can optionally specify inputs that are passed to the workflow. The triggered workflow receives the inputs in the `inputs` context.
+When using the `workflow_dispatch` event, you have the option to specify inputs that are passed to the workflow. The triggered workflow receives the inputs in the `inputs` context.
 
 For example:
 
@@ -157,11 +157,11 @@ jobs:
         run: echo  The tags are ${{ inputs.tags }} 
 ```
 
-### Further control how your workflow will run
+### More workflow control
 
-You can use conditionals and environments to control whether individual jobs or steps in your workflow will run, if you want more granular control than events, event activity types, or event filters provide.
+Looking for more granular control than what events, event activity types, or event filters provide? Using conditionals and environments give you more control over individual jobs or steps in your workflow.
 
-Conditionals will further control whether jobs or steps in your workflow will run. For example, you want the workflow to run when a specific label is added to an issue. You can trigger on the `issues labeled` event activity type and use a conditional to check what label triggered the workflow. The following workflow runs when any label is added to an issue in the workflow's repository, but the `run_if_label_matches` job will only execute if the label is named bug.
+Conditionals will further control whether jobs or steps in your workflow will run. For example, if you want the workflow to run when a specific label is added to an issue, you can trigger on the `issues labeled` event activity type and use a conditional to check what label triggered the workflow. The following workflow will run when any label is added to an issue in the workflow's repository, but the `run_if_label_matches` job will only execute if the label is named bug.
 
 ```
 on:
@@ -177,7 +177,10 @@ jobs:
       - run: echo 'The label was bug'
 ```
 
-You can use an environment that requires approval from a specific team or user to manually trigger a specific job in a workflow. First, configure an environment with required reviewers. Second, reference the environment name in a job in your workflow using the `environment:` key. Any job referencing the environment will not run until at least one reviewer approves the job.
+The following steps will give you the ability to use an environment that requires approval from a specific team or user to manually trigger a specific job in a workflow.
+
+1. Configure an environment with required reviewers
+2. Reference the environment name in a job in your workflow using the `environment:` key. Any job referencing the environment will not run until at least one reviewer approves the job
 
 For example, the following workflow will run whenever there is a push to main. The `build` job will always run. The `publish` job will only run after the `build` job successfully completes (due to `needs: [build]`) and after all of the rules (including required reviewers) for the environment called `production` pass (due to `environment: production`).
 
@@ -231,7 +234,3 @@ jobs:
 ```
 
 We'll cover reusing workflows in the next unit.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
