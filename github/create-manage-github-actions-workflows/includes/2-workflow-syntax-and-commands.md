@@ -1,10 +1,12 @@
-Here you'll learn workflow syntax and commands. Creating a workflow is pretty straightforward as long as you can find the right actions for your steps.
+Here you'll learn about YAML syntax for workflows and workflow commands.
+
+Creating a workflow is pretty straightforward as long as you can find the right actions for your steps. 
 
 ## YAML syntax for workflows
 
 Workflow files use YAML syntax, and must have either a `.yml` or `.yaml` file extension. You need to store workflow files in the `.github/workflows` directory of your repository.
 
-To automatically trigger a workflow, use `on` to define which events can cause the workflow to run. You can define single or multiple events that can a trigger workflow, or set a time schedule.
+To automatically trigger a workflow, use `on` to define which events can cause the workflow to run. You can define single or multiple events that can trigger a  workflow, or set a time schedule.
 
 A workflow with the following `on` value will run when a push is made to any branch in the workflow's repository:
 
@@ -74,7 +76,7 @@ on:
  
 ## Workflow commands
 
-Creating a workflow is pretty straightforward as long as you can find the right actions for your steps. In some cases you may need to create your own actions to achieve your desired outcomes, but you can use workflow commands to add another level of customization to your workflows.
+Creating a workflow is simple as long as you can find the right actions for your steps. In some cases you may need to create your own actions to achieve your desired outcomes, but you can use workflow commands to add another level of customization to your workflows.
 
 Workflow commands enable you to communicate with the GitHub Actions runner machine by printing formatted lines of text to the console. These workflow commands can be used with shell commands or within your custom actions. Workflow commands are useful because they enable you to share information between workflow steps, print debug or error messages to the console, set environment variables, set output parameters, or add to the system path.
 
@@ -101,7 +103,7 @@ You can also create a message to print to the log with a filename (file), line n
 echo "::error file=app.js,line=10,col=15::Something went wrong"
 ```
 
-It's important to note that these workflow commands need to be on a single line. Characters that interfere with parsing such as commas and line breaks will need to be URL-encoded.
+It's important that these workflow commands need to be on a single line. Characters that interfere with parsing such as commas and line breaks will need to be URL-encoded.
 
 For example, the below text is a multi-line message.
 
@@ -119,7 +121,3 @@ This text spans%0Aacross multiple lines
 In addition to workflow commands, you can set exit codes to set the status of an action. This is important because when you're working with jobs in a workflow, a failed exit code will halt all concurrent actions and cancel any future actions. If you are creating a JavaScript action, you can use the actions toolkit `@actions/core` package to log a message and set a failure exit code. If you are creating a Docker container action, you can set a failure exit code in your `entrypoint.sh` script.
 
 We'll cover create, use, and share starter workflows in the next unit.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
