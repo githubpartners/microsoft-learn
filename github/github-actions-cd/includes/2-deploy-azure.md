@@ -16,6 +16,8 @@ on:
     types: [labeled]
 ```
 
+Workflow re-runs in GitHub Actions will use the initial run’s actor for privilege evaluation. The actor who triggered the re-run will continue to be displayed in the UI, and accessed in a workflow via the `triggering_actor` field in the `github` context.
+
 ## Control execution with a job conditional
 
 Often, you only want to run a workflow if some condition is true. 
@@ -164,3 +166,7 @@ steps:
 ```
 
 Notice that you use GitHub actions to check out the repository and to sign in to Azure. After that, you create the resources you need and deploy the container by using the Azure CLI.
+
+## Disable Actions workflows
+
+You can temporarily disable a GitHub Actions workflow either in the UI or through the API. This functionality allows you to stop a workflow from being triggered without having to delete the file from the repo. Later, you can easily re-enable it again from the UI or through the API.

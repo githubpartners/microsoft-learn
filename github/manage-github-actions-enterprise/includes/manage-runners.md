@@ -7,7 +7,7 @@ GitHub Actions workflows can be executed by two types of runners: GitHub-hosted 
 > [!Note]
 > GitHub-hosted runners are only available for Enterprise Cloud. If you have an Enterprise Server instance, this section does not apply to you.
 
-GitHub-hosted runners offer a quicker, simpler way to run your workflows, while self-hosted runners are a highly configurable way to run workflows in your own custom environment. For example, if you need to use an IP address allowlist for your organization or a specialized hardware configuration for running your workflows, you would use a self-hosted runner.
+GitHub-hosted runners offer a quicker, simpler way to run your workflows, while self-hosted runners are a highly configurable way to run workflows in your own custom environment. For example, if you need to use an IP address allowlist for your organization or a specialized hardware configuration for running your workflows, you would use a self-hosted runner. When running a job that requires a self-hosted runner, GitHub Actions will look for self-hosted runners with the first available matching runner. This is at any level running the job in all cases. This allows jobs to be sent to self-hosted runners much faster, especially for organizations and enterprises with lots of self-hosted runners.
 
 The table below compares GitHub-hosted runners versus self-hosted runners. Use it to choose the appropriate runner for your workload.
 
@@ -61,6 +61,14 @@ To add a label to a self-hosted runner, navigate to the GitHub Actions settings 
     :::image type="content" source="../media/show-labels.png" alt-text="Example runner with label menu displayed.":::
 
 1. Click an existing label to add it to your runner or type the name of your new label in the **Filter labels** field and select **Create new label**. The label is automatically added to your runner when you create it.
+
+Managing self-hosted runners within an enterprise no longer requires personal access tokens with the` admin:enterprise` scope. You can tighten down the permissions on your token by using the `manage_runners:enterprise` scope instead. A token with this scope can authenticate many endpoints to manage your enterprise's self-hosted runners.
+
+It is possible to list, add, and remove runner labels for Actions self-hosted runners via API.
+
+### Restrict self-hosted runner groups to specific workflows
+
+Administrators can further control access by selecting specific workflow files and versions. This will restrict self-hosted runner groups to only be accessible from certain workflows. Combining this feature with reusable workflows will help you create more secure standard workflows in your organization.
 
 ### Proxy servers
 
