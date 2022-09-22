@@ -2,13 +2,15 @@ In this module, you implemented a CI solution using GitHub Actions and workflows
 
 You can now:
 
-- Build and test a Node.js project by using GitHub Actions and a templated workflow
-- Debug a failed test using the GitHub Actions log
-- Customize your workflow with GitHub Actions to:
-  - Create a build artifact and save it
-  - Get access to your build artifacts
-  - Test against multiple targets
-  - Add labels your pull requests
+- Create a workflow from a template
+- Understand the GitHub Actions logs
+- Save and access build artifacts
+- Automate reviews in GitHub using workflows
+- Use partial re-runs
+- Simplify using secrets with reusable workflows
+- Discover code scanning partner integrations
+- How to use default environment variables and contexts
+- Access the workflow logs from the user interface
 
 ## Next steps
 
@@ -18,17 +20,17 @@ To continue your journey with GitHub Actions, check out the next module on this 
 
 Here are some links to more information on the topics we discussed in this module.
 
-- [GitHub Actions documentation](https://help.github.com/actions?azure-portal=true)
+- [GitHub Actions documentation](https://docs.github.com/en/actions)
 - [GitHub Marketplace](https://github.com/marketplace?type=actions&azure-portal=true)
 - [GitHub created actions](https://github.com/actions?azure-portal=true)
 - [actions/checkout@v1](https://github.com/actions/checkout?azure-portal=true)
 - [actions/upload-artifact](https://github.com/actions/upload-artifact?azure-portal=true)
 - [actions/download-artifact](https://github.com/actions/download-artifact?azure-portal=true)
 - [pullreminders/label-when-approved-action](https://github.com/pullreminders/label-when-approved-action?azure-portal=true)
-- [Metadata syntax for GitHub Actions](https://help.github.com/actions/building-actions/metadata-syntax-for-github-actions?azure-portal=true)
-- [Workflow syntax for GitHub Actions](https://help.github.com/actions/reference/workflow-syntax-for-github-actions?azure-portal=true)
+- [Metadata syntax for GitHub Actions](https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions)
+- [Workflow syntax for GitHub Actions](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions)
 - [Events that trigger workflows](https://help.github.com/articles/events-that-trigger-workflows?azure-portal=true)
-- [GitHub Actions usage limits](https://help.github.com/actions/reference/workflow-syntax-for-github-actions#usage-limits?azure-portal=true)
+- [GitHub Actions usage limits](https://docs.github.com/en/billing/managing-billing-for-github-actions/managing-your-spending-limit-for-github-actions)
 - [About GitHub Actions: Job](https://help.github.com/articles/about-github-actions#job?azure-portal=true)
 - [About CI: Job](https://help.github.com/articles/about-continuous-integration#job?azure-portal=true)
 - [npm install](https://docs.npmjs.com/cli/install?azure-portal=true)
