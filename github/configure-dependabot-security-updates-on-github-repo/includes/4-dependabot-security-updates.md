@@ -1,6 +1,6 @@
 Now you know how Dependabot alerts can help you identify vulnerable dependencies in your repository and you're ready to learn about security updates and version updates. Dependabot security updates help you to fix the vulnerabilities identified by Dependabot alerts. Version updates help manage different versions of dependent packages.
 
-Once you have set up Dependabot alerts to notify you of vulnerabilities in your repository, you can enable two related features so that Dependabot automatically raises pull requests to try to help with your dependency management:
+Once you have set up Dependabot alerts to notify you of vulnerabilities in your repository or at an organizational level, you can enable two related features so that Dependabot automatically raises pull requests to try to help with your dependency management:
 
 - **Dependabot security updates** are automated pull requests that help you update dependencies with known vulnerabilities.
 - **Dependabot version updates** are automated pull requests that keep your dependencies updated, even when they don’t have any vulnerabilities.
@@ -9,16 +9,17 @@ Once you have set up Dependabot alerts to notify you of vulnerabilities in your 
 
 ## Supported repositories
 
-GitHub automatically enables Dependabot security updates for  every repository that meets the following prerequisites:
+GitHub automatically enables Dependabot security updates for every repository that meets the following prerequisites:
 
 - The repository isn't a fork.
 - The repository isn't archived.
 - The repository is public or it's private and you've enabled the read-only analysis by the dependency graph, and vulnerability alerts in the repository's settings.
+- If your organization has already set up **Automatically enable for new repositories**
 - Dependabot security updates aren't disabled for the repository.
 
 ## Manually enable security updates
 
-You can enable security updates manually on private repositories that don't meet the prerequisites mentioned in the section above. Make sure you've enabled the dependency graph and Dependabot alerts on your repository, and follow these steps to manually enable security updates for it:
+You can enable security updates manually on private repositories at a personal or organizational level that don't meet the prerequisites mentioned in the section above. Make sure you've enabled the dependency graph and Dependabot alerts on your repository, and follow these steps to manually enable security updates for it:
 
 1. Sign in to your GitHub account and select your profile photo from the upper-right.
 2. Select **Settings** > **Code security and analysis**.
@@ -26,7 +27,7 @@ You can enable security updates manually on private repositories that don't meet
 
 ## View and resolve security updates 
 
-View Dependabot pull requests the same way that you would view other pull requests on GitHub, within the **Pull requests** tab of the related repository. Dependabot pull requests will have dependabot as the author, this account is the bot account used by Dependabot. They'll also use the `dependencies` label.
+View Dependabot pull requests the same way that you would view other pull requests on GitHub, within the **Pull requests** tab of the related repository. Dependabot pull requests will have Dependabot as the author, this account is the bot account used by Dependabot. They'll also use the `dependencies` label.
 
 Dependabot pull requests include all the information that you need to review and merge a proposed fix into your project like release notes, changelog entries, and commit details. Details of which vulnerability a pull request resolves are hidden from anyone who doesn't have access to Dependabot alerts for the repository. Merging a security update pull request automatically closes the related Dependabot alert. 
 
@@ -50,7 +51,7 @@ The **Last checked TIME ago** link in the **Dependabot** tab also enables you to
 
 Version updates are another Dependabot feature that helps to manage your dependencies by automatically generating a pull request whenever there's a new version of a package or application that your project depends on.
 
-Dependabot checks for new versions by looking at the semantic versioning of the dependency (`MAJOR.MINOR.PATCH` naming convention), which is included in a manifest or other type of package definition file stored in your repository. To enable version updates, you need to create a `dependabot.yml` file, which will essentially tell Dependabot where to find the manifest, or other package definition file. You'll learn how to create a `dependabot.yml` file in the next section.
+Dependabot checks for new versions by looking at the semantic versioning of the dependency (`MAJOR.MINOR.PATCH` naming convention), which is included in a manifest or other type of package definition file stored in your repository. To enable version updates, you need to create a `dependabot.yml` file, which will essentially tell Dependabot where to find the manifest, or other package definition files. You'll learn how to create a `dependabot.yml` file in the next section.
 
 ### Enable version updates for private repositories
 
