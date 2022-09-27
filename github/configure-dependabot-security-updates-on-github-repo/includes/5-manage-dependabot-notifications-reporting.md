@@ -13,7 +13,7 @@ By default, users receive notifications in the following manner:
 - On GitHub for mobile, as web notifications.
 
 >[!NOTE]
-> You can sync your web and mobile notifications so that taking action on a notification in one inbox will automatically change its status in the other. For example reading a notification on mobile would change its status to 'read' for the web inbox as well. To sync your web and mobile inboxes, make sure that your email client can view images from `notifications@github.com`.
+> You can sync your web and mobile notifications so that taking action on a notification in one inbox will automatically change its status in the other. For example, reading a notification on mobile would change its status to 'read' for the web inbox as well. To sync your web and mobile inboxes, make sure that your email client can view images from `notifications@github.com`.
 
 ## Configure notifications for Dependabot alerts
 
