@@ -1,6 +1,6 @@
 In the previous unit, you learned about the different GitHub tools that work together to enable dependency management and how Dependabot helps to automate some of these processes. Now, you'll learn about Dependabot alerts. 
 
-If your project relies on external dependencies, then you can use valuable resources trying to monitor them. This monitoring process is important because you have to be aware of any changes or vulnerabilities in the code. It can also be challenging because this code isn't a part of your project. GitHub helps to automate this process by monitoring your dependencies and then sending Dependabot alerts when vulnerabilities are detected in your repository.
+If your project relies on external dependencies, chances are you need to use valuable resources to monitor them. This monitoring process is important because you have to be aware of any changes or vulnerabilities in the code. It can also be challenging because this code isn't a part of your project. GitHub helps to automate this process by monitoring your dependencies and then sending Dependabot alerts when vulnerabilities are detected in your repository.
 
 Dependabot alerts are generated under two conditions:
 
@@ -16,7 +16,7 @@ GitHub also reviews pull request attempts to merge changes into the main branch 
 
 ## Set up Dependabot alerts
 
-Dependabot alerts are enabled for public repositories by default. Repository administrators and owners can however, set up Dependabot alerts for private repositories and for some GitHub Enterprise Server repositories. Enabling these features grants GitHub permission to perform read-only analysis of those specific repositories.
+Dependabot alerts are enabled for public repositories by default. However, repository administrators and owners can set up Dependabot alerts for private repositories and for some GitHub Enterprise Server repositories. Enabling these features grants GitHub permission to perform read-only analysis of those specific repositories.
 
 ### Set up Dependabot alerts for private repositories
 
