@@ -4,4 +4,4 @@ Suppose you are a developer needing custom solutions for npm modules, sending SM
 
 In this module, you'll learn the different ways to create a custom action, its necessary metadata and syntax, and how to publish a custom action to the GitHub Marketplace.
 
-Next up, learn about GitHub Actions, the metadata, syntax, and workflow commands to create custom GitHub Actions.
+Next up, learn about the metadata, syntax, and workflow commands to create custom GitHub Actions.
