@@ -8,15 +8,11 @@ In this module, you learn to use key GitHub features, including issues, notifica
 
 In this module, you will:
 
-- Communicate with the project community in issues
-- Manage notifications for project events
-- Create branches to manage work in parallel
-- Make commits to update project source
-- Introduce changes with pull requests
-- Deploy a web page to GitHub Pages
-- Recognize the differences between Git and GitHub and the roles they play in the software development lifecycle 
-- Describe a repository fork and how it differs from a clone 
-- Explain the functionality of repository labels and where to apply them in issues and pull requests 
+- Recognize the differences between Git and GitHub
+- Understand the basics of the following features of GitHub:
+  - Issues, notifications, branches, commits, pull requests, notifications, labels, actions, forks, and GitHub pages
+- Learn how to:
+  - Create a branch, commit a file, open a pull request, and merge a pull request
 
 ## Prerequisites
 
