@@ -14,9 +14,8 @@ abstract: |
   In this module, you will learn how to:
   - Identify the metadata and syntax needed to create custom GitHub actions
   - Learn best practices to publish a private or public GitHub action
-  - Consume actions within a workflow file
-  - Create custom JavaScript based actions
   - Publish a newly created action to the GitHub Marketplace
+  - Create custom JavaScript based actions
 levels:
   - intermediate
 roles:
