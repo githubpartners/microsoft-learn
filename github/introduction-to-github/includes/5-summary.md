@@ -1,16 +1,12 @@
-In this module, you learned about the key features of GitHub, including issues, commits, and pull requests. You also used GitHub Pages to publish a public site based on the contents of your project.
+In this module, you learned about the key features of GitHub, including issues, commits, and pull requests.
 
 You learned about:
 
-- Communicating with the project community in issues
-- Managing notifications for project events
-- Creating branches to manage work in parallel
-- Making commits to update project source
-- Introducing changes with pull requests
-- Deploying a web page to GitHub Pages
-- Differences between Git and GitHub and the roles they play in the software development lifecycle 
-- How a repository fork differs from a clone 
-- Repository labels and where to apply them in issues and pull requests 
+- Recognize the differences between Git and GitHub
+- Understand the basics of the following features of GitHub:
+  - Issues, notifications, branches, commits, pull requests, notifications, labels, actions, forks, and GitHub pages
+- Learn how to:
+  - Create a branch, commit a file, open a pull request, and merge a pull request
 
 Now that you're familiar with the basics of GitHub, learn to [Upload your project by using GitHub best practices](/learn/modules/upload-project-github/).
 
