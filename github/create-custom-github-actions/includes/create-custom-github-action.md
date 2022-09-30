@@ -1,4 +1,4 @@
-GitHub Actions is a powerful feature that empowers you to go from code to cloud all from the comfort and convenience of your own repository. Here, you'll learn about the different types of GitHub actions and the metadata, syntax, and workflow commands to create custom GitHub actions. 
+Here, you'll learn about the different types of GitHub actions and the metadata, syntax, and workflow commands to create custom GitHub actions. GitHub Actions is a powerful feature that empowers you to go from code to cloud all from the comfort and convenience of your own repository.
 
 ## Types of GitHub actions
 
