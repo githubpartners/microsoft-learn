@@ -187,3 +187,4 @@ This text spans%0Aacross multiple lines
 
 In addition to workflow commands, you can set exit codes to set the status of an action. This is important because when you're working with jobs in a workflow, a failed exit code will halt all concurrent actions and cancel any future actions. If you are creating a JavaScript action, you can use the actions toolkit `@actions/core` package to log a message and set a failure exit code. If you are creating a Docker container action, you can set a failure exit code in your `entrypoint.sh` script.
 
+Next up, learn about choosing the right visibility for your action, best practices for documenting and versioning your action, and how to publish your action to the GitHub Marketplace.
