@@ -4,21 +4,4 @@ Imagine that you are a senior developer at a start-up company specializing in he
 
 In this module, you will learn about the CodeQL static analysis tool and how the code scanning feature in GitHub uses it to automate vulnerability scanning. You will also learn how to customize a code scanning workflow that uses CodeQL, how to include additional queries, and how to adapt your workflow to repositories that have multiple languages.
 
-## Learning objectives
-
-By the end of this module, you will be able to:
-
-* Understand CodeQL and how it analyzes code
-* Understand QL, a unique logic programming language
-* Set up CodeQL based code scanning in a GitHub repository
-* Reference a custom CodeQL query
-* Configure the language matrix in a CodeQL workflow
-* Learn how to use the CodeQL CLI to generate code scanning results and upload them to GitHub
-* Implement custom build steps
-
-## Prerequisites
-
-- A GitHub enterprise account with a GitHub Advanced Security license
-- Necessary permissions to administrate your repository
-- Knowledge of GitHub Advanced Security's code scanning feature
-- Knowledge of GitHub Actions
+Next up, you'll learn how CodeQL is used by developers.
