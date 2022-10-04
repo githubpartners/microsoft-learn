@@ -1,8 +1,10 @@
 Here, you'll learn the basics about creating, using, and sharing GitHub Actions workflows.
 
-## Create a GitHub Actions workflow
+## Create a starter workflow
 
-Workflows can be created by users with *write* access to your organization's `.github` repository. Those workflows can then be used by your organization’s members who have permission to create workflows. Workflows created by users can only be used to create workflows in public repositories. If your organization utilizes GitHub Enterprise Cloud, you can also use workflows to create workflows in private repositories.
+![workflow-template-files](https://user-images.githubusercontent.com/6351798/193735008-0a72ccaa-0954-4076-afc4-3e5336c5601a.png)
+
+You can use starter workflows as a starting place to build your custom workflow or use them as-is. This not only saves time, it promotes consistency and best practice across your organization. These starter workflows can be created by users with *write* access to your organization's `.github` repository. Those workflows can then be used by your organization’s members who have permission to create workflows. Workflows created by users can only be used to create workflows in public repositories. If your organization utilizes GitHub Enterprise Cloud, you can also use workflows to create workflows in private repositories.
 
 Here are the steps to create a workflow and metadata file. The metadata file describes how the workflows will be presented to users when they are creating a new workflow.
 1. Create a new public repository named `.github` in your organization, if it doesn't already exist

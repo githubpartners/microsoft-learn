@@ -1,6 +1,4 @@
-Here you'll learn about YAML syntax for workflows and workflow commands.
-
-Creating a workflow is pretty straightforward as long as you can find the right actions for your steps. 
+Understanding your workflow can seem challenging at first. In this unit, you'll learn more about the YAMl syntax and some common workflow commands.
 
 ## YAML syntax for workflows
 
@@ -24,6 +22,8 @@ If you specify multiple events, only one of those events needs to occur to trigg
 
 ### Activity types
 
+![activity-types](https://user-images.githubusercontent.com/6351798/193733579-5140c49b-c183-4049-a604-be5f9ed1d703.png)
+
 Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run. If your workflow triggers on the `label` event, it will run whenever a label is `created`, `edited`, or `deleted`. If you specify the `created` activity type for the `label` event, your workflow will run when a label is created but not when a label is edited or deleted.
 
 ```
@@ -42,8 +42,6 @@ on:
       - opened
       - labeled
 ```
-
-### Pull requests
 
 When using the `pull_request` and `pull_request_target` events, you can configure a workflow to run only for pull requests that target specific branches. Use the `branches` filter when you want to include branch name patterns or when you want to both include and exclude branch names patterns. Use the `branches-ignore` filter when you only want to exclude branch name patterns. You cannot use both the `branches` and `branches-ignore` filters for the same event in a workflow.
 
@@ -65,7 +63,7 @@ on:
 
 ### On schedule
 
-You can use `on.schedule` to define a time schedule for your workflows. Scheduled workflows run on the latest commit on the default or base branch. The shortest interval you can run scheduled workflows is once every 5 minutes. Using POSIX cron syntax for specific UTC times, this example triggers the workflow every day at 5:30 and 17:30 UTC:
+If you want to define a time schedule for your workflows, you can use the `on.schedule` event type. Scheduled workflows run on the latest commit on the default or base branch. The shortest interval you can run scheduled workflows is once every 5 minutes. This is done by using POSIX cron syntax to run at specific UTC times. The below example will trigger the workflow to run every day at 5:30 and 17:30 UTC:
 
 ```
 on:
@@ -120,4 +118,4 @@ This text spans%0Aacross multiple lines
 
 In addition to workflow commands, you can set exit codes to set the status of an action. This is important because when you're working with jobs in a workflow, a failed exit code will halt all concurrent actions and cancel any future actions. If you are creating a JavaScript action, you can use the actions toolkit `@actions/core` package to log a message and set a failure exit code. If you are creating a Docker container action, you can set a failure exit code in your `entrypoint.sh` script.
 
-We'll cover create, use, and share starter workflows in the next unit.
+In the next unit, we'll cover how to create, use, and share starter workflows.
