@@ -2,6 +2,8 @@ Here, we'll introduce reusable workflows. You'll learn about DRY (don’t repeat
 
 ## Make any GitHub Actions workflow reusable
 
+![reusable-workflow](https://user-images.githubusercontent.com/6351798/193931014-2658c5c3-1fbf-480f-b24c-eceb196457a1.png)
+
 When you DRY, this means that you don’t need to copy and paste your workflows from one repository to another. As an example, if you have three different Node applications and you’re building them all the same way, you can use one reusable workflow for all three.
 
 Additionally, when combined with OpenID Connect (OIDC), reusable workflows let you enforce consistent deployments across your repository, organization, or enterprise. You can do this by defining trust conditions on cloud roles based on reusable workflows.
