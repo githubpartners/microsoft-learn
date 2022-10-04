@@ -1,8 +1,29 @@
-Understanding your workflow can seem challenging at first. In this unit, you'll learn more about the YAMl syntax and some common workflow commands.
+Understanding your workflow can seem challenging at first. In this unit, you'll learn more about the YAMl syntax for your workflow files and some common workflow commands.
 
 ## YAML syntax for workflows
 
-Workflow files use YAML syntax, and must have either a `.yml` or `.yaml` file extension. You need to store workflow files in the `.github/workflows` directory of your repository.
+![yaml-syntax](https://user-images.githubusercontent.com/6351798/193923396-68fce29b-209c-4e56-b740-ae78beb492b7.png)
+
+Workflow files use YAML syntax, and must have either a `.yml` or `.yaml` file extension to be valid YAML files. These files must be stored in the `.github/workflows` directory of your repository in order for GitHub to recognize them as workflow files.
+
+The foundations of any GitHub Actions workflow file contain four main parts or definitions; `name`, `run-name`, `on`, and `jobs`. Let's explore each of these to better understand their purpose and how they work.
+
+### 1) name
+
+This is the name of your workflow. GitHub displays the name of each workflow in your repository's "Actions" tab. If you have several workflows running, it's uesful to be able to identify each workflow to view, diagnose, or troubleshoot. If you omit the name, GitHub will set it to the workflow file path relative to the root of the repository.
+
+### 2) run-name
+
+REPLACE WITH TEXT
+
+### 3) on
+
+REPLACE WITH TEXT
+
+### 4) jobs
+
+REPLACE WITH TEXT
+
 
 To automatically trigger a workflow, use `on` to define which events can cause the workflow to run. You can define single or multiple events that can trigger a  workflow, or set a time schedule.
 
@@ -21,8 +42,6 @@ on: [push, fork]
 If you specify multiple events, only one of those events needs to occur to trigger your workflow.
 
 ### Activity types
-
-![activity-types](https://user-images.githubusercontent.com/6351798/193733579-5140c49b-c183-4049-a604-be5f9ed1d703.png)
 
 Some events have activity types that give you more control over when your workflow should run. Use `on.<event_name>.types` to define the type of event activity that will trigger a workflow run. If your workflow triggers on the `label` event, it will run whenever a label is `created`, `edited`, or `deleted`. If you specify the `created` activity type for the `label` event, your workflow will run when a label is created but not when a label is edited or deleted.
 
