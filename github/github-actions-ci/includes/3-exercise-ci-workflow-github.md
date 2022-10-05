@@ -2,6 +2,8 @@ This exercise checks your knowledge on how to create, customize and test a conti
 
 ## Getting started
 
+![Image](https://user-images.githubusercontent.com/6351798/193979027-5274f63e-6523-4638-8c1d-c9942ea7a431.png)
+
 When you click the _Start the exercise on GitHub_ button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
 
 - Select the _Start course_ button or the _Use this template_ feature within the template repository. This will prompt you to create a new repository. We recommend creating a public repository, as private repositories will use Actions minutes.
