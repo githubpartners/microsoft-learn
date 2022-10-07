@@ -1,4 +1,4 @@
-Understanding your workflow can seem challenging at first. In this unit, you'll learn more about the YAMl syntax for your workflow files and some common workflow commands.
+Understanding your workflow can seem challenging at first. In this unit, you'll learn more about the YAML syntax for your workflow files and some common workflow commands.
 
 ## YAML syntax for workflows
 
@@ -10,20 +10,19 @@ The foundations of any GitHub Actions workflow file contain four main parts or d
 
 ### 1) name
 
-This is the name of your workflow. GitHub displays the name of each workflow in your repository's "Actions" tab. If you have several workflows running, it's uesful to be able to identify each workflow to view, diagnose, or troubleshoot. If you omit the name, GitHub will set it to the workflow file path relative to the root of the repository.
+This is the name of your workflow. GitHub displays the name of each workflow in your repository's "Actions" tab. If you have several workflows running, it's useful to be able to identify each workflow to view, diagnose, or troubleshoot. If you omit the name, GitHub will set it to the workflow file path relative to the root of the repository.
 
 ### 2) run-name
 
-REPLACE WITH TEXT
+This is the name for workflow runs generated from the workflow, which appears in the list of workflow runs on your repository's "Actions" tab. If you omit `run-name`, the run name is set to event-specific information for the workflow run.
 
 ### 3) on
 
-REPLACE WITH TEXT
+`on` automatically triggers a workflow. You can use `on` to define which events can cause the workflow to run. You can further define single or multiple events that can a trigger workflow, or set a time schedule.
 
 ### 4) jobs
 
-REPLACE WITH TEXT
-
+A workflow run is made up of one or more `jobs`. `jobs` run in parallel by default. You can run jobs sequentially or you can define dependencies on other jobs using the jobs.<job_id>.needs keyword.
 
 To automatically trigger a workflow, use `on` to define which events can cause the workflow to run. You can define single or multiple events that can trigger a  workflow, or set a time schedule.
 
