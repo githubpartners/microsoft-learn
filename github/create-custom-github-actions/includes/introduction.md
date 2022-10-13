@@ -4,4 +4,25 @@ Suppose you are a developer needing your actions to run in a specific environmen
 
 In this module, you'll learn the different ways to create a custom action, its necessary metadata and syntax, and how to publish a custom action to the GitHub Marketplace.
 
+### Learning objectives
+
+In this module, you will learn how to:
+
+- Identify the metadata and syntax needed to create custom GitHub actions
+- Learn best practices to publish a private or public GitHub action
+- Publish a newly created action to the GitHub Marketplace
+- Create custom JavaScript based actions
+
+### Prerequisites
+
+This module assumes you have basic familiarity with GitHub Actions and workflows.
+
+- A GitHub account
+- The ability to navigate and edit files in GitHub
+  - For more information about GitHub, see [Introduction to GitHub](https://learn.microsoft.com/en-us/training/modules/introduction-to-github/).
+- Basic familiarity with GitHub Actions and workflows
+  - If you aren't familiar with workflows, jobs and steps, check out the [Automate development tasks by using GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-automate-tasks/) module.
+- Basic familiarity with continuous integration using GitHub Actions and workflows
+  - If you're unfamiliar with continuous integration using GitHub Actions and workflows, check out [Build continuous integration workflows by using GitHub Actions](https://learn.microsoft.com/en-us/training/modules/github-actions-ci/)
+
 Up next, learn about the metadata, syntax, and workflow commands to create custom GitHub Actions.
