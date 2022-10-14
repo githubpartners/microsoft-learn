@@ -9,7 +9,7 @@ Luckily, GitHub provides you with dependency management tools that help to manag
 By the end of this module, you'll be able to:
 
 - Understand the basics of the dependency graph, the GitHub Advisory Database, and Dependabot.
-- How to enable,view, grant, and resolve Dependabot alerts.
+- How to enable, view, grant, and resolve Dependabot alerts.
 - Enable and configure Dependabot security updates.
 - Manage Dependabot notifications and reports.
 
