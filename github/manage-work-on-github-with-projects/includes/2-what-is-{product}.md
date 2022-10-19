@@ -1,129 +1,56 @@
-<!-- 1. Topic sentence(s) ---------------------------------------------------------------
+Imagine you want to organize your team’s feature backlog. Projects is a perfect way to organize and prioritize your team’s work in a single space. 
 
-    Goal: briefly state that this unit will define the product.
+In this unit you’ll learn how to:
+- Create a project
+- Set the name, description, and README
+- Add issues and pull requests to your project
 
-    Heading: none
+## Creating an organization project
 
-    Example: "Let's start with a few definitions and a quick tour of the core features of Logic Apps. This overview should help you see whether Logic Apps might be a good fit for your work."
--->
-TODO: add your topic sentences(s)
+First we want to lay the foundation of your Project by creating a new Project. This is fairly simple and you can do this relatively quickly.
 
-<!-- 2. Background-concept definitions (optional) ----------------------------------------
+1. First, in the top right corner of GitHub.com, click your profile photo, then click Your organizations.
+1. Then, click the name of your organization.
+1. Under your organization name, click Projects.
+1. Then click the green button labeled “New Project”
+1. Next it will ask you to select either a template or an empty project. Let’s start from scratch and select Table and then click the green Create button. 
 
-    Goal:
-        Define any needed underlying concepts or terms the learner must know to understand the product.
-        Repeat this pattern multiple times if multiple concepts are needed.
+You just created a Project! 
 
-    Heading:
-        "## What is (concept)?"
+## Setting your project’s name, description, and README
 
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that gives a definition "(concept) is..." (ensure this is a definition, do not give use cases like "(concept) lets you...").
-        3. Additional text as needed (typically 1-3 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
+Let’s define your project in a couple of different ways so that your team can easily understand what you're tracking. 
 
-    Example:
-        (Note: the product "Logic Apps" implements business processes in the cloud; therefore, "business process" is a background concept.)
-        Heading: "What is a business process?
-        Lead sentence: "A business process or _workflow_ is a sequence of tasks that produce a specific outcome. The result might be a decision, some data, or a notification...."
--->
-## What is (concept)?
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
+1. To edit your project’s name, description and README navigate to your newly created project and in the top right, click the 3 dots to open the menu.
+1. In the menu, click settings.
+1. And here you can edit the name of the project and it will save automatically.
+1. Next add a short 5-7 word description of the project and make sure to click save afterwards. 
+1. Then to update your project’s README, under "README", type out a bit more information for your team to understand why you created this project and what you hope to accomplish with it. And when you’re done make sure to click save. 
 
-<!-- 3. Define the product -------------------------------------------------------------
 
-    Goal:
-        Give a formal and precise definition of the product.
+## Adding issues and pull requests to your Project
 
-    Heading:
-        "## (product) definition"
+Adding in issues and pull requests to your Project is what makes it so powerful. It allows you to know the status of tasks your team is working on in order to coordinate and complete your goals. 
 
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that gives a definition "(product) is..." (ensure this is a definition, do not give use cases like "(product) lets you...").
-        3. Additional text as needed (typically 1-3 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
+Let’s go through the different ways to add issues and pull requests to your project. 
 
-    Example:
-        Heading: "Azure Logic Apps definition"
-        Lead sentence: "Azure Logic Apps is a cloud service that automates the execution of your business processes."
--->
-## (product) definition
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
+### Adding an existing issue and pull request
+1. First, copy the url of an existing issue and pull request. 
+1. Next, place your cursor in the bottom row of the project, next to the + and paste the URL of your issue or pull request. 
+1. Finally press return and your issue or pull request will appear as a task in your project
 
-<!-- 4. Solve the scenario -------------------------------------------------------------
+### Searching for an existing issue and pull request
+1. You can also search for existing issues or pull request by simply adding a new item 
+1. Enter #
+1. Select the repository where the pull request or issue is located. You can type part of the repository name to narrow down your options.
+1. Select the issue or pull request. You can also start typing the title to find the one you want. 
 
-    Goal:
-        At a high level, describe how the (product) solves one of the customer tasks in your (scenario).
-        Avoid teaching how to actually do the work (you're not teaching how-to-use in this module).
+## Bulk adding issues and pull request
 
-    Heading:
-        "## How to (solve scenario)"
+If you have an existing repository that you’d like to track using Projects bulk adding issues and pull requests saves you time and allows you to start organizing your team faster. 
 
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that summarizes how the (product) solved the (scenario).
-        3. Additional text as needed (typically 1-2 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
-
-    Example:
-        Heading: "How to implement a Twitter monitor"
-        Lead sentence: "To implement a Twitter monitor, you map each task to a Logic Apps component and connect them with conditional logic."
--->
-## How to (solve scenario)
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
-
-<!-- 5. Additional content (optional, as needed) ------------------------------------------------
-
-    Goal:
-        The section is a catch-all for any information not covered in the sections above.
-        Repeat the pattern here as many times as needed.
-
-    Possible topics:
-        - Key feature(s).
-        - Example use case in addition to the scenario.
-        - High-level of how practitioners use the product (e.g. there's an API and a web UI to support multiple use cases).
-        - Business value (e.g. it lets you do something that would be difficult to achieve without (product)).
-
-    Pattern:
-        Break the content into 'chunks' where each chunk has three things:
-            1. An H2 or H3 heading describing the goal of the chunk.
-            2. 1-3 paragraphs of text, with a strong lead sentence in the first paragraph.
-            3. Visual like an image, table, list, code sample, or blockquote (image preferred).
-
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
-
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
-
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list, code sample, blockquote)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
+1. First in the bottom row of the project, click +. 
+1. Next, click add item from repository. 
+1. To change the repository, click the dropdown and select a repository. The issues and pull requests will populate.
+1. You can either select all or select the ones you want to include.
+1. Once you are ready to add the issues and pull requests to your project, click on the “Add selected items” in the bottom right corner. 
