@@ -54,3 +54,5 @@ If you have an existing repository that you’d like to track using Projects bul
 1. To change the repository, click the dropdown and select a repository. The issues and pull requests will populate.
 1. You can either select all or select the ones you want to include.
 1. Once you are ready to add the issues and pull requests to your project, click on the “Add selected items” in the bottom right corner. 
+
+In the next unit we will be going into how to organize and prioritize your project in order to keep your tasks on track.
