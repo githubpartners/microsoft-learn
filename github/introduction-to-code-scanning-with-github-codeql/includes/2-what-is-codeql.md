@@ -67,4 +67,4 @@ dependencies:
     codeql/suite-helpers: "*"
 ```
 
-Next up, learn how codeql analyzes code.
+Next up, you will learn about the three phases of CodeQL analysis.
