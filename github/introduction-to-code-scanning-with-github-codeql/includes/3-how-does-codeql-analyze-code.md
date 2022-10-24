@@ -1,104 +1,39 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Implementing code scanning with CodeQL requires an understanding of how the tool analyzes code.
 
-    Goal: remind the learner of the core idea(s) from the preceding learning-content unit (without mentioning the details of the exercise or the scenario)
+CodeQL analysis consists of three steps:
 
-    Heading: none
+1. Preparing the code, by creating a CodeQL database.
+2. Running CodeQL queries against the database.
+3. Interpreting the query results.
 
-    Example: "A storage account represents a collection of settings that implement a business policy."
+In this unit, you will learn about the three phases of CodeQL analysis.
 
-    [Exercise introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-exercise-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+## Database creation
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+To create a database, CodeQL first extracts a single relational representation of each source file in the codebase.
 
-    Goal: Describe the part of the scenario covered in this exercise
+For compiled languages, extraction works by monitoring the normal build process. Each time a compiler is invoked to process a source file, a copy of that file is made, and all relevant information about the source code is collected. This includes syntactic data about the abstract syntax tree and semantic data about name binding and type information.
 
-    Heading: a separate heading is optional; you can combine this with the topic sentence into a single paragraph
+For interpreted languages, the extractor runs directly on the source code, resolving dependencies to give an accurate representation of the codebase.
 
-    Example: "Recall that in the chocolate-manufacturer example, there would be a separate storage account for the private business data. There were two key requirements for this account: geographically-redundant storage because the data is business-critical and at least one location close to the main factory."
+There is one extractor for each language supported by CodeQL to ensure that the extraction process is as accurate as possible. For multi-language codebases, databases are generated one language at a time.
 
-    Recommended: image that summarizes the entire scenario with a highlight of the area implemented in this exercise
--->
-TODO: add your scenario sub-task
-TODO: add your scenario image
+After extraction, all the data required for analysis (relational data, copied source files, and a language-specific database schema, which specifies the mutual relations in the data) is imported into a single directory, known as a CodeQL database.
 
-<!-- 3. Task performed in the exercise ---------------------------------------------------------------------
+## Query execution
 
-    Goal: State concisely what they'll implement here; that is, describe the end-state after completion
+After you’ve created a CodeQL database, one or more queries are executed against it. CodeQL queries are written in a specially designed object-oriented query language called QL.
 
-    Heading: a separate heading is optional; you can combine this with the sub-task into a single paragraph
+You can run the queries checked out from the CodeQL repo (or custom queries that you’ve written yourself) using the CodeQL for VS Code extension or the CodeQL CLI.
 
-    Example: "Here, you will create a storage account with settings appropriate to hold this mission-critical business data."
+## Query results
 
-    Optional: a video that shows the end-state
--->
-TODO: describe the end-state
+The final step converts results produced during query execution into a form that is more meaningful in the context of the source code. That is, the results are interpreted in a way that highlights the potential issue that the queries are designed to find.
 
-<!-- 4. Chunked steps -------------------------------------------------------------------------------------
+:::image type="content" source="../media/codeql-query-results.png" alt-text="Screenshot of CodeQL query results.":::
 
-    Goal: List the steps they'll do to complete the exercise.
+Queries contain metadata properties that indicate how the results should be interpreted. For instance, some queries display a simple message at a single location in the code. Others display a series of locations that represent steps along a data-flow or control-flow path, along with a message explaining the significance of the result. Queries that don’t have metadata are not interpreted—their results are output as a table and not displayed in the source code.
 
-    Structure: Break the steps into 'chunks' where each chunk has three things:
-        1. A heading describing the goal of the chunk
-        2. An introductory paragraph describing the goal of the chunk at a high level
-        3. Numbered steps (target 7 steps or fewer in each chunk)
+Following interpretation, results are output for code review and triaging. In CodeQL for Visual Studio Code, interpreted query results are automatically displayed in the source code. Results generated by the CodeQL CLI can be output into a number of different formats for use with different tools.
 
-    Example:
-        Heading:
-            "Use a template for your Azure logic app"
-        Introduction:
-             "When you create an Azure logic app in the Azure portal, you have the option of selecting a starter template. Let's select a blank template so that we can build our logic app from scratch."
-        Steps:
-             "1. In the left navigation bar, select Resource groups.
-              2. Select the existing Resource group [sandbox resource group name].
-              3. Select the ShoeTracker logic app.
-              4. Scroll down to the Templates section and select Blank Logic App."
--->
-
-## (Chunk 1 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## (Chunk 2 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## (Chunk n heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-<!-- 5. Validation -------------------------------------------------------------------------------------------
-
-    Goal: Enables the learner to evaluate if they completed the exercise correctly. Feedback like this is critical for learning.
-
-    Structure:
-        1. A heading of "## Check your work".
-        2. An introductory paragraph describing how they'll validate their work at a high level.
-        3. Numbered steps (if the learner needs to perform multiple steps to verify if they were successful).
-        4. Video of an expert performing the exact steps of the exercise (optional).
-
-    Example:
-         "At this point, the app is scanning Twitter every minute for tweets containing the search text. To verify the app is running and working correctly, we'll look at the Runs history table."
-             "1. Select Overview in the navigation menu.
-              2. Select Refresh once a minute until you see a row in the Runs history table.
-              ...
-              6. Examine the data in the OUTPUTS section. For example, locate the text of the matching tweet."
--->
-
-## Check your work
-<!-- Introduction paragraph -->
-1. <!-- Step 1 (if multiple steps are needed) -->
-1. <!-- Step 2 (if multiple steps are needed) -->
-1. <!-- Step n (if multiple steps are needed) -->
-Optional "exercise-solution" video
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
+Next up, learn about CodeQL.
