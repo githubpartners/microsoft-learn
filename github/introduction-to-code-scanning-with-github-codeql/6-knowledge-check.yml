@@ -6,7 +6,7 @@ metadata:
   description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
   ms.date: 10/24/2022
   author: a-a-ron
-  ms.author: aastewar
+  ms.author: rmallorybpc
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 1
@@ -27,58 +27,58 @@ durationInMinutes: 1
 content: |
 quiz:
   questions:
-  - content: ""
+  - content: "In CodeQL, errors like bugs and vulnerabilities are modeled as:"
     choices:
-    - content: ""
+    - content: "Data"
+      isCorrect: false
+      explanation: "CodeQL treats *code* like data, but errors in the code are modeled differently."
+    - content: "Queries"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct!"
+    - content: "Processes"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "CodeQL is used to perform the *process* of variant analysis."
+  - content: "How many default query suites are there with GitHub code scanning with CodeQL?"
     choices:
-    - content: ""
+    - content: "One (1)"
+      isCorrect: false
+      explanation: "There are three default query suites for CodeQL"
+    - content: "Two (2)"
+      isCorrect: false
+      explanation: "There are three default query suites for CodeQL"
+    - content: "Three (3)"
       isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Correct! There are three default query suites for CodeQL"
+  - content: "Which of the following are part of a CodeQL database?"
     choices:
-    - content: ""
+    - content: "A representation of the language's abstract syntax tree"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! A representation of the language's abstract syntax tree is a part of a CodeQL database."
+    - content: "Query length (.qlg) files"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: ""Query length files are not a part of CodeQL. Query library (.qll) files are used in CodeQL, but are not a part of the database."
+    - content: "A logic flow graph"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "A data flow graph is a part of a CodeQL database. A logic flow graph is not."
+  - content: "The final step of CodeQL analysis is:"
     choices:
-    - content: ""
+    - content: "Interpreting the results"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! The final step converts results produced during query execution into a form that is more meaningful in the context of the source code."
+    - content: "Running CodeQL queries against the database"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Running CodeQL queries against the database is the second step of CodeQL analysis."
+    - content: "Creating a CodeQL database"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Creating a CodeQL database is the first step of CodeQL analysis."
+  - content: "What feature does QL add to the Datalog programming language?"
     choices:
-    - content: ""
+    - content: "Recursive predicates"
+      isCorrect: false
+      explanation: "QL inherits recursive predicates from Datalog."
+    - content: "Complexity to Datadog"
+      isCorrect: false
+      explanation: "QL inherits recursive predicates from Datalog, and adds support for aggregates, making even complex queries concise and simple."
+    - content: "Support for aggregates"
       isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "Correct! Furthermore, QL inherits recursive predicates from Datalog, and adds support for aggregates."
