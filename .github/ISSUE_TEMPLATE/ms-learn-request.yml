@@ -1,0 +1,66 @@
+name: MS Learn Module Update Request
+description: Use this form to submit a module update request 
+title: "MS Learn Module Update Request: [REPLACE_WITH_MODULE_TITLE]"
+labels: [MS Learn Update]
+assignees:
+  - a-a-ron
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ![learn](https://user-images.githubusercontent.com/6351798/105084888-381b5480-5a54-11eb-83f3-b7cf1810fe04.png) </br> <div align="center"><h1> Thank you for taking the time to submit a module update request!</h1> </br></br> <h3>Please fill out the below form so that we can address this update appropriately.</h3></div> 
+  - type: dropdown
+    id: select-module
+    attributes:
+      label: Which of the MS Learn modules from the dropdown are you submitting an update request? 
+      multiple: false
+      options:
+        - "Introduction to GitHub"
+        - "Introduction to Git"
+        - "Maintain a secure repository by using GitHub best practices"
+        - "Build and deploy applications to Azure by using GitHub Actions"
+        - "Automate GitHub by using GitHub Script"
+        - "Build continuous integration (CI) workflows by using GitHub Actions"
+        - "Migrate your repository by using GitHub best practices"
+        - "Upload your project by using GitHub best practices"
+        - "Manage repository changes by using pull requests on GitHub"
+        - "Settle competing commits by using merge conflict resolution on GitHub"
+        - "Manage an InnerSource program by using GitHub"
+        - "Manage software delivery by using a release based workflow on GitHub"
+        - "Communicate effectively on GitHub by using Markdown"
+        - "Search and organize repository history by using GitHub"
+        - "Automate DevOps processes by using GitHub Apps"
+        - "Introduction to GitHub's Products"
+        - "Introduction to GitHub administration"
+        - "Automate development tasks by using GitHub Actions"
+        - "Leverage GitHub Actions to publish to GitHub Packages"
+        - "Contribute to an open-source project on GitHub"
+        - "Create and host web sites by using GitHub Pages"
+        - "Create an open-sourced program by using GitHub best practices"
+        - "Manage GitHub Actions in the enterprise"
+        - "Create and publish custom GitHub actions"
+        - "Manage sensitive data and security policies within GitHub"
+        - "Authenticate and authorize user identities on GitHub"
+        - "GitHub administration for enterprise support and adoption"
+        - "Configure and use secret scanning in your GitHub repository"
+        - "Introduction to GitHub Advanced Security"
+        - "Configure Dependabot security updates on your GitHub repo"
+        - "Configure code scanning on GitHub"
+        - "Identify security vulnerabilities in your codebase with CodeQL"
+        - "Code scanning with GitHub CodeQL"
+        - "GitHub administration for GitHub Advanced Security"
+  - type: checkboxes
+    id: tasks
+    attributes:
+      label: Additional information
+      description: Please select any that apply
+      options:
+        - label: Fix a broken user experience (broken links, exercise error, etc.)
+        - label: Update incorrect information
+        - label: Add new content to the module 
+        - label: Some other request
+  - type: textarea
+    id: specific-request
+    attributes:
+      label: Information about the requested update
+      description: Please provide the necessary information to address the module update request (unit section, links, detailed description, etc.)
