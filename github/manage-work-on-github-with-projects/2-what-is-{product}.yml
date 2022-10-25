@@ -1,9 +1,9 @@
 ### YamlMime:ModuleUnit
 uid: learn.manage-work-on-github-with-projects.what-is-{product}
-title: What is {product}?
+title: Manage your work on GitHub with Projects
 metadata:
-  title: what-is-{product}
-  description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
+  title: Manage your work on GitHub with Projects
+  description: "Learn how to manage your work on GitHub with Projects. Learn how to build an organization project and understand how to automate and organize your project."
   ms.date: 10/10/2022
   author: a-a-ron
   ms.author: aastewar
