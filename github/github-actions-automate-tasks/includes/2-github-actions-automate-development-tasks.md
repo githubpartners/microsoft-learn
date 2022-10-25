@@ -1,39 +1,10 @@
-Here, we'll introduce GitHub Actions and workflows. You'll learn the types of actions you can use and where to find them. You'll also look at examples of these types of actions and how they fit in a workflow.
-
-## GitHub decreases time from idea to deployment
-
-GitHub is designed to help teams of developers and DevOps engineers build and deploy applications quickly. There are many features in GitHub that enable this, but they generally fall into one of two categories:
-
-- **Communication:** Consider all of the ways that GitHub makes it easy for a team of developers to communicate about the software development project: code reviews in pull requests, GitHub issues, project boards, wikis, notifications, and so on. 
-- **Automation:** GitHub Actions lets your team automate workflows at every step in the software-development process, from integration to delivery to deployment. It even lets you automate adding labels to pull requests and checking for stale issues and pull requests.
-
-When combined, these features have allowed thousands of development teams to effectively decrease the amount of time it takes from their initial idea to deployment.
-
-## Use workflow automation to decrease development time
-
-In this module we'll focus on automation, so let's take a moment to understand how teams can use automation to reduce the amount of time it takes to complete a typical development and deployment workflow.
-
-Consider all of the tasks that must happen *after* the code is written, but before the code can be reliably used for its intended purpose. Depending on your organization's goals, you'll likely need to perform one or more of the following tasks:
-
-- Ensure the code passes all unit tests
-- Perform code quality and compliance checks to make sure the source code meets the organization's standards
-- Check the code and its dependencies for known security issues
-- Build the code integrating new source from (potentially) multiple contributors
-- Ensure the software passes integration tests
-- Version the new build
-- Deliver the new binaries to the appropriate filesystem location
-- Deploy the new binaries to one or more servers
-- If any of these tasks do not pass, report the issue to the proper individual or team for resolution
-
-The challenge is to do these tasks reliably, consistently, and in a sustainable manner. This is an ideal job for workflow automation. If you're already relying on GitHub, you'll likely want to set up your workflow automation using GitHub Actions.
-
-## What is GitHub Actions?
+## What are GitHub Actions?
 
 *GitHub Actions* are packaged scripts to automate tasks in a software development workflow in GitHub. You can configure GitHub Actions to trigger complex workflows that meet your organization's needs; each time developers check new source code into a specific branch, at timed intervals, or manually. The result is a reliable and sustainable automated workflow, which leads to a significant decrease in development time.
 
 ## Where can you find GitHub Actions?
 
-GitHub Actions are scripts that adhere to a yml data format. Each repository has an **Actions** tab that provides a quick and easy way to get started with setting up your first script. If you see a workflow that you think might be a great starting point, just select the **Configure** button to add the script and begin editing the source yml.
+GitHub Actions are scripts that adhere to a yml data format. Each repository has an **Actions** tab that provides a quick and easy way to get started with setting up your first script. If you see a workflow that you think would be a great starting point, just select the **Configure** button to add the script and begin editing the source yml.
 
 :::image type="content" source="../media/github-actions-automate-development-tasks-01.png" alt-text="Screenshot of the *Actions tab* in GitHub Actions displaying a simple workflow and a button to set up this workflow.":::
 

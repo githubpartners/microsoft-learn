@@ -138,7 +138,7 @@ To further reduce the risk of a user using Actions to merge a change into a prot
 
 One of the best things about GitHub Actions is that it gives developers the ability to automate all of their software workflows. Unfortunately, as GitHub Actions has grown, there has been a wide variety of bad actors abusing Actions, affecting service performance, and causing denial of service to open source projects. 
 
-To help prevent this, GitHub has made two changes to how they treat pull requests from from public forks in Actions to help maintainers.
+To help prevent this, GitHub has made two changes to how they treat pull requests from public forks in Actions to help maintainers.
 
 - First, if GitHub determines an Actions run to be abusive or against our terms, GitHub's enforcement will be directed at the account hosting the fork and not the account associated with the upstream repository. The result of this process is to prevent maintainer accounts from being flagged and blocked due to these bad actors. 
 
