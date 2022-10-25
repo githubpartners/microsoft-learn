@@ -38,7 +38,7 @@ GitHub calculates your storage usage for each month based on hourly usage during
 720 GB-Hours + 6,048 GB-Hours = 6,768 GB-Hours
 6,768 GB-Hours / (744 hours per month) = 9.0967 GB-Months
 
-At the end of the month, GitHub rounds your storage to the nearest megabyte. Therefore, your storage usage for March would be 9.097 GB.
+At the end of the month, GitHub rounds your storage to the nearest megabyte. Therefore, your storage usage for March would be 9.067 GB.
 
 If your account's usage surpasses these limits and you have set a spending limit above $0, you incur an additional fee per gigabyte of storage used per month.
 

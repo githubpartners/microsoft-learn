@@ -24,14 +24,12 @@ This is often the product version that comes to mind when thinking of GitHub. Gi
 Below is a breakdown of the features included with GitHub Free:
 
 - Unlimited public/private repositories
-- 2,000 Actions automation minutes/month (_Free for public repositories_)
-- 500MB of Packages storage (_Free for public repositories_)
 - New Issues & Projects (in limited beta)
 - GitHub Community Support
 - Dependabot alerts
 - Two-factor authentication enforcement
-- 2,000 GitHub Actions minutes (_Number of free minutes for private repositories_)
-- 500 MB GitHub Packages storage (_Number of free minutes for private repositories_)
+- 2,000 GitHub Actions minutes (_Number of free minutes for private repositories_), free for public repositories
+- 500 MB GitHub Packages storage (_Number of free minutes for private repositories_), free for public repositories
 
 For a more comprehensive list of features, please refer to [GitHub's pricing page](https://github.com/pricing).
 
