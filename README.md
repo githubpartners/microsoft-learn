@@ -17,6 +17,11 @@
 - **Helen Miller**: Sr. Instructional Designer
 - **John Papa**: Lead Cloud Developer Advocate
 
+## How to provide feedback ✍️
+
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content! 
+
+
 ## Learning Paths
 
 Below are the topic learning paths currently published on MS Learn. If you're looking for the complete module catalog, you can find it [here](https://docs.microsoft.com/en-us/users/githubtraining/collections/8p72c736z77gjp).
