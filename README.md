@@ -16,7 +16,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 ### GitHub Actions
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/n5p4a5z7keznp5)
 
-<details><summary>Modules:</summary>
+<details><summary>Expand for the GitHub Actions modules:</summary>
 
   - [Automate development tasks by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-automate-tasks/?ns-enrollment-type=Collection&ns-enrollment-id=n5p4a5z7keznp5)
   - [Build continuous integration (CI) workflows by using GitHub Actions](https://docs.microsoft.com/en-us/learn/modules/github-actions-ci/?ns-enrollment-type=Collection&ns-enrollment-id=n5p4a5z7keznp5)
@@ -30,7 +30,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 ### GitHub Administration
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/mom7u1gzjdxw03)
 
-<details><summary>Modules:</summary>
+<details><summary>Expand for the GitHub Administration modules:</summary>
   
   - [Introduction to GitHub administration](https://docs.microsoft.com/en-us/learn/modules/github-introduction-administration/?ns-enrollment-type=Collection&ns-enrollment-id=mom7u1gzjdxw03)
   - [Introduction to GitHub's Products](https://docs.microsoft.com/en-us/learn/modules/github-introduction-products/?ns-enrollment-type=Collection&ns-enrollment-id=mom7u1gzjdxw03)
@@ -46,7 +46,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 ### GitHub Advanced Security
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/rqymc6yw8q5rey)
 
-<details><summary>Modules:</summary>
+<details><summary>Expand for the GitHub Advanced Securuity modules:</summary>
 
   - [Introduction to GitHub Advanced Security](https://docs.microsoft.com/en-us/learn/modules/introduction-github-advanced-security/?ns-enrollment-type=Collection&ns-enrollment-id=rqymc6yw8q5rey)
   - [Configure Dependabot security updates on your GitHub repo](https://docs.microsoft.com/en-us/learn/modules/configure-dependabot-security-updates-on-github-repo/?ns-enrollment-type=Collection&ns-enrollment-id=rqymc6yw8q5rey)
@@ -62,7 +62,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 ### GitHub Fundamentals
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/p0ygh4erdrmkp7)
 
-<details><summary>Modules:</summary>
+<details><summary>Expand for the GitHub Fundamentals modules:</summary>
 
   - [Introduction to GitHub](https://docs.microsoft.com/en-us/learn/modules/introduction-to-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
   - [Manage repository changes by using pull requests on GitHub](https://docs.microsoft.com/en-us/learn/modules/manage-changes-pull-requests-github/?ns-enrollment-type=Collection&ns-enrollment-id=p0ygh4erdrmkp7)
