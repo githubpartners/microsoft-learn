@@ -76,3 +76,5 @@ Paragraph (optional)
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 <!-- Do not add a unit summary or references/links -->
+
+Next up, you will learn how to set up code scanning with GitHub Actions and how to perform bulk setup of code scanning for multiple repositories.
