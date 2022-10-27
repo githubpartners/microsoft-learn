@@ -1,104 +1,39 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Depending on which tool you want to use for analysis and how you want to generate alerts, there are a few different options for setting up a code scanning workflow on your repository:
 
-    Goal: remind the learner of the core idea(s) from the preceding learning-content unit (without mentioning the details of the exercise or the scenario)
+| Analysis tool | Alert generation |
+| --- | --- |
+| CodeQL | GitHub Actions |
+| CodeQL | CodeQL in a third-party continuous integration (CI) system |
+| Third-party | GitHub Actions |
+| Third-party | Generated externally and then uploaded to GitHub |
 
-    Heading: none
+In this unit, you will learn how to set up code scanning with GitHub Actions, as well as how to perform bulk setup of code scanning for multiple repositories.
 
-    Example: "A storage account represents a collection of settings that implement a business policy."
+## Code scanning with GitHub Actions and CodeQL
 
-    [Exercise introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-exercise-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+To set up code scanning with GitHub Actions and CodeQL on a repository, do the following:
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+1. Go to the **Security** tab of your repository.
 
-    Goal: Describe the part of the scenario covered in this exercise
+    :::image type="content" source="../media/security-tab.png" alt-text="Screenshot of the Security tab.":::
 
-    Heading: a separate heading is optional; you can combine this with the topic sentence into a single paragraph
+2. To the right of **Code scanning alerts**, click **Set up code scanning**. If code scanning is missing, this means you need to enable GitHub Advanced Security.
+3. Under **Get started with code scanning**, click **Set up this workflow** on the CodeQL analysis workflow or on a third-party workflow.
 
-    Example: "Recall that in the chocolate-manufacturer example, there would be a separate storage account for the private business data. There were two key requirements for this account: geographically-redundant storage because the data is business-critical and at least one location close to the main factory."
+   > [!Note]
+   > Workflows are only displayed if they are relevant for the programming languages detected in the repository. The CodeQL analysis workflow is always displayed, but the "Set up this workflow" button is only enabled if CodeQL analysis supports the languages present in the repository.
 
-    Recommended: image that summarizes the entire scenario with a highlight of the area implemented in this exercise
--->
-TODO: add your scenario sub-task
-TODO: add your scenario image
+4. To customize how code scanning scans your code, edit the workflow. Generally you can commit the CodeQL analysis workflow without making any changes to it. However, many of the third-party workflows require additional configuration, so read the comments in the workflow before committing.
+5. Use the **Start commit** drop-down, and type a commit message.
+6. Choose whether you'd like to commit directly to the default branch, or create a new branch and start a pull request.
+7. Click **Commit new file** or **Propose new file**.
 
-<!-- 3. Task performed in the exercise ---------------------------------------------------------------------
+In the default CodeQL analysis workflow, code scanning is configured to analyze your code each time you either push a change to the default branch or any protected branches, or raise a pull request against the default branch. As a result, code scanning will now commence.
 
-    Goal: State concisely what they'll implement here; that is, describe the end-state after completion
+The `on:pull_request` and `on:push triggers` for code scanning are each useful for different purposes.
 
-    Heading: a separate heading is optional; you can combine this with the sub-task into a single paragraph
+## Bulk setup of code scanning
 
-    Example: "Here, you will create a storage account with settings appropriate to hold this mission-critical business data."
+You can set up code scanning in many repositories at once using a script. If you'd like to use a script to raise pull requests that add a GitHub Actions workflow to multiple repositories, see the [jhutchings1/Create-ActionsPRs](https://github.com/jhutchings1/Create-ActionsPRs) repository for an example using PowerShell, or [nickliffen/ghas-enablement](https://github.com/NickLiffen/ghas-enablement) for an example using NodeJS.
 
-    Optional: a video that shows the end-state
--->
-TODO: describe the end-state
-
-<!-- 4. Chunked steps -------------------------------------------------------------------------------------
-
-    Goal: List the steps they'll do to complete the exercise.
-
-    Structure: Break the steps into 'chunks' where each chunk has three things:
-        1. A heading describing the goal of the chunk
-        2. An introductory paragraph describing the goal of the chunk at a high level
-        3. Numbered steps (target 7 steps or fewer in each chunk)
-
-    Example:
-        Heading:
-            "Use a template for your Azure logic app"
-        Introduction:
-             "When you create an Azure logic app in the Azure portal, you have the option of selecting a starter template. Let's select a blank template so that we can build our logic app from scratch."
-        Steps:
-             "1. In the left navigation bar, select Resource groups.
-              2. Select the existing Resource group [sandbox resource group name].
-              3. Select the ShoeTracker logic app.
-              4. Scroll down to the Templates section and select Blank Logic App."
--->
-
-## (Chunk 1 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## (Chunk 2 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-## (Chunk n heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
-
-<!-- 5. Validation -------------------------------------------------------------------------------------------
-
-    Goal: Enables the learner to evaluate if they completed the exercise correctly. Feedback like this is critical for learning.
-
-    Structure:
-        1. A heading of "## Check your work".
-        2. An introductory paragraph describing how they'll validate their work at a high level.
-        3. Numbered steps (if the learner needs to perform multiple steps to verify if they were successful).
-        4. Video of an expert performing the exact steps of the exercise (optional).
-
-    Example:
-         "At this point, the app is scanning Twitter every minute for tweets containing the search text. To verify the app is running and working correctly, we'll look at the Runs history table."
-             "1. Select Overview in the navigation menu.
-              2. Select Refresh once a minute until you see a row in the Runs history table.
-              ...
-              6. Examine the data in the OUTPUTS section. For example, locate the text of the matching tweet."
--->
-
-## Check your work
-<!-- Introduction paragraph -->
-1. <!-- Step 1 (if multiple steps are needed) -->
-1. <!-- Step 2 (if multiple steps are needed) -->
-1. <!-- Step n (if multiple steps are needed) -->
-Optional "exercise-solution" video
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
+Next up, you'll learn how to use the CodeQL CLI to create databases, analyze databases and upload the results to GitHub.
