@@ -1,65 +1,79 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Now that you’ve added issues and pull requests to your Project, now it’s time to organize to keep track of the great work you and your team are doing. 
 
-    Goal: state what's in this unit and how it aligns to the 'describe' learning objective.
+In this unit you will learn:
+- How to create a field to track and group by priority
+- How to add an iteration field 
+- How to create a board view 
+- How to configure built-in automation
 
-    Pattern:
-        One paragraph of 2-3 sentences:
-            Sentence 1: State that this unit addresses ("how it works").
-            Sentence 2: State that this unit targets this learning objective: "Describe how (features) of (product) work to (solve problem)."
-            Sentence 3-4 (optional): Give the rationale ("helps you decide if it will meet your needs").
-        Table-of-contents as a bulleted list (do not simply list every heading you'll have on the page, group them into about 3 high-level areas).
+## How to create a field to track and group by priority
 
-    Heading: none
+To group a set of issues and pull requests by priority, you’ll need to first create a new field. 
 
-    Example: "Here, we'll discuss how Logic Apps works behind the scenes. You'll learn about all the pieces of Logic apps and see how they fit together into an app. This knowledge will help you decide whether Logic Apps will work for you without any customization. In cases where you do need to create custom components, you'll be able to determine how difficult it will be.
-        * Connectors, triggers, actions
-        * Control actions
-        * Logic Apps Designer"
--->
-TODO: add your topic sentences(s)
-TODO: add your bulleted list of key things covered
-* TODO
-* TODO
-* TODO
+1. First in the table view, in the rightmost field header, click +.
+1. Then click, New Field
+1. Next, type the name of your field, in this case it’ll be Priority
+1. In the drop down menu below, click the Single Select option. This will allow you to create your own classification for your new field. 
+1. Then in the Options text box below, start to add your different priority levels, Urgent, High, Medium, and Low.
+1. Then, make sure to click Save. 
 
-<!-- 2. Chunked content-------------------------------------------------------------------------------------
+Now that you have your priority classification set up, next up you’ll need to classify your issues and pull requests based on priority. 
 
-    Goal:
-        Cover the components of (product) and how they work.
-        Repeat this pattern multiple times as needed.
+To do this, select the issue or pull request you want to classify, this in the field row titled Priority, in the drop down field select the priority you want to choose for this particular issue or pull request. 
 
-    Pattern:
-        Break the content into 'chunks' where each chunk has three things:
-            1. An H2 or H3 heading describing the goal of the chunk.
-            2. 1-3 paragraphs of text, with a strong lead sentence in the first paragraph.
-            3. Visual like an image, table, list, code sample, or blockquote.
+Repeat for your remaining pull request and issues. 
 
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
+Great! 
 
-<!-- Pattern for simple topic -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
+Now let’s group your issues and pull requests by priority to make it easier to focus on urgent and high priority items.
 
-<!-- Pattern for complex topic -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list, code sample, blockquote)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
+1. To do this click the down carrot next to the name of your currently open view.
+1. Then click the Group
+1. Next, click Priority.
+1. Now you should be able to view issues and pull requests based on the priority you assigned them to. 
+1. One of the great features of this particular view is you can now drag and drop issues into new priority fields easily. 
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
-<!-- Do not add a unit summary or references/links -->
+Now that you have your work prioritized, let’s tackle timelines and iterations.
+
+## How to add an iteration field
+
+Adding an iteration field to your project can help you and your team visualize the balance of upcoming work in order to help everyone stay on track. It allows you to set up phases for your tasks in a tangible timeframe to keep you and your team organized.
+
+1. To first add an interaction field first go to the table view of your project, in the rightmost field header, click +.
+1. Then click on New Field
+1. Type in the name of your iteration, examples are Project Phase or Sprint 
+1. Next you can change the duration of each iteration, type a new number, then select the dropdown and click either days or weeks.
+1. Then make sure to click save
+1. Once you have your iteration field set up, you can now assign what iteration phase you want each of your issues and pull requests to fall under
+
+Now that you have prioritized and organized your project, let’s take a look at how to view your project from a different perspective – a board view.
+
+## How to create a board view
+
+A board view of your project allows you to view upcoming tasks in a more visualizing way. 
+
+Let’s walk through how to get your board view up and running. 
+
+1. To the right of your existing views, click New view
+1. Click on the down carrot next to the name of the currently open view.
+1. Under "Layout", click Board.
+1. When you changed the layout, your project displayed an indicator to show that the view was modified. 
+1. Save this view by clicking the Save changes button to the right of the top of the board. 
+1. Now you can drag and drop issues and pull request to the various columns
+1. You can also rename the view by double clicking on the tab of the view and typing in the new name.
+1. Once you click out of the tab it will automatically save
+
+## How to configure built-in automation
+
+With built-in automation, your project will take newly created issues or pull requests and automatically put them into your project with a Todo status, helping you stay aware of all of your work.
+
+To enable automation first go to the top-right corner of your project and click on the three dots to open the menu. 
+1. Next, in the menu, click Workflows.
+1. In the left column, under Default workflows, select Item added to project. 
+(image)
+1. Now in the center of the page, where it says When, ensure that both issues and pull requests are selected.
+1. Below click on Set and click Status:Todo.
+1. Finally in the right corner of the page, ensure the toggle is turned On. 
+
+Congratulations! You’ve just automated your project!
