@@ -1,80 +1,25 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+As a developer, you can perform code scanning externally and then display the results in GitHub. Alternatively, you can set up webhooks that listen to code scanning activity in your repository.
 
-    Goal: briefly summarize the key skill this unit will teach
+## Integrate with code scanning
 
-    Heading: none
+You can perform analysis elsewhere and then upload the code scanning results to GitHub. The alerts for code scanning that you run externally are displayed in the same way as those for code scanning that you run within GitHub. When you use a third-party static analysis tool that can produce results as Static Analysis Results Interchange Format (SARIF) 2.1.0 data, you can upload the results to GitHub.
 
-    Example: "Organizations often have multiple storage accounts to let them implement different sets of requirements."
+You can view the status of the alert for each analysis origin on the alert page if an alert has multiple analysis origins. This occurs when you run code scanning using multiple configurations.
 
-    [Learning-unit introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-learning-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+## Integrate with webhooks
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+You can use code scanning webhooks to build or set up integrations that subscribe to code scanning events in your repository, such as GitHub Apps or OAuth Apps. For example, you could build an integration that creates an issue on GitHub or sends you a Slack notification when a new code scanning alert is added in your repository.
 
-    Goal: Describe the part of the scenario that will be solved by the content in this unit
+### Set up a webhook
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+You can install webhooks on an organization or on a specific repository. To set up a webhook, go to the settings page of your repository or organization. Then, click ***Webhooks***, then ***Add webhook***.
 
-    Example: "In the shoe-company scenario, we will use a Twitter trigger to launch our app when tweets containing our product name are available."
--->
-TODO: add your scenario sub-task
+Webhooks require a few configuration options before you can make use of them. These webhooks settings include: payload URL, content type, secret, SSL verification, active, and events.
 
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------
+## Use partner integrations
 
-    Goal: State concisely what's covered in this unit
+You can discover and configure Actions workflow templates for partner integrations straight from their repository's **Actions** tab under a category called **Security**. Workflows are recommended based on the repository's content. GitHub suggests analysis engines that are compatible with the source code in your repository.
 
-    Heading: none, combine this with the topic sentence into a single paragraph
 
-    Example: "Here, you will learn the policy factors that are controlled by a storage account so you can decide how many accounts you need."
--->
-TODO: write your prose table-of-contents
-
-<!-- 4. Visual element (highly recommended) ----------------------------------------------------------------
-
-    Goal: Visual element, like an image, table, list, code sample, or blockquote. Ideally, you'll provide an image that illustrates the customer problem the unit will solve; it can use the scenario to do this or stay generic (i.e. not address the scenario).
-
-    Heading: none
--->
-TODO: add a visual element
-
-<!-- 5. Chunked content-------------------------------------------------------------------------------------
-
-    Goal: Provide all the information the learner needs to perform this sub-task.
-
-    Structure: Break the content into 'chunks' where each chunk has three things:
-        1. An H2 or H3 heading describing the goal of the chunk
-        2. 1-3 paragraphs of text
-        3. Visual like an image, table, list, code sample, or blockquote.
-
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
-
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
-
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
 
 Next up, you will learn how to set up code scanning with GitHub Actions and how to perform bulk setup of code scanning for multiple repositories.
