@@ -1,59 +1,17 @@
-<!-- 1. Goal and criteria-----------------------------------------------------------------------------
+In this module you learned GitHub Projects, GitHub’s project management tool that connects your planning directly to the work your teams are doing in GitHub and flexibly adapts to whatever your team needs at any point.
 
-    Goal: Recap that this module's goal is 'evaluate' using the provided decision criteria.
+You learned about:
+- Learn how to build an organization project
+- Understand how to automate and organize your project
 
-    Format: Short text followed by a bulleted list of the decision criteria developed in the "When to use (product)" unit.
+## Learn More
 
-    Heading: none
+Here are some links to more information on the topics we discussed in this module:
+- [GitHub Projects on GitHub Mobile](https://github.blog/2022-10-11-on-the-go-with-github-projects-on-github-mobile-public-beta/)
+- [Using the API to Manage Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects)
+- [Automating Projects with Actions](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions)
+- [Archiving Items Automatically](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/archiving-items-automatically)
 
-    Example: "Our goal was to help you evaluate whether Logic Apps would be a good choice for your business process. We developed some criteria you can use to guide your decision:
-    * Integration
-    * Performance
-    * Conditionals
-    * Connectors"
+## How to provide feedback ✍️
 
--->
-TODO: 1-2 sentences restating the module's "evaluate" goal
-TODO: bulleted list of the decision criteria
-
-<!-- 2. Show how you solved the scenario problem(s)---------------------------------------------------
-
-    Goal: Briefly summarize how you applied the decision criteria to the scenario problem(s). Ideally, discuss two scenarios, one where the product was appropriate and one where it wasn't.
-
-    Heading: none; depending on length, you can put this in a separate paragraph or combine this with the previous section into a single paragraph
-
-    Example: "We applied these criteria to our fictional shoe company. The analysis helped us see how difficult it would be to use Logic Apps for each process. Both the social-media monitor and the video archive utility used only the built-in connectors. This characteristic made them perfect for Logic Apps. The online sales portal required more work because it had complex conditionals and needed custom connectors."
- -->
-
-TODO: add your discussion of applying the criteria
-
-<!-- 3. Describe the business impact ----------------------------------------------------
-
-    Goal: explain how choosing the right product is important
-
-    Heading: none; depending on length, you can put this in a separate paragraph or combine this with the previous section into a single paragraph
-
-    Example: "The criteria help you evaluate whether your business processes are a good match for Logic Apps. First, they let you assess how well Logic Apps will solve your problem. Second, they give you an idea of the amount of customization effort involved in using them for your task. This process should give you enough information to choose the right product for your work."
- -->
-TODO: describe the business impact
-
-<!-- 4. References (optional) ----------------------------------------------------
-
-    Goal: Provide a few recommendations for further study via a bulleted list of links. This is optional and intended to be used sparingly.
-        - use the target page title as the text for your link
-        - do not include other text such as a description
-        - prefer other first-party sites like Docs reference pages
-        - link to third-party sites only when they are trusted and authoritative
-        - do not link to other Learn content ("next steps" recommendations are generated automatically)
-        - avoid linking to opinion sites such as blog posts
-
-    Heading: "## References"
-
-    Example:
-        "References
-        * [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
-        * [What is Azure role-based access control (Azure RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
-        * [Manage access to billing information for Azure](https://docs.microsoft.com/azure/billing/billing-manage-access)"
- -->
-
-<!-- Do not include any other content -->
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content! 
