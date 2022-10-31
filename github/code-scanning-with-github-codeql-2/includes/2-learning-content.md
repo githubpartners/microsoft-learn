@@ -20,6 +20,11 @@ Webhooks require a few configuration options before you can make use of them. Th
 
 You can discover and configure Actions workflow templates for partner integrations straight from their repository's **Actions** tab under a category called **Security**. Workflows are recommended based on the repository's content. GitHub suggests analysis engines that are compatible with the source code in your repository.
 
+    <!-- @a-a-ron add image here: 
+    https://github.blog/changelog/2022-02-22-discover-code-scanning-partner-integrations-on-the-github-actions-tab/
+    The security image from the page link above.
+    -->
 
+Code scanning and GitHub's CodeQL analysis engine are freely available for public repositories. Analysis engines and services provided by partners might require a subscription. Additionally, you can configure code scanning for organization-owned private repositories when GitHub Advanced Security (GHAS) is enabled.
 
 Next up, you will learn how to set up code scanning with GitHub Actions and how to perform bulk setup of code scanning for multiple repositories.
