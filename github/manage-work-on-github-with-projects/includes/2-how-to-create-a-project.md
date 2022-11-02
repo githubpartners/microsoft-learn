@@ -17,6 +17,8 @@ First we want to lay the foundation of your Project by creating a new Project. T
 
 You just created a Project! 
 
+You can also create a personal Project by clicking your profile photo and navigating to **Your projects**. Once you are on your Projects page, you can simply click on the green button titled **New project**. 
+
 ## Setting your project’s name, description, and README
 
 Let’s define your project in a couple of different ways so that your team can easily understand what you're tracking. 
