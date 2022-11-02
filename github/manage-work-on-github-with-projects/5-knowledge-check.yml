@@ -9,85 +9,41 @@ metadata:
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 1
-###########################################################################
-###
-### General guidance (https://review.docs.microsoft.com/learn-docs/docs/id-guidance-knowledge-check)
-###  - Questions are complete sentences ending with a question mark
-###  - No true/false questions
-###  - 3 answers per question
-###  - All answers about the same length
-###  - Numeric answers listed in sorted order
-###  - No "All of the above" and/or "None of the above" as answer choices
-###  - No "Not" or "Except" in questions
-###  - No second person ("you") in the questions or answers
-###  - Provide a meaningful explanation for both correct and incorrect answers
-###
-### Question content requirements:
-###  - Write 5 questions
-###  - Questions 1,2 must test this Learning Objective: "Describe how (attributes) of (product) work to (solve problem)"
-###      Guidance: These two questions can be short, no need for a long scenario to analyze. Test if they understand how the product works.
-###      Example: "What differentiates an action from a control action in a Logic App?"
-###  - Questions 3,4,5 must test this Learning Objective: "Evaluate whether (product) is appropriate to (general product use case)"
-###      Guidance: Use scenario questions that ask the learner to analyze a situation with the "when to use" criteria presented in the module.
-###      Example: "A financial company is building a system to let brokers trade financial instruments. The system must monitor market conditions, detect changes, and execute trades. It will need to handle a large volume of transactions quickly. The faster it completes trades, the more of an advantage the company will have over its competitors. Which requirement of this system would be difficult for Azure Logic Apps to satisfy?"
-###
-###########################################################################
+durationInMinutes: 3
 content: |
 quiz:
+  title: Check your knowledge
   questions:
-  - content: ""
+  - content: "What Project descriptor will automatically save when you change it? "
     choices:
-    - content: ""
+    - content: "Project name"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "A GitHub Project's name is the only descriptor that saves automatically."
+    - content: "Project description"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "You need to ensure your click save after writing your description to save it."
+    - content: "Project README"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "You also need to push save in order for your Project's README to save."
+  - content: "What does an iteration field help you do in Projects?"
     choices:
-    - content: ""
+    - content: "Allows you to keep track of the various changes made to an issue or pull request."
+      isCorrect: false
+      explanation: "Although an iteration field may help you keep track of where your team is with a particiular phase of your project, it unfotunately doesn't specific changes to an issue or pull request you've put in your Project."
+    - content: "Allows you to reverse the changes you made to your Project."
+      isCorrect: false
+      explanation: "An iteration field helps you and your team break down your Project into different phases, unfortunately it does not help reverse changes."
+    - content: "Allows you to create sequential phases of your project and group issues and pull request based on the phase."
       isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "An iteration field helps you amd yourr team break down your Project into different phases, allowing you to prioritize what comes first and implement timelines in order to keep you on track to accomplsih your goals."
+  - content: "What field can you use in order to make a Priority grouping like High, Medium, and Low in your Project?"
     choices:
-    - content: ""
+    - content: "Date"
+      isCorrect: false
+      explanation: "The Date field allows you assign a date to the issue or pull request in your project."
+    - content: "Single select"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Single select field allows you to create multiple groups like Priority grouping in order to help you organize and prioritize your Project."
+    - content: "Iteration field"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "Although the interation field helps you build different phases of your Project, the Single select field can help you create groupings to organize your Project."
