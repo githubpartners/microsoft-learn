@@ -55,4 +55,4 @@ If you have an existing repository that you’d like to track using Projects bul
 1. You can either select all or select the ones you want to include.
 1. Once you are ready to add the issues and pull requests to your project, click on green button titled **Add selected item** in the bottom right corner. 
 
-In the next unit we will be going into how to organize and prioritize your project in order to keep your tasks on track.
+In the next unit you will learn how to organize and prioritize your project in order to keep your tasks on track.
