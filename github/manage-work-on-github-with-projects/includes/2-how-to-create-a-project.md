@@ -32,6 +32,8 @@ Let’s define your project in a couple of different ways so that your team can 
 1. Next add a short 5-7 word description of the project and make sure to click save afterwards. 
 1. Then to update your project’s README, under **README**, type out a bit more information for your team to understand why you created this project and what you hope to accomplish with it. And when you’re done make sure to click save. 
 
+:::image type="content" source="../media/edit-readme.png" alt-text="An Example of a Project README.":::
+
 
 ## Adding issues and pull requests to your Project
 
@@ -42,11 +44,17 @@ Let’s go through the different ways to add issues and pull requests to your pr
 ### Adding an existing issue and pull request
 1. First, copy the url of an existing issue or pull request. 
 1. Next, place your cursor in the bottom row of the project, next to the **+** and paste the URL of your issue or pull request. 
+
+:::image type="content" source="../media/paste-url-to-add.png" alt-text="Pasting Issues URL in Projects.":::
+
 1. Finally press return and your issue or pull request will appear as a task in your project.
 
 ### Searching for an existing issue and pull request
 1. You can also search for existing issues or pull request by simply adding a new item. 
 1. Enter #.
+
+:::image type="content" source="../media/add-item-select-repo.png" alt-text="Searching for an Existing Issue or Pull Request.":::
+
 1. Select the repository where the pull request or issue is located. You can type part of the repository name to narrow down your options.
 1. Select the issue or pull request. You can also start typing the title to find the one you want. 
 
@@ -58,6 +66,9 @@ If you have an existing repository that you’d like to track using Projects bul
 1. Next, click **Add item from repository**. 
 1. To change the repository, click the dropdown and select a repository. The issues and pull requests will populate.
 1. You can either select all or select the ones you want to include.
+
+:::image type="content" source="../media/add-bulk-select-repo.png" alt-text="Bulk Adding from a Repo.":::
+
 1. Once you are ready to add the issues and pull requests to your project, click on green button titled **Add selected item** in the bottom right corner. 
 
 In the next unit you will learn how to organize and prioritize your project in order to keep your tasks on track.
