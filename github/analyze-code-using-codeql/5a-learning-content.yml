@@ -1,5 +1,5 @@
 ### YamlMime:ModuleUnit
-uid: learn.code-scanning-with-github-codeql-2.learning-content
+uid: learn.analyze-code-using-codeql.learning-content
 title: Enter learning content title
 metadata:
   title: learning-content
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 1
 content: |
-  [!include[](includes/4-learning-content.md)]
+  [!include[](includes/5a-learning-content.md)]

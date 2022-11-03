@@ -1,5 +1,5 @@
 ### YamlMime:Module
-uid: learn.code-scanning-with-github-codeql-2
+uid: learn.analyze-code-using-codeql
 metadata:
   title: Code Scanning with GitHub CodeQL 2
   description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the module; include relevant search keywords."
@@ -29,12 +29,13 @@ products: # see product taxonomy https://review.docs.microsoft.com/help/contribu
 subjects: # see subject taxonomy https://review.docs.microsoft.com/help/contribute/metadata-taxonomies?branch=main#subject
   - cloud-computing
 units:
-- learn.code-scanning-with-github-codeql-2.introduction
-- learn.code-scanning-with-github-codeql-2.learning-content
-- learn.code-scanning-with-github-codeql-2.learning-content
-- learn.code-scanning-with-github-codeql-2.learning-content
-- learn.code-scanning-with-github-codeql-2.exercise
-- learn.code-scanning-with-github-codeql-2.knowledge-check
-- learn.code-scanning-with-github-codeql-2.summary
+- learn.analyze-code-using-codeql.introduction
+- learn.analyze-code-using-codeql.learning-content
+- learn.analyze-code-using-codeql.learning-content
+- learn.analyze-code-using-codeql.learning-content
+- learn.analyze-code-using-codeql.exercise
+- learn.analyze-code-using-codeql.learning-content
+- learn.analyze-code-using-codeql.knowledge-check
+- learn.analyze-code-using-codeql.summary
 badge:
-  uid: learn.code-scanning-with-github-codeql-2.badge
+  uid: learn.analyze-code-using-codeql.badge
