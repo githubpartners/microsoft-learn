@@ -182,4 +182,4 @@ The full list of parameters for the `github upload-results` command is shown in 
 |`--sarif`	|Specify the SARIF file to load.|
 |`--github-auth-stdin`	|Optional. Use to pass the CLI the GitHub App or personal access token created for authentication with GitHub's REST API via standard input. This is not needed if the command has access to a `GITHUB_TOKEN` environment variable set with this token.
 
-Next up, you learn about the recommended hardware resources for running CodeQL.
+Next up, you'll take on the role of a detective to find the thief in a fictional QL village.
