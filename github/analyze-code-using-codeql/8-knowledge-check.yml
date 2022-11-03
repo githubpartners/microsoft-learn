@@ -9,7 +9,7 @@ metadata:
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 1
+durationInMinutes: 5
 ###########################################################################
 ###
 ### General guidance (https://review.docs.microsoft.com/learn-docs/docs/id-guidance-knowledge-check)
@@ -27,58 +27,37 @@ durationInMinutes: 1
 content: |
 quiz:
   questions:
-  - content: ""
+  - content: "What enables you to customize how code scanning analyzes your code?"
     choices:
-    - content: ""
+    - content: "The code scanning workflow"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct!"
+    - content: "A build file"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Incorrect. A build file is used by the code scanning autobuild process to determine the build system for Java codebases."
+    - content: "A GitHub Actions script"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Incorrect. A GitHub Actions script can be used to perform bulk setup of code scanning."
+  - content: "Dave's company wants to use GitHub actions to generate code scanning alerts. What tools can they use for code analysis?"
     choices:
-    - content: ""
+    - content: "CodeQL only"
+      isCorrect: false
+      explanation: "Incorrect. CodeQL is one of the options available, but not the only one."
+    - content: "CodeQL or supported third party tools"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! Code analysis can be performed with CodeQL as well as third party tools."
+    - content: "Only supported third party tools"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Incorrect. Supported third party tools can be used for code analysis with GitHub Actions, but that is not the only tool for code analysis."
+  - content: "Which command is used to create a CodeQL database using the CLI?"
     choices:
-    - content: ""
+    - content: "codeql database create"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct!"
+    - content: "codeql database-create"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Incorrect syntax."
+    - content: "codeql create-database"
       isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "Incorrect syntax."
+   
