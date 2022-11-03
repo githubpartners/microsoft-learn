@@ -22,9 +22,6 @@ To group a set of issues and pull requests by priority, you’ll need to first c
 
 5. Then in the **Options** text box below, start to add your different priority levels, you can label them as: Urgent, High, Medium, and Low.
 6. Then, make sure to click **Save**. 
-
-:::image type="content" source="../media/status_example.png" alt-text="Example of Priority Classification with Single Select Field.":::
-
 Now that you have your priority classification set up, next up you’ll need to classify your issues and pull requests based on priority. 
 
 To do this, select the issue or pull request you want to classify, this in the field row titled Priority, in the drop down field select the priority you want to choose for this particular issue or pull request. 
@@ -41,6 +38,7 @@ Now let’s group your issues and pull requests by priority to make it easier to
 1. Now you should be able to view issues and pull requests based on the priority you assigned them to. 
 1. One of the great features of this particular view is you can now drag and drop issues into new priority fields easily. 
 
+:::image type="content" source="../media/status_example.png" alt-text="Example of Priority Classification with Single Select Field.":::
 
 Now that you have your work prioritized, let’s tackle timelines and iterations.
 
