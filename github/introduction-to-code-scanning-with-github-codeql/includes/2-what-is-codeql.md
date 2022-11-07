@@ -1,12 +1,17 @@
-CodeQL is the analysis engine used by developers to automate security checks, and by security researchers to perform variant analysis.
+CodeQL is the analysis engine used by developers to automate security checks and by security researchers to perform variant analysis.
 
 In CodeQL, code is treated like data. Security vulnerabilities, bugs, and other errors are modeled as queries that can be executed against databases extracted from code. You can run the standard CodeQL queries, written by GitHub researchers and community contributors, or write your own to use in custom analyses. Queries that find potential bugs highlight the result directly in the source file.
 
-In this unit, you will learn about variant analysis, CodeQL databases, query suites, and query language packs.
+In this unit, you will learn about:
+
+- Variant analysis
+- CodeQL databases
+- Query suites
+- Query language packs
 
 ## Variant analysis
 
-Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities, and ensure these threats are properly fixed across multiple codebases.
+Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities and ensure these threats are properly fixed across multiple codebases.
 
 Querying code using CodeQL is the most efficient way to perform variant analysis. You can use the standard CodeQL queries to identify seed vulnerabilities, or find new vulnerabilities by writing your own custom CodeQL queries. Then, develop or iterate over the query to automatically find logical variants of the same bug that could be missed using traditional manual techniques.
 
@@ -14,7 +19,7 @@ Querying code using CodeQL is the most efficient way to perform variant analysis
 
 CodeQL databases contain queryable data extracted from a codebase, for a single language at a particular point in time. The database contains a full, hierarchical representation of the code, including a representation of the abstract syntax tree, the data flow graph, and the control flow graph.
 
-Each language has its own unique database schema that defines the relations used to create a database. The schema provides an interface between the initial lexical analysis performed during the extraction process, and the actual complex analysis of the CodeQL query evaluator. The schema specifies, for instance, that there is a table for every language construct.
+Each language has its own unique database schema that defines the relations used to create a database. The schema provides an interface between the initial lexical analysis performed during the extraction process and the actual complex analysis of the CodeQL query evaluator. The schema specifies, for instance, that there is a table for every language construct.
 
 For each language, the CodeQL libraries define classes to provide a layer of abstraction over the database tables. This provides an object-oriented view of the data which makes it easier to write queries.
 
@@ -29,7 +34,7 @@ The CodeQL library defines classes to provide a layer of abstraction over each o
 
 CodeQL query suites provide a way of selecting queries, based on their filename, location on disk or in a QL pack, or metadata properties. Create query suites for the queries that you want to frequently use in your CodeQL analyses.
 
-Query suites allow you to pass multiple queries to CodeQL without having to specify the path to each query file individually. Query suite definitions are stored in YAML files with the extension `.qls`. A suite definition is a sequence of instructions, where each instruction is a YAML mapping with (usually) a single key. The instructions are executed in the order they appear in the query suite definition. After all the instructions in the suite definition have been executed, the result is a set of selected queries.
+Query suites allow you to pass multiple queries to CodeQL without having to specify the path to each query file individually. Query suite definitions are stored in YAML files with the extension `.qls`. A suite definition is a sequence of instructions, where each instruction is usually a YAML mapping with a single key. The instructions are executed in the order they appear in the query suite definition. After all the instructions in the suite definition have been executed, the result is a set of selected queries.
 
 ### Default query suites
 
