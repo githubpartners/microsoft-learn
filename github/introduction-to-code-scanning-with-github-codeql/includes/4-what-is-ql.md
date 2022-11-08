@@ -44,4 +44,4 @@ Here are a few prominent conceptual and functional differences between general p
 
 In object-oriented programming languages, instantiating a class involves creating an object by allocating physical memory to hold the state of that instance of the class. In QL, classes are just logical properties describing sets of already existing values.
 
-Next up, an exercise.
+Next up, you'll tackle an exercise utilizing the knowledge you just learned.
