@@ -1,5 +1,3 @@
-CodeQL is the analysis engine used by developers to automate security checks and by security researchers to perform variant analysis.
-
 In CodeQL, code is treated like data. Security vulnerabilities, bugs, and other errors are modeled as queries that can be executed against databases extracted from code. You can run the standard CodeQL queries, written by GitHub researchers and community contributors, or write your own to use in custom analyses. Queries that find potential bugs highlight the result directly in the source file.
 
 In this unit, you will learn about:
@@ -11,7 +9,7 @@ In this unit, you will learn about:
 
 ## Variant analysis
 
-Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities and ensure these threats are properly fixed across multiple codebases.
+CodeQL is the analysis engine used by developers to automate security checks and by security researchers to perform variant analysis. Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities and ensure these threats are properly fixed across multiple codebases.
 
 Querying code using CodeQL is the most efficient way to perform variant analysis. You can use the standard CodeQL queries to identify seed vulnerabilities, or find new vulnerabilities by writing your own custom CodeQL queries. Then, develop or iterate over the query to automatically find logical variants of the same bug that could be missed using traditional manual techniques.
 
