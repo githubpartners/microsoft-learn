@@ -11,3 +11,7 @@ You learned about integrating with code scanning, setting up code scanning with 
 - [Find the thief](https://codeql.github.com/docs/writing-codeql-queries/find-the-thief/#find-the-thief)
 - [Recommended hardware resources for running CodeQL](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/recommended-hardware-resources-for-running-codeql)
 - [CodeQL system requirements](https://codeql.github.com/docs/codeql-overview/system-requirements/)
+
+## How to provide feedback
+
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content!
