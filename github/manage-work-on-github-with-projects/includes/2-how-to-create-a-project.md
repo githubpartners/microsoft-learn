@@ -58,7 +58,7 @@ Let’s go through the different ways to add issues and pull requests to your pr
 3. Select the repository where the pull request or issue is located. You can type part of the repository name to narrow down your options.
 4. Select the issue or pull request. You can also start typing the title to find the one you want. 
 
-## Bulk adding issues and pull request
+### Bulk adding issues and pull request
 
 If you have an existing repository that you’d like to track using Projects bulk adding issues and pull requests saves you time and allows you to start organizing your team faster. 
 
