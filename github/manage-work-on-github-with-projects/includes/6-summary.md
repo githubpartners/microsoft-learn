@@ -1,8 +1,8 @@
 In this module you learned about GitHub Projects, GitHub’s project management tool that connects your planning directly to the work your teams are doing in GitHub and flexibly adapts to whatever your team needs at any point.
 
 You learned about:
-- Learn how to build an organization project
-- Understand how to automate and organize your project
+- How to build an organization project
+- How to automate and organize your project
 
 ## Learn More
 
