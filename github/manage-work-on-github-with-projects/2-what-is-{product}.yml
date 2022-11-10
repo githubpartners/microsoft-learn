@@ -1,5 +1,5 @@
 ### YamlMime:ModuleUnit
-uid: learn.manage-work-on-github-with-projects.what-is-{product}
+uid: learn.manage-work-on-github-with-projects.2-how-to-create-a-project
 title: Manage your work on GitHub with Projects
 metadata:
   title: Manage your work on GitHub with Projects
@@ -9,6 +9,6 @@ metadata:
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 1
+durationInMinutes: 5
 content: |
-  [!include[](includes/2-what-is-{product}.md)]
+  [!include[](includes/2-how-to-create-a-project.md)]
