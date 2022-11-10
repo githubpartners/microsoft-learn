@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.manage-work-on-github-with-projects.3-how-to-organize-and-automate-your-project
+title: How to organize and automate your Project
+metadata:
+  title: How to organize and automate your Project
+  description: "Learn how to organize your project to effectively track your team's work and automate your project to help simplify your workload."
+  ms.date: 10/10/2022
+  author: a-a-ron
+  ms.author: aastewar
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure # Edit as appropriate for your portfolio area
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-how-to-organize-and-automate-your-project.md)]
