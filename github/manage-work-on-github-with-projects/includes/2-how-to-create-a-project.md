@@ -5,7 +5,7 @@ In this unit you’ll learn how to:
 - Set the name, description, and README
 - Add issues and pull requests to your project
 
-## Creating an organization project
+## Creating an organization level project
 
 First we want to lay the foundation of your Project by creating a new Project. This is fairly simple and you can do this relatively quickly.
 
