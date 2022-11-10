@@ -67,3 +67,7 @@ TODO: describe the business impact
  -->
 
 <!-- Do not include any other content -->
+
+## How to provide feedback
+
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content!
