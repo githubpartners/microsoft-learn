@@ -24,7 +24,7 @@ To group a set of issues and pull requests by priority, you’ll need to first c
 6. Then, make sure to click **Save**. 
 Now that you have your priority classification set up, next up you’ll need to classify your issues and pull requests based on priority. 
 
-To do this, select the issue or pull request you want to classify, this in the field row titled Priority, in the drop down field select the priority you want to choose for this particular issue or pull request. 
+To do this, select the issue or pull request you want to classify in the field row titled Priority. Now, in the drop down field select the priority you want to choose for this particular issue or pull request. 
 
 Repeat for your remaining pull requests and issues. 
 
@@ -34,7 +34,7 @@ Now let’s group your issues and pull requests by priority to make it easier to
 
 1. To do this click the down carrot next to the name of your currently opened view.
 1. Then click the **group** option.
-1. Next, click Priority.
+1. Next, click **Priority**.
 1. Now you should be able to view issues and pull requests based on the priority you assigned them to. 
 1. One of the great features of this particular view is you can now drag and drop issues into new priority fields easily. 
 
@@ -42,9 +42,11 @@ Now let’s group your issues and pull requests by priority to make it easier to
 
 Now that you have your work prioritized, let’s tackle timelines and iterations.
 
+If you want to save this view click the **Save changes** button to the right of the top of the list view. 
+
 ## How to add an iteration field
 
-Adding an iteration field to your project can help you and your team visualize the balance of upcoming work in order to help everyone stay on track. It allows you to set up phases for your tasks in a tangible timeframe to keep you and your team organized.
+Adding an iteration field to your Project can help you and your team visualize the balance of upcoming work in order to help everyone stay on track. It allows you to set up phases for your tasks in a tangible timeframe to keep you and your team organized.
 
 1. To first add an interaction field first go to the table view of your project, in the rightmost field header, click **+**.
 2. Then click on **New field**.
@@ -56,18 +58,18 @@ Adding an iteration field to your project can help you and your team visualize t
 5. Then make sure to click **Save**.
 6. Once you have your iteration field set up, you can now assign what iteration phase you want each of your issues and pull requests to fall under.
 
-Now that you have prioritized and organized your project, let’s take a look at how to view your project from a different perspective – a board view.
+Now that you have prioritized and organized your project, let’s take a look at how to view your Project from a different perspective – a board view.
 
 ## How to create a board view
 
-A board view of your project allows you to view upcoming tasks in a more visualizing way. 
+A board view of your Project allows you to view upcoming tasks in a more visualizing way. 
 
 Let’s walk through how to get your board view up and running. 
 
 1. To the right of your existing views, click **New view**.
 1. Click on the down carrot next to the name of the currently open view.
 1. Under **Layout**, click **Board**.
-1. When you changed the layout, your project displayed an indicator to show that the view was modified. 
+1. When you changed the layout, your Project displayed an indicator to show that the view was modified. 
 1. Save this view by clicking the **Save changes** button to the right of the top of the board. 
 1. Now you can drag and drop issues and pull request to the various columns.
 1. You can also rename the view by double clicking on the tab of the view and typing in the new name.
@@ -77,15 +79,17 @@ Let’s walk through how to get your board view up and running.
 
 ## How to configure built-in automation
 
-With built-in automation, your project will take newly created issues or pull requests and automatically put them into your project with a Todo status, helping you stay aware of all of your work.
+With built-in automation, your Project will take newly created issues or pull requests and automatically put them into your Poject with a Todo status, helping you stay aware of all of your work.
 
-To enable automation first go to the top-right corner of your project and click on the three dots to open the menu. 
+To enable automation first go to the top-right corner of your Project and click on the three dots to open the menu. 
 1. Next, in the menu, click **Workflows**.
 :::image type="content" source="../media/workflows-menu-item.png" alt-text="Workflows Menu on Projects.":::
-2. In the left column, under Default workflows, select Item added to project. 
+2. In the left column, under Default workflows, select **Item added to project**. 
 :::image type="content" source="../media/default-workflows.png" alt-text="Select added to project for your Default workflows":::
 3. Now in the center of the page, where it says **When**, ensure that both issues and pull requests are selected.
 4. Below click on **Set** and click **Status:Todo**.
 5. Finally in the right corner of the page, ensure the toggle is turned **On**. 
 
 Congratulations! You’ve just automated your project!
+
+Next up, we'll check the knowledge you learned in this module by asking you a couple of quick questions. 
