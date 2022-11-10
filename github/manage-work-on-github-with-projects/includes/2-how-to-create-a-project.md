@@ -1,9 +1,9 @@
-Imagine you want to organize your team’s feature backlog. Projects is a perfect way to organize and prioritize your team’s work in a single space. 
+Imagine you want to organize your team’s feature backlog. Projects, GitHub's built in program management tool, is a perfect way to organize and prioritize your team’s work in a single space. 
 
 In this unit you’ll learn how to:
-- Create a project
-- Set the name, description, and README
-- Add issues and pull requests to your project
+- Create a Project
+- Set the name, description, and README of your Project
+- Add issues and pull requests to your Project
 
 ## Creating an organization level Project
 
@@ -13,7 +13,7 @@ First we want to lay the foundation of your Project by creating a new Project. T
 
 :::image type="content" source="../media/your-organizations.png" alt-text="Profile Dropdown Menu - Your Organization.":::
 
-2. Once on Your organization page, click the name of your organization you want to create a new Project for.
+2. Once on **Your organization page**, click the name of your organization you want to create a new Project for.
 3. Under your organization name, click **Projects**.
 4. Then click the green button labeled **New Project**. 
 5. Next it will ask you to select either a template or an empty project. Let’s start from scratch and select **Table** and then click the green **Create** button. 
@@ -24,13 +24,13 @@ You can also create a personal Project by clicking your profile photo and naviga
 
 ## Setting your project’s name, description, and README
 
-Let’s define your project in a couple of different ways so that your team can easily understand what you're tracking. 
+Let’s define your Project in a couple of different ways so that your team can easily understand what you're tracking. 
 
-1. To edit your project’s name, description and README navigate to your newly created project and in the top right, click the 3 dots to open the menu.
+1. To edit your Project’s name, description and README navigate to your newly created project and in the top right, click the 3 dots to open the menu.
 1. In the menu, click **Settings**.
-1. And here you can edit the name of the project and it will save automatically.
-1. Next add a short 5-7 word description of the project and make sure to click save afterwards. 
-1. Then to update your project’s README, under **README**, type out a bit more information for your team to understand why you created this project and what you hope to accomplish with it. And when you’re done make sure to click save. 
+1. And here you can edit the name of the Project and it will save automatically.
+1. Next add a short 5-7 word description of the Project and make sure to click **Save** afterwards. 
+1. Then to update your Project’s README, under **README**, type out a bit more information for your team to understand why you created this Project and what you hope to accomplish with it. And when you’re done make sure to click **Save**. 
 
 :::image type="content" source="../media/edit-readme.png" alt-text="An Example of a Project README.":::
 
@@ -39,15 +39,15 @@ Let’s define your project in a couple of different ways so that your team can 
 
 Adding in issues and pull requests to your Project is what makes it so powerful. It allows you to know the status of tasks your team is working on in order to coordinate and complete your goals. 
 
-Let’s go through the different ways to add issues and pull requests to your project. 
+Let’s go through the different ways to add issues and pull requests to your Project. 
 
 ### Adding an existing issue and pull request
 1. First, copy the url of an existing issue or pull request. 
-2. Next, place your cursor in the bottom row of the project, next to the **+** and paste the URL of your issue or pull request. 
+2. Next, place your cursor in the bottom row of the Project, next to the **+** and paste the URL of your issue or pull request. 
 
 :::image type="content" source="../media/paste-url-to-add.png" alt-text="Pasting Issues URL in Projects.":::
 
-3. Finally press return and your issue or pull request will appear as a task in your project.
+3. Finally press return and your issue or pull request will appear as a task in your Project.
 
 ### Searching for an existing issue and pull request
 1. You can also search for existing issues or pull request by simply adding a new item. 
@@ -71,4 +71,4 @@ If you have an existing repository that you’d like to track using Projects bul
 
 5. Once you are ready to add the issues and pull requests to your project, click on green button titled **Add selected item** in the bottom right corner. 
 
-In the next unit you will learn how to organize and prioritize your project in order to keep your tasks on track.
+In the next unit you'll learn how to organize and prioritize your project in order to keep your tasks on track.
