@@ -8,9 +8,9 @@ In this module, you will learn about the CodeQL static analysis tool and how the
 
 By the end of this module, you will be able to:
 
-- Understand CodeQL and how it analyzes code
-- Learn about QL, a unique logic programming language
-- Set up CodeQL based code scanning in a GitHub repository
+- Understanding variant analysis, CodeQL databases, query suites, and query language packs relevancy with Code Scanning
+- How to run a CodeQL analysis
+- What is QL and how to use it with Code Scanning 
 
 ## Prerequisites
 
