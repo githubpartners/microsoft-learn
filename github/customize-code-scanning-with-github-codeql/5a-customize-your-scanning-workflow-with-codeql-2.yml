@@ -1,8 +1,8 @@
 ### YamlMime:ModuleUnit
-uid: learn.customize-code-scanning-with-github-codeql.exercise
-title: Enter exercise title
+uid: learn.customize-code-scanning-with-github-codeql.learning-content
+title: Enter learning content title
 metadata:
-  title: exercise
+  title: learning-content
   description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
   ms.date: 10/24/2022
   author: a-a-ron
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 1
 content: |
-  [!include[](includes/5-exercise.md)]
+  [!include[](includes/5a-customize-your-scanning-workflow-with-codeql-2.md)]

@@ -1,5 +1,5 @@
 ### YamlMime:ModuleUnit
-uid: learn.customize-code-scanning-with-github-codeql.learning-content
+uid: learn.customize-code-scanning-with-github-codeql.exercise
 title: Enter exercise title
 metadata:
   title: exercise
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 1
 content: |
-  [!include[](includes/3-learning-content.md)]
+  [!include[](includes/5b-exercise-configure-language-matrix.md)]

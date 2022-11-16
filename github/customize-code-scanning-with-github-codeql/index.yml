@@ -30,10 +30,13 @@ subjects: # see subject taxonomy https://review.docs.microsoft.com/help/contribu
   - cloud-computing
 units:
 - learn.customize-code-scanning-with-github-codeql.introduction
-- learn.customize-code-scanning-with-github-codeql.learning-content
-- learn.customize-code-scanning-with-github-codeql.learning-content
-- learn.customize-code-scanning-with-github-codeql.learning-content
-- learn.customize-code-scanning-with-github-codeql.exercise
+- learn.customize-code-scanning-with-github-codeql.configure-codeql
+- learn.customize-code-scanning-with-github-codeql.customize-your-scanning-workflow-with-codeql
+- learn.customize-code-scanning-with-github-codeql.exercise-reference-codeql-query
+- learn.customize-code-scanning-with-github-codeql.customize-your-scanning-workflow-with-codeql-2
+- learn.customize-code-scanning-with-github-codeql.exercise-configure-language-matrix
+- learn.customize-code-scanning-with-github-codeql.custom-build-steps-for-code-scanning
+- learn.customize-code-scanning-with-github-codeql.troubleshooting-the-codeql-workflow
 - learn.customize-code-scanning-with-github-codeql.knowledge-check
 - learn.customize-code-scanning-with-github-codeql.summary
 badge:
