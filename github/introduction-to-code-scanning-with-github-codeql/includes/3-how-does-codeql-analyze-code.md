@@ -2,11 +2,9 @@ Implementing code scanning with CodeQL requires an understanding of how the tool
 
 CodeQL analysis consists of three steps:
 
-1. Preparing the code, by creating a CodeQL database.
-2. Running CodeQL queries against the database.
-3. Interpreting the query results.
-
-In this unit, you will learn about the three phases of CodeQL analysis.
+- Preparing the code, by creating a CodeQL database
+- Running CodeQL queries against the database
+- Interpreting the query results
 
 ## Database creation
 
