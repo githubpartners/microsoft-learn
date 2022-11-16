@@ -1,5 +1,14 @@
 QL is a declarative, object-oriented query language that is optimized to enable efficient analysis of hierarchical data structures, in particular, databases representing software artifacts.
 
+In this unit you'll learn about:
+
+- Query language: provides a programming platform to ask questions about information stored in a database
+- QL syntax: a logic language, all operations in QL are logical operations
+- Object orientation: increases modularity, enables information hiding, and allows code reuse, within its logical foundation
+- QL and general purpose programming languages: conceptual and functional differences
+
+## QL query language
+
 A database is an organized collection of data. The most commonly used database model is a relational model which stores data in tables and SQL (Structured Query Language) is the most commonly used query language for relational databases.
 
 The purpose of a query language is to provide a programming platform where you can ask questions about information stored in a database. A database management system manages the storage and administration of data and provides the querying mechanism. A query typically refers to the relevant database entities and specifies various conditions (called predicates) that must be satisfied by the results. Query evaluation involves checking these predicates and generating the results. Some of the desirable properties of a good query language and its implementation include:
@@ -32,7 +41,7 @@ int getNumberOfDescendants(Person p) {
 
 ## Object orientation
 
-Object orientation is an important feature of QL. The benefits of object orientation are well-known – it increases modularity, enables information hiding, and allows code reuse. QL offers all these benefits without compromising on its logical foundation. This is achieved by defining a simple object model where classes are modeled as predicates and inheritance as implication. The libraries made available for all supported languages make extensive use of classes and inheritance.
+Object orientation is an important feature of QL. The benefits of object orientation are well-known. It increases modularity, enables information hiding, and allows code reuse. QL offers all these benefits without compromising on its logical foundation. This is achieved by defining a simple object model where classes are modeled as predicates and inheritance as implication. The libraries made available for all supported languages make extensive use of classes and inheritance.
 
 ## QL and general purpose programming languages
 
