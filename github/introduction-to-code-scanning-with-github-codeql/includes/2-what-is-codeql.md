@@ -1,17 +1,11 @@
-In CodeQL, code is treated like data. Security vulnerabilities, bugs, and other errors are modeled as queries that can be executed against databases extracted from code. You can run the standard CodeQL queries, written by GitHub researchers and community contributors, or write your own to use in custom analyses. Queries that find potential bugs highlight the result directly in the source file.
+In CodeQL, code is treated like data, which makes it easier to find security vulnerabilities, bugs, and other errors. Running the standard CodeQL queries can find potential bugs and highlight the result directly in the source file. You can use variant analysis and known security vulnerabilities as a seed to find similar problems in your code.
 
-In this unit, you will learn about:
+The topics in the unit include:
 
-- Variant analysis
-- CodeQL databases
-- Query suites
-- Query language packs
-
-## Variant analysis
-
-CodeQL is the analysis engine used by developers to automate security checks and by security researchers to perform variant analysis. Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities and ensure these threats are properly fixed across multiple codebases.
-
-Querying code using CodeQL is the most efficient way to perform variant analysis. You can use the standard CodeQL queries to identify seed vulnerabilities, or find new vulnerabilities by writing your own custom CodeQL queries. Then, develop or iterate over the query to automatically find logical variants of the same bug that could be missed using traditional manual techniques.
+- CodeQL databases: contain queryable data extracted from a codebase
+- Query language packs: use to organize the files used in CodeQL analysis
+- Query suites: provide a way of selecting queries
+- Variant analysis: developers automate security checks and security researchers perform variant analysis
 
 ## CodeQL databases
 
@@ -27,20 +21,6 @@ For example, in a CodeQL database for a Java program, two key tables are:
 * The `statements` table containing a row for every single statement in the source code that was analyzed during the build process.
 
 The CodeQL library defines classes to provide a layer of abstraction over each of these tables (and the related auxiliary tables): `Expr` and `Stmt`.
-
-## Query suites
-
-CodeQL query suites provide a way of selecting queries, based on their filename, location on disk or in a QL pack, or metadata properties. Create query suites for the queries that you want to frequently use in your CodeQL analyses.
-
-Query suites allow you to pass multiple queries to CodeQL without having to specify the path to each query file individually. Query suite definitions are stored in YAML files with the extension `.qls`. A suite definition is a sequence of instructions, where each instruction is usually a YAML mapping with a single key. The instructions are executed in the order they appear in the query suite definition. After all the instructions in the suite definition have been executed, the result is a set of selected queries.
-
-### Default query suites
-
-There are three default query suites for CodeQL:
-
-- `code-scanning`: queries run by default in CodeQL code scanning on GitHub.
-- `security-extended`: queries from `code-scanning`, plus extra security queries with slightly lower precision and severity.
-- `security-and-quality`: queries from `code-scanning`, `security-extended`, plus extra maintainability and reliability queries.
 
 ## Query Language (QL) packs
 
@@ -69,5 +49,25 @@ dependencies:
     codeql/java-all: "*"
     codeql/suite-helpers: "*"
 ```
+
+## Query suites
+
+CodeQL query suites provide a way of selecting queries, based on their filename, location on disk or in a QL pack, or metadata properties. Create query suites for the queries that you want to frequently use in your CodeQL analyses.
+
+Query suites allow you to pass multiple queries to CodeQL without having to specify the path to each query file individually. Query suite definitions are stored in YAML files with the extension `.qls`. A suite definition is a sequence of instructions, where each instruction is usually a YAML mapping with a single key. The instructions are executed in the order they appear in the query suite definition. After all the instructions in the suite definition have been executed, the result is a set of selected queries.
+
+### Default query suites
+
+There are three default query suites for CodeQL:
+
+- `code-scanning`: queries run by default in CodeQL code scanning on GitHub.
+- `security-extended`: queries from `code-scanning`, plus extra security queries with slightly lower precision and severity.
+- `security-and-quality`: queries from `code-scanning`, `security-extended`, plus extra maintainability and reliability queries.
+
+## Variant analysis
+
+CodeQL is the analysis engine used by developers to automate security checks and by security researchers to perform variant analysis. Variant analysis is the process of using a known security vulnerability as a seed to find similar problems in your code. It’s a technique that security engineers use to identify potential vulnerabilities and ensure these threats are properly fixed across multiple codebases.
+
+Querying code using CodeQL is the most efficient way to perform variant analysis. You can use the standard CodeQL queries to identify seed vulnerabilities, or find new vulnerabilities by writing your own custom CodeQL queries. Then, develop or iterate over the query to automatically find logical variants of the same bug that could be missed using traditional manual techniques.
 
 Next up, you will learn about the three phases of CodeQL analysis.
