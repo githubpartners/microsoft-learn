@@ -2,6 +2,11 @@ In addition to the graphical user interface on GitHub.com, you can also access m
 
 This unit will cover using the CodeQL CLI to create databases, analyze databases and upload the results to GitHub.
 
+- CodeQL CLI commands: generate results and upload them to GitHub
+- Create CodeQL databases to analyze: create CodeQL databases to analyze
+- Analyze a CodeQL database: analyze your CodeQL database
+- Upload results to GitHub: decide on the most secure and reliable upload method for your CI server
+
 ## CodeQL CLI commands
 
 Once you've made the CodeQL CLI available to servers in your CI system, and ensured that they can authenticate with GitHub, you're ready to generate data.
