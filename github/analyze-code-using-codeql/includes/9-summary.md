@@ -1,5 +1,3 @@
-You are a senior developer at a start-up company specializing in health care software. Now you understand the various code scanning configuration options.
-
 You learned about integrating with code scanning, setting up code scanning with GitHub Actions, using the CodeQL command-line interface (CLI), and understanding what hardware resources to use with CodeQL.
 
 ## References
