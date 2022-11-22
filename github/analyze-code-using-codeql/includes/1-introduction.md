@@ -2,8 +2,6 @@ When integrating with code scanning you will need to decide which tool you want 
 
 Imagine that you continue to be a senior developer at a start-up company specializing in health care software. You will need to understand the various configuration options. You will also need to know how to implement and maintain a code scanning pipeline to assist other developers at your company in configuring and deploying code scanning correctly.
 
-In this module, you will learn about integrating with code scanning, set up code scanning with GitHub Actions, use the CodeQL command-line interface (CLI), and understand what hardware resources to use with CodeQL.
-
 ## Learning objectives
 
 By the end of this module, you will be able to:
