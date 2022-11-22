@@ -28,7 +28,7 @@ To set up code scanning with GitHub Actions and CodeQL on a repository, do the f
 6. Choose whether you'd like to commit directly to the default branch, or create a new branch and start a pull request.
 7. Click **Commit new file** or **Propose new file**.
 
-In the default CodeQL analysis workflow, code scanning is configured to analyze your code each time you either push a change to the default branch or any protected branches, or raise a pull request against the default branch. As a result, code scanning will now commence.
+In the default CodeQL analysis workflow, code scanning is configured to analyze your code each time you either push a change to the default branch or any protected branches, or raise a pull request against the default branch. As a result of either of these two occurrences, code scanning will automatically start.
 
 The `on:pull_request` and `on:push triggers` for code scanning are each useful for different purposes.
 
