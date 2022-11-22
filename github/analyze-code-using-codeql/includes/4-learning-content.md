@@ -1,6 +1,6 @@
 In addition to the graphical user interface on GitHub.com, you can also access many of the same primary CodeQL features through a command line interface.
 
-This unit will cover using the CodeQL CLI to create databases, analyze databases and upload the results to GitHub.
+This unit will cover using the CodeQL CLI to create databases, analyze databases, and upload the results to GitHub.
 
 - CodeQL CLI commands: generate results and upload them to GitHub
 - Create CodeQL databases to analyze: create CodeQL databases to analyze
@@ -9,7 +9,7 @@ This unit will cover using the CodeQL CLI to create databases, analyze databases
 
 ## CodeQL CLI commands
 
-Once you've made the CodeQL CLI available to servers in your CI system, and ensured that they can authenticate with GitHub, you're ready to generate data.
+Once you've made the CodeQL CLI available to servers in your CI system and ensured that they can authenticate with GitHub, you're ready to generate data.
 
 You use three different commands to generate results and upload them to GitHub:
 
@@ -187,4 +187,4 @@ The full list of parameters for the `github upload-results` command is shown in 
 |`--sarif`	|Specify the SARIF file to load.|
 |`--github-auth-stdin`	|Optional. Use to pass the CLI the GitHub App or personal access token created for authentication with GitHub's REST API via standard input. This is not needed if the command has access to a `GITHUB_TOKEN` environment variable set with this token.
 
-Next up, you'll take on the role of a detective to find the thief in a fictional QL village.
+Next up, you'll take on the role of a detective in a hands-on exercise to find the thief in a fictional QL village.
