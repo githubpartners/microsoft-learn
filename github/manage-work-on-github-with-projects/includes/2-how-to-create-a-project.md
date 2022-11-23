@@ -7,7 +7,40 @@ In this unit you’ll learn:
 - How to add issues and pull requests to your Project
 
 ## Projects vs Projects (Classic)
-Before we dive into Projects, let's first go over how Projects has improved by comparing Projects (Classic) to the updated Projects.
+Before we dive into Projects, let's first go over how Projects has improved by comparing Projects to Projects (Classic).
+
+|  | Projects | Projects (Classic) | 
+|--------|--------|--------| 
+| Tables and Boards | Boards, Lists, Timeline Layout | Boards | 
+| Data | Sort, rank, and group items by custom fields such as text, number, date, iteration and single select | Columns and Cards | 
+| Insight |  Rewrite what should go here | Rewrite what should go here | 
+| Automation | Research what should go here | Research what should go here | 
+
+The new GitHub Projects provides a richer experience that allows you to keep track of your work, where you work. Let's dive a bit deeper into the changes that have been made.
+
+### Tables and boards:
+- Plan and track work in a table or board view
+- Rank, sort, and group within a table by any custom field
+- Create draft issues with detailed descriptions and metadata
+- Materialize any perspective with tokenized filtering and saved views
+- Customize cards and group-by in project boards
+- Real-time project updates and user presence indicators
+
+### Data:
+- Define custom fields of type: text, number, date, iteration, and single select
+- Configure iterations with flexible date ranges and breaks to represent your sprints, cycles, or quarterly roadmap
+- View linked pull requests and reviewers in both table and board views
+
+### Insight:
+- Create and configure custom bar, column, line, and stacked area charts
+- Use aggregation functions like sum, count, average, min, and max to get the proper insight
+- Persist charts and share them with a URL to keep everyone in the know
+
+### Automation
+- GraphQL ProjectsV2 API
+- GitHub app project scopes
+- Webhooks events for project item metadata updates
+- GitHub Action to automate adding issues to projects
 
 ## Creating an organization level Project
 
