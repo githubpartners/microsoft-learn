@@ -1,1 +1,14 @@
-
+### YamlMime:ModuleUnit
+uid: learn.manage-work-on-github-with-projects.6-Projects-versus-Projects-Classic
+title: Projects versus Projects (Classic)
+metadata:
+  title: Projects versus Projects (Classic)
+  description: "Learn Projects' enhancements and updates that can help make your team for effective and effecient."
+  ms.date: 10/10/2022
+  author: a-a-ron
+  ms.author: aastewar
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure # Edit as appropriate for your portfolio area
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-Projects-versus-Projects-Classic.md)]
