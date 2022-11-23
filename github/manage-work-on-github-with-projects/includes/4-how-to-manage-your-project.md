@@ -1,5 +1,5 @@
-Project visibility
-Project access
-Closing / deleting projects
-Adding a project to a repo
-Adding a project to a team
+- Project visibility
+- Project access
+- Closing / deleting projects
+- Adding a project to a repo
+- Adding a project to a team
