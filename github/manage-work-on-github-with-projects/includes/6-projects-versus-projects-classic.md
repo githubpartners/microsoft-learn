@@ -7,8 +7,8 @@ Let's first go over some of the enhancements in a side-by-side glance and then d
 |--------|--------|--------| 
 | Tables and Boards | Boards, Lists, Timeline Layout | Boards | 
 | Data | Sort, rank, and group items by custom fields such as text, number, date, iteration and single select | Columns and Cards | 
-| Insight |  Rewrite what should go here | Rewrite what should go here | 
-| Automation | Research what should go here | Research what should go here | 
+| Insight |  Create visuals to help understand your work through historical and current charts with Projects | Progress bar | 
+| Automation | Use GraphQL API, Actions, and Column presets to manage your Project | Configure Column presets for when issues and pull requests are added, edited, or closed | 
 
 The new GitHub Projects provides a richer experience that allows you to keep track of your work, where you work. Let's dive a bit deeper into the changes that have been made.
 
