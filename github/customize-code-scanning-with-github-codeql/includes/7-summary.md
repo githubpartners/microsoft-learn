@@ -1,4 +1,4 @@
-#EDITS NEEDED
+# EDITS NEEDED
 
 You are a senior developer responsible for implementing automated code vulnerability scanning at your company. You need to understand how code scanning with CodeQL works and how to configure it, so that you can help your entire organization adopt it.
 
