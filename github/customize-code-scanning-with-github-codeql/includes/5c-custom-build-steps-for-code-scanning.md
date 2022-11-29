@@ -1,78 +1,65 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+CodeQL code scanning supports many languages by default with an autobuild feature. If your code uses a non-standard build process, however, you may need to customize your workflow with custom build steps.
 
-    Goal: briefly summarize the key skill this unit will teach
+This unit will describe how to change the languages analyzed by code scanning and how to add custom build steps to a CodeQL code scanning workflow.
 
-    Heading: none
+## Change the languages that are analyzed
 
-    Example: "Organizations often have multiple storage accounts to let them implement different sets of requirements."
+CodeQL code scanning automatically detects code written in the following supported languages: C/C++, C#, Go, Java, JavaScript/TypeScript, Python, and Ruby.
 
-    [Learning-unit introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-learning-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+> [!Note]
+> CodeQL analysis for Ruby is currently in beta. During the beta, analysis of Ruby will be less comprehensive than CodeQL analysis of other languages.
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+The default CodeQL analysis workflow file contains a build matrix called *language* which lists the languages in your repository that are analyzed. CodeQL automatically populates this matrix when you add code scanning to a repository. Using the language matrix optimizes CodeQL to run each analysis in parallel. We recommend that all workflows adopt this configuration due to the performance benefits of parallelizing builds.
 
-    Goal: Describe the part of the scenario that will be solved by the content in this unit
+If your repository contains code in more than one of the supported languages, you can choose which languages you want to analyze. There are several reasons you might want to prevent a language being analyzed. For example, the project might have dependencies in a different language to the main body of your code, and you might prefer not to see alerts for those dependencies.
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+If your workflow uses the language matrix then CodeQL is hardcoded to analyze only the languages in the matrix. To change the languages you want to analyze, edit the value of the matrix variable. You can remove a language to prevent it being analyzed or you can add a language that was not present in the repository when code scanning was set up. For example, if the repository initially only contained JavaScript when code scanning was set up, and you later added Python code, you will need to add `python` to the matrix.
 
-    Example: "In the shoe-company scenario, we will use a Twitter trigger to launch our app when tweets containing our product name are available."
--->
-TODO: add your scenario sub-task
+```yml
+jobs:
+  analyze:
+    name: Analyze
+    ...
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['javascript', 'python']
+```
 
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------
+If your workflow does not contain a matrix called language, then CodeQL is configured to run analysis sequentially. If you don't specify languages in the workflow, CodeQL automatically detects, and attempts to analyze, any supported languages in the repository. If you want to choose which languages to analyze, without using a matrix, you can use the languages parameter under the `init` action.
 
-    Goal: State concisely what's covered in this unit
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    languages: cpp, csharp, python
+```
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+## Custom build steps for code scanning
 
-    Example: "Here, you will learn the policy factors that are controlled by a storage account so you can decide how many accounts you need."
--->
-TODO: write your prose table-of-contents
+For the supported compiled languages, you can use the autobuild action in the CodeQL analysis workflow to build your code. This avoids you having to specify explicit build commands for C/C++, C#, and Java. CodeQL also runs a build for Go projects to set up the project. However, in contrast to the other compiled languages, all Go files in the repository are extracted, not just those that are built. You can use custom build commands to skip extracting Go files that are not touched by the build.
 
-<!-- 4. Visual element (highly recommended) ----------------------------------------------------------------
+### Add build steps for a compiled language
 
-    Goal: Visual element, like an image, table, list, code sample, or blockquote. Ideally, you'll provide an image that illustrates the customer problem the unit will solve; it can use the scenario to do this or stay generic (i.e. not address the scenario).
+If the C/C++, C#, or Java code in your repository has a non-standard build process, `autobuild` may fail. You will need to remove the `autobuild` step from the workflow, and manually add build steps.
 
-    Heading: none
--->
-TODO: add a visual element
+After removing the `autobuild` step, uncomment the run step and add build commands that are suitable for your repository. The workflow run step runs command-line programs using the operating system's shell. You can modify these commands and add more commands to customize the build process.
 
-<!-- 5. Chunked content-------------------------------------------------------------------------------------
+```yml
+- run: |
+  make bootstrap
+  make release
+```
 
-    Goal: Provide all the information the learner needs to perform this sub-task.
+If your repository contains multiple compiled languages, you can specify language-specific build commands. For example, if your repository contains C/C++, C# and Java, and `autobuild` correctly builds C/C++ and C# but fails to build Java, you could use the following configuration in your workflow, after the init step. This specifies build steps for Java while still using `autobuild` for C/C++ and C#:
 
-    Structure: Break the content into 'chunks' where each chunk has three things:
-        1. An H2 or H3 heading describing the goal of the chunk
-        2. 1-3 paragraphs of text
-        3. Visual like an image, table, list, code sample, or blockquote.
+```yml
+- if: matrix.language == 'cpp' || matrix.language == 'csharp'
+  name: Autobuild
+  uses: github/codeql-action/autobuild@v1
 
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
-
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
-
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
+- if: matrix.language == 'java'
+  name: Build Java
+  run: |
+    make bootstrap
+    make release
+```
