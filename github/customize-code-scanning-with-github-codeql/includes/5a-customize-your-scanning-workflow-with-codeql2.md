@@ -1,78 +1,118 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Code scanning workflows that use CodeQL have various configuration options that can be adjusted to better suit the needs of your organization.
 
-    Goal: briefly summarize the key skill this unit will teach
+In this unit, you will learn how to reference additional queries in a custom configuration file.
 
-    Heading: none
+## Additional queries in a custom configuration file
 
-    Example: "Organizations often have multiple storage accounts to let them implement different sets of requirements."
+A custom configuration file is an alternative way to specify additional packs and queries to run. You can also use the file to disable the default queries and to specify which directories to scan during analysis.
 
-    [Learning-unit introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-learning-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+In the workflow file, use the `config-file` parameter of the `init` action to specify the path to the configuration file you want to use. This example loads the configuration file `./.github/codeql/codeql-config.yml`.
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    config-file: ./.github/codeql/codeql-config.yml
+```
 
-    Goal: Describe the part of the scenario that will be solved by the content in this unit
+The configuration file can be located within the repository you are analyzing, or in an external repository. Using an external repository allows you to specify configuration options for multiple repositories in a single place. When you reference a configuration file located in an external repository, you can use the `OWNER/REPOSITORY/FILENAME@BRANCH` syntax. For example, `octo-org/shared/codeql-config.yml@main`.
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+If the configuration file is located in an external private repository, use the `external-repository-token` parameter of the `init` action to specify a token that has access to the private repository.
 
-    Example: "In the shoe-company scenario, we will use a Twitter trigger to launch our app when tweets containing our product name are available."
--->
-TODO: add your scenario sub-task
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    external-repository-token: ${{ secrets.ACCESS_TOKEN }}
+```
 
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------
+The settings in the configuration file are written in YAML format.
 
-    Goal: State concisely what's covered in this unit
+### Specify CodeQL query packs in custom configuration files
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+> [!Note]
+> The CodeQL package management functionality, including CodeQL packs, is currently in beta and subject to change.
 
-    Example: "Here, you will learn the policy factors that are controlled by a storage account so you can decide how many accounts you need."
--->
-TODO: write your prose table-of-contents
+You specify CodeQL query packs in an array. Note that the format is different from the format used by the workflow file.
 
-<!-- 4. Visual element (highly recommended) ----------------------------------------------------------------
+```yml
+packs:
+  # Use the latest version of 'pack1' published by 'scope'
+  - scope/pack1
+  # Use version 1.23 of 'pack2'
+  - scope/pack2@v1.2.3
+  # Use the latest version of 'pack3' compatible with 1.23
+  - scope/pack3@~1.2.3
+```
 
-    Goal: Visual element, like an image, table, list, code sample, or blockquote. Ideally, you'll provide an image that illustrates the customer problem the unit will solve; it can use the scenario to do this or stay generic (i.e. not address the scenario).
+If you have a workflow that generates more than one CodeQL database, you can specify any CodeQL query packs to run in a custom configuration file using a nested map of packs.
 
-    Heading: none
--->
-TODO: add a visual element
+```yml
+packs:
+  # Use these packs for JavaScript analysis
+  javascript:
+    - scope/js-pack1
+    - scope/js-pack2
+  # Use these packs for Java analysis
+  java:
+    - scope/java-pack1
+    - scope/java-pack2@v1.0.0
+```
 
-<!-- 5. Chunked content-------------------------------------------------------------------------------------
+### Specify additional queries in a custom configuration
 
-    Goal: Provide all the information the learner needs to perform this sub-task.
+You specify additional queries in a queries array. Each element of the array contains a uses parameter with a value that identifies a single query file, a directory containing query files, or a query suite definition file.
 
-    Structure: Break the content into 'chunks' where each chunk has three things:
-        1. An H2 or H3 heading describing the goal of the chunk
-        2. 1-3 paragraphs of text
-        3. Visual like an image, table, list, code sample, or blockquote.
+```yml
+queries:
+  - uses: ./my-basic-queries/example-query.ql
+  - uses: ./my-advanced-queries
+  - uses: ./query-suites/my-security-queries.qls
+```
 
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
+Optionally, you can give each array element a name, as shown in the example configuration file below.
 
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
+```yml
+name: "My CodeQL config"
 
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
+disable-default-queries: true
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+queries:
+  - name: Use an in-repository QL pack (run queries in the my-queries directory)
+    uses: ./my-queries
+  - name: Use an external JavaScript QL pack (run queries from an external repo)
+    uses: octo-org/javascript-qlpack@main
+  - name: Use an external query (run a single query from an external QL pack)
+    uses: octo-org/python-qlpack/show_ifs.ql@main
+  - name: Use a query suite file (run queries from a query suite in this repo)
+    uses: ./codeql-qlpacks/complex-python-qlpack/rootAndBar.qls
 
-<!-- Do not add a unit summary or references/links -->
+paths:
+  - src
+paths-ignore:
+  - src/node_modules
+  - '**/*.test.js'
+```
+
+## Disable the default queries
+
+If you only want to run custom queries, you can disable the default security queries by using `disable-default-queries: true`. This flag should also be used if you are trying to construct a custom query suite that excludes a particular rule. This is to avoid having all of the queries run twice.
+
+## Specify directories to scan
+
+For the interpreted languages that CodeQL supports (Python, Ruby and JavaScript/TypeScript), you can restrict code scanning to files in specific directories by adding a paths array to the configuration file. You can exclude the files in specific directories from analysis by adding a `paths-ignore` array.
+
+```yml
+paths:
+  - src
+paths-ignore:
+  - src/node_modules
+  - '**/*.test.js'
+```
+
+> [!Note]
+> * The `paths` and `paths-ignore` keywords, used in the context of the code scanning configuration file, should not be confused with the same keywords when used for `on.<push|pull_request>.paths` in a workflow. When they are used to modify `on.<push|pull_request>` in a workflow, they determine whether the actions will be run when someone modifies code in the specified directories.
+> * The filter pattern characters `?`, `+`, `[`, `]`, and `!` are not supported and will be matched literally.
+> * `**` characters can only be at the start or end of a line, or surrounded by slashes, and you can't mix `**` and other characters. For example, `foo/**`, `**/foo`, and `foo/**/bar` are all allowed syntax, but `**foo` isn't. However you can use single stars along with other characters, as shown in the example. You'll need to quote anything that contains a `*` character.
+
+For compiled languages, if you want to limit code scanning to specific directories in your project, you must specify appropriate build steps in the workflow. The commands you need to use to exclude a directory from the build will depend on your build system.
+
+You can quickly analyze small portions of a monorepo when you modify code in specific directories. You'll need to both exclude directories in your build steps and use the `paths-ignore` and `paths` keywords for `on.<push|pull_request>` in your workflow.
