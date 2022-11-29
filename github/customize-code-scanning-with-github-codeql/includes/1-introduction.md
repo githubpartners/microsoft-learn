@@ -1,62 +1,28 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+# EDITS NEEDED
 
-    Goal: orient the learner to the area covered in this module
+Code scanning using CodeQL provides an extensible method to automate vulnerability scanning across your organizations GitHub repositories.
 
-    Heading: none
+Imagine that you are a senior developer at a start-up company specializing in health care software. Your flagship product is a Java-based web portal that allows physicians to manage patient records. A recent penetration test of this product revealed a number of serious vulnerabilities that could compromise patient information. The CIO has asked you to implement automated code vulnerability scanning. Because your code is already hosted in a private repository on GitHub, you have decided to use the code scanning feature with CodeQL. You will need to understand how the feature works to persuade other developers and management to use the feature. You will also need to understand the various configuration options and how to implement and maintain a code scanning pipeline to assist other developers at your company in configuring and deploying code scanning correctly.
 
-    Example: "Azure Logic Apps let you automate your business processes and run them in the cloud."
+In this module, you will learn about the CodeQL static analysis tool and how the code scanning feature in GitHub uses it to automate vulnerability scanning. You will also learn how to customize a code scanning workflow that uses CodeQL, how to include additional queries, and how to adapt your workflow to repositories that have multiple languages.
 
-    Recommended: visual like an image, table, list, etc. that supports the topic sentence(s)
+## Learning objectives
 
-    [Introduction unit guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-module-introduction-format)
--->
-TODO: add your topic sentences(s)
-TODO: add a visual element
+By the end of this module, you will be able to:
 
-<!-- 2. Scenario -----------------------------------------------------------------------------------------
+- Understand CodeQL and how it analyzes code
+- Understand QL, a unique logic programming language
+- Set up CodeQL based code scanning in a GitHub repository
+- Reference a custom CodeQL query
+- Configure the language matrix in a CodeQL workflow
+- Learn how to use the CodeQL CLI to generate code scanning results and upload them to GitHub
+- Implement custom build steps
 
-    Goal: describe the real-world scenario this module will use to illustrate the concepts
+## Prerequisites
 
-    Heading: "## Example scenario"
+- A GitHub enterprise account with a GitHub Advanced Security license
+- Necessary permissions to administrate your repository
+- Knowledge of GitHub Advanced Security's code scanning feature
+- Knowledge of GitHub Actions
 
-    Example: "Suppose you work at an athletic shoe company on the marketing team. You're launching a new basketball shoe created by a celebrity athlete. Previous launches resulted in a social media frenzy as people shared stories and photos of themselves wearing their new shoes. The marketing team wants to monitor hundreds of social media sites, blogs, and websites to determine consumer reaction. There will be more data than you can process manually. You would like a cloud-hosted system that automates monitoring, text analytics, database storage, and email notifications."
-
-    Recommended: an image that visualizes the scenario, use the image markdown extension (https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=main#images)
-
-    Optional: a "scenario video" that visualizes the scenario
-
-    [Scenario guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-scenarios)
-    [Scenario video guidance](TBD)
- -->
-## Example scenario
-TODO: add your scenario
-TODO: add a visual element
-
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------------
-
-    Goal: List the activities the learner will do in this content. This differs from the title and the learning objectives. The title and the learning objectives are "outcome focused"; that is, they describe the skills the learner will acquire as a result of consuming this content. By contrast, here you should be specific about what the learning will **do** in order to acquire those skills. The format can be either prose or bulleted-list; however, a list will yield better results when transformed into other output types such as PowerPoint.
-
-    Heading: "## What will we be doing?"
-
-    Example: "Here, you'll create a business workflow using Azure Logic Apps to automate the processing of tweets:
-                * **Launch**: when a new tweet is available
-                * **Process**: determine if the sentiment of the tweet is positive or negative
-                * **Route**: branch based on the sentiment score"
-
- -->
-## What will we be doing?
-TODO: add your activities
-
-<!-- 4. Terminal learning objective ----------------------------------------------------------------------
-
-    Goal: This is a restatement of the module title into a complete sentence. You have more room here to convey the main goal than in a space-limited title. Make it outcome-focused so it describes the main skill the learner will acquire as a result of this training. In other words, it should answer the question: "what is the key thing the learner will be able to do as a result of consuming this training?"
-
-    Heading: "## What is the main goal?"
-
-    Example: "By the end of this session, you'll be able to create workflows which route and process data using Azure Logic Apps and its built-in connectors."
-
- -->
-## What is the main goal?
-By the end of this session, you'll be able to (TODO)
-
-<!-- Do **not** include any other content like learning objectives, prerequisites, unit summary, "next unit" lead-in, or references. -->
+Next up, you'll learn how CodeQL is used by developers.
