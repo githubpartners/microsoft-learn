@@ -1,104 +1,80 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Code scanning workflows that use CodeQL have various configuration options that can be adjusted to better suit the needs of your organization.
 
-    Goal: remind the learner of the core idea(s) from the preceding learning-content unit (without mentioning the details of the exercise or the scenario)
+When you use CodeQL to scan code, the CodeQL analysis engine generates a database from the code and runs queries on it. CodeQL analysis uses a default set of queries, but you can specify more queries to run, in addition to the default queries.
 
-    Heading: none
+You can run extra queries if they are part of a CodeQL pack (beta) published to the GitHub Container registry or a QL pack stored in a repository.
 
-    Example: "A storage account represents a collection of settings that implement a business policy."
+There are two options for specifying which queries you want to run with CodeQL code scanning:
 
-    [Exercise introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-exercise-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+- Using your code scanning workflow
+- Using a custom configuration file
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+In this unit, you will learn how to edit a workflow file to reference additional queries, how to use queries from query packs and how to combine queries from a workflow file and a custom configuration file.
 
-    Goal: Describe the part of the scenario covered in this exercise
+## Specify additional queries in a workflow file
 
-    Heading: a separate heading is optional; you can combine this with the topic sentence into a single paragraph
+The options available to specify the additional queries you want to run are:
 
-    Example: "Recall that in the chocolate-manufacturer example, there would be a separate storage account for the private business data. There were two key requirements for this account: geographically-redundant storage because the data is business-critical and at least one location close to the main factory."
+* `packs` to install one or more CodeQL query packs (beta) and run the default query suite or queries for those packs.
+* `queries` to specify a single `.ql` file, a directory containing multiple `.ql` files, a `.qls` query suite definition file, or any combination.
 
-    Recommended: image that summarizes the entire scenario with a highlight of the area implemented in this exercise
--->
-TODO: add your scenario sub-task
-TODO: add your scenario image
+You can use both packs and queries in the same workflow.
 
-<!-- 3. Task performed in the exercise ---------------------------------------------------------------------
+We don't recommend referencing query suites directly from the `github/codeql` repository, like `github/codeql/cpp/ql/src@main`. Such queries may not be compiled with the same version of CodeQL as used for your other queries, which could lead to errors during analysis.
 
-    Goal: State concisely what they'll implement here; that is, describe the end-state after completion
+### Use CodeQL query packs
 
-    Heading: a separate heading is optional; you can combine this with the sub-task into a single paragraph
+> [!Note]
+> The CodeQL package management functionality, including CodeQL packs, is currently in beta and subject to change.
 
-    Example: "Here, you will create a storage account with settings appropriate to hold this mission-critical business data."
+To add one or more CodeQL query packs (beta), add a `with: packs:` entry within the `uses: github/codeql-action/init@v1` section of the workflow. Within packs you specify one or more packages to use and, optionally, which version to download. Where you don't specify a version, the latest version is downloaded. If you want to use packages that are not publicly available, you need to set the `GITHUB_TOKEN` environment variable to a secret that has access to the packages.
 
-    Optional: a video that shows the end-state
--->
-TODO: describe the end-state
+In the example below, scope is the organization or personal account that published the package. When the workflow runs, the three CodeQL query packs are downloaded from GitHub and the default queries or query suite for each pack run. The latest version of `pack1` is downloaded as no version is specified. Version 1.2.3 of `pack2` is downloaded, as well as the latest version of `pack3` that is compatible with version 1.2.3.
 
-<!-- 4. Chunked steps -------------------------------------------------------------------------------------
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    # Comma-separated list of packs to download
+    packs: scope/pack1,scope/pack2@1.2.3,scope/pack3@~1.2.3
+```
 
-    Goal: List the steps they'll do to complete the exercise.
+> [!Note]
+> For workflows that generate CodeQL databases for multiple languages, you must instead specify the CodeQL query packs in a configuration file.
 
-    Structure: Break the steps into 'chunks' where each chunk has three things:
-        1. A heading describing the goal of the chunk
-        2. An introductory paragraph describing the goal of the chunk at a high level
-        3. Numbered steps (target 7 steps or fewer in each chunk)
+### Use queries in QL packs
 
-    Example:
-        Heading:
-            "Use a template for your Azure logic app"
-        Introduction:
-             "When you create an Azure logic app in the Azure portal, you have the option of selecting a starter template. Let's select a blank template so that we can build our logic app from scratch."
-        Steps:
-             "1. In the left navigation bar, select Resource groups.
-              2. Select the existing Resource group [sandbox resource group name].
-              3. Select the ShoeTracker logic app.
-              4. Scroll down to the Templates section and select Blank Logic App."
--->
+To add one or more queries, add a `with: queries:` entry within the `uses: github/codeql-action/init@v1` section of the workflow. If the queries are in a private repository, use the `external-repository-token` parameter to specify a token that has access to check out the private repository.
 
-## (Chunk 1 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    queries: COMMA-SEPARATED LIST OF PATHS
+    # Optional. Provide a token to access queries stored in private repositories.
+    external-repository-token: ${{ secrets.ACCESS_TOKEN }}
+```
 
-## (Chunk 2 heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+You can also specify query suites in the value of queries. Query suites are collections of queries, usually grouped by purpose or language.
 
-## (Chunk n heading)
-<!-- Introduction paragraph -->
-1. <!-- Step 1 -->
-1. <!-- Step 2 -->
-1. <!-- Step n -->
+The following query suites are built into CodeQL code scanning and are available for use.
 
-<!-- 5. Validation -------------------------------------------------------------------------------------------
+|Query suite|Description|
+|---|---|
+| `code-scanning` | Queries run by default in CodeQL code scanning on GitHub. |
+|  `security-extended` | Queries of lower severity and precision than the default queries |
+| `security-and-quality` | Queries from security-extended, plus maintainability and reliability queries |
 
-    Goal: Enables the learner to evaluate if they completed the exercise correctly. Feedback like this is critical for learning.
+When you specify a query suite, the CodeQL analysis engine will run the queries contained within the suite for you, in addition to the default set of queries.
 
-    Structure:
-        1. A heading of "## Check your work".
-        2. An introductory paragraph describing how they'll validate their work at a high level.
-        3. Numbered steps (if the learner needs to perform multiple steps to verify if they were successful).
-        4. Video of an expert performing the exact steps of the exercise (optional).
+## Combine queries from a workflow file and a custom configuration file
 
-    Example:
-         "At this point, the app is scanning Twitter every minute for tweets containing the search text. To verify the app is running and working correctly, we'll look at the Runs history table."
-             "1. Select Overview in the navigation menu.
-              2. Select Refresh once a minute until you see a row in the Runs history table.
-              ...
-              6. Examine the data in the OUTPUTS section. For example, locate the text of the matching tweet."
--->
+If you also use a configuration file for custom settings, any additional packs or queries specified in your workflow are used instead of those specified in the configuration file. If you want to run the combined set of additional packs or queries, prefix the value of packs or queries in the workflow with the `+` symbol.
 
-## Check your work
-<!-- Introduction paragraph -->
-1. <!-- Step 1 (if multiple steps are needed) -->
-1. <!-- Step 2 (if multiple steps are needed) -->
-1. <!-- Step n (if multiple steps are needed) -->
-Optional "exercise-solution" video
+In the following example, the `+` symbol ensures that the specified additional packs and queries are used together with any specified in the referenced configuration file.
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
+```yml
+- uses: github/codeql-action/init@v1
+  with:
+    config-file: ./.github/codeql/codeql-config.yml
+    queries: +security-and-quality,octo-org/python-qlpack/show_ifs.ql@main
+    packs: +scope/pack1,scope/pack2@v1.2.3`
+```
