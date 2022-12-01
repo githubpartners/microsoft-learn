@@ -78,3 +78,5 @@ In the following example, the `+` symbol ensures that the specified additional p
     queries: +security-and-quality,octo-org/python-qlpack/show_ifs.ql@main
     packs: +scope/pack1,scope/pack2@v1.2.3`
 ```
+
+Next up, an exercise that will check your knowledge on referencing a CodeQL query in a CodeQL workflow.
