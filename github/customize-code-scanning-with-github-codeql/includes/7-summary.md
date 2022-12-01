@@ -18,3 +18,5 @@ Successfully rolling out automated code vulnerability scanning across your organ
 * [GitHub code scanning](https://docs.github.com/en/code-security/code-scanning)
 * [Configuring the CodeQL workflow for compiled languages](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/configuring-the-codeql-workflow-for-compiled-languages)
 * [QL language specification](https://codeql.github.com/docs/ql-language-reference/ql-language-specification/#ql-language-specification)
+* [Troubleshooting the CodeQL workflow](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/troubleshooting-the-codeql-workflow)
+* [Troubleshooting query performance](https://codeql.github.com/docs/writing-codeql-queries/troubleshooting-query-performance/#troubleshooting-query-performance)
