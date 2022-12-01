@@ -1,6 +1,10 @@
 Code scanning workflows that use CodeQL have various configuration options that can be adjusted to better suit the needs of your organization.
 
-In this unit, you will learn how to reference additional queries in a custom configuration file.
+In this unit, you will learn about:
+
+- Additional queries in a custom configuration file: alternative ways to specify additional packs and queries
+- Disable the default queries: avoid running queries twice
+- Specify directories to scan: restrict code scanning to files in specific directories 
 
 ## Additional queries in a custom configuration file
 
