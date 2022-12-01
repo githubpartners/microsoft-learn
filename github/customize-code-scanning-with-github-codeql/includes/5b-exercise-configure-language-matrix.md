@@ -37,3 +37,5 @@ When you've finished the exercise in GitHub, return here for:
 > [!div class="nextstepaction"]
 > [Start the exercise on GitHub](https://github.com/githubtraining/exercise-configure-codeql-language-matrix)
 > 
+
+Following the exercise you will learn about CodeQL code scanning supporting many languages by default with an autobuild feature in the next unit.
