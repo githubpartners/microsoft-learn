@@ -32,3 +32,5 @@ When you've finished the exercise in GitHub, return here for the next part on cu
 > [!div class="nextstepaction"]
 > [Start the exercise on GitHub](https://github.com/githubtraining/exercise-reference-a-codeql-query)
 > 
+
+Following the exercise in the next unit you will learn about code scanning workflows that use CodeQL and have various configuration options to better suit the needs of your organization.
