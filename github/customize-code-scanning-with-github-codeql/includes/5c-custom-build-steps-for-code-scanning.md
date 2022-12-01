@@ -63,3 +63,5 @@ If your repository contains multiple compiled languages, you can specify languag
     make bootstrap
     make release
 ```
+
+Next up, learn about troubleshooting the CodeQL workflow.
