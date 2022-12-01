@@ -116,3 +116,5 @@ paths-ignore:
 For compiled languages, if you want to limit code scanning to specific directories in your project, you must specify appropriate build steps in the workflow. The commands you need to use to exclude a directory from the build will depend on your build system.
 
 You can quickly analyze small portions of a monorepo when you modify code in specific directories. You'll need to both exclude directories in your build steps and use the `paths-ignore` and `paths` keywords for `on.<push|pull_request>` in your workflow.
+
+Next up is an exercise that checks your knowledge on configuring the language matrix in a CodeQL workflow.
