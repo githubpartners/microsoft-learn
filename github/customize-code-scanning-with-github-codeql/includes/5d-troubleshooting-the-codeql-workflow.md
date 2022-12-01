@@ -1,78 +1,104 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+Here are some troubleshooting ideas if you are having problems with code scanning.
 
-    Goal: briefly summarize the key skill this unit will teach
+## Troubleshooting the CodeQL workflow
 
-    Heading: none
+You can enable step debug logging to produce more detailed logging output.
 
-    Example: "Organizations often have multiple storage accounts to let them implement different sets of requirements."
+### Creating CodeQL debugging artifacts
 
-    [Learning-unit introduction guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-learning-unit-introduction-format)
--->
-TODO: add your topic sentences(s)
+You can get artifacts to help you debug CodeQL. The debug artifacts are uploaded to the workflow run as an artifact named debug-artifacts. The data contains the CodeQL logs, CodeQL database(s), and any SARIF file(s) produced by the workflow. 
 
-<!-- 2. Scenario sub-task --------------------------------------------------------------------------------
+### Creating CodeQL debugging artifacts using a workflow flag
 
-    Goal: Describe the part of the scenario that will be solved by the content in this unit
+You can create CodeQL debugging artifacts by using a flag in your workflow. You will need to modify the `init` step of your CodeQL analysis workflow file and set `debug: true`.
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+### Automatic build for a compiled language fails
 
-    Example: "In the shoe-company scenario, we will use a Twitter trigger to launch our app when tweets containing our product name are available."
--->
-TODO: add your scenario sub-task
+Try the following troubleshooting steps if an automatic build of code for a compiled language within your project fails.
 
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------
+- Remove the `autobuild` step from your code scanning workflow and add specific build steps
+- Edit the workflow and add a matrix specifying the languages you want to analyze
+  - CodeQL implicitly detects the supported languages in your code base if your workflow does not explicitly specify the languages to analyze 
+  - CodeQL only analyzes the language with the most source files, in this configuration, the compiled languages C/C++, C#, Go, and Java
+- The default CodeQL analysis workflow uses such a matrix
+  - The following code sample from a workflow show how you can use a matrix within the job strategy to specify languages and then reference each language within the "Initialize CodeQL" step:
 
-    Goal: State concisely what's covered in this unit
+```
+jobs:
+  analyze:
+    permissions:
+      security-events: write
+      actions: read
+    ...
+    strategy:
+      fail-fast: false
+      matrix:
+        language: ['csharp', 'cpp', 'javascript']
 
-    Heading: none, combine this with the topic sentence into a single paragraph
+    steps:
+    ...
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: ${{ matrix.language }}
+ ```
 
-    Example: "Here, you will learn the policy factors that are controlled by a storage account so you can decide how many accounts you need."
--->
-TODO: write your prose table-of-contents
+### No code found during the build
 
-<!-- 4. Visual element (highly recommended) ----------------------------------------------------------------
+Several reasons can explain if your workflow fails with an error `No source code was seen during the build` or `The process '/opt/hostedtoolcache/CodeQL/0.0.0-20200630/x64/codeql/codeql' failed with exit code 32`, this indicates that CodeQL was unable to monitor your code.
 
-    Goal: Visual element, like an image, table, list, code sample, or blockquote. Ideally, you'll provide an image that illustrates the customer problem the unit will solve; it can use the scenario to do this or stay generic (i.e. not address the scenario).
+1. The repository may not contain source code that is written in languages supported by CodeQL
+   - Fix: Check the list of supported languages and, if this is the case, remove the CodeQL workflow
+2. Automatic language detection identified a supported language, but there is no analyzable code of that language in the repository
+   - Fix: You can manually define the languages you want to analyze by updating the list of languages in the `language` matrix
+3. Your code scanning workflow is analyzing a compiled language (C, C++, C#, Go, or Java), but the code was not compiled
+   - Fix: The CodeQL analysis workflow autobuild step may not have succeeded in building your code
+   - Fix: Compilation may also fail if you have removed the `autobuild` step and did not include build steps manually
+4. Your workflow is analyzing a compiled language (C, C++, C#, Go, or Java), but portions of your build are cached to improve performance
+   - Fix: CodeQL requires a complete build to take place in order to perform analysis
+5. Your workflow is analyzing a compiled language (C, C++, C#, Go, or Java), but compilation does not occur between the `init` and `analyze` steps in the workflow
+   - Fix: CodeQL requires that your build happens in between these two steps in order to observe the activity of the compiler and perform analysis
+6. Your compiled code (in C, C++, C#, Go, or Java) was compiled successfully, but CodeQL was unable to detect the compiler invocations
+   - Fix: You ran the build process in a separate container to CodeQL
+   - Fix: You are using a distributed build system external to GitHub Actions, using a daemon process
+   - Fix: CodeQL is not aware of the specific compiler you are using.
 
-    Heading: none
--->
-TODO: add a visual element
+## Troubleshooting query performance
 
-<!-- 5. Chunked content-------------------------------------------------------------------------------------
+Here are some tips on to avoid problems that can affect the performance of your queries.
 
-    Goal: Provide all the information the learner needs to perform this sub-task.
+### Eliminate cartesian products
 
-    Structure: Break the content into 'chunks' where each chunk has three things:
-        1. An H2 or H3 heading describing the goal of the chunk
-        2. 1-3 paragraphs of text
-        3. Visual like an image, table, list, code sample, or blockquote.
+You may have used two variables without relating them in any way, or only relating them using a negation. This leads to computing the Cartesian product between the sets of possible values for each variable. This could potentially generate a huge table of results. Additionally, this can occur if you do not specify restrictions on your variables.
 
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
+### Use specific types
 
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
+“Types” provide an upper bound on the size of a relation. This helps the query optimizer be more effective. It’s generally good to use the most specific types possible. Here is an example:
 
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
+```
+predicate foo(LoggingCall e)
+```
 
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+is preferred over:
 
-<!-- Do not add a unit summary or references/links -->
+```
+predicate foo(Expr e)
+```
+
+### Determine the most specific types of a variable
+
+You can use CodeQL to determine what types an entity has when you are unfamiliar with the library used in a query. The predicate `getAQlClass()` returns the most specific QL types of the entity that it is called on.
+
+### Avoid complex recursion
+
+“Recursion” is about self-referencing definitions. On the whole, you should try to make recursive predicates as simple as possible. Meaning, you should define a base case that allows the predicate to bottom out, along with a single recursive call. Here is an example:
+
+```
+int depth(Stmt s) {
+  exists(Callable c | c.getBody() = s | result = 0) // base case
+  or
+  result = depth(s.getParent()) + 1 // recursive call
+}
+```
+
+Next up, the module summary.
