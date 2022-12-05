@@ -1,16 +1,11 @@
-# EDITS NEEDED
+You now understand how to configure the language matrix in a CodeQL workflow, customize scanning workflow with CodeQL, and implement custom build steps.
 
-You are a senior developer responsible for implementing automated code vulnerability scanning at your company. You need to understand how code scanning with CodeQL works and how to configure it, so that you can help your entire organization adopt it.
+You did work on code scanning with CodeQL and practiced the following:
 
-You did some research on code scanning with CodeQL and found the following:
+* Referencing a CodeQL query in a CodeQL workflow
+* Configuring the language matrix in a CodeQL workflow
 
-* Code scanning with CodeQL uses a workflow file that specifies the location of queries, which languages to analyze, and whether they should be built with autobuild, or manual build steps
-* GitHub supports integration of third party scanning and alerting tools in the code scanning process
-* CodeQL has a CLI that allows you to create and analyze databases offline and then upload the results to GitHub using a SARIF file
-
-Without using GitHub code scanning with CodeQL, it would be very difficult to automate both the scanning of your code, as well as generating pull requests to fix the vulnerable code. In addition, CodeQL provides an extensive, growing library of queries in multiple languages that help you create more secure code with little engineering effort.
-
-Successfully rolling out automated code vulnerability scanning across your organization has made developers more productive and the product at your company more secure.
+Successfully rolling out customized CodeQL code scanning across your organization has made developers more productive and the product at your company more secure.
 
 ## References
 
@@ -22,3 +17,5 @@ Successfully rolling out automated code vulnerability scanning across your organ
 * [Troubleshooting query performance](https://codeql.github.com/docs/writing-codeql-queries/troubleshooting-query-performance/#troubleshooting-query-performance)
 * [QL language reference](https://codeql.github.com/docs/ql-language-reference/#ql-language-reference)
 * [CodeQL tools](https://codeql.github.com/docs/codeql-overview/codeql-tools/#codeql-tools)
+
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content!
