@@ -27,58 +27,48 @@ durationInMinutes: 5
 content: |
 quiz:
   questions:
-  - content: ""
+  - content: "To create a database, CodeQL extracts:"
     choices:
-    - content: ""
+    - content: "A single relational representation that contains all of the source files in the database."
+      isCorrect: false
+      explanation: "Incorrect, a single relational representation of each source file in the codebase."
+    - content: "A single relational representation of each source file in the codebase."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct!"
+    - content: "Multiple relational representations for each source file in the database."
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Incorrect, a single relational representation of each source file in the codebase."
+  - content: "How does CodeQL database creation work for compiled languages?"
     choices:
-    - content: ""
+    - content: "For compiled languages, extraction works by monitoring the normal build process."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "For compiled languages, extraction works by monitoring the normal build process."
+    - content: "The extractor runs directly on the source code."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "For interpreted languages, the extractor runs directly on the source code."
+    - content: "The extractor can run either directly on the source code, or during the build process, depending on how it's configured."
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: ""The extractor only runs in one way for compiled languages.""
+  - content: "What options are available for referencing other queries in a workflow file?"
     choices:
-    - content: ""
+    - content: "Workflow files can only reference query packs."
+      isCorrect: false
+      explanation: "Incorrect. Query packs aren't the only option for referencing other queries."
+    - content: "Workflow files can only reference individual query files (.ql) or query suite files (.qls)."
+      isCorrect: false
+      explanation: "Incorrect. Individual query files and query suite file aren't the only option for referencing other queries."
+    - content: "Workflow files can reference query packs, individual query files, and query suite files."
       isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Correct"
+  - content: "What is the method for specifying other queries in a custom configuration file?"
     choices:
-    - content: ""
+    - content: "A 'queries' array where each element contains a 'uses' parameter."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct!"
+    - content: "A 'resources' array where each element contains a 'query' parameter."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Incorrect. The custom configuration file doesn't contain a 'resources' array."
+    - content: "A 'paths' array where each element contains a 'queries' parameter."
       isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "The custom configuration file doesn't contain a 'paths' array."
+  
