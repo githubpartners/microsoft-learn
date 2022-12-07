@@ -1,4 +1,6 @@
-Now that you've created your Project, added issues and pull requests, and it's now organize, let's talk about how to provide visibility and access to your project as well as how to close and delete it. 
+Now that you've created your Project, added issues and pull requests, and it's now organize, let's talk about how to:
+- Provide visibility and access to your Project 
+- And how to close and delete your Project
 
 ## Project visibility and access
 
@@ -15,10 +17,10 @@ In this portion of the unit we will go over the following:
 You have the ability to control whether or not your Project is public or private. When your Project is public, everyone on the internet can view it. When your Project is private, only users granted at least read access can see it.  
 
 To change your Project’s visibility:
-1. First navigate to your project
-2. In the top-right, click the three dots at the top the menu
-3. Then select the **Settings** to access to your project
-4. Next to the **Visibility** in the **“Danger zone,”** select **Private** or **Public**
+1. First navigate to your Project.
+2. In the top-right, click the three dots at the top the menu.
+3. Then select the **Settings** to access to your Project.
+4. Next to the **Visibility** in the **“Danger zone,”** select **Private** or **Public**. 
 
 ### Who has access and who can manage access to your project
 Access to your project will depend if your project is an organization-level project or a personal/user-level project, but managing access is very similar between the two levels.
@@ -43,10 +45,10 @@ Types of Roles and access to your Project
 - Admin: The individual can view, edit, and add new collaborators to the project.
 
 ### Steps to add individuals, teams, and change their roles for both organization-level and personal/user-level projects
-1. Navigate to your project
-2. In the top right, click the 3 dots to open the menu
-3. In the menu, click **Settings** to access the project settings
-4. Then, in the left-hand navigation bar, click on the option **Manage access**
+1. Navigate to your Project.
+2. In the top right, click the 3 dots to open the menu.
+3. In the menu, click **Settings** to access the project settings.
+4. Then, in the left-hand navigation bar, click on the option **Manage access**.
 5. Once on the page you can either:
    - Invite individuals and teams by searching in the Invite collaborators search bar
    - Change their role in your project
@@ -67,15 +69,14 @@ Steps to adding projects to teams:
 7. Start typing the name of the project you want to add and then select the project in the list of matches.
 
 ### Adding a Project to a repository
-You can list relevant projects in a repository. You can only list projects that are owned by the same user or organization that owns the repository.
+You can list relevant Projects in a repository so your team can access information they need to stay up-to-date. But it is worth noting you can only list Projects that are owned by the same user or organization that owns the repository. In order for repository members to see a Project listed in a repository, they must have visibility to the project. To change permissions see the above section Who has access and who can manage access to your project?
 
-In order for repository members to see a project listed in a repository, they must have visibility for the project.
-
-On GitHub, navigate to the main page of your repository.
-Click  Projects.
-Click Add project.
-In the search bar that appears, search for projects that are owned by the same user or organization that owns the repository.
-Click on a project to list it in your repository.
+Here are the steps to add a Project to a repository:
+1. On GitHub, navigate to the main page of your repository.
+2. Click  **Projects.**
+3. Next, click **Add project.**
+4. In the search bar that appears, search for projects that are owned by the same user or organization that owns the repository.
+5. Then, click on a project to list it in your repository.
 
 ## Closing and deleting Projects
 
