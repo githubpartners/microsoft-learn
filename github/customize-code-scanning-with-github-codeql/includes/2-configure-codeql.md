@@ -1,4 +1,4 @@
-QL is a query language for CodeQL databases. 
+CodeQL databases contain queryable data extracted from a codebase for a single language at a particular point in time. Each language has its own unique database schema that defines the relations used to create a database. The CodeQL libraries define classes to provide a layer of abstraction over the database tables for each language.
 
 ## QL language specification
 
@@ -20,7 +20,7 @@ A QL program consists of a query module defined in a QL file and a number of lib
 
 The library path is not strictly speaking a core part of the QL language. Different implementations of QL construct it in slightly different ways. Most QL tools allow you to explicitly specify the library path on the command line for a particular invocation. That is rarely done and only useful in very special situations.
 
-Here is the the default construction of the library path. First, determine the query directory of the .ql file being compiled. Starting with the directory containing the .ql file each directory is checked for a file called qlpack.yml or codeql-pack.yml. The first directory where such a file is found is the query directory. If there is no such directory then the directory of the .ql file itself is the query directory.
+Here is the default construction of the library path. First, determine the query directory of the .ql file being compiled. Starting with the directory containing the .ql file each directory is checked for a file called qlpack.yml or codeql-pack.yml. The first directory where such a file is found is the query directory. If there is no such directory then the directory of the .ql file itself is the query directory.
 
 ## Configuring the CodeQL workflow for compiled languages
 
