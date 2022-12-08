@@ -38,3 +38,4 @@ The new GitHub Projects provides a richer experience that allows you to keep tra
 - Webhooks events for project item metadata updates
 - GitHub Action to automate adding issues to projects
 
+Now let's dive into how to create a Project! 
