@@ -9,7 +9,11 @@ There are two options for specifying which queries you want to run with CodeQL c
 - Using your code scanning workflow
 - Using a custom configuration file
 
-In this unit, you will learn how to edit a workflow file to reference additional queries, how to use queries from query packs and how to combine queries from a workflow file and a custom configuration file.
+In this unit, you will learn about:
+
+- Specifying additional queries in a workflow file
+- Using CodeQL query packs
+- Combining queries from a workflow file and a custom configuration file
 
 ## Specify additional queries in a workflow file
 
@@ -22,7 +26,7 @@ You can use both packs and queries in the same workflow.
 
 We don't recommend referencing query suites directly from the `github/codeql` repository, like `github/codeql/cpp/ql/src@main`. Such queries may not be compiled with the same version of CodeQL as used for your other queries, which could lead to errors during analysis.
 
-### Use CodeQL query packs
+## Use CodeQL query packs
 
 > [!Note]
 > The CodeQL package management functionality, including CodeQL packs, is currently in beta and subject to change.
