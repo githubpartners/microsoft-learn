@@ -20,12 +20,14 @@ As mentioned above there are two types of charts you can create from insights: c
 
 You can create current charts to visualize your Project items. For example, you can create charts to show how many items are assigned to each individual, or how many issues are assigned to each upcoming iteration.
 You can also use filters to manipulate the data used to build your chart. For example, you can create a chart showing how much upcoming work you have, but limit those results to particular labels or assignees. 
+:::image type="content" source="../media/column-chart-example.png" alt-text="Example of a current bar chart tracking the amount of hours spent per 7 iteration phases and color coded by amount of time spent on Bugs, Feedback, Backend, and UI work.":::
 
 #### Historical charts:
 
 Historical charts are currently available as a feature preview for organizations using GitHub Team and are generally available for organizations using GitHub Enterprise Cloud.
 Historical charts are time-based charts that allow you to view your Project's trends and progress. You can view the number of items, grouped by status and other fields, over time.
 The default "Burn up" chart shows item status over time, allowing you to visualize progress and spot patterns over time.
+:::image type="content" source="../media/burnup-example.png" alt-text="Example of a historic stacked area line graph showing the amount of hours spent on to dos, in progress, and completed tasks during the month of July.":::
 
 ### Creating and customizing charts
 
@@ -40,7 +42,7 @@ Creating charts is simple, below are the steps to follow for when you want to cr
 Now that you’ve created a new chart, let’s customize it to fit your needs. 
 
 1. First, navigate to your Project.
-2. In the top-right, to access insights, click the line graph button, labeled **Insights**.
+2. In the top-right, to access insights, click the line graph button, labeled Insights.
 3. In the menu on the left, click on the chart you would like to configure.
 4. On the right side of the page, click Configure. A panel will open on the right.
 5. To change the type of chart, select the Layout dropdown and click on the chart type you want to use.
