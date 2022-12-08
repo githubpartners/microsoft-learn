@@ -1,4 +1,4 @@
-If you were a user of Projects (Classic) and you want to know what has changed, you're in the right place.  
+Before we dive into learning how to utilze the new and improved Projects, let's take a moment to walk through what has changed from Projects (Classic).
 
 Let's first go over some of the enhancements in a side-by-side glance and then dive deeper into each section of updates.
 
