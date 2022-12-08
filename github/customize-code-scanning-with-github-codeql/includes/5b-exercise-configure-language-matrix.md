@@ -1,6 +1,4 @@
-This exercise checks your knowledge on configuring the language matrix in a CodeQL workflow.
-​
-This GitHub exercise is graded automatically once you have attempted
+This exercise checks your knowledge on configuring the language matrix in a CodeQL workflow. This GitHub exercise is graded automatically once you have attempted
 a solution to the challenge. The results of your actions, as well as
 helpful feedback, are provided in real-time within the `grade-learner` workflow logs.
 ​
