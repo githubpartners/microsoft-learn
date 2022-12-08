@@ -12,7 +12,7 @@ Let's first go over some of the enhancements in a side-by-side glance and then d
 
 The new GitHub Projects provides a richer experience that allows you to keep track of your work, where you work. Let's dive a bit deeper into the changes that have been made.
 
-## A deep dive into Project enhancements
+## Comprehensive lists of Project enhancements
 
 ### Tables and boards:
 - Plan and track work in a table or board view
