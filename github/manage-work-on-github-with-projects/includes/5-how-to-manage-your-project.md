@@ -21,6 +21,9 @@ To change your Project’s visibility:
 2. In the top-right, click the three dots at the top the menu.
 3. Then select the **Settings** to access to your Project.
 4. Next to the **Visibility** in the **“Danger zone,”** select **Private** or **Public**. 
+:::image type="content" source="../media/Visibility-for-Projects-public-or-private.png" alt-text="Danger Zone settings with the option to make your Project Public or Private.":::
+
+
 
 ### Who has access and who can manage access to your project
 Access to your Project will depend if your Project is an organization-level project or a personal/user-level project, but managing access is very similar between the two levels.
@@ -51,6 +54,7 @@ Types of Roles and access to your Project
    - Invite individuals and teams by searching in the Invite collaborators search bar
    - Change their role in your Project
    - Or remove them from your Project
+ :::image type="content" source="../media/Managing-access-and-role-for-adding-individial-or-team-to-a-project.png" alt-text="Manage access settings with the ability to add a single collaborator or team and select their role or remove them.":::
 
 ### Adding a Project to a team
 You can add Projects to your team to give the whole team collaborator access to their Projects. When you add a Project to a team, that Project is listed on the team's Projects page, making it easier for members to identify which Projects a particular team uses.
@@ -75,8 +79,10 @@ Here are the steps to add a Project to a repository:
 1. On GitHub, navigate to the main page of your repository.
 2. Click  **Projects.**
 3. Next, click **Add project.**
+:::image type="content" source="../media/add-to-repo-button.png" alt-text="Green Add project button to add to a repository.":::
 4. In the search bar that appears, search for Projects that are owned by the same user or organization that owns the repository.
 5. Then, click on a project to list it in your repository.
+
 
 ## Closing and deleting Projects
 
@@ -95,5 +101,7 @@ Below are steps on how to navigate to them:
 3. In the menu, click **Settings** to access the Project settings.
 4. At the bottom of the page, within the “Danger zone” section you can either select **Close project** or **Delete project**
    - If you select **Delete project**, you will prompted to read the warnings, then type the name of your Project into text box. 
+
+:::image type="content" source="../media/delete-project-button.png" alt-text="Danger zone section with the option to change visibility, close project and delete project with delete project highlighted":::
 
 Next up, we'll be reviewing insights and automation in Projects.
