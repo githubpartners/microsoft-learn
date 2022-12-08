@@ -1,4 +1,4 @@
-Imagine that you continue to be a senior developer at a start-up company specializing in health care software. You have learned about the CodeQL static analysis tool and how the code scanning feature in GitHub uses it to automate vulnerability scanning. Additionally, you learned about the various configuration options. Now you want to customize CodeQL for your health care software start-up. 
+You have learned about the CodeQL static analysis tool and how the code scanning feature in GitHub uses it to automate vulnerability scanning. Additionally, you learned about the various configuration options. Now you want to customize CodeQL for your health care software start-up. 
 
 In this module, you will learn about configuring the language matrix in a CodeQL workflow, customize scanning workflow with CodeQL, and how to implement custom build steps.
 
@@ -7,8 +7,19 @@ In this module, you will learn about configuring the language matrix in a CodeQL
 By the end of this module, you will be able to:
 
 - Configure the language matrix in a CodeQL workflow
+  - QL language specification
+  - Configuring the CodeQL workflow for compiled languages
 - Customize scanning workflow with CodeQL
+  - Specify additional queries in a workflow file
+  - Combine queries from a workflow file and a custom configuration file
+- Continued code scanning customization
+  - Additional queries in a custom configuration file
+  - Disable the default queries
 - Implement custom build steps
+  - Change the languages that are analyzed
+  - Custom build steps for code scanning
+- Troubleshooting the CodeQL workflow
+  - Troubleshooting query performance
 
 ## Prerequisites
 
