@@ -8,7 +8,7 @@ Projects connects your planning directly to the work your team is doing and flex
   - Decern the differences between Projects and Projects (Classic)
   - Learn how to build an organization level Project
   - Understand how to organize your Project 
-  - Gain insight on how to manage your Project
+  - Gain insight on how edit the visibility, access, and management of your Project
   - Know how to develop automation and insights from your Project
 
 # Prerequisites:
