@@ -1,5 +1,5 @@
 ### YamlMime:ModuleUnit
-uid: learn.manage-work-on-github-with-projects.4-how-to-manage-your-project
+uid: learn.manage-work-on-github-with-projects.4-visibility-access-and-management-of-your-project
 title: How to manage your Project
 metadata:
   title: How to manage your Project
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 8
 content: |
-  [!include[](includes/4-how-to-manage-your-project.md)]
+  [!include[](includes/4-visibility-access-and-management-of-your-projectt.md)]
