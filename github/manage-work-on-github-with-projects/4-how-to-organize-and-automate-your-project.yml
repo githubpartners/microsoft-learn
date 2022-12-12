@@ -1,5 +1,5 @@
 ### YamlMime:ModuleUnit
-uid: learn.manage-work-on-github-with-projects.3-how-to-organize-and-automate-your-project
+uid: learn.manage-work-on-github-with-projects.4-how-to-organize-and-automate-your-project
 title: How to organize and automate your Project
 metadata:
   title: How to organize and automate your Project
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 8
 content: |
-  [!include[](includes/3-how-to-organize-and-automate-your-project.md)]
+  [!include[](includes/4-how-to-organize-and-automate-your-project.md)]
