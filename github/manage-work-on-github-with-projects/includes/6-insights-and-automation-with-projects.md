@@ -55,7 +55,11 @@ Work doesn’t have to take up too much work, especially when you use Projects. 
 
 There are two different ways you can automate your Project: 
 - Built-in automation
-- GitHub Actions and GraphQL API
+- GraphQL API
+- GitHub Actions
+
+The easiest way to automate your Project would be to use Project’s built-in automation, while GraphQL and Actions you have more control over customizing automation. 
+In the following sections we’ll walk you through how to utilize Project’s built-in automation and briefly go over GraphQL API and GitHub Actions automation. 
 
 Let’s start with Project’s built-in automation. 
 
@@ -74,4 +78,10 @@ To enable automation first go to the top-right corner of your Project and click 
 
 Congratulations! You’ve just automated your project!
 
-### Automation with Projects with GitHub Actions and GraphQL API 
+### GraphQL API 
+
+If you are using GraphQL in GitHub, you can also utilize it to help automate your Project. For more information on using GraphQL API, see [Using the GraphQL API to automate your projects.](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects) 
+
+### GitHub Actions
+
+GitHub Actions allows you the most customization for your Project’s automation. Learn more about automating workflows for your Project here, [Automating Projects using Actions.](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions)
