@@ -5,12 +5,12 @@ Now that you've created your Project, added issues and pull requests, and it's n
 ## Project visibility and access
 
 In this portion of the unit we will go over the following:
-- Who has visibility to your Project
-- Who has access and who can manage access to your project
-- Who can manage access to your project
-- Steps to add individuals, teams, and change their roles for both organization-level and personal/user-level projects
-- Adding a Project to a team
-- Adding a Project to a repository
+- [Who has visibility to your Project](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#who-has-visibility-to-your-project) 
+- [Who has access and who can manage access to your project](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#who-has-access-and-who-can-manage-access-to-your-project) 
+- [Who can manage access to your project](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#who-can-manage-access-to-your-project) 
+- [Steps to add individuals, teams, and change their roles for both organization-level and personal/user-level projects](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#steps-to-add-individuals-teams-and-change-their-roles-for-both-organization-level-and-personaluser-level-projects) 
+- [Adding a Project to a team](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#adding-a-project-to-a-team) 
+- [Adding a Project to a repository](https://github.com/githubpartners/microsoft-learn/blob/cami-memex/github/manage-work-on-github-with-projects/includes/5-visibility-access-and-management-of-your-project.md#adding-a-project-to-a-repository) 
 
 ### Who has visibility to your Project
 
