@@ -47,3 +47,25 @@ quiz:
     - content: "Iteration field"
       isCorrect: false
       explanation: "Although the interation field helps you build different phases of your Project, the Single select field can help you create groupings to organize your Project."
+ - content: "What is the easiest way to add automation to your Project?"
+    choices:
+    - content: "GraphQL API"
+      isCorrect: false
+      explanation: "Although GraphQL might be simple to some, it's not necessarily the simplist way to add automation to a Project."
+    - content: "Built-in Automation"
+      isCorrect: true
+      explanation: "Built-int automation built within Projects allows you a simple way to automate your Project."
+    - content: "GitHub Actions"
+      isCorrect: false
+      explanation: "Although Actions can be simple to some, it's not necessarily the simplist way to add automation to a Project."
+  - content: "What is the name of the section where you can edit the section where you change the visibility of your Project and delete or close your Project?"
+    choices:
+    - content: "Red Zone"
+      isCorrect: false
+      explanation: "Although the section is technically red, this is not the name of the section."
+    - content: "Visibility and Access"
+      isCorrect: false
+      explanation: "Single select field allows you to create multiple groups like Priority grouping in order to help you organize and prioritize your Project."
+    - content: "Danger Zone"
+      isCorrect: true
+      explanation: "Correct!"
