@@ -3,8 +3,7 @@ Now that you’ve added issues and pull requests to your Project, now it’s tim
 In this unit you will learn:
 - How to create a field to track and group by priority
 - How to add an iteration field 
-- How to create a board view 
-- How to configure built-in automation
+- How to create a board view  
 
 ## How to create a field to track and group by priority
 
