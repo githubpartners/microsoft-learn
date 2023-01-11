@@ -28,11 +28,13 @@ To ensure you're running the latest version of GitHub Actions Importer, you shou
 $ gh actions-importer update
 ```
 
-You must be authenticated with the Container registry for this command to be successful. Alternatively, you can provide credentials using the ‘--username’ and ‘--password-stdin’ parameters:
+You must be authenticated with the Container registry for this command to be successful. Alternatively, you can provide credentials using the ```--username``` and ```--password-stdin``` parameters:
 
-‘ $ gh actions-importer migrate -h
+```
+$ gh actions-importer migrate -h
 Description:
-  Convert a pipeline to a GitHub Actions workflow and open a pull request with the changes.’ 
+  Convert a pipeline to a GitHub Actions workflow and open a pull request with the changes.
+```
 
 Once you are granted access to the preview, you will be able to access further reference documentation about running a migration.
 
