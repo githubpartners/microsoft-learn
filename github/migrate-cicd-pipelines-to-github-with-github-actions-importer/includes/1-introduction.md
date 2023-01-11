@@ -12,11 +12,7 @@ In this module you will:
 
 - **Understand** the different phases of a GitHub Actions Importer migration
 - **Review** how to install the GitHub Actions Importer CLI Extension and its support CI platforms
-- **Gain** knowledge of how to audit your pipelines
-- **Discover** how to forecast your Actions usage
-- **Comprehend** how to execute a dry-run migration
-- **Learn** how to migrate your environment
-- **Discern** what is not automatically migrated
+- **Comprehend** how to execute the audit, forecast, dry-run, and migrate commands and what is not automatically migrated
 
 ## Prerequisites
 
