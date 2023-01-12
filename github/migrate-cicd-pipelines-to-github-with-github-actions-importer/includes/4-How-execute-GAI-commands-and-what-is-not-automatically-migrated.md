@@ -10,12 +10,12 @@ In this unit we’ll be going over how to run the audit command with GitHub Acti
 
 ### How to run the audit command
 
-GitHub Actions Importer provides an ''' audit''' command that is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. This command will fetch all of the pipelines defined in a specified scope of the existing CI/CD environment, attempt a conversion of these pipelines to their equivalent workflow, and write a summary report with statistics gathered from the audit.
+GitHub Actions Importer provides an ```audit``` command that is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. This command will fetch all of the pipelines defined in a specified scope of the existing CI/CD environment, attempt a conversion of these pipelines to their equivalent workflow, and write a summary report with statistics gathered from the audit.
 
 Running an audit on the command line will look something like this:
-'''
+```
 $ gh actions-importer audit jenkins --output-dir .
-'''
+```
 
 Once you initiate the command it will provide an Audit Summary report.
 
@@ -93,20 +93,20 @@ The final section of the audit summary report provides a manifest of all the fil
 - The converted workflow file(s).
 - A log of any error messages to troubleshoot a failed pipeline conversion.
 
-In the next section we’ll be going over the ‘Forecast’ command.
+In the next section we’ll be going over the ```Forecast``` command.
 
 ## How to run the forecast commmand
 
-In this unit we’ll be reviewing how to run the ‘forecast command’ and a rundown of the Forecast report. 
+In this unit we’ll be reviewing how to run the ```forecast``` command and a rundown of the Forecast report. 
 
 ### How to run the Forecast command
 
-The '''forecast''' command is designed to help you understand the compute capacity you’re currently using within your CI/CD environment. This command fetches jobs that have been completed over a specified time period and uses that data to calculate usage metrics.
+The ```forecast``` command is designed to help you understand the compute capacity you’re currently using within your CI/CD environment. This command fetches jobs that have been completed over a specified time period and uses that data to calculate usage metrics.
 
 Running a forecast on the command line will look something like this:
-'''
+```
 $ gh actions-importer audit jenkins –start-date 7/1/22 --output-dir . 
-'''
+```
 
 Image 
 
@@ -122,26 +122,26 @@ The Forecast report includes these metrics:
 
 Additionally, these metrics are presented for each runner queue defined in the source CI/CD system. This is useful if you will need a mix of hosted and self-hosted runners and/or if you use a mix of platforms.
 
-In the next section, we’ll be diving into how to utilize the ‘Dry-run’ command. 
+In the next section, we’ll be diving into how to utilize the ```dry-run``` command. 
 
 ## How to execute a dry-run command
 
-In this unit we will review how to use the ‘dry-run’ command and provide an example of what the converted workflow will look like. 
+In this unit we will review how to use the ```dry-run``` command and provide an example of what the converted workflow will look like. 
 
 ### How to run a dry-run command 
 
-You can use the dry-run command to convert an existing pipeline to its equivalent GitHub Actions workflow. The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry run of a pipeline and validate the contents are suitable.
+You can use the ```dry-run``` command to convert an existing pipeline to its equivalent GitHub Actions workflow. The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry run of a pipeline and validate the contents are suitable.
 
 If the conversion of a pipeline was only “partially successful” (that is, it included tasks that could not be converted automatically), the task that was not converted will be included in a commented section. For example, if you were to run the following CLI command:
 
-'''
+```
 $ gh actions-importer dry-run jenkins --source-url $SOURCE_URL --output-dir 
-'''
+```
 
 ### An example of the converted workflow 
 
-'''
-‘name: ethanis/universe
+```
+name: ethanis/universe
 on:
   workflow_dispatch:
 jobs:
@@ -158,25 +158,25 @@ jobs:
 #         value:
 #           isLiteral: true
 #           value: false’ 
-'''
+```
 
 In this situation, you will need to decide how to implement this functionality. If this task is used within multiple pipelines, the recommended approach is to implement a custom transformer that can handle this scenario in every pipeline. If this is a one-off scenario, you can edit the converted workflow file manually.
 Let’s assume in this example that the buildJavascriptApp build step is used in multiple workflows and could be easily replicated with a single shell command. This is what that custom transformer would look like:
 
-''''
+```
 transform “buildJavascriptApp” do |item|
   {
     name: “Build Javascript App”,
     run: “npm install && npm run build”
   }
 End
-'''
+```
 
 If you were to add these contents to a file named transformers.rb, they can be provided to GitHub Actions Importer on the command line. For example:
 
-'''
+```
 $ gh actions-importer dry-run jenkins --source-url $SOURCE_URL --output-dir . --custom-transformers transformers.rb
-'''
+```
 
 In the next section, we’ll provide the command line for migration and provide other resources for specific CIs. 
 
@@ -184,9 +184,9 @@ In the next section, we’ll provide the command line for migration and provide 
 
 You can use the migrate command to convert an existing pipeline to its equivalent action and open a pull request with the converted workflows and associated files.
 
-'''
+```
 $ gh actions-importer migrate jenkins --source-url $SOURCE_URL –target-url $TARGET_URL --output-dir .
-'''
+```
 
 Any necessary manual tasks will be included in the description of the pull request. Once these manual tasks and the code reviews are complete, the pull request can be merged and the workflow will have been successfully migrated to GitHub Actions.
 
