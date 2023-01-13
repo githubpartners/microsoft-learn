@@ -17,7 +17,7 @@ In this unit we will be walking through the following:
 Now let's get started with how to execute an ```audit``` command. 
 
 ## How to audit your pipelines
-In this unit we’ll be going over how to run the audit command with GitHub Actions Importer and how to interpret your Audit summary. 
+In this section we’ll be going over how to run the ```audit``` command with GitHub Actions Importer and how to interpret your Audit summary. 
 
 ### How to run the audit command
 
@@ -63,7 +63,7 @@ The **Job types** section summarizes which pipeline types are being used and whe
 
 Next, let’s go over Build steps.
 
-##### Build steps
+#### Build steps
 
 This section presents an aggregated summary of the individual build steps that are used across all of the target pipelines and how many could be converted automatically.
 
@@ -108,9 +108,9 @@ In the next section we’ll be going over the ```Forecast``` command.
 
 ## How to run the forecast commmand
 
-In this unit we’ll be reviewing how to run the ```forecast``` command and a rundown of the Forecast report. 
+In this section we’ll be reviewing how to run the ```forecast``` command and a rundown of the Forecast report. 
 
-### How to run the Forecast command
+### How to run the forecast command
 
 The ```forecast``` command is designed to help you understand the compute capacity you’re currently using within your CI/CD environment. This command fetches jobs that have been completed over a specified time period and uses that data to calculate usage metrics.
 
@@ -137,7 +137,7 @@ In the next section, we’ll be diving into how to utilize the ```dry-run``` com
 
 ## How to execute a dry-run command
 
-In this unit we will review how to use the ```dry-run``` command and provide an example of what the converted workflow will look like. 
+In this section we will review how to use the ```dry-run``` command and provide an example of what the converted workflow will look like. 
 
 ### How to run a dry-run command 
 
