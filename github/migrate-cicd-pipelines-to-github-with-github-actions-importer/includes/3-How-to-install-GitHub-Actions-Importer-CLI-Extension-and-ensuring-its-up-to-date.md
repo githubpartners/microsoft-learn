@@ -1,3 +1,4 @@
+Before we get into learning about the different commands you can run in GitHub Actions Importer, first we'll review installation, ensuring you have the most up-to-date version, and learn about the supported CI platforms.
 
 In this unit we’ll be reviewing:
 - How to install GitHub Actions Importer CLI extension
