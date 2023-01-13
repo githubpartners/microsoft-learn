@@ -1,3 +1,12 @@
+There are four commands that you can utilize with GitHub Actions Importer to assess, plan, test, and migrate your CI/CD environment into GitHub.
+
+There commands are:
+
+- **Audit**: Fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempt a conversion of these pipelines to their equivalent workflow, and write a summary report with statistics gathered from the audit.
+- **Forcast**: Fetches jobs that have been completed over a specified time period and uses that data to calculate usage metrics.
+- **Dry Run**: Provide existing pipelines with their equivalent GitHub Actions workflow and highlight ones that will need to potentially migrate manually.
+- **Migrate**: Convert an existing pipeline to its equivalent action and open a pull request with the converted workflows and associated files
+
 In this unit we will be walking through the following:
 - How to audit your pipelines
 - How to run the forecast commmand
@@ -5,7 +14,9 @@ In this unit we will be walking through the following:
 - How to execute your migration
 - What is not automatically mirgrated
 
-## Gain knowledge of how to audit your pipelines
+Now let's get started with how to execute an ```audit``` command. 
+
+## How to audit your pipelines
 In this unit we’ll be going over how to run the audit command with GitHub Actions Importer and how to interpret your Audit summary. 
 
 ### How to run the audit command
