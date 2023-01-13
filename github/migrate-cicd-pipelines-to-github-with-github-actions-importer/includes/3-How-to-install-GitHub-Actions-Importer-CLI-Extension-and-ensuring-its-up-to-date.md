@@ -49,4 +49,4 @@ And finally, here are the platforms that you can use GitHub Action Importer to m
 - Jenkins
 - Travis CI
 
-Next we’ll tackle how to run the command, Audit, and how to interpret the information GitHub Actions Importer provides you. 
+Next we’ll tackle how to run the different commands and how to interpret their results. 
