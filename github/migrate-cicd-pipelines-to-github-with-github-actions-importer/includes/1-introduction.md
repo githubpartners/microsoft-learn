@@ -10,11 +10,10 @@ Any workflow that is converted by the GitHub Actions Importer should be inspecte
 
 In this module you will:
 
-- Understand the different phases of a GitHub Actions Importer migration
-- Review how to install the GitHub Actions Importer CLI Extension and its support CI platforms
+- Review how to install the GitHub Actions Importer CLI Extension and ensure it's up-to-date and learn about supported CI platforms
 - Comprehend how to execute the audit, forecast, dry-run, and migrate commands and what is not automatically migrated
 
-## Prerequisites
+## Prerequisites:
 
 - You must have been granted access to the public preview for the GitHub Actions Importer
 - You must have credentials to authenticate to the GitHub Packages Container registry. For more information, see "Working with the Container registry"
