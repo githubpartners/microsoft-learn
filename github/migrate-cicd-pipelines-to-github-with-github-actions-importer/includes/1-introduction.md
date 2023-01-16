@@ -10,8 +10,8 @@ Any workflow that is converted by the GitHub Actions Importer should be inspecte
 
 In this module you will:
 
-- Review how to install the GitHub Actions Importer CLI Extension and ensure it's up-to-date and learn about supported CI platforms
-- Comprehend how to execute the audit, forecast, dry-run, and migrate commands and what is not automatically migrated
+- Review how to install the GitHub Actions Importer CLI Extension, ensure it's up-to-date, and learn about supported CI platforms
+- Comprehend how to execute the audit, forecast, dry-run, and migrate commands and learn what is not automatically migrated
 
 ## Prerequisites:
 
