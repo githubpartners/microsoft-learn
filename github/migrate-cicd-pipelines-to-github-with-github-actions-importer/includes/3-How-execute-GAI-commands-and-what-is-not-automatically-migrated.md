@@ -9,10 +9,10 @@ There commands are:
 
 In this unit we will be walking through the following:
 - How to audit your pipelines
-- How to run the forecast commmand
+- How to run the forecast command
 - How to run a dry-run migration
 - How to execute your migration
-- What is not automatically mirgrated
+- What is not automatically migrated
 
 Now let's get started with how to execute an ```audit``` command. 
 
