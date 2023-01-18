@@ -3,13 +3,13 @@ uid: learn.migrate-cicd-pipelines-to-github-with-github-actions-importer.knowled
 title: Knowledge check
 metadata:
   title: Knowledge check
-  description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
+  description: "Test your knowledge on GitHub Actions Importer with questions on the commands of Importer and supported CI platforms."
   ms.date: 1/10/2023
   author: a-a-ron
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 1
+durationInMinutes: 3
 ###########################################################################
 ###
 ### General guidance (https://review.docs.microsoft.com/learn-docs/docs/id-guidance-knowledge-check)
@@ -27,58 +27,47 @@ durationInMinutes: 1
 content: |
 quiz:
   questions:
-  - content: ""
+  - content: "What is NOT a command in GitHub Actions Importer?"
     choices:
-    - content: ""
+    - content: "Convert"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! Although it might seem like it, this is not a command you can execute in GitHub Actions Importer"
+    - content: "Audit"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Audit is a command in GitHub Actions Importer"
+    - content: "Migrate"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Migrate is a command in GitHub Actions Importer"
+  - content: "What is NOT a supported CI platform through GitHub Actions Importer?"
     choices:
-    - content: ""
+    - content: "Azure DevOps"
+      isCorrect: false
+      explanation: "Azure DevOps is a supported CI platform for GitHub Actions Importer."
+    - content: "AWS CodePipeline"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! AWS CodePipeline is not a support CI platform."
+    - content: "CircleCI"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "CircleCI is a supported CI platform for GitHub Actions Importer."
+  - content: "What are the correct sections of an Audit summary"
     choices:
-    - content: ""
+    - content: "Pipelines, Build steps, Manual Tasks, and File manifest."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! These are the sections of an Audit summary."
+    - content: "Pipelines, Build steps, Manual Tasks, and Execute time."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "Execute time is not a part of an Audit summary."
+    - content: "Pipelines, Build steps, Manual Tasks, and Forecast report."
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "Forecast report is not a part of an Audit summary."
+  - content: "What is NOT included in a Forecast report?"
     choices:
-    - content: ""
+    - content: "Job count"
+      isCorrect: false
+      explanation: "Job count is included in a Forecast report."
+    - content: "File manifest"
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "Correct! File manifest is not a part of a Forecast report."
+    - content: "Execution time"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "Execution time is included in a Forecast report."
