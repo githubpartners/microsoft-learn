@@ -36,10 +36,10 @@ Let’s go over the details the Audit Summary report will provide you.
 
 There are 4 sections of the Audit summary: 
 
-- Pipelines
-- Build steps
-- Manual tasks
-- File manifest
+- [Pipelines](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#pipelines)
+- [Build steps](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#build-steps)
+- [Manual tasks](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#manual-tasks)
+- [File manifest](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#file-manifest)
 
 Now, let’s break down what each of these sections will provide you and how to interpret the results.
 
