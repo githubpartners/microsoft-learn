@@ -11,7 +11,7 @@ In this unit we will be walking through the following:
 - [How to audit your pipelines](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#how-to-audit-your-pipelines)
 - [How to run the forecast command](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#how-to-run-the-forecast-commmand)
 - [How to run a dry-run migration](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#how-to-execute-a-dry-run-command)
-- [How to execute your migration](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#learn-how-to-migrate-your-environment)
+- [How to run your migration](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#learn-how-to-migrate-your-environment)
 - [What is not automatically migrated](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#understand-what-is-not-migrated-automatically)
 
 Now let's get started with how to execute an ```audit``` command. 
