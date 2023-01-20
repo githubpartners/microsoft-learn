@@ -25,7 +25,7 @@ GitHub Actions Importer provides an ```audit``` command that is designed to help
 
 Running an audit on the command line will look something like this:
 ```
-$ gh actions-importer audit jenkins --output-dir .
+$ gh actions-importer audit jenkins --output-dir 
 ```
 
 Once you initiate the command it will provide an Audit Summary report.
@@ -116,7 +116,7 @@ The ```forecast``` command is designed to help you understand the compute capaci
 
 Running a forecast on the command line will look something like this:
 ```
-$ gh actions-importer audit jenkins –start-date 7/1/22 --output-dir . 
+$ gh actions-importer audit jenkins –start-date 7/1/22 --output-dir  
 ```
 
 Image 
@@ -186,7 +186,7 @@ End
 If you were to add these contents to a file named transformers.rb, they can be provided to GitHub Actions Importer on the command line. For example:
 
 ```
-$ gh actions-importer dry-run jenkins --source-url $SOURCE_URL --output-dir . --custom-transformers transformers.rb
+$ gh actions-importer dry-run jenkins --source-url $SOURCE_URL --output-dir --custom-transformers transformers.rb
 ```
 
 In the next section, we’ll provide the command line for migration and provide other resources for specific CIs. 
@@ -196,7 +196,7 @@ In the next section, we’ll provide the command line for migration and provide 
 You can use the migrate command to convert an existing pipeline to its equivalent action and open a pull request with the converted workflows and associated files.
 
 ```
-$ gh actions-importer migrate jenkins --source-url $SOURCE_URL –target-url $TARGET_URL --output-dir .
+$ gh actions-importer migrate jenkins --source-url $SOURCE_URL –target-url $TARGET_URL --output-dir 
 ```
 
 Any necessary manual tasks will be included in the description of the pull request. Once these manual tasks and the code reviews are complete, the pull request can be merged and the workflow will have been successfully migrated to GitHub Actions.
