@@ -1,14 +1,16 @@
-In this module you learned about GitHub Actions Importer, how to ensure it is up-to-date, its supported CI platforms, the commands you can run on it, and what might not be migrated over automatically from your previous CI/CD environment.
+In this module you learned about GitHub Projects, GitHub’s project management tool that connects your planning directly to the work your teams are doing in GitHub and flexibly adapts to whatever your team needs at any point.
 
 You learned about:
-- Review how to install the GitHub Actions Importer CLI Extension, ensure it's up-to-date, and learn about supported CI platforms
-- Comprehend how to execute the audit, forecast, dry-run, and migrate commands and learn what is not automatically migrated
+- How to build an organization project
+- How to automate and organize your project
 
 ## Learn More
 
 Here are some links to more information on the topics we discussed in this module:
-- [Automating migration with GitHub Actions Importer](https://docs.github.com/en/actions/migrating-to-github-actions/automating-migration-with-github-actions-importer)
-- [Introducing GitHub Actions Importer](https://github.blog/2022-11-10-introducing-github-actions-importer/)
+- [GitHub Projects on GitHub Mobile](https://github.blog/2022-10-11-on-the-go-with-github-projects-on-github-mobile-public-beta/)
+- [Using the API to Manage Projects](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/using-the-api-to-manage-projects)
+- [Automating Projects with Actions](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/automating-projects-using-actions)
+- [Archiving Items Automatically](https://docs.github.com/en/issues/planning-and-tracking-with-projects/automating-your-project/archiving-items-automatically)
 
 ## How to provide feedback ✍️
 
