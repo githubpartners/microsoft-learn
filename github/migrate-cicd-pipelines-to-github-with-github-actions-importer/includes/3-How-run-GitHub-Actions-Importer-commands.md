@@ -205,11 +205,11 @@ image
 
 For specific differences for supported CI platforms please reference the following links:
 
-- Azure DevOps
-- CircleCI
-- GitLab
-- Jenkins
-- Travis CI
+- [Azure DevOps](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-azure-pipelines-to-github-actions)
+- [CircleCI](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-circleci-to-github-actions)
+- [GitLab](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-gitlab-cicd-to-github-actions)
+- [Jenkins](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-jenkins-to-github-actions)
+- [Travis CI](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-travis-ci-to-github-actions)
 
 Now let’s take a moment to review what is not automatically migrated. 
 
