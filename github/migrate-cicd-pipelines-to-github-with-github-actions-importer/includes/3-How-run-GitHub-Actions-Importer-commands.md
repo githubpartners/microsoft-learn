@@ -41,13 +41,13 @@ There are 4 sections of the Audit summary:
 - [Manual tasks](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#manual-tasks)
 - [File manifest](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#file-manifest)
 
+:::image type="content" source="../media/Audit_summary.jpg" alt-text="Audit summary for an Jenkins instance with sections of Pipelines and Job types.":::
+
 Now, let’s break down what each of these sections will provide you and how to interpret the results.
 
 #### Pipelines
 
 This section contains high-level aggregated statistics on GitHub Actions Importer’s ability to migrate the targeted pipeline automatically.
-
-image
 
 The Pipelines section provides the following key metrics:
 
@@ -67,7 +67,7 @@ Next, let’s go over Build steps.
 
 This section presents an aggregated summary of the individual build steps that are used across all of the target pipelines and how many could be converted automatically.
 
-image
+:::image type="content" source="../media/Build_steps.jpg" alt-text="Build steps report with Known, Unknown, Unsupported, and Actions sections.":::
 
 The Build steps section provides the following details:
 
@@ -88,7 +88,7 @@ Next up, we’ll cover the Manual tasks section.
 
 This section presents an overview of the manual tasks that can be identified.
 
-image
+:::image type="content" source="../media/Manual_tasks.jpg" alt-text="Manual tasks section with Secrets and Self hosted runners.":::
 
 The Manual tasks section can provide the following details:
 - Secrets includes a summarized list of the secrets used in the converted pipelines. Because secrets cannot be migrated automatically, they will need to be created manually in order for these workflows to function properly.
@@ -119,7 +119,8 @@ Running a forecast on the command line will look something like this:
 $ gh actions-importer audit jenkins –start-date 7/1/22 --output-dir  
 ```
 
-Image 
+:::image type="content" source="../media/Forecast_report.jpg" alt-text="Forecast report for Jenkins with Job count, Pipeline count, Execution time, Queue time, and Concurrent jobs sections.":::
+
 
 #### What is in a Forecast report?
 
@@ -201,7 +202,7 @@ $ gh actions-importer migrate jenkins --source-url $SOURCE_URL –target-url $TA
 
 Any necessary manual tasks will be included in the description of the pull request. Once these manual tasks and the code reviews are complete, the pull request can be merged and the workflow will have been successfully migrated to GitHub Actions.
 
-image
+:::image type="content" source="../media/PR_for_Migration.jpg" alt-text="New PR once a migration is completed.":::
 
 For specific differences for supported CI platforms please reference the following links:
 
