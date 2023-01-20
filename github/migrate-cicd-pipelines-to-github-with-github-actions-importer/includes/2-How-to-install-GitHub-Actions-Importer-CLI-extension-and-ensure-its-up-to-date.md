@@ -10,14 +10,19 @@ Let’s start with how to install GitHub Actions Importer CLI extension.
 
 ## How to install GitHub Actions Importer CLI extension
 
-1. Install the GitHub Actions Importer CLI extension:
+Once you have installed [Docker](https://docs.docker.com/get-docker/) and [GitHub CLI](https://cli.github.com/) is installed, navigate to your Linuxed-based environment. 
+
+1. To install the GitHub Actions Importer CLI extension, insert the below content:
 ```
  $ gh extension install github/gh-actions-importer 
  ```
 
-2. Verify that the extension is installed:
+2. Next, to verify that the extension is installed, utilize the below content:
 ```
  $ gh actions-importer -h
+```
+3. If the extension was installed properly, you will see the following:
+```
 Options:
   -?, -h, --help  Show help and usage information
   
@@ -30,6 +35,7 @@ Options:
   dry-run    Convert a pipeline to a GitHub Actions workflow and output its yaml file.
   migrate    Convert a pipeline to a GitHub Actions workflow and open a pull request with the changes.
   ```
+Next up, let's ensure GitHub Actions Importer is up-to-date. 
 
 ## Updating the GitHub Actions Importer CLI
 
