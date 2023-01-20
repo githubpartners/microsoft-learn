@@ -1,10 +1,10 @@
 Before we get into learning about the different commands you can run in GitHub Actions Importer, first we'll review installation, ensuring you have the most up-to-date version, and learn about the supported CI platforms.
 
 In this unit we’ll be reviewing:
-- How to install GitHub Actions Importer CLI extension
-- Updating the GitHub Actions Importer CLI
-- Authenticating at the command line
-- GitHub Actions Importer CI supported platforms
+- [How to install GitHub Actions Importer CLI extension](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#how-to-install-github-actions-importer-cli-extension)
+- [Updating the GitHub Actions Importer CLI](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#updating-the-github-actions-importer-cli
+)
+- [GitHub Actions Importer CI supported platforms](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#github-actions-importer-ci-supported-platforms)
 
 Let’s start with how to install GitHub Actions Importer CLI extension.
 
