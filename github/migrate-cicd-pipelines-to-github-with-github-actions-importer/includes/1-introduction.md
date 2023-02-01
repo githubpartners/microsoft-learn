@@ -1,6 +1,7 @@
 GitHub Actions Importer is designed to help you forecast, plan, and facilitate migrations from your current CI/CD tool to GitHub Actions. Doing individual migrations is relatively easy in isolation. However, if you have a large and established CI/CD footprint, having tooling available to assist with migrations is key to your ability to adopt GitHub Actions at scale.
 
-You can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. For specific CI platform guidance click on the links below to direct you to the specific CI lab:
+You can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. We will be diving deeper into each specific CI platform in the exercise later in the module, but here are the links to them for reference. 
+
 - [Azure DevOps](https://github.com/valet-customers/labs/blob/main/azure_devops/readme.md)
 - [CircleCI](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
 - [GitLab](https://github.com/valet-customers/labs/blob/main/gitlab/readme.md)
