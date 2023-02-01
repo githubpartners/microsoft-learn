@@ -1,4 +1,6 @@
-There are four commands that you can utilize with GitHub Actions Importer to assess, plan, test, and migrate your CI/CD environment into GitHub.
+In this unit we'll be introducing you to the four commands of GitHub Actions Importer. In the following [Lab exercise](https://github.com/actions/importer-labs) you will be provided step by step guidelines on how to run all four commands for each of the supported CI platforms. 
+
+But for now, let's introduce you to the commands of GitHub Importer.
 
 The commands are:
 
