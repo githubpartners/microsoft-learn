@@ -1,7 +1,5 @@
 Next you will have the opportunity to walk through a migration with the help of Valet. 
 
-> Valet is currently private and you must be onboard prior to using it. Please reach out to [GitHub Sales](https://github.com/enterprise/contact) to inquire about being granted access. 
-
 To get started:
 1. First navigate to https://github.com/actions/importer-labs 
 2. Next, use the ```valet-customers/labs``` repository as a template to generate a new GitHub repository.
