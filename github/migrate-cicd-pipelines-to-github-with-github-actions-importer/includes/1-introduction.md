@@ -37,5 +37,5 @@ In this module you will:
 
 - You must have credentials to authenticate to the GitHub Packages Container registry. For more information, see "Working with the Container registry"
 - An environment where you can run Linux-based containers, and can install the necessary tools
-    - [Docker] (https://docs.docker.com/get-docker/) is installed and running
+    - [Docker](https://docs.docker.com/get-docker/) is installed and running
     - [GitHub CLI](https://cli.github.com/) is installed
