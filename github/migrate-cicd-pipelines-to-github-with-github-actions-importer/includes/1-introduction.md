@@ -14,11 +14,9 @@ In this module you will:
 
 - A GitHub account
 - Prior working knowledge of GitHub Actions
-- Ability to execute the accompanying labs exercises
+- Ability to execute the accompanying labs exercises in one of the supported CI environments
 
 As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
-
-We will be diving deeper into each specific CI platform in the exercise later in the module, but here are the links to them for reference. 
 
 - [Azure DevOps](https://github.com/valet-customers/labs/blob/main/azure_devops/readme.md)
 - [CircleCI](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
