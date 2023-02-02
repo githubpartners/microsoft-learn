@@ -1,8 +1,24 @@
 GitHub Actions Importer is designed to help you forecast, plan, and facilitate migrations from your current CI/CD tool to GitHub Actions. Doing individual migrations is relatively easy in isolation. 
 
-However, if you have a large and established CI/CD footprint, having tooling available to assist with migrations is key to your ability to adopt GitHub Actions at scale.
+However, if you have a large and established CI/CD footprint, having a tool capable to assist with migrations is key to your ability to adopt GitHub Actions at scale.
 
-You can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. We will be diving deeper into each specific CI platform in the exercise later in the module, but here are the links to them for reference. 
+## Learning objectives
+
+In this module you will:
+
+- Review how to install the GitHub Actions Importer CLI Extension and ensure it's up-to-date
+- Learn about the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what is not automatically migrated
+- Run through a lab mock migration exercise for a supported CI platform 
+
+## Prerequisites:
+
+- A GitHub account
+- Prior working knowledge of GitHub Actions
+- Ability to execute the accompanying labs exercises
+
+As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
+
+We will be diving deeper into each specific CI platform in the exercise later in the module, but here are the links to them for reference. 
 
 - [Azure DevOps](https://github.com/valet-customers/labs/blob/main/azure_devops/readme.md)
 - [CircleCI](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
@@ -24,18 +40,4 @@ To set expectations it is important to note that there are a couple of things th
 - Permissions for CI/CD pipelines
 - Build steps or build triggers
 
-We'll dive deeper into this in the module, for now let's review the learning objectives for this module.
-
-## Learning objectives
-
-In this module you will:
-
-- Review how to install the GitHub Actions Importer CLI Extension, ensure it's up-to-date, and learn about supported CI platforms
-- Comprehend how to execute the audit, forecast, dry-run, and migrate commands and learn what is not automatically migrated
-
-## Prerequisites:
-
-- You must have credentials to authenticate to the GitHub Packages Container registry. For more information, see "Working with the Container registry"
-- An environment where you can run Linux-based containers, and can install the necessary tools
-    - [Docker](https://docs.docker.com/get-docker/) is installed and running
-    - [GitHub CLI](https://cli.github.com/) is installed
+Now, let's dive into how to install GitHub Actions Importer and ensure it is up-to-date. 
