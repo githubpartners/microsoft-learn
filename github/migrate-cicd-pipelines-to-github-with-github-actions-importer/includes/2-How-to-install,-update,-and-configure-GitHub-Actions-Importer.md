@@ -1,16 +1,19 @@
-Before we dive into different commands you can run in GitHub Actions Importer, let's first review installating GitHub Actions Importer, ensuring you have the most up-to-date version, and learn about the supported CI platforms.
+Before we dive into different commands you can run in GitHub Actions Importer, let's first review installating GitHub Actions Importer and ensuring you have the most up-to-date version.
 
 In this unit we’ll be reviewing:
 - [How to install GitHub Actions Importer CLI extension](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#how-to-install-github-actions-importer-cli-extension)
 - [Updating the GitHub Actions Importer CLI](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#updating-the-github-actions-importer-cli
 )
-- [GitHub Actions Importer CI supported platforms](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/2-How-to-install%2C-update%2C-and-configure-GitHub-Actions-Importer.md#github-actions-importer-ci-supported-platforms)
 
 Let’s start with how to install GitHub Actions Importer CLI extension.
 
 ## How to install GitHub Actions Importer CLI extension
 
-Once you have installed [Docker](https://docs.docker.com/get-docker/) and [GitHub CLI](https://cli.github.com/) is installed, navigate to your Linuxed-based environment. 
+In the upcoming labs exercise before you install GitHub Actions Importer, you will want to make sure you have:
+- Created your own private repository using the [valet-customer/labs](https://github.com/valet-customers/labs) as a template
+- And have configured your ```codespace```
+
+Now you're ready to follow the steps below! 
 
 1. To install the GitHub Actions Importer CLI extension, insert the below content:
 ```
@@ -51,17 +54,15 @@ $ gh actions-importer migrate -h
 Description:
   Convert a pipeline to a GitHub Actions workflow and open a pull request with the changes.
 ```
+If GitHub Actions Importer has updated successfully, you should see something similar to the text below.
 
-Once you are granted access to the preview, you will be able to access further reference documentation about running a migration.
+```
+$ gh valet update
+Login Succeeded
+latest: Pulling from valet-customers/valet-cli
+Digest: sha256:a7d00dee8a37e25da59daeed44b1543f476b00fa2c41c47f48deeaf34a215bbb
+Status: Image is up to date for ghcr.io/valet-customers/valet-cli:latest
+ghcr.io/valet-customers/valet-cli:latest
+```
 
-## GitHub Actions Importer CI supported platforms
-
-And finally, here are the platforms that you can use GitHub Action Importer to migrate from:
-
-- Azure DevOps
-- CircleCI
-- GitLab
-- Jenkins
-- Travis CI
-
-Next we’ll tackle how to run the different commands and how to interpret their results. 
+Next, we’ll tackle how to run the different commands and how to interpret their results. 
