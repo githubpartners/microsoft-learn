@@ -16,7 +16,7 @@ The goal is to achieve an 80% conversion rate for every workflow, but like all t
 
 To set expectations it is important to note that there are a couple of things that won't be autmatically migrated when you use GitHub Actions Importer.
 
-#### What is not automatically migrated
+#### What is not automatically migrated:
 
 - Secrets and encrypted values 
 - Self-hosted build agents
@@ -37,5 +37,5 @@ In this module you will:
 
 - You must have credentials to authenticate to the GitHub Packages Container registry. For more information, see "Working with the Container registry"
 - An environment where you can run Linux-based containers, and can install the necessary tools
-    - Docker is installed and running
-    - GitHub CLI is installed
+    - [Docker] (https://docs.docker.com/get-docker/) is installed and running
+    - [GitHub CLI](https://cli.github.com/) is installed
