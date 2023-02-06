@@ -14,6 +14,7 @@ In this module you will:
 
 - A GitHub account
 - Prior working knowledge of GitHub Actions
+- Organizational access to one of the supported CI/CD platforms below 
 - Ability to execute the accompanying labs exercises within Codespaces
 
 As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
