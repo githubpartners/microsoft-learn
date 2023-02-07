@@ -57,12 +57,12 @@ Description:
 If GitHub Actions Importer has updated successfully, you should see something similar to the text below.
 
 ```
-$ gh valet update
+$ gh actions-importer update
 Login Succeeded
-latest: Pulling from valet-customers/valet-cli
-Digest: sha256:a7d00dee8a37e25da59daeed44b1543f476b00fa2c41c47f48deeaf34a215bbb
-Status: Image is up to date for ghcr.io/valet-customers/valet-cli:latest
-ghcr.io/valet-customers/valet-cli:latest
+latest: Pulling from actions-importer/cli
+Digest: sha256:613627879a3b5cff9c23a43fd81d94d26d0597eac8a840f09d6dc496abbe2e5b
+Status: Downloaded newer image for ghcr.io/actions-importer/cli:latest
+ghcr.io/actions-importer/cli:latest
 ```
 
 Next, we’ll tackle how to run the different commands and how to interpret their results. 
