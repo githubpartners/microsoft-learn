@@ -6,9 +6,14 @@ You can configure settings for GitHub Copilot on GitHub.com in addition to the c
 
 ### Enabling or disabling duplication detection
 
-GitHub Copilot includes a duplication detection filter, which detects code suggestions matching public code on GitHub. When you enable the filter, GitHub Copilot checks code suggestions with their surrounding code of about 150 characters against public code on GitHub. The suggestion will not be shown to you if there is a match or near match.
+GitHub Copilot includes a duplication detection filter, which detects code suggestions matching public code on GitHub. When you enable the filter, GitHub Copilot checks code suggestions with their surrounding code of about 150 characters against public code on GitHub. The suggestion will not be shown to you if there is a match or near match. Meaning that you can block suggestions of 150+ characters matching public code (ignoring whitespace). While useful in some instances, blocking matching suggestions does not address all use cases.
 
-<!-- Content revision needed -->
+Therefore, for any code fragment suggested by Copilot developers will get:
+
+An inventory of similar code found in GitHub public repositories.
+The ability to sort that inventory by repository license, commit date, etc.
+
+Using this information, you can find inspiration from other codebases, discover documentation, and almost certainly gain confidence that this fragment is appropriate to use in your project.
 
 Here are the steps to enable or disable the filter:
 
