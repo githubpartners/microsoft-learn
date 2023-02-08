@@ -10,7 +10,7 @@ Let’s start with how to install GitHub Actions Importer CLI extension.
 ## How to install GitHub Actions Importer CLI extension
 
 In the upcoming labs exercise before you install GitHub Actions Importer, you will want to make sure you have:
-- Created your own private repository using the [valet-customer/labs](https://github.com/valet-customers/labs) as a template
+- Created your own private repository using the [actions/importer-labs](https://github.com/actions/importer-labs) as a template
 - And have configured your ```codespace```
 
 Now you're ready to follow the steps below! 
