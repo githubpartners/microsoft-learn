@@ -1,64 +1,29 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+GitHub Copilot for Business allows you to manage access to GitHub Copilot for organizations within your enterprise.
 
-    Goal: state what's in this unit and how it aligns to the 'describe' learning objective.
+## Using GitHub Copilot for Business for your enterprise
 
-    Pattern:
-        One paragraph of 2-3 sentences:
-            Sentence 1: State that this unit addresses ("how it works").
-            Sentence 2: State that this unit targets this learning objective: "Describe how (features) of (product) work to (solve problem)."
-            Sentence 3-4 (optional): Give the rationale ("helps you decide if it will meet your needs").
-        Table-of-contents as a bulleted list (do not simply list every heading you'll have on the page, group them into about 3 high-level areas).
+You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations. Once GitHub Copilot for Business is enabled at the enterprise-level, you can configure GitHub Copilot settings for each organization in your enterprise. 
 
-    Heading: none
+With Copilot for Business, GitHub will not retain code snippets, store or share your code regardless if the data is from public repositories, private repositories, non-GitHub repositories, or local files.
 
-    Example: "Here, we'll discuss how Logic Apps works behind the scenes. You'll learn about all the pieces of Logic apps and see how they fit together into an app. This knowledge will help you decide whether Logic Apps will work for you without any customization. In cases where you do need to create custom components, you'll be able to determine how difficult it will be.
-        * Connectors, triggers, actions
-        * Control actions
-        * Logic Apps Designer"
--->
-TODO: add your topic sentences(s)
-TODO: add your bulleted list of key things covered
-* TODO
-* TODO
-* TODO
+## Enabling GitHub Copilot for Business for your enterprise
 
-<!-- 2. Chunked content-------------------------------------------------------------------------------------
+By first establishing the policy and then assigning users your enterprise owner can enable GitHub Copilot for Business for the organizations in the enterprise. 
 
-    Goal:
-        Cover the components of (product) and how they work.
-        Repeat this pattern multiple times as needed.
+Follow these steps to enforce a policy to manage the use of GitHub Copilot for Business.
+These steps are also found in "Enforcing a policy to manage the use of GitHub Copilot for Business in your enterprise” in the GitHub Docs.
 
-    Pattern:
-        Break the content into 'chunks' where each chunk has three things:
-            1. An H2 or H3 heading describing the goal of the chunk.
-            2. 1-3 paragraphs of text, with a strong lead sentence in the first paragraph.
-            3. Visual like an image, table, list, code sample, or blockquote.
+In the enterprise sidebar, click **Policies**.
+Under **Policies**, click Copilot.
+Under Manage organization access to GitHub Copilot, configure the access for your GitHub Copilot subscription.
+To disable GitHub Copilot for all organizations in your enterprise, select **Disabled**.
+To enable GitHub Copilot for all organizations in your enterprise, both current and future, select **Allow for all organizations**.
+To enable GitHub Copilot for specific organizations, select **Allow for specific organizations**.
+If you selected **Allow for specific organizations**, select the organizations you want to enable GitHub Copilot for. Alternatively, you can select the organizations you want to disable GitHub Copilot access for.
+Click **Set organization permissions** and select **Enable** or **Disable** to grant or deny GitHub Copilot access for the specified organizations.
+Click **Save changes**.
 
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
-
-<!-- Pattern for simple topic -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
-
-<!-- Pattern for complex topic -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list, code sample, blockquote)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
+In the next unit, you’ll learn about configuring GitHub Copilot.
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
