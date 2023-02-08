@@ -1,59 +1,24 @@
-<!-- 1. Goal and criteria-----------------------------------------------------------------------------
+GitHub Copilot is an AI pair programmer that suggests code in your editor. You now understand how GitHub Copilot can help you code by offering autocomplete-style suggestions. You can enable GitHub Copilot for Business for your enterprise, and you know how to configure and troubleshoot GitHub Copilot.
 
-    Goal: Recap that this module's goal is 'evaluate' using the provided decision criteria.
+## References
 
-    Format: Short text followed by a bulleted list of the decision criteria developed in the "When to use (product)" unit.
+- [GitHub Copilot features](https://github.com/features/copilot)
+- [GitHub Copilot is generally available to all developers](https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/)
+- [About GitHub Copilot](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot)
+- [Using GitHub Copilot](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot#using-github-copilot)
+- [8 things you didn’t know you could do with GitHub Copilot](https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/)
+- [Research: How GitHub Copilot helps improve developer productivity](https://github.blog/2022-07-14-research-how-github-copilot-helps-improve-developer-productivity/)
+- [Configuring GitHub Copilot](https://docs.github.com/en/copilot/configuring-github-copilot)
+- [GitHub Copilot Frequently Asked Questions](https://github.com/features/copilot/#faq)
+- [GitHub Copilot is generally available for businesses](https://github.blog/2022-12-07-github-copilot-is-generally-available-for-businesses/)
+- [About GitHub Copilot for Business](https://docs.github.com/en/enterprise-cloud@latest/copilot/overview-of-github-copilot/about-github-copilot-for-business)
+- [Enabling and setting up GitHub Copilot for Business](https://docs.github.com/en/enterprise-cloud@latest/copilot/overview-of-github-copilot/enabling-and-setting-up-github-copilot-for-business)
+- [Using GitHub Copilot to Automate Tests](https://applitools.com/blog/using-github-copilot-to-automate-tests/)
+- [Make Testing Easy with GitHub](https://applitools.com/event/make-testing-easy-github-copilot/)
+- [Writing Better Tests with AI and GitHub Copilot](https://about.codecov.io/blog/writing-better-tests-with-ai-and-github-copilot/)
 
-    Heading: none
+## How to provide feedback
 
-    Example: "Our goal was to help you evaluate whether Logic Apps would be a good choice for your business process. We developed some criteria you can use to guide your decision:
-    * Integration
-    * Performance
-    * Conditionals
-    * Connectors"
-
--->
-TODO: 1-2 sentences restating the module's "evaluate" goal
-TODO: bulleted list of the decision criteria
-
-<!-- 2. Show how you solved the scenario problem(s)---------------------------------------------------
-
-    Goal: Briefly summarize how you applied the decision criteria to the scenario problem(s). Ideally, discuss two scenarios, one where the product was appropriate and one where it wasn't.
-
-    Heading: none; depending on length, you can put this in a separate paragraph or combine this with the previous section into a single paragraph
-
-    Example: "We applied these criteria to our fictional shoe company. The analysis helped us see how difficult it would be to use Logic Apps for each process. Both the social-media monitor and the video archive utility used only the built-in connectors. This characteristic made them perfect for Logic Apps. The online sales portal required more work because it had complex conditionals and needed custom connectors."
- -->
-
-TODO: add your discussion of applying the criteria
-
-<!-- 3. Describe the business impact ----------------------------------------------------
-
-    Goal: explain how choosing the right product is important
-
-    Heading: none; depending on length, you can put this in a separate paragraph or combine this with the previous section into a single paragraph
-
-    Example: "The criteria help you evaluate whether your business processes are a good match for Logic Apps. First, they let you assess how well Logic Apps will solve your problem. Second, they give you an idea of the amount of customization effort involved in using them for your task. This process should give you enough information to choose the right product for your work."
- -->
-TODO: describe the business impact
-
-<!-- 4. References (optional) ----------------------------------------------------
-
-    Goal: Provide a few recommendations for further study via a bulleted list of links. This is optional and intended to be used sparingly.
-        - use the target page title as the text for your link
-        - do not include other text such as a description
-        - prefer other first-party sites like Docs reference pages
-        - link to third-party sites only when they are trusted and authoritative
-        - do not link to other Learn content ("next steps" recommendations are generated automatically)
-        - avoid linking to opinion sites such as blog posts
-
-    Heading: "## References"
-
-    Example:
-        "References
-        * [Administrator role permissions in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/users-groups-roles/directory-assign-admin-roles)
-        * [What is Azure role-based access control (Azure RBAC)?](https://docs.microsoft.com/azure/role-based-access-control/overview)
-        * [Manage access to billing information for Azure](https://docs.microsoft.com/azure/billing/billing-manage-access)"
- -->
+If you have content feedback or suggested changes for a Microsoft Learn module, please use the [MS Learn Module Update Request](https://github.com/githubpartners/microsoft-learn/issues/new/choose) issue form to provide that feedback and a team member will triage the request. Thank you for taking the time to improve our content!
 
 <!-- Do not include any other content -->
