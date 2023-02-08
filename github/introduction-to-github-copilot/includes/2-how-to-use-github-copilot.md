@@ -1,129 +1,28 @@
-<!-- 1. Topic sentence(s) ---------------------------------------------------------------
+GitHub Copilot for Business allows you to manage access to GitHub Copilot for organizations within your enterprise.
 
-    Goal: briefly state that this unit will define the product.
+## Using GitHub Copilot for Business for your enterprise
 
-    Heading: none
+You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations. Once GitHub Copilot for Business is enabled at the enterprise-level, you can configure GitHub Copilot settings for each organization in your enterprise. 
 
-    Example: "Let's start with a few definitions and a quick tour of the core features of Logic Apps. This overview should help you see whether Logic Apps might be a good fit for your work."
--->
-TODO: add your topic sentences(s)
+With Copilot for Business, GitHub will not retain code snippets, store or share your code regardless if the data is from public repositories, private repositories, non-GitHub repositories, or local files.
 
-<!-- 2. Background-concept definitions (optional) ----------------------------------------
+## Enabling GitHub Copilot for Business for your enterprise
 
-    Goal:
-        Define any needed underlying concepts or terms the learner must know to understand the product.
-        Repeat this pattern multiple times if multiple concepts are needed.
+By first establishing the policy and then assigning users your enterprise owner can enable GitHub Copilot for Business for the organizations in the enterprise. 
 
-    Heading:
-        "## What is (concept)?"
+Follow these steps to enforce a policy to manage the use of GitHub Copilot for Business.
+These steps are also found in "Enforcing a policy to manage the use of GitHub Copilot for Business in your enterprise” in the GitHub Docs.
 
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that gives a definition "(concept) is..." (ensure this is a definition, do not give use cases like "(concept) lets you...").
-        3. Additional text as needed (typically 1-3 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
+In the enterprise sidebar, click **Policies**.
+Under **Policies**, click Copilot.
+Under Manage organization access to GitHub Copilot, configure the access for your GitHub Copilot subscription.
+To disable GitHub Copilot for all organizations in your enterprise, select **Disabled**.
+To enable GitHub Copilot for all organizations in your enterprise, both current and future, select **Allow for all organizations**.
+To enable GitHub Copilot for specific organizations, select **Allow for specific organizations**.
+If you selected **Allow for specific organizations**, select the organizations you want to enable GitHub Copilot for. Alternatively, you can select the organizations you want to disable GitHub Copilot access for.
+Click **Set organization permissions** and select **Enable** or **Disable** to grant or deny GitHub Copilot access for the specified organizations.
+Click **Save changes**.
 
-    Example:
-        (Note: the product "Logic Apps" implements business processes in the cloud; therefore, "business process" is a background concept.)
-        Heading: "What is a business process?
-        Lead sentence: "A business process or _workflow_ is a sequence of tasks that produce a specific outcome. The result might be a decision, some data, or a notification...."
--->
-## What is (concept)?
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
-
-<!-- 3. Define the product -------------------------------------------------------------
-
-    Goal:
-        Give a formal and precise definition of the product.
-
-    Heading:
-        "## (product) definition"
-
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that gives a definition "(product) is..." (ensure this is a definition, do not give use cases like "(product) lets you...").
-        3. Additional text as needed (typically 1-3 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
-
-    Example:
-        Heading: "Azure Logic Apps definition"
-        Lead sentence: "Azure Logic Apps is a cloud service that automates the execution of your business processes."
--->
-## (product) definition
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
-
-<!-- 4. Solve the scenario -------------------------------------------------------------
-
-    Goal:
-        At a high level, describe how the (product) solves one of the customer tasks in your (scenario).
-        Avoid teaching how to actually do the work (you're not teaching how-to-use in this module).
-
-    Heading:
-        "## How to (solve scenario)"
-
-    Pattern:
-        1. H2 heading.
-        2. Lead sentence that summarizes how the (product) solved the (scenario).
-        3. Additional text as needed (typically 1-2 paragraphs total, integrate the lead sentence into the first paragraph).
-        4. Visual like an image, table, list, code sample, or blockquote (image preferred).
-
-    Example:
-        Heading: "How to implement a Twitter monitor"
-        Lead sentence: "To implement a Twitter monitor, you map each task to a Logic Apps component and connect them with conditional logic."
--->
-## How to (solve scenario)
-TODO: Add your lead sentence
-TODO: Add your additional text
-TODO: Add your visual element
-
-<!-- 5. Additional content (optional, as needed) ------------------------------------------------
-
-    Goal:
-        The section is a catch-all for any information not covered in the sections above.
-        Repeat the pattern here as many times as needed.
-
-    Possible topics:
-        - Key feature(s).
-        - Example use case in addition to the scenario.
-        - High-level of how practitioners use the product (e.g. there's an API and a web UI to support multiple use cases).
-        - Business value (e.g. it lets you do something that would be difficult to achieve without (product)).
-
-    Pattern:
-        Break the content into 'chunks' where each chunk has three things:
-            1. An H2 or H3 heading describing the goal of the chunk.
-            2. 1-3 paragraphs of text, with a strong lead sentence in the first paragraph.
-            3. Visual like an image, table, list, code sample, or blockquote (image preferred).
-
-    [Learning-unit structural guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-structure-learning-content?branch=main)
--->
-
-<!-- Pattern for simple chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-Paragraph (optional)
-
-<!-- Pattern for complex chunks (repeat as needed) -->
-## H2 heading
-Strong lead sentence; remainder of paragraph.
-Visual (image, table, list, code sample, blockquote)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-### H3 heading
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+In the next unit, you’ll learn about configuring GitHub Copilot.
 
 <!-- Do not add a unit summary or references/links -->
