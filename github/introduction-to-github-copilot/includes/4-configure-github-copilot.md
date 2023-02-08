@@ -1,175 +1,59 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+GitHub Copilot allows you to enable, configure, or disable GitHub Copilot in a supported IDE.
 
-    Goal: state what's in this unit and how it aligns to the 'evaluate' learning objective.
+## Configuring GitHub Copilot settings on GitHub.com
 
-    Pattern:
-        One paragraph of 2 sentences:
-            Sentence 1: State that this unit addresses ("when to use it").
-            Sentence 2: State that this unit targets this learning objective: "Evaluate whether (product) is appropriate to (general product use case)."
-        Decision criteria as a bulleted list.
+You can configure settings for GitHub Copilot on GitHub.com in addition to the configuration for the GitHub Copilot plugin in your supported IDE. The settings apply wherever you use GitHub Copilot. GitHub Copilot includes a filter, which detects code suggestions matching public code on GitHub that you can enable and disable.
 
-    Heading: none
+### Enabling or disabling duplication detection
 
-    Example: "Here, we'll discuss how you can decide whether Logic Apps is the right choice for a workflow. We'll list some criteria that indicate whether Logic Apps will meet your performance and functional goals.
-        * Integration
-        * Performance
-        * Conditionals
-        * Connectors"
--->
-TODO: add your topic sentences(s)
-TODO: add your bulleted list of key things covered
-* TODO
-* TODO
-* TODO
+GitHub Copilot includes a duplication detection filter, which detects code suggestions matching public code on GitHub. When you enable the filter, GitHub Copilot checks code suggestions with their surrounding code of about 150 characters against public code on GitHub. The suggestion will not be shown to you if there is a match or near match.
 
-<!-- 2. Decision criteria introduction --------------------------------------------------------------------------------
+<!-- Content revision needed -->
 
-    Goal: Lead-in to the criteria discussion.
+Here are the steps to enable or disable the filter:
 
-    Pattern:
-        1 paragraph consisting of 3 sentences
-            Sentence 1: summarizing the criteria from a positive view ("when to use").
-            Sentence 2: describing the negative ("when not to use") at a high level.
-            Sentence 3: transition/lead-in to the detailed discussion.
+In the upper-right corner of any page, click your profile photo, then click **Settings**.
+In the left sidebar, click **GitHub Copilot**.
+Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code.
+To confirm your new settings, click **Save**.
 
-    Heading: "## Decision criteria"
+## Enabling or disabling telemetry
 
-    Example:
-        "Decision criteria"
-         "Logic Apps helps you coordinate the flow of data through disparate systems. The cases where Logic Apps might not be the best option typically involve real-time requirements, complex business rules, or use of non-standard services. Here's some discussion of each of these factors."
--->
-## Decision criteria
-TODO: add your 3 lead-in sentences
+Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub and further processed, And, shared with Microsoft and OpenAI by adjusting your user settings.
 
-<!-- 3a. Decision criteria (for simple criteria) ----------------------------------------------------
+You can use the left sidebar and the GitHub Copilot option on GitHub.com to enable or disable telemetry data. Changing the option, allows GitHub to use my code snippets for product improvements, or not..
 
-    Note:
-        Choose either 3a or 3b for your content; do not do both.
-        This pattern is for simple criteria where the analysis is brief and does not require a visual element.
+## Configuring GitHub Copilot in Visual Studio Code
 
-    Goal: Describe in detail each criterion that helps the "when to use it" decision.
+GitHub Copilot can autocomplete code as you type when you use Visual Studio Code. After installation, you can enable or disable GitHub Copilot, and you can configure advanced settings within Visual Studio Code.  You need to install the GitHub Copilot plugin for use with Visual Studio Code.
 
-    Heading: none, this content will be the 'body' for the "Decision criteria" heading above.
+When using GitHub Copilot, you can use the default keyboard shortcuts in Visual Studio Code. Alternatively, you can rebind the shortcuts in the Keyboard Shortcuts editor using your preferred keyboard shortcuts for each specific command. You can search for each keyboard shortcut by command name in the Keyboard Shortcuts editor.
 
-    Pattern:
-        No heading.
-        Place both the criteria and analysis into a table.
+In Visual Studio Code, the GitHub Copilot status icon in the bottom panel of the window indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon matches the color of the status bar. When disabled, the background color of the icon contrasts with the color of the status bar.
 
-    Example:
-        | | |
-        | --- | --- |
-        | **Criteria** | **Analysis**|
-        | **Integration** | The key question to ask when you're considering Logic Apps is "do I need to integrate services?".... |
-        | **Performance** | The next consideration is performance. The Logic Apps execution engine scales your apps automatically.... |
-        | **Conditionals** | Logic Apps provides control constructs like Boolean expressions, switch statements, and loops.... |
-        | **Connectors** | The last consideration is whether there are pre-built connectors for all the services you need to access. |
-        |   |   |
--->
-TODO: add your topic sentences(s)
+Additionally, you can choose to enable or disable inline suggestions and specify which languages you want to enable or disable GitHub Copilot for.
 
-<!-- 3b. Decision criteria (for complex criteria) ----------------------------------------------------------
+## Configuring GitHub Copilot in Visual Studio
 
-    Note:
-        Choose either 3a or 3b for your content; do not do both.
-        This pattern is for complex criteria where the analysis of each criterion needs both and a visual element.
+After Visual Studio installation, you can enable or disable GitHub Copilot after installing the GitHub Copilot plugin, Then you can configure advanced settings within Visual Studio and GitHub.com.
 
-    Goal: Describe in detail each criterion that helps the "when to use it" decision.
+In the bottom panel of the Visual Studio window, the GitHub Copilot status icon indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon will match the color of the status bar. When disabled, the icon will have a diagonal line through it.
 
-    Pattern:
-        For each criterion, repeat this pattern:
-            1. H3 of the criterion.
-            2. 1-3 paragraphs of discussion/analysis.
-            3. Visual like an image, table, list, code sample, or blockquote.
-            
-    Example:
-        H3: "Integration"
-        Prose: The key question to ask when you're considering Logic Apps is _"do I need to integrate services?"_ Logic Apps work well when you need to get multiple applications and systems to work together. That's what they were designed to do. If you're building an app with no external connections, Logic Apps is probably not the best option."
-        Visual: (image preferred)
--->
-### (criterion)
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
+### Configuring ReSharper for GitHub Copilot
 
-### (criterion)
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
+GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot's native IntelliSense. In the Visual Studio toolbar, use tools, options, environment, IntelliSense, and general.
 
-### (criterion)
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list, code sample, blockquote)
-Paragraph (optional)
+## Configuring GitHub Copilot in a JetBrains IDE
 
-<!-- 4. Apply-the-criteria introduction --------------------------------------------------------------------------------
+Using a JetBrains IDE, GitHub Copilot can autocomplete code as you type. After installation, you can enable or disable GitHub Copilot and you can configure advanced settings within your IDE or on GitHub.com. GitHub describes how to configure GitHub Copilot in the IntelliJ IDE on GitHub Docs. The user interfaces of other JetBrains IDEs may differ.
 
-    Goal: Lead-in to the example applications of the criteria.
+## Configuring GitHub Copilot in Neovim
 
-    Pattern:
-        1 paragraph consisting of 3 sentences
-            Sentence 1: summarizing the criteria from a positive view ("when to use").
-            Sentence 2: Acknowledge that there are cases for which (product) won't work and/or there are edge cases that are difficult to decide.
-            Sentence 3: transition/lead-in to the detailed discussion.
+You can find the GitHub Copilot documentation in Neovim by running the following command.
 
-    Heading: "## Apply the criteria"
+`:help copilot`
 
-    Example:
-        "Apply the criteria"
-         "Logic Apps works best when you're integrating multiple services with some added control logic. The decision is often a judgment call though. Let's think about how to apply these criteria to our example processes."
--->
-## Apply the criteria
-TODO: add your 3 lead-in sentences
-
-<!-- 5. Apply the criteria examples -----------------------------------------------------------------------------
-
-    Goal: Apply the criteria to the 2-3 customer tasks in the scenario described in your introduction unit.
-
-    Pattern:
-        For each customer task, repeat this pattern:
-            1. "### Should (scenario subtask) use (product)?".
-            2. 1-3 paragraphs of discussion/analysis (first sentence should answer yes/no about whether the product is suitable).
-            3. Visual like an image, table, list, code sample, or blockquote.
-
-    Example:
-        H3: "Should the video-archive utility use Logic Apps?"
-        Prose: "The video archive task is a good fit for Logic Apps even though it doesn't integrate multiple systems. Logic Apps has a built-in timer trigger and an Azure blob connector that are perfect to implement this process...."
-        Visual: (image preferred)
--->
-
-### Should (scenario subtask) use (product)?
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-
-### Should (scenario subtask) use (product)?
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-
-### Should (scenario subtask) use (product)?
-Strong lead sentence; remainder of paragraph.
-Paragraph (optional)
-Visual (image, table, list)
-Paragraph (optional)
-
-<!-- 6. Guidance summary (optional) ------------------------------------------------
-
-    Goal: Job-aid for future use to help customers evaluate their own tasks against the criteria.
-
-    Pattern:
-        1. Heading "## Guidance summary"
-        2. Lead-in sentence acknowledging that this is a summary/repeat of previous material.
-        3. Visual like a flowchart (as an image) or rubric (as a table).
-
-    Example:
-        "The following flowchart summarizes the key questions to ask when you're considering using Logic Apps."
-        <flowchart image>
--->
+In the next unit, you’ll learn about troubleshooting GitHub Copilot.
 
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
