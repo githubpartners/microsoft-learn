@@ -1,63 +1,43 @@
-<!-- 1. Topic sentence(s) --------------------------------------------------------------------------------
+GitHub Copilot is an AI pair programmer that you can use to get suggestions for whole lines or entire functions right inside your editor.
 
-    Goal: briefly orient the learner to the product; what category of problem does it solve?
+In this unit, you’ll learn about GitHub Copilot and how the tool provides autocomplete suggestions.
 
-    Heading: none
+## About GitHub Copilot
 
-    Example: "Implementing a business process can be challenging because you typically need to make diverse services work together. Think about everything your company uses to store and process data: Salesforce, Microsoft 365, Oracle, Twitter, YouTube, Dropbox, Google services, Azure Cognitive Services, and so on. How do you integrate all these products? Azure Logic Apps gives you pre-built components to connect to hundreds of services. You use a graphical design tool to put the pieces together in any combination you need and Logic Apps will run your process automatically in the cloud."
+When you utilize GitHub Copilot, you will receive code suggestions by starting to write the code you want to use, or by writing a natural language comment describing what you want the code to do. GitHub Copilot analyzes the context in the file you are editing, as well as related files, and offers suggestions from within your text editor. GitHub Copilot is powered by OpenAI Codex, a new AI system created by OpenAI.
 
-    Recommended: visual like an image (preferred), table, list, etc.
+GitHub Copilot can help with each language that appears in public repositories. The quality of suggestions you receive may depend on the volume and diversity of training data for that language. For example, JavaScript is well represented in public repositories and is one of GitHub Copilot's best supported languages. Languages with less representation in public repositories may produce fewer or less robust suggestions.
 
-    [Introduction unit guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-introductions?branch=main#rule-use-the-standard-module-introduction-format)
--->
-TODO: add your topic sentences(s)
-TODO: add your visual element
+GitHub Copilot can be used with GitHub.com, Visual Studio Code, Visual Studio, JetBrains IDEs, and Neovim as an unobtrusive extension
 
-<!-- 2. Scenario -----------------------------------------------------------------------------------------
+## Using GitHub Copilot
 
-    Goal: Describe the real-world scenario you'll use to illustrate the product. Include 2-3 customer tasks that represent the most-common use cases for the product.
+GitHub Copilot provides suggestions from a model that OpenAI built from billions of lines of open source code. You can spend less time creating boilerplate and repetitive code patterns, and more time on building great software. 
 
-    Heading: "## Example scenario"
+You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution.
 
-    Example: "Suppose you work at an athletic shoe company that is launching a new product. You sell the shoes on your website, manage your cloud-hosted advertising videos, and monitor social media to gauge reactions to the launch. The following illustration shows these processes. Notice how the tasks include both customer-facing processes like direct sales and administrative tasks like auto-archiving old videos. Here, you'll see how Logic Apps automates these types of business processes."
+<!-- Possibly add the image from https://github.com/features/copilot under, Focus on solving bigger problems, or something similar →
 
-    Recommended: an image that visualizes the scenario
+### Assisting non-native English speakers
 
-    [Scenario guidance](https://review.docs.microsoft.com/learn-docs/docs/id-guidance-scenarios)
- -->
-## Example scenario
-TODO: add your scenario
-TODO: add your image
+Importantly, GitHub Copilot can assist non-native English speakers and can understand other languages beyond English. This is helpful for developers of all backgrounds since programming languages are based on American English. 
 
-<!-- 3. Prose table-of-contents --------------------------------------------------------------------------
+In this example, the CSS property `color` is based on American English. It is unfamiliar for native British-English or Canadian-English speakers who use the spelling “colour”. Forgetting the correct spelling and syntax can often result in typos, unexpected errors, and lost time.
 
-    Goal: List the activities the learner will do. This differs from the learning objectives. The learning objectives are "outcome focused"; that is, they describe the skills the learner will acquire as a result of consuming this content. By contrast, here you should be specific about what the learning will **do** in order to acquire those skills. The format can be either prose or bulleted-list; however, a list will yield better results when transformed into other output types such as PowerPoint.
+In the GIF below, I wrote a comment in Spanish that says, “importar”, which translates to “import”. GitHub Copilot quickly completed my comment in Spanish and imported the necessary libraries as the comment described.
 
-    Heading: "## What will we be doing?"
+<!-- Use the example from https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/ under Assisting non-native English speakers -->
 
-    Example: "We’ll analyze the capabilities of Logic Apps to help you decide when to use them:
-                * **Launch**: what conditions can you set to launch your app?
-                * **Connect**: which services can you connect to?
-                * **Branch**: what types of business logic can you add to your app?"
+### Testing your code
 
- -->
-## What will we be doing?
-TODO: add your activities
+GitHub Copilot excels in pattern recognition and pattern completion. It can speed up the process of writing unit tests, visual regression tests, and more. This is key since writing tests is a vital yet sometimes tedious step in the software development lifecycle.
 
-<!-- 4. Terminal learning objective ----------------------------------------------------------------------
+### Securing your code
 
-    Goal: The title of an "Introduction to (product)" module tells our customers that this is a good place to start their learning. This helps our customers find the right content quickly. The trade-off is that the title does not reflect the terminal learning objective of the module. Here, you explain that this module teaches the 'evaluate' task. To do this, you:
-        - Start with your 'evaluate' learning objective
-        - Make it a complete sentence if it's not already
-        - Use plain language so it sounds conversational
-        - Include the lead-in shown below ("By the end...")
+As a result of the training set for GitHub Copilot, the suggestions may contain insecure coding patterns, bugs, or references to outdated APIs or idioms. Therefore, ensuring the security and quality of your code is still very important. GitHub provides a number of features to help you monitor and improve code quality, such as GitHub Actions, Dependabot, CodeQL and code scanning.
 
-    Heading: "## What is the main goal?"
+GitHub Copilot uses filters to block offensive words in the prompts and avoid producing suggestions in sensitive contexts. GitHub is committed to constantly improving the filter system to more intelligently detect and remove offensive suggestions generated by GitHub Copilot, including biased, discriminatory, or abusive outputs.
 
-    Example: "By the end of this session, you'll be able to decide whether Logic Apps is a good choice to automate your business processes."
-
- -->
-## What is the main goal?
-By the end of this session, you'll be able to (TODO)
+In the next unit, you’ll learn about enabling GitHub Copilot for Business for your enterprise.
 
 <!-- Do **not** include any other content like learning objectives, prerequisites, unit summary, "next unit" lead-in, or references. -->
