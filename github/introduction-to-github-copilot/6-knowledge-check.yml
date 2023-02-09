@@ -9,85 +9,46 @@ metadata:
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 1
+durationInMinutes: 10
 ###########################################################################
-###
-### General guidance (https://review.docs.microsoft.com/learn-docs/docs/id-guidance-knowledge-check)
-###  - Questions are complete sentences ending with a question mark
-###  - No true/false questions
-###  - 3 answers per question
-###  - All answers about the same length
-###  - Numeric answers listed in sorted order
-###  - No "All of the above" and/or "None of the above" as answer choices
-###  - No "Not" or "Except" in questions
-###  - No second person ("you") in the questions or answers
-###  - Provide a meaningful explanation for both correct and incorrect answers
-###
-### Question content requirements:
-###  - Write 5 questions
-###  - Questions 1,2 must test this Learning Objective: "Describe how (attributes) of (product) work to (solve problem)"
-###      Guidance: These two questions can be short, no need for a long scenario to analyze. Test if they understand how the product works.
-###      Example: "What differentiates an action from a control action in a Logic App?"
-###  - Questions 3,4,5 must test this Learning Objective: "Evaluate whether (product) is appropriate to (general product use case)"
-###      Guidance: Use scenario questions that ask the learner to analyze a situation with the "when to use" criteria presented in the module.
-###      Example: "A financial company is building a system to let brokers trade financial instruments. The system must monitor market conditions, detect changes, and execute trades. It will need to handle a large volume of transactions quickly. The faster it completes trades, the more of an advantage the company will have over its competitors. Which requirement of this system would be difficult for Azure Logic Apps to satisfy?"
-###
-###########################################################################
+
 content: |
 quiz:
+  title: Check your knowledge
   questions:
-  - content: ""
+  - content: “What is GitHub Copilot?”
     choices:
-    - content: ""
+    - content: “GitHub Copilot is an AI pair programmer that you can use to get code suggestions.”
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: “GitHub Copilot is an AI pair programmer that you can use to get suggestions for whole lines or entire functions right inside your editor.”
+    - content: “GitHub Copilot is OpenAI Codex, a new AI system created by OpenAI.”
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "GitHub Copilot is powered by OpenAI Codex, a new AI system created by OpenAI."
+    - content: "GitHub Copilot is a JavaScript public repository and is one of the best supported languages."
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "JavaScript is well represented in public repositories and is one of GitHub Copilot's best supported languages."
+    - content: "GitHub Copilot can write a comment describing logic and you can add your suggested code to implement the solution."
+      isCorrect: false
+      explanation: "You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution."
+  - content: “Can GitHub Copilot assist non-native English speakers and can understand other languages beyond English?”
     choices:
-    - content: ""
+    - content: “True”
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: “GitHub Copilot can assist non-native English speakers and can understand other languages beyond English”
+    - content: “False”
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "GitHub Copilot can assist non-native English speakers and can understand other languages beyond English"
+  - content: “What is the first step to establish when using GitHub Copilot for Business in your enterprise?”
     choices:
-    - content: ""
+    - content: “A policy”
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: “You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations”
+    - content: “Code snippets”
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
+    - content: "Assign users"
       isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
+    - content: "Enable GitHub Copilot"
       isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-  - content: ""
-    choices:
-    - content: ""
-      isCorrect: true
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
-    - content: ""
-      isCorrect: false
-      explanation: ""
+      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
