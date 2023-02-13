@@ -71,7 +71,7 @@ In the next section, we’ll be diving into the ```dry-run``` command.
 
 ## What is the dry-run command
 
-In this section we will review how to use the ```dry-run``` command and provide an example of what the converted workflow will look like. 
+In this section we will review what the ```dry-run``` command does. 
 
 You can use the ```dry-run``` command to convert an existing pipeline to its equivalent GitHub Actions workflow. The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry-run of a pipeline and validate the contents are suitable.
 
