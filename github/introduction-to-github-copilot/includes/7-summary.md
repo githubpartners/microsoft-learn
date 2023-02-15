@@ -1,4 +1,4 @@
-GitHub Copilot is an AI pair programmer that suggests code in your editor. You now understand how GitHub Copilot can help you code by offering autocomplete-style suggestions. You can enable GitHub Copilot for Business for your enterprise, and you know how to configure and troubleshoot GitHub Copilot.
+You now understand how GitHub Copilot can help you code by offering autocomplete-style suggestions. You can enable GitHub Copilot for Business for your enterprise, and you know how to configure and troubleshoot GitHub Copilot.
 
 ## References
 
