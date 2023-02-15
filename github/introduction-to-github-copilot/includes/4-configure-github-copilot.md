@@ -24,7 +24,7 @@ Here are the steps to enable or disable the filter:
 
 ## Enabling or disabling telemetry
 
-Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub and further processed, And, shared with Microsoft and OpenAI by adjusting your user settings.
+Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub. Additionally, you can choose if your code snipper is further processed and shared with Microsoft and OpenAI by adjusting your user settings.
 
 You can use the left sidebar and the GitHub Copilot option on GitHub.com to enable or disable telemetry data. Changing the option, allows GitHub to use my code snippets for product improvements, or not..
 
@@ -36,6 +36,8 @@ When using GitHub Copilot, you can use the default keyboard shortcuts in Visual 
 
 In Visual Studio Code, the GitHub Copilot status icon in the bottom panel of the window indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon matches the color of the status bar. When disabled, the background color of the icon contrasts with the color of the status bar.
 
+<!-- Add image from here, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio-code#enabling-or-disabling-github-copilot -->
+
 Additionally, you can choose to enable or disable inline suggestions and specify which languages you want to enable or disable GitHub Copilot for.
 
 ## Configuring GitHub Copilot in Visual Studio
@@ -43,6 +45,8 @@ Additionally, you can choose to enable or disable inline suggestions and specify
 After Visual Studio installation, you can enable or disable GitHub Copilot after installing the GitHub Copilot plugin, Then you can configure advanced settings within Visual Studio and GitHub.com.
 
 In the bottom panel of the Visual Studio window, the GitHub Copilot status icon indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon will match the color of the status bar. When disabled, the icon will have a diagonal line through it.
+
+<!-- add image, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio#enabling-or-disabling-github-copilot -->
 
 ### Configuring ReSharper for GitHub Copilot
 
@@ -59,7 +63,5 @@ You can find the GitHub Copilot documentation in Neovim by running the following
 `:help copilot`
 
 In the next unit, you’ll learn about troubleshooting GitHub Copilot.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 <!-- Do not add a unit summary or references/links -->
