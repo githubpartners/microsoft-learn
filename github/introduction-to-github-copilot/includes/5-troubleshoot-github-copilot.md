@@ -2,7 +2,7 @@ Troubleshooting GitHub Copilot is done in each environment. Here is some informa
 
 ## Troubleshooting GitHub Copilot in Visual Studio Code
 
-The log files are useful for diagnosing connection issues. The GitHub Copilot extension stores the log files in the standard log location for Visual Studio Code extensions. The log files are found through the developer option and open extension logs folder within Visual Studio Code.
+In Visual Studio Code, the log files are useful for diagnosing connection issues. The GitHub Copilot extension stores the log files in the standard log location for Visual Studio Code extensions. The log files are found through the developer option and open extension logs folder within Visual Studio Code.
 
 In rare cases, errors might not be logged in the regular locations. If you encounter errors and there is nothing in the logs, you may try to see the logs from the process running VS Code and the extension. This allows you to view the Electron logs. These logs are found under developer and the toggle developer tools within Visual Studio Code.
 
