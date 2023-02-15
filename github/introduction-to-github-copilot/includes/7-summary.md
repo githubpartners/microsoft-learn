@@ -6,6 +6,7 @@ GitHub Copilot is an AI pair programmer that suggests code in your editor. You n
 - [GitHub Copilot is generally available to all developers](https://github.blog/2022-06-21-github-copilot-is-generally-available-to-all-developers/)
 - [About GitHub Copilot](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot)
 - [Using GitHub Copilot](https://docs.github.com/en/copilot/overview-of-github-copilot/about-github-copilot#using-github-copilot)
+- [GitHub Copilot now has a better AI model and new capabilities](https://github.blog/2023-02-14-github-copilot-now-has-a-better-ai-model-and-new-capabilities/)
 - [8 things you didn’t know you could do with GitHub Copilot](https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/)
 - [Research: How GitHub Copilot helps improve developer productivity](https://github.blog/2022-07-14-research-how-github-copilot-helps-improve-developer-productivity/)
 - [Configuring GitHub Copilot](https://docs.github.com/en/copilot/configuring-github-copilot)
