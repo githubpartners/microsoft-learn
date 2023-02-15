@@ -3,7 +3,7 @@ uid: learn.migrate-cicd-pipelines-to-github-with-github-actions-importer.introdu
 title: Introduction
 metadata:
   title: introduction
-  description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
+  description: "Learn about GitHub Actions Importer and how it can help facilitate migrations from your current CI/CD tool to GitHub Actions."
   ms.date: 1/10/2023
   author: a-a-ron
   ms.author: aastewar
