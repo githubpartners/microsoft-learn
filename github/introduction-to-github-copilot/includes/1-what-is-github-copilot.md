@@ -1,4 +1,4 @@
-GitHub Copilot is an AI pair programmer that you can use to get suggestions for whole lines or entire functions right inside your editor.
+GitHub Copilot is an Artificial Intelligence (AI) pair programmer that you can use to get suggestions for whole lines or entire functions right inside your editor.
 
 In this unit, you’ll learn about GitHub Copilot and how the tool provides autocomplete suggestions.
 
