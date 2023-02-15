@@ -72,9 +72,11 @@ subjects:
 ###
 units:
 - learn.introduction-to-github-copilot.introduction
+- learn.introduction-to-github-copilot.about-{product}
 - learn.introduction-to-github-copilot.using-{product}
-- learn.introduction-to-github-copilot.how-{product}-works
-- learn.introduction-to-github-copilot.when-to-use-{product}
+- learn.introduction-to-github-copilot.enable-github-{product}-for-business-enterprise
+- learn.introduction-to-github-copilot.configure-{product}
+- learn.introduction-to-github-copilot.troubleshoot-{product}
 - learn.introduction-to-github-copilot.knowledge-check
 - learn.introduction-to-github-copilot.summary
 ###########################################################################
