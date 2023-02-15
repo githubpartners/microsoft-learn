@@ -37,6 +37,6 @@ To set expectations it is important to note that there are a couple of things th
 - Self-hosted build agents
 - Historical packages
 - Permissions for CI/CD pipelines
-- Build steps or build triggers
+- Less commonly use build steps or build triggers
 
 Now, let's dive into how to install GitHub Actions Importer and ensure it is up-to-date. 
