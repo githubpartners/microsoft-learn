@@ -1,9 +1,9 @@
 ### YamlMime:ModuleUnit
 uid: learn.migrate-cicd-pipelines-to-github-with-github-actions-importer.exercise
-title: Enter exercise title
+title: How-execute-GitHub-Actions-Importer-commands-and-what-is-not-automatically-migrated
 metadata:
   title: exercise
-  description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
+  description: Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what is not automatically migrated
   ms.date: 1/10/2023
   author: a-a-ron
   ms.author: aastewar
@@ -11,4 +11,4 @@ metadata:
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
 durationInMinutes: 10
 content: |
-  [!include[](includes/3-exercise.md)]
+  [!include[](includes/How-execute-GitHub-Actions-Importer-commands-and-what-is-not-automatically-migrated..md)]
