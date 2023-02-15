@@ -1,6 +1,6 @@
 GitHub Copilot provides suggestions from a model that OpenAI built from billions of lines of open source code. You can spend less time creating boilerplate and repetitive code patterns, and more time on building great software. 
 
-You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution.
+You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution. GitHub Copilot can assist non-native English speakers, test your code, and secure your code.
 
 <!-- Possibly add the image from https://github.com/features/copilot under, Focus on solving bigger problems, or something similar -->
 
