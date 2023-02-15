@@ -1,14 +1,20 @@
 GitHub Copilot provides suggestions from a model that OpenAI built from billions of lines of open source code. You can spend less time creating boilerplate and repetitive code patterns, and more time on building great software. 
 
+## Using GitHub Copilot
+
+GitHub is continually updating the underlying Codex model to improve the quality of GitHub Copilot’s code suggestions. This results in large scale improvements to the quality of code suggestions and reduction of time to serve those suggestions to the users.
+
+An AI-based vulnerability filtering system blocks insecure coding patterns in real-time to make GitHub Copilot suggestions more secure. The system leverages Large language models (LLMs) to approximate the behavior of static analysis tools. This can even detect vulnerable patterns in incomplete fragments of code. Meaning insecure coding patterns are quickly blocked and replaced by alternative suggestions.
+
 You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution. GitHub Copilot can assist in testing and securing your code, and assist non-native English speakers.
 
 <!-- Possibly add the image from https://github.com/features/copilot under, Focus on solving bigger problems, or something similar -->
 
-## Testing your code
+### Testing your code
 
 GitHub Copilot excels in pattern recognition and pattern completion. It can speed up the process of writing unit tests, visual regression tests, and more. This is key since writing tests is a vital yet sometimes tedious step in the software development lifecycle.
 
-## Securing your code
+### Securing your code
 
 As a result of the training set for GitHub Copilot, the suggestions may contain insecure coding patterns, bugs, or references to outdated APIs or idioms. Therefore, ensuring the security and quality of your code is still very important. GitHub provides a number of features to help you monitor and improve code quality, such as GitHub Actions, Dependabot, CodeQL and code scanning.
 
