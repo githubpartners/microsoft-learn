@@ -1,4 +1,10 @@
-Troubleshooting GitHub Copilot is done in each environment. Here is some information about troubleshooting GitHub Copilot for Visual Studio Code, Visual Studio, JetBrains IDE, Neovim, and certificate errors for GitHub Copilot.
+Troubleshooting GitHub Copilot is done in each environment. Here is some information about troubleshooting GitHub Copilot for:
+
+- Visual Studio Code
+- Visual Studio
+- JetBrains IDE
+- Neovim
+- Certificate errors for GitHub Copilot
 
 ## Troubleshooting GitHub Copilot in Visual Studio Code
 
