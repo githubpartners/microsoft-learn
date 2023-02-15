@@ -10,17 +10,17 @@ GitHub Copilot includes a duplication detection filter, which detects code sugge
 
 Therefore, for any code fragment suggested by Copilot developers will get:
 
-An inventory of similar code found in GitHub public repositories.
-The ability to sort that inventory by repository license, commit date, etc.
+- An inventory of similar code found in GitHub public repositories.
+- The ability to sort that inventory by repository license, commit date, etc.
 
 Using this information, you can find inspiration from other codebases, discover documentation, and almost certainly gain confidence that this fragment is appropriate to use in your project.
 
 Here are the steps to enable or disable the filter:
 
-In the upper-right corner of any page, click your profile photo, then click **Settings**.
-In the left sidebar, click **GitHub Copilot**.
-Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code.
-To confirm your new settings, click **Save**.
+- In the upper-right corner of any page, click your profile photo, then click **Settings**.
+- In the left sidebar, click **GitHub Copilot**.
+- Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code.
+- To confirm your new settings, click **Save**.
 
 ## Enabling or disabling telemetry
 
