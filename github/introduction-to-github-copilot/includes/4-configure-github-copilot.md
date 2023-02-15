@@ -1,4 +1,4 @@
-GitHub Copilot allows you to enable, configure, or disable GitHub Copilot in a supported IDE.
+GitHub Copilot generates new code in a probabilistic way. The models do not contain a database of code, and do not look up snippets. Programming Languages and Technology available in the Public code base all are supported, allowing you to enable, configure, or disable GitHub Copilot in a supported IDE.
 
 ## Configuring GitHub Copilot settings on GitHub.com
 
