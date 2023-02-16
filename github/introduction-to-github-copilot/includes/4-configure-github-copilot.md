@@ -26,7 +26,7 @@ Here are the steps to enable or disable the filter:
 
 Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub. Additionally, you can choose if your code snipper is further processed and shared with Microsoft and OpenAI by adjusting your user settings.
 
-<!-- Use the, Allow GitHub to use my code, image... https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio-code#enabling-or-disabling-telemetry -->
+:::image type="content" source="../media/4-configure-github-copilot Telemetry.png" alt-text="Allow GitHub to use my code snippets for product improvements.":::
 
 You can use the left sidebar and the GitHub Copilot option on GitHub.com to enable or disable telemetry data. Changing the option, allows GitHub to use my code snippets for product improvements, or not.
 
