@@ -27,7 +27,3 @@ These steps are also found in:
 - "Enforcing a policy to manage the use of GitHub Copilot for Business in your enterprise” in the GitHub Docs.
 
 In the next unit, you’ll learn about configuring GitHub Copilot.
-
-<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-
-<!-- Do not add a unit summary or references/links -->
