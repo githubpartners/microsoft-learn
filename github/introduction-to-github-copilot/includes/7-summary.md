@@ -10,6 +10,7 @@ You now understand how GitHub Copilot can help you code by offering autocomplete
 - [8 things you didn’t know you could do with GitHub Copilot](https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/)
 - [Research: How GitHub Copilot helps improve developer productivity](https://github.blog/2022-07-14-research-how-github-copilot-helps-improve-developer-productivity/)
 - [Configuring GitHub Copilot](https://docs.github.com/en/copilot/configuring-github-copilot)
+- [ReSharper Documentation](https://www.jetbrains.com/resharper/documentation/documentation.html)
 - [GitHub Copilot Frequently Asked Questions](https://github.com/features/copilot/#faq)
 - [GitHub Copilot is generally available for businesses](https://github.blog/2022-12-07-github-copilot-is-generally-available-for-businesses/)
 - [About GitHub Copilot for Business](https://docs.github.com/en/enterprise-cloud@latest/copilot/overview-of-github-copilot/about-github-copilot-for-business)
