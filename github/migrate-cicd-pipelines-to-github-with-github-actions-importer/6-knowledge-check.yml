@@ -13,47 +13,51 @@ durationInMinutes: 3
 content: |
 quiz:
   questions:
-  - content: "What is NOT a command in GitHub Actions Importer?"
+  - content: "Which of the following are supported in a GitHub Actions Importer migration?"
     choices:
-    - content: "Convert"
+    - content: "Widely used build steps and triggers"
       isCorrect: true
-      explanation: "Correct! Although it might seem like it, this is not a command you can execute in GitHub Actions Importer"
-    - content: "Audit"
+      explanation: "Correct! Widely used build steps and tiggers are included in GitHub Actions Importer migrations. What you want to be wary of is less used build steps and triggers."
+    - content: "Secrets and encrypted values"
       isCorrect: false
-      explanation: "Audit is a command in GitHub Actions Importer"
-    - content: "Migrate"
+      explanation: "Secrets and encrypted values are not included in GitHub Actions Importer migrations."
+    - content: "Self-hosted build agents"
       isCorrect: false
-      explanation: "Migrate is a command in GitHub Actions Importer"
-  - content: "What is NOT a supported CI platform through GitHub Actions Importer?"
+      explanation: "Self-hosted build agents are not included in GitHub Actions Importer migrations."
+    - content: "Historical packages"
+      isCorrect: false
+      explanation: "Historical packages are not included in GitHub Actions Importer migrations."
+    - content: "Permissions for CI/CD pipelines"
+      isCorrect: false
+      explanation: "Permissions for CI/CD pipelines are not included in GitHub Actions Importer migrations."
+  - content: "Which of the following is *NOT* part of the Audit summary?"
     choices:
-    - content: "Azure DevOps"
+    - content: "Pipelines"
       isCorrect: false
-      explanation: "Azure DevOps is a supported CI platform for GitHub Actions Importer."
-    - content: "AWS CodePipeline"
+      explanation: "Pipelines are included in the Audit summary."
+    - content: "Templates"
       isCorrect: true
-      explanation: "Correct! AWS CodePipeline is not a support CI platform."
-    - content: "CircleCI"
+      explanation: "Correct! Templates are NOT a part of the Audit summary."
+    - content: "Build steps"
       isCorrect: false
-      explanation: "CircleCI is a supported CI platform for GitHub Actions Importer."
-  - content: "What are the correct sections of an Audit summary"
-    choices:
-    - content: "Pipelines, Build steps, Manual Tasks, and File manifest."
-      isCorrect: true
-      explanation: "Correct! These are the sections of an Audit summary."
-    - content: "Pipelines, Build steps, Manual Tasks, and Execute time."
+      explanation: "Build steps are included in the Audit summary."
+    - content: "Manual tasks"
       isCorrect: false
-      explanation: "Execute time is not a part of an Audit summary."
-    - content: "Pipelines, Build steps, Manual Tasks, and Forecast report."
-      isCorrect: false
-      explanation: "Forecast report is not a part of an Audit summary."
-  - content: "What is NOT included in a Forecast report?"
-    choices:
-    - content: "Job count"
-      isCorrect: false
-      explanation: "Job count is included in a Forecast report."
+      explanation: "Manual tasks are included in the Audit summary."
     - content: "File manifest"
-      isCorrect: true
-      explanation: "Correct! File manifest is not a part of a Forecast report."
+      isCorrect: false
+      explanation: "The File manifest is included in the Audit summary."
+  - content: "Which of the following metrics are *NOT* included in the Forecast report?"
+    choices:
     - content: "Execution time"
       isCorrect: false
-      explanation: "Execution time is included in a Forecast report."
+      explanation: "Execute time is a part of a Forecast report."
+    - content: "Queue time"
+      isCorrect: false
+      explanation: "Queue time is a part of a Forecast report."
+    - content: "Pipeline count"
+      isCorrect: false
+      explanation: "Pipeline count is a part of a Forecast report."
+    - content: "Total CI/CD spend"
+      isCorrect: true
+      explanation: "Correct! Total CI/CD spend is NOT a part of a Forecast report."
