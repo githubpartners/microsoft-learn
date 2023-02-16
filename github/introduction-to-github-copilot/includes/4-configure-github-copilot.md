@@ -56,7 +56,12 @@ GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot'
 
 ## Configuring GitHub Copilot in a JetBrains IDE
 
-Using a JetBrains IDE, GitHub Copilot can autocomplete code as you type. After installation, you can enable or disable GitHub Copilot and you can configure advanced settings within your IDE or on GitHub.com. GitHub describes how to configure GitHub Copilot in the IntelliJ IDE on GitHub Docs. The user interfaces of other JetBrains IDEs may differ.
+Using a JetBrains IDE, GitHub Copilot can autocomplete code as you type. After installation you can:
+
+- Enable or disable GitHub Copilot
+- Configure advanced settings within your IDE or on GitHub.com
+
+GitHub describes how to configure GitHub Copilot in the IntelliJ IDE on GitHub Docs. The user interfaces of other JetBrains IDEs may differ.
 
 ## Configuring GitHub Copilot in Neovim
 
