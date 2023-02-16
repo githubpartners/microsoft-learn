@@ -52,11 +52,11 @@ In the bottom panel of the Visual Studio window, the GitHub Copilot status icon 
 
 ### Configuring ReSharper for GitHub Copilot
 
-GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot's native IntelliSense. ReSharper assists Visual Studio in terms of code analysis, set of refactorings and code transformations, and depth of navigation support. Additionally, ReSharper helps with software development and maintenance tasks such as: finding unused code, complying with naming guidelines, detecting possible runtime exceptions, and adopting software design patterns. In the Visual Studio toolbar, use tools, options, environment, IntelliSense, and general.
+GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot's native IntelliSense. ReSharper assists Visual Studio in terms of code analysis, set of refactoring and code transformations, and depth of navigation support. Additionally, ReSharper helps with software development and maintenance tasks such as: finding unused code, complying with naming guidelines, detecting possible runtime exceptions, and adopting software design patterns. In the Visual Studio toolbar, use tools, options, environment, IntelliSense, and general.
 
 ## Configuring GitHub Copilot in a JetBrains IDE
 
-Using a JetBrains IDE, GitHub Copilot can autocomplete code as you type. After installation you can:
+From JetBrains, IntelliJ IDEA is an option to write code with coding assistance features that search for possible errors and provide improvement suggestions as you type. Using a JetBrains IDE with GitHub Copilot, you view and incorporate suggestions from GitHub Copilot directly within the editor. After installation you can:
 
 - Enable or disable GitHub Copilot
 - Configure advanced settings within your IDE or on GitHub.com
