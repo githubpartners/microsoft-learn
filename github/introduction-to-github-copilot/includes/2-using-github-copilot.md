@@ -8,7 +8,7 @@ An AI-based vulnerability filtering system blocks insecure coding patterns in re
 
 You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution. GitHub Copilot can assist in testing and securing your code, and assist non-native English speakers.
 
-<!-- Possibly add the image from https://github.com/features/copilot under, Focus on solving bigger problems, or something similar -->
+:::image type="content" source="../media/2-using-github-copilot - Focus.png" alt-text="Copilot snippet.":::
 
 ### Testing your code
 
