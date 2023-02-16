@@ -65,7 +65,7 @@ GitHub describes how to configure GitHub Copilot in the IntelliJ IDE on GitHub D
 
 ## Configuring GitHub Copilot in Neovim
 
-You can find the GitHub Copilot documentation in Neovim by running the following command.
+Neovim is a Vim-based text editor. When using GitHub Copilot in Neovim, you will start seeing suggestions as you write comments and code. You can find the GitHub Copilot documentation in Neovim by running the following command.
 
 `:help copilot`
 
