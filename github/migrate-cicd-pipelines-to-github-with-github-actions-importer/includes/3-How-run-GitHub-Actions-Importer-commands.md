@@ -1,27 +1,27 @@
-In this unit we'll be introducing you to the four commands of GitHub Actions Importer. In the following [Lab exercise](https://github.com/actions/importer-labs) you will be provided step by step guidelines on how to run all four commands for each of the supported CI platforms. 
+In this unit we'll introduce you to the four commands of GitHub Actions Importer. The following [Lab exercise](https://github.com/actions/importer-labs) will provide step-by-step guidelines on how to run all four commands for each of the supported CI platforms. 
 
-But for now, let's introduce you to the commands of GitHub Importer.
+But for now, let's introduce you to the commands of GitHub Actions Importer.
 
 The commands are:
 
 - **Audit**
 - **Forecast**
-- **Dry-Run**
+- **Dry-run**
 - **Migrate**
 
 In this unit we will be walking through the following:
-- [What is the audit command](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-audit-command)
-- [What is the forecast command](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-forecast-command)
-- [What is the dry-run command](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-dry-run-command)
+- [What is the audit command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-audit-command)
+- [What is the forecast command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-forecast-command)
+- [What is the dry-run command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-dry-run-command)
 - [How to run your migration](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#learn-how-to-migrate-your-environment)
-- [What is not automatically migrated](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#understand-what-is-not-migrated-automatically)
+- [What is not automatically migrated?](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#understand-what-is-not-migrated-automatically)
 
 Let's get started with getting to know the ```audit``` command. 
 
-## What is the audit command
-In this section we’ll be going over the basics of the ```audit``` command with GitHub Actions Importer.
+## What is the audit command?
+In this section we’ll go over the basics of the ```audit``` command with GitHub Actions Importer.
 
-The ```audit``` command fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempts a conversion of these pipelines to their equivalent workflow, and write a summary report with statistics gathered from the audit. It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
+The ```audit``` command fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempts a conversion of these pipelines to their equivalent Actions workflow, and writes a summary report with statistics gathered from the audit. It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
 
 Running an audit on the command line will look something like this:
 ```
@@ -30,11 +30,11 @@ $ gh actions-importer audit jenkins --output-dir
 
 Once you initiate the command it will provide an Audit Summary report.
 
-Let’s go over the details the Audit Summary report will provide you. 
+Let’s go over the details the Audit Summary report provides. 
 
-### What is in an Audit summary
+### What is in an Audit summary?
 
-There are 4 sections of the Audit summary: 
+There are four sections in the Audit summary: 
 
 - **Pipelines:** This section contains high-level aggregated statistics on GitHub Actions Importer’s ability to migrate the targeted pipeline automatically.
 - **Build steps:** This section presents an aggregated summary of the individual build steps that are used across all of the target pipelines and how many could be converted automatically.
@@ -44,9 +44,9 @@ There are 4 sections of the Audit summary:
 :::image type="content" source="../media/Audit_summary.jpg" alt-text="Audit summary for an Jenkins instance with sections of Pipelines and Job types.":::
 
 
-## What is the Forecast command
+## What is the forecast command?
 
-In this section we’ll be reviewing the ```forecast``` command and a rundown of the Forecast report. 
+In this section we’ll review the ```forecast``` command and a rundown of the Forecast report. 
 
 The ```forecast``` command fetches jobs that have been completed over a specified time period and uses that data to calculate usage metrics.
 
@@ -67,17 +67,17 @@ The Forecast report includes these metrics:
 
 Additionally, these metrics are presented for each runner queue defined in the source CI/CD system. This is useful if you will need a mix of hosted and self-hosted runners and/or if you use a mix of platforms.
 
-In the next section, we’ll be diving into the ```dry-run``` command. 
+In the next section, we’ll dive into the ```dry-run``` command. 
 
-## What is the dry-run command
+## What is the dry-run command?
 
 In this section we will review what the ```dry-run``` command does. 
 
 You can use the ```dry-run``` command to convert an existing pipeline to its equivalent GitHub Actions workflow. The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry-run of a pipeline and validate the contents are suitable.
 
-If the conversion of a pipeline was only “partially successful” (that is, it included tasks that could not be converted automatically), the task that was not converted will be included in a commented section.
+If the conversion of a pipeline was only “partially successful” (that is, the pipeline included tasks that could not be converted automatically), the task that was not converted will be included in a commented section.
 
-Next up, we'll be tackling how to migrate your environmment. 
+Next up, we'll tackle how to migrate your environmment. 
 
 ## Learn how to migrate your environment 
 
@@ -106,7 +106,7 @@ Now, let’s take a moment to review and dive a bit deeper into what is not auto
 GitHub Actions Importer cannot migrate everything. It’s important to be mindful of its limitations, which include:
 
 - **Secrets and encrypted values** are not automatically converted to repository secrets. References to secrets will be converted into context expressions and populating these values will be a manual task.
-- **Self-hosted build agents** are not automatically converted to self-hosted runners. Determining whether to use GitHub-hosted runners or create equivalent self-hosted - runners will be a manual task. References to these self-hosted runners will be converted to the same set of labels in a needs statement in the resulting workflow.
+- **Self-hosted build agents** are not automatically converted to self-hosted runners. Determining whether to use GitHub-hosted runners or create equivalent self-hosted runners will be a manual task. References to these self-hosted runners will be converted to the same set of labels in a needs statement in the resulting workflow.
 - **Historical packages** are not migrated to GitHub Packages. Any steps that publish or consume pipeline artifacts and caches will be converted using the equivalent actions.
 - **Permissions for CI/CD pipelines** are not migrated automatically and will need to be manually configured.
 - **Build steps or build triggers** that are less commonly used may not be automatically converted by GitHub Actions Importer. This can be a factor for migrations involving Azure DevOps, Jenkins, and CircleCI, all of which can be extended through marketplace customizations.
