@@ -10,12 +10,14 @@ In this module you will:
 - Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what is not automatically migrated
 - Run through a mock migration lab exercise for a supported CI platform 
 
-## Prerequisites:
+## Prerequisites
 
 - A GitHub account
 - Prior working knowledge of GitHub Actions
 - Organizational access to one of the supported CI/CD platforms below 
-- Ability to execute the accompanying labs exercises within Codespaces
+- Run through a mock migration lab exercise for a supported CI platform with the platforms mentioned below
+
+## Important Notes
 
 As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
 
@@ -23,7 +25,7 @@ As you'll learn from this module, you can use GitHub Actions Importer to plan an
 - [CircleCI](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
 - [GitLab](https://github.com/valet-customers/labs/blob/main/gitlab/readme.md)
 - [Jenkins](https://github.com/valet-customers/labs/blob/main/jenkins/readme.md)
-- [Travis CI](https://github.com/valet-customers/labs/blob/main/travis/readme.md)
+- [Travis CI](https://github.com/valet-customers/labs/blob/main/travis/readme.md)  
 
 It is imperative to review every workflow that is converted by the GitHub Actions Importer for correctness before using it as a production workload. 
 
@@ -31,7 +33,7 @@ The goal is to achieve an 80% conversion rate for every workflow, but like all t
 
 To set expectations it is important to note that there are a couple of things that won't be automatically migrated when you use GitHub Actions Importer.
 
-#### What is not automatically migrated:
+#### What is *not* automatically migrated:
 
 - Secrets and encrypted values 
 - Self-hosted build agents
