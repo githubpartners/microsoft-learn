@@ -21,7 +21,7 @@ Let's get started with getting to know the ```audit``` command.
 ## What is the audit command
 In this section we’ll be going over the basics of the ```audit``` command with GitHub Actions Importer.
 
-The ```audit``` command fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempts a conversion of these pipelines to their equivalent workflow, and write a summary report with statistics gathered from the audit. It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
+The ```audit``` command fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempts a conversion of these pipelines to their equivalent workflow and writes a summary report with statistics gathered from the audit. It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
 
 Running an audit on the command line will look something like this:
 ```
@@ -77,7 +77,7 @@ You can use the ```dry-run``` command to convert an existing pipeline to its equ
 
 If the conversion of a pipeline was only “partially successful” (that is, it included tasks that could not be converted automatically), the task that was not converted will be included in a commented section.
 
-Next up, we'll be tackling how to migrate your environmment. 
+Next up, we'll be tackling how to migrate your environment. 
 
 ## Learn how to migrate your environment 
 
@@ -112,3 +112,6 @@ GitHub Actions Importer cannot migrate everything. It’s important to be mindfu
 - **Build steps or build triggers** that are less commonly used may not be automatically converted by GitHub Actions Importer. This can be a factor for migrations involving Azure DevOps, Jenkins, and CircleCI, all of which can be extended through marketplace customizations.
 
 Now let’s check your knowledge on what we just learned!
+
+
+
