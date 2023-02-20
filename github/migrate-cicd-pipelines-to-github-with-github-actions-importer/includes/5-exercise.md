@@ -7,6 +7,6 @@ To get started:
    - [Migrations from Azure DevOps to GitHub Actions](https://github.com/actions/importer-labs/blob/main/azure_devops/readme.md)
    - [Migrations from CircleCI to GitHub Actions](https://github.com/actions/importer-labs/blob/main/circle_ci/readme.md)
    - [Migrations from GitLab CI to GitHub Actions](https://github.com/actions/importer-labs/blob/main/gitlab/readme.md)
-   - [Migrations from Jenkins to GitHub Actions](https://github.com/valet-customers/labs/blob/main/jenkins/readme.md)
+   - [Migrations from Jenkins to GitHub Actions](https://github.com/actions/importer-labs/blob/main/jenkins/readme.md)
    - [Migrations from Travis CI to GitHub Actions](https://github.com/valet-customers/labs/blob/main/travis/readme.md)
 4. Each learning path describes how to configure your codespace, bootstrap a CI/CD environment, and troubleshoot the Valet CLI.
