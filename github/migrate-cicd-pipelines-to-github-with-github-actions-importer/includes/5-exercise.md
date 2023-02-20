@@ -1,4 +1,4 @@
-Next you will have the opportunity to walk through a migration with the help of Valet. 
+Next you will have the opportunity to walk through a migration with the help of GitHub Actions Importer. 
 
 To get started:
 1. First navigate to https://github.com/actions/importer-labs 
