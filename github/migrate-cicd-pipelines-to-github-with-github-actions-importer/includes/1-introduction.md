@@ -8,14 +8,13 @@ In this module you will:
 
 - Review how to install the GitHub Actions Importer CLI Extension and ensure it's up-to-date
 - Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what is not automatically migrated
-- Run through a mock migration lab exercise for a supported CI platform 
+- Run through a mock migration lab exercise for a supported CI platform with the platforms mentioned below
 
 ## Prerequisites
 
 - A GitHub account
 - Prior working knowledge of GitHub Actions
 - Organizational access to one of the supported CI/CD platforms below 
-- Run through a mock migration lab exercise for a supported CI platform with the platforms mentioned below
 
 ## Important Notes
 
