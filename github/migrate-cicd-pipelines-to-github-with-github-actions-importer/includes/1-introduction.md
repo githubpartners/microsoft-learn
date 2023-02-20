@@ -29,7 +29,7 @@ It is imperative to review every workflow that is converted by the GitHub Action
 
 The goal is to achieve an 80% conversion rate for every workflow, but like all things, the actual conversion rate will depend on your specific makeup of your  pipelines. 
 
-To set expectations it is important to note that there are a couple of things that won't be autmatically migrated when you use GitHub Actions Importer.
+To set expectations it is important to note that there are a couple of things that won't be automatically migrated when you use GitHub Actions Importer.
 
 #### What is not automatically migrated:
 
