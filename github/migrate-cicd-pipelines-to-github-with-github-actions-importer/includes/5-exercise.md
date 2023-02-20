@@ -5,7 +5,7 @@ To get started:
 2. Next, use the ```actions/importer-labs``` repository as a template to generate a new GitHub repository.
 3. Select which learning path to begin with. There are currently learning paths for:
    - [Migrations from Azure DevOps to GitHub Actions](https://github.com/actions/importer-labs/blob/main/azure_devops/readme.md)
-   - [Migrations from CircleCI to GitHub Actions](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
+   - [Migrations from CircleCI to GitHub Actions](https://github.com/actions/importer-labs/blob/main/circle_ci/readme.md)
    - [Migrations from GitLab CI to GitHub Actions](https://github.com/valet-customers/labs/blob/main/gitlab/readme.md)
    - [Migrations from Jenkins to GitHub Actions](https://github.com/valet-customers/labs/blob/main/jenkins/readme.md)
    - [Migrations from Travis CI to GitHub Actions](https://github.com/valet-customers/labs/blob/main/travis/readme.md)
