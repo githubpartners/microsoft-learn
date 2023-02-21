@@ -10,20 +10,41 @@ With Copilot for Business, GitHub will not retain code snippets, store or share 
 
 By first establishing the policy and then assigning users your enterprise owner can enable GitHub Copilot for Business for the organizations in the enterprise. 
 
+### Enforcing a policy
+
 Follow these steps to enforce a policy to manage the use of GitHub Copilot for Business.
 
-- In the enterprise sidebar, click **Policies**.
-- Under **Policies**, click Copilot.
-- Under Manage organization access to GitHub Copilot, configure the access for your GitHub Copilot subscription.
-- To disable GitHub Copilot for all organizations in your enterprise, select **Disabled**.
-- To enable GitHub Copilot for all organizations in your enterprise, both current and future, select **Allow for all organizations**.
-- To enable GitHub Copilot for specific organizations, select **Allow for specific organizations**.
-- If you selected **Allow for specific organizations**, select the organizations you want to enable GitHub Copilot for. Alternatively, you can select the organizations you want to disable GitHub Copilot access for.
-- Click **Set organization permissions** and select **Enable** or **Disable** to grant or deny GitHub Copilot access for the specified organizations.
-- Click **Save changes**.
+1. In the enterprise sidebar, click **Policies**.
+2. Under **Policies**, click Copilot.
+3. Under Manage organization access to GitHub Copilot, configure the access for your GitHub Copilot subscription.
+
+### Enabling access to GitHub Copilot for all current and future users in your organization
+
+1. Click your profile photo, then click **Your organizations**
+2. Next to the organization, click **Settings**
+3. In the, Code planning and automation, section of the sidebar, click **Copilot**, and then click **Access**
+4. Under, User permissions, to enable GitHub Copilot for all users in your organization, select **Allow for all members**
+5. In the, Confirm seat assignment, dialog confirm that you want to enable GitHub Copilot for all current and future users in your organization, click **Confirm**
+6. To save your changes, click **Save**
+
+### Enabling access to GitHub Copilot for selected users in your organization
+
+Start at step 3 from the above enabling steps.
+
+4. Under, User permissions, to disable GitHub Copilot for select users in your organization, select **Selected teams/users**
+5. In the, Confirm seat assignment, dialog confirm that you want to enable GitHub Copilot for selected teams/users in your organization, click **Confirm**
+6. To save your changes, click **Save**
+
+### Disabling access to GitHub Copilot for your whole organization
+
+Start at step 3 from the above enabling steps.
+
+4. Under the, User permissions, section to disable GitHub Copilot for all users in your organization, select **Disabled**
+5. In the, Confirm seat assignment, dialog confirm that you want to enable GitHub Copilot for selected teams/users in your organization, click **Confirm**
+6. To save your changes, click **Save**
 
 These steps are also found in:
 
-- "Enforcing a policy to manage the use of GitHub Copilot for Business in your enterprise” in the GitHub Docs.
+- "Configuring GitHub Copilot settings in your organization” in the GitHub Docs.
 
 In the next unit, you’ll learn about configuring GitHub Copilot.
