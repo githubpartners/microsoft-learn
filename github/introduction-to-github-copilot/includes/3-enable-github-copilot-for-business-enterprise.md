@@ -45,6 +45,6 @@ Start at step 3 from the above enabling steps.
 
 These steps are also found in:
 
-- "Configuring GitHub Copilot settings in your organization” in the GitHub Docs.
+- [Configuring GitHub Copilot settings in your organization](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-in-your-organization#further-reading) in the GitHub Docs.
 
 In the next unit, you’ll learn about configuring GitHub Copilot.
