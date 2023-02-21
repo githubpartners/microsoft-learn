@@ -22,7 +22,7 @@ GitHub Copilot uses filters to block offensive words in the prompts and avoid pr
 
 ## Assisting non-native English speakers
 
-Importantly, GitHub Copilot can assist non-native English speakers and can understand other languages beyond English. This is helpful for developers of all backgrounds since programming languages are based on American English. 
+GitHub Copilot can understand languages beyond English, helping developers of all backgrounds with program languages that are based on American English.
 
 In this example, the CSS property `color` is based on American English. It is unfamiliar for native British-English or Canadian-English speakers who use the spelling “colour”. Forgetting the correct spelling and syntax can often result in typos, unexpected errors, and lost time.
 
