@@ -3,7 +3,7 @@ uid: learn.migrate-cicd-pipelines-to-github-with-github-actions-importer.knowled
 title: Knowledge check
 metadata:
   title: Knowledge check
-  description: "Test your knowledge on GitHub Actions Importer with questions on the commands of Importer and supported CI platforms."
+  description: "Test your knowledge on GitHub Actions Importer with questions about its commands and supported CI platforms."
   ms.date: 1/10/2023
   author: a-a-ron
   ms.author: aastewar
@@ -17,7 +17,7 @@ quiz:
     choices:
     - content: "Widely used build steps and triggers"
       isCorrect: true
-      explanation: "Correct! Widely used build steps and tiggers are included in GitHub Actions Importer migrations. What you want to be wary of is less used build steps and triggers."
+      explanation: "Correct! Widely used build steps and tiggers are included in GitHub Actions Importer migrations. What you want to be wary of is less frequently used build steps and triggers."
     - content: "Secrets and encrypted values"
       isCorrect: false
       explanation: "Secrets and encrypted values are not included in GitHub Actions Importer migrations."
@@ -30,7 +30,7 @@ quiz:
     - content: "Permissions for CI/CD pipelines"
       isCorrect: false
       explanation: "Permissions for CI/CD pipelines are not included in GitHub Actions Importer migrations."
-  - content: "Which of the following is *NOT* a part of the Audit summary?"
+  - content: "Which of the following is *NOT* part of the Audit summary?"
     choices:
     - content: "Pipelines"
       isCorrect: false
@@ -51,13 +51,13 @@ quiz:
     choices:
     - content: "Execution time"
       isCorrect: false
-      explanation: "Execute time is a part of a Forecast report."
+      explanation: "Execute time is part of a Forecast report."
     - content: "Queue time"
       isCorrect: false
-      explanation: "Queue time is a part of a Forecast report."
+      explanation: "Queue time is part of a Forecast report."
     - content: "Pipeline count"
       isCorrect: false
-      explanation: "Pipeline count is a part of a Forecast report."
+      explanation: "Pipeline count is part of a Forecast report."
     - content: "Total CI/CD spend"
       isCorrect: true
-      explanation: "Correct! Total CI/CD spend is NOT a part of a Forecast report."
+      explanation: "Correct! Total CI/CD spend is NOT part of a Forecast report."
