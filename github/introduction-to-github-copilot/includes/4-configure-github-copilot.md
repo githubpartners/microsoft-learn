@@ -19,17 +19,17 @@ GitHub Copilot includes a duplication detection filter, which detects code sugge
 
 Therefore, for any code fragment suggested by Copilot developers will get:
 
-- An inventory of similar code found in GitHub public repositories.
+- An inventory of similar code found in GitHub public repositories
 - The ability to sort that inventory by repository license, commit date, etc.
 
 Using this information, you can find inspiration from other codebases, discover documentation, and almost certainly gain confidence that this fragment is appropriate to use in your project.
 
 Here are the steps to enable or disable the filter:
 
-- In the upper-right corner of any page, click your profile photo, then click **Settings**.
-- In the left sidebar, click **GitHub Copilot**.
-- Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code.
-- To confirm your new settings, click **Save**.
+1. In the upper-right corner of any page, click your profile photo, then click **Settings**
+2. In the left sidebar, click **GitHub Copilot**
+3. Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code
+5. To confirm your new settings, click **Save**
 
 ### Enabling or disabling telemetry
 
@@ -43,7 +43,16 @@ You can use the left sidebar and the GitHub Copilot option on GitHub.com to enab
 
 GitHub Copilot can autocomplete code as you type when you use Visual Studio Code. After installation, you can enable or disable GitHub Copilot, and you can configure advanced settings within Visual Studio Code.  You need to install the GitHub Copilot plugin for use with Visual Studio Code.
 
+1. To enable or disable GitHub Copilot, click the status icon in the bottom panel of the Visual Studio Code window
+2. When disabling GitHub Copilot, you will be asked whether you want to disable suggestions globally, or for the language of the file you are currently editing
+   -  To disable suggestions from GitHub Copilot globally, click **Disable Globally**
+   -  To disable suggestions from GitHub Copilot for a specified language, click **Disable for LANGUAGE**
+
 When using GitHub Copilot, you can use the default keyboard shortcuts in Visual Studio Code. Alternatively, you can rebind the shortcuts in the Keyboard Shortcuts editor using your preferred keyboard shortcuts for each specific command. You can search for each keyboard shortcut by command name in the Keyboard Shortcuts editor.
+
+1. In the File menu, navigate to Preferences and click **Settings**
+2. In the left-side panel of the settings tab, click **Extensions** and then select **Copilot**
+3. Under, Inline Suggest:Enable, select or deselect the checkbox to enable or disable inline suggestions
 
 In Visual Studio Code, the GitHub Copilot status icon in the bottom panel of the window indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon matches the color of the status bar. When disabled, the background color of the icon contrasts with the color of the status bar.
 
@@ -59,9 +68,22 @@ In the bottom panel of the Visual Studio window, the GitHub Copilot status icon 
 
 <!-- add image, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio#enabling-or-disabling-github-copilot -->
 
+Here are the steps for enabling or disabling GitHub Copilot.
+
+1. To enable or disable GitHub Copilot, click the GitHub Copilot icon in the bottom panel of the Visual Studio window
+2. When disabling GitHub Copilot, you will be asked whether you want to disable suggestions globally, or for the language of the file you are currently editing
+   -  To disable suggestions from GitHub Copilot globally, click **Disable Globally**
+   -  To disable suggestions from GitHub Copilot for a specified language, click **Disable for LANGUAGE**
+
 ## Configuring ReSharper for GitHub Copilot
 
 GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot's native IntelliSense. ReSharper assists Visual Studio in terms of code analysis, set of refactoring and code transformations, and depth of navigation support. Additionally, ReSharper helps with software development and maintenance tasks such as: finding unused code, complying with naming guidelines, detecting possible runtime exceptions, and adopting software design patterns. In the Visual Studio toolbar, use tools, options, environment, IntelliSense, and general.
+
+Here are the steps to configure ReSharper for GitHub Copilot:
+
+1. In the Visual Studio toolbar, under **Tools**, click **Options**
+2. In the Options dialog, under **Environment**, click **IntelliSense** and then click **General**
+3. Under **General** select **Visual Studio** and then click **Save**
 
 ## Configuring GitHub Copilot in a JetBrains IDE
 
@@ -70,11 +92,11 @@ From JetBrains, IntelliJ IDEA is an option to write code with coding assistance 
 - Enable or disable GitHub Copilot
 - Configure advanced settings within your IDE or on GitHub.com
 
-GitHub describes how to configure GitHub Copilot in the IntelliJ IDE on GitHub Docs. The user interfaces of other JetBrains IDEs may differ.
+The user interfaces of other JetBrains IDEs may differ. Enabling or disabling duplication detection, and enabling or disabling telemetry uses the same method as described above.
 
 ## Configuring GitHub Copilot in Neovim
 
-Neovim is a Vim-based text editor. When using GitHub Copilot in Neovim, you will start seeing suggestions as you write comments and code. You can find the GitHub Copilot documentation in Neovim by running the following command.
+Neovim is a Vim-based text editor. When using GitHub Copilot in Neovim, you will start seeing suggestions as you write comments and code. For guidance on configuring GitHub Copilot in Neovim, use the GitHub Copilot documentation in Neovim by running the following command:
 
 `:help copilot`
 
