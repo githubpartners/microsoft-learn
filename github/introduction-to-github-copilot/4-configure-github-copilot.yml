@@ -9,6 +9,6 @@ metadata:
   ms.author: aastewar
   ms.topic: interactive-tutorial
   ms.prod: learning-azure # Edit as appropriate for your portfolio area
-durationInMinutes: 5
+durationInMinutes: 7
 content: |
   [!include[](includes/4-when-to-use-{product}.md)]
