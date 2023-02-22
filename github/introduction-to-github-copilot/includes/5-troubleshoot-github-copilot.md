@@ -25,7 +25,7 @@ The log files contain a lot of the error information. The files are stored in th
 
 ## Troubleshooting GitHub Copilot in a JetBrains IDE
 
-To troubleshoot issues while using JetBrains IDE, you can view the log files. The location of the log files depends on the JetBrains IDE you are using. Each of these JefBrains IDE have log files that will help troubleshoot GitHub Copilot.
+To troubleshoot issues while using JetBrains IDE, you can view the log files. The location of the log files depends on the JetBrains IDE you are using. Each of these JetBrains IDE have log files that will help troubleshoot GitHub Copilot.
 
 IntelliJ IDEA
 Android Studio
