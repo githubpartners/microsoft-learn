@@ -43,8 +43,4 @@ Start at step 3 from the above enabling steps.
 5. In the, Confirm seat assignment, dialog confirm that you want to enable GitHub Copilot for selected teams/users in your organization, click **Confirm**
 6. To save your changes, click **Save**
 
-These steps are also found in:
-
-- [Configuring GitHub Copilot settings in your organization](https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-settings-in-your-organization#further-reading) in the GitHub Docs.
-
 In the next unit, you’ll learn about configuring GitHub Copilot.
