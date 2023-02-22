@@ -30,7 +30,7 @@ quiz:
     - content: "Permissions for CI/CD pipelines"
       isCorrect: false
       explanation: "Permissions for CI/CD pipelines are not included in GitHub Actions Importer migrations."
-  - content: "Which of the following is *NOT* part of the Audit summary?"
+  - content: "Which of the following is *NOT* a part of the Audit summary?"
     choices:
     - content: "Pipelines"
       isCorrect: false
