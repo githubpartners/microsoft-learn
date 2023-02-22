@@ -5,7 +5,7 @@ You learned about:
 - What the audit, forecast, dry-run, and migrate commands can do and what is not automatically migrated
 - How to run a mock migration through a lab exercise for a supported CI platform
 
-## Learn More
+## Learn more
 
 Here are some links to more information on the topics we discussed in this module:
 - [Automating migration with GitHub Actions Importer](https://docs.github.com/en/actions/migrating-to-github-actions/automating-migration-with-github-actions-importer)
