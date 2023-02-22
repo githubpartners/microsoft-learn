@@ -28,7 +28,7 @@ In this example, the CSS property `color` is based on American English. It is un
 
 In the GIF below, I wrote a comment in Spanish that says, “importar”, which translates to “import”. GitHub Copilot quickly completed my comment in Spanish and imported the necessary libraries as the comment described.
 
-<!-- Use the example from https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/ under Assisting non-native English speakers -->
+<!-- Aaron, can we convert this example to an MS Learn image type? Use the example from https://github.blog/2022-09-14-8-things-you-didnt-know-you-could-do-with-github-copilot/ under Assisting non-native English speakers -->
 
 In the next unit, you’ll learn about enabling GitHub Copilot for Business for your enterprise.
 
