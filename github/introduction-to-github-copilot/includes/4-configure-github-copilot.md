@@ -1,4 +1,13 @@
-GitHub Copilot generates new code in a probabilistic way. The models do not contain a database of code, and do not look up snippets. Programming Languages and Technology available in the Public code base all are supported, allowing you to enable, configure, or disable GitHub Copilot in a supported IDE.
+GitHub Copilot generates new code in a probabilistic way. The models do not contain a database of code and do not look up snippets. Programming Languages and Technology available in the Public code base all are supported, allowing you to enable, configure, or disable GitHub Copilot in a supported IDE.
+
+You have multiple programming language options that can be configured to use GitHub Copilot. Here are many of those options:
+
+- Configuring GitHub Copilot settings on GitHub.com
+- Configuring GitHub Copilot in Visual Studio Code
+- Configuring GitHub Copilot in Visual Studio
+- Configuring ReSharper for GitHub Copilot
+- Configuring GitHub Copilot in a JetBrains IDE
+- Configuring GitHub Copilot in Neovim
 
 ## Configuring GitHub Copilot settings on GitHub.com
 
@@ -22,9 +31,9 @@ Here are the steps to enable or disable the filter:
 - Under **Suggestions** matching public code, select the dropdown menu, then click **Allow** to allow suggestions matching public code, or **Block** to block suggestions matching public code.
 - To confirm your new settings, click **Save**.
 
-## Enabling or disabling telemetry
+### Enabling or disabling telemetry
 
-Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub. Additionally, you can choose if your code snipper is further processed and shared with Microsoft and OpenAI by adjusting your user settings.
+Enabling or disabling telemetry allows you to choose whether your code snippets are collected and retained by GitHub. Additionally, you can choose if your code snippet is further processed and shared with Microsoft and OpenAI by adjusting your user settings.
 
 :::image type="content" source="../media/4-configure-github-copilot Telemetry.png" alt-text="Allow GitHub to use my code snippets for product improvements.":::
 
@@ -50,7 +59,7 @@ In the bottom panel of the Visual Studio window, the GitHub Copilot status icon 
 
 <!-- add image, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio#enabling-or-disabling-github-copilot -->
 
-### Configuring ReSharper for GitHub Copilot
+## Configuring ReSharper for GitHub Copilot
 
 GitHub Copilot may work best when you configure ReSharper to use GitHub Copilot's native IntelliSense. ReSharper assists Visual Studio in terms of code analysis, set of refactoring and code transformations, and depth of navigation support. Additionally, ReSharper helps with software development and maintenance tasks such as: finding unused code, complying with naming guidelines, detecting possible runtime exceptions, and adopting software design patterns. In the Visual Studio toolbar, use tools, options, environment, IntelliSense, and general.
 
