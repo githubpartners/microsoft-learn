@@ -56,7 +56,7 @@ When using GitHub Copilot, you can use the default keyboard shortcuts in Visual 
 
 In Visual Studio Code, the GitHub Copilot status icon in the bottom panel of the window indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon matches the color of the status bar. When disabled, the background color of the icon contrasts with the color of the status bar.
 
-<!-- Add image from here, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio-code#enabling-or-disabling-github-copilot -->
+<!-- Aaron, can we convert this image type to an MS Learn image type? Add image from here, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio-code#enabling-or-disabling-github-copilot -->
 
 Additionally, you can choose to enable or disable inline suggestions and specify which languages you want to enable or disable GitHub Copilot for.
 
@@ -66,7 +66,7 @@ After Visual Studio installation, you can enable or disable GitHub Copilot after
 
 In the bottom panel of the Visual Studio window, the GitHub Copilot status icon indicates whether GitHub Copilot is enabled or disabled. When enabled, the background color of the icon will match the color of the status bar. When disabled, the icon will have a diagonal line through it.
 
-<!-- add image, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio#enabling-or-disabling-github-copilot -->
+<!-- Aaron, can we convert this image type to an MS Learn image type? Add image, https://docs.github.com/en/copilot/configuring-github-copilot/configuring-github-copilot-in-visual-studio#enabling-or-disabling-github-copilot -->
 
 Here are the steps for enabling or disabling GitHub Copilot.
 
