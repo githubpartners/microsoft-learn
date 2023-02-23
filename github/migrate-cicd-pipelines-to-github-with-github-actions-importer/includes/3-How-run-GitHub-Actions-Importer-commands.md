@@ -35,9 +35,9 @@ Running an audit on the command line will look something like this:
 $ gh actions-importer audit jenkins --output-dir 
 ```
 
-Once you initiate the command it will provide an Audit Summary report.
+Once you initiate the command it will provide an Audit summary report.
 
-Let’s go over the details the Audit Summary report will provide you. 
+Let’s go over the details the Audit summary report will provide you. 
 
 ### What is in an Audit summary report?
 
