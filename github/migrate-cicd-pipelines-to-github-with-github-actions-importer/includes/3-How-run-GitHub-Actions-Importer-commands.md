@@ -101,7 +101,7 @@ Any necessary manual tasks will be included in the description of the pull reque
 
 :::image type="content" source="../media/PR_for_Migration.jpg" alt-text="New PR once a migration is completed.":::
 
-For specific differences for supported CI platforms please reference the following links:
+For specific differences for each of the supported CI/CD platforms, please reference the following links:
 
 - [Azure DevOps](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-azure-pipelines-to-github-actions)
 - [CircleCI](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-circleci-to-github-actions)
