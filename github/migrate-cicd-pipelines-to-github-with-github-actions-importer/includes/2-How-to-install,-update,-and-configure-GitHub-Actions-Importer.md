@@ -34,11 +34,11 @@ Options:
   dry-run    Convert a pipeline to a GitHub Actions workflow and output its yaml file.
   migrate    Convert a pipeline to a GitHub Actions workflow and open a pull request with the changes.
   ```
-Next up, let's ensure GitHub Actions Importer is up-to-date. 
+Next up, let's ensure GitHub Actions Importer is up to date. 
 
 ## Updating the GitHub Actions Importer CLI
 
-To ensure you're running the latest version of GitHub Actions Importer, you should regularly run the ‘update’  command:
+To ensure you're running the latest version of GitHub Actions Importer, you should regularly run the ‘update’ command:
 ```
 $ gh actions-importer update
 ```
@@ -61,4 +61,4 @@ Status: Downloaded newer image for ghcr.io/actions-importer/cli:latest
 ghcr.io/actions-importer/cli:latest
 ```
 
-Next, we’ll tackle how to run the different commands and how to interpret their results. 
+Next, we’ll tackle GitHub Actions Importer's commands and review what is not migrated. 
