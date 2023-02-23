@@ -1,6 +1,6 @@
-GitHub Actions Importer is designed to help you forecast, plan, and facilitate migrations from your current CI/CD tool to GitHub Actions. Doing individual migrations is relatively easy in isolation. 
+GitHub Actions Importer is designed to help you forecast, plan, and facilitate migrations from your current CI/CD tool to GitHub Actions. 
 
-However, if you have a large and established CI/CD footprint, having a tool capable to assist with migrations is key to your ability to adopt GitHub Actions at scale.
+Doing individual migrations is relatively easy in isolation. However, if you have a large and established CI/CD footprint, having a tool capable to assist with migrations is key to your ability to adopt GitHub Actions at scale.
 
 ## Learning objectives
 
@@ -20,11 +20,11 @@ In this module you will:
 
 As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
 
-- [Azure DevOps](https://github.com/valet-customers/labs/blob/main/azure_devops/readme.md)
-- [CircleCI](https://github.com/valet-customers/labs/blob/main/circle_ci/readme.md)
-- [GitLab](https://github.com/valet-customers/labs/blob/main/gitlab/readme.md)
-- [Jenkins](https://github.com/valet-customers/labs/blob/main/jenkins/readme.md)
-- [Travis CI](https://github.com/valet-customers/labs/blob/main/travis/readme.md)  
+- [Azure DevOps](https://github.com/actions/importer-labs/blob/main/azure_devops/readme.md)
+- [CircleCI](https://github.com/actions/importer-labs/blob/main/circle_ci/readme.md)
+- [GitLab](https://github.com/actions/importer-labs/blob/main/gitlab/readme.md)
+- [Jenkins](https://github.com/actions/importer-labs/blob/main/jenkins/readme.md)
+- [Travis CI](https://github.com/actions/importer-labs/blob/main/travis/readme.md)
 
 It is imperative to review every workflow that is converted by the GitHub Actions Importer for correctness before using it as a production workload. 
 
