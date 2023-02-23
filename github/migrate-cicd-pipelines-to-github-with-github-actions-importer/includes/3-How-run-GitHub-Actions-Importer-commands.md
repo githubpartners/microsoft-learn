@@ -1,6 +1,8 @@
-In this unit we'll be introducing you to the four commands of GitHub Actions Importer. In the following [Lab exercise](https://github.com/actions/importer-labs) you will be provided step by step guidelines on how to run all four commands for each of the supported CI platforms. 
+In this unit we'll be introducing you to the four commands of GitHub Actions Importer and reviewing what is not automatically migrated. 
 
-But for now, let's introduce you to the commands of GitHub Importer.
+In the following [Lab exercise](https://github.com/actions/importer-labs) you will be provided step by step guidelines on how to run all four commands for each of the supported CI platforms. 
+
+But for now, let's introduce you to the commands.
 
 The commands are:
 
@@ -21,7 +23,12 @@ Let's get started with getting to know the ```audit``` command.
 ## What is the audit command
 In this section we’ll be going over the basics of the ```audit``` command with GitHub Actions Importer.
 
-The ```audit``` command fetches all of the pipelines defined in a specified scope of the existing CI/CD environment, attempts a conversion of these pipelines to their equivalent workflow and writes a summary report with statistics gathered from the audit. It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
+The ```audit``` command does the following: 
+- Fetches all of the pipelines defined in a specified scope of the existing CI/CD environment
+- Attempts a conversion of these pipelines to their equivalent workflow 
+- And writes a summary report with statistics gathered from the audit. 
+
+It is designed to help analyze the complexity of a potential migration, which can be used to formulate a migration plan. 
 
 Running an audit on the command line will look something like this:
 ```
@@ -43,6 +50,7 @@ There are 4 sections of the Audit summary:
 
 :::image type="content" source="../media/Audit_summary.jpg" alt-text="Audit summary for an Jenkins instance with sections of Pipelines and Job types.":::
 
+Next, let's get into the ```forcast``` command. 
 
 ## What is the Forecast command
 
@@ -73,7 +81,9 @@ In the next section, we’ll be diving into the ```dry-run``` command.
 
 In this section we will review what the ```dry-run``` command does. 
 
-You can use the ```dry-run``` command to convert an existing pipeline to its equivalent GitHub Actions workflow. The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry-run of a pipeline and validate the contents are suitable.
+You can use the ```dry-run``` command to convert an existing pipeline to its equivalent GitHub Actions workflow. 
+
+The console output of the command will list the path to the file or files that GitHub Actions Importer generated. Before migrating, you should perform a dry-run of a pipeline and validate the contents are suitable.
 
 If the conversion of a pipeline was only “partially successful” (that is, it included tasks that could not be converted automatically), the task that was not converted will be included in a commented section.
 
