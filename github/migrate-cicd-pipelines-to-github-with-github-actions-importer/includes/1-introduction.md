@@ -6,9 +6,9 @@ Doing individual migrations is relatively easy in isolation. However, if you hav
 
 In this module you will:
 
-- Review how to install the GitHub Actions Importer CLI Extension and ensure it's up-to-date
-- Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what is not automatically migrated
-- Run through a mock migration lab exercise for a supported CI platform with the platforms mentioned below
+- Review how to install the GitHub Actions Importer CLI extension and ensure it's up to date
+- Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what cannot be migrated automatically 
+- Run through a mock migration lab exercise for one of the supported CI/CD platforms listed below
 
 ## Prerequisites
 
@@ -16,21 +16,21 @@ In this module you will:
 - Prior working knowledge of GitHub Actions
 - Organizational access to one of the supported CI/CD platforms below 
 
-## Important Notes
+## Important notes
 
-As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from these supported platforms below. 
+As you'll learn from this module, you can use GitHub Actions Importer to plan and automatically migrate your CI/CD pipelines to GitHub Actions from the following supported platforms: 
 
-- [Azure DevOps](https://github.com/actions/importer-labs/blob/main/azure_devops/readme.md)
-- [CircleCI](https://github.com/actions/importer-labs/blob/main/circle_ci/readme.md)
-- [GitLab](https://github.com/actions/importer-labs/blob/main/gitlab/readme.md)
-- [Jenkins](https://github.com/actions/importer-labs/blob/main/jenkins/readme.md)
-- [Travis CI](https://github.com/actions/importer-labs/blob/main/travis/readme.md)
+- Azure DevOps
+- CircleCI
+- GitLab
+- Jenkins
+- Travis CI
 
 It is imperative to review every workflow that is converted by the GitHub Actions Importer for correctness before using it as a production workload. 
 
-The goal is to achieve an 80% conversion rate for every workflow, but like all things, the actual conversion rate will depend on your specific makeup of your  pipelines. 
+The goal is to achieve an 80% conversion rate for every workflow, but like all things, the actual conversion rate will depend on your specific makeup of your pipelines. 
 
-To set expectations it is important to note that there are a couple of things that won't be automatically migrated when you use GitHub Actions Importer.
+To set expectations, it is important to note that there are a couple of things that won't be automatically migrated when you use GitHub Actions Importer.
 
 #### What is *not* automatically migrated:
 
@@ -40,4 +40,4 @@ To set expectations it is important to note that there are a couple of things th
 - Permissions for CI/CD pipelines
 - Less commonly used build steps or build triggers
 
-Now, let's dive into how to install GitHub Actions Importer and ensure it is up-to-date. 
+Now, let's dive into how to install GitHub Actions Importer and ensure it is up to date. 

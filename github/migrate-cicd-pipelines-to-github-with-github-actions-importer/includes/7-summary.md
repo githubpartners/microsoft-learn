@@ -1,4 +1,4 @@
-In this module you learned about GitHub Actions Importer, how to ensure it is up to date, its supported CI platforms, the commands you can run on it, and what might not be migrated automatically from your previous CI/CD environment.
+In this module you learned about GitHub Actions Importer, how to ensure it is up to date, its supported CI/CD platforms, the commands you can run on it, and what might not be migrated automatically from your previous CI/CD environment.
 
 You learned about:
 - How to install the GitHub Actions Importer and ensure it's up to date
