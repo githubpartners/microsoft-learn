@@ -5,7 +5,7 @@ But in the meantime, in this unit we will be reviewing the two phases of how you
 - We’ll walk through the Planning Phase of your migration and introduce you to the:
   - Audit
   - Forecast
-  - And dry-run commands
+  - And Dry-run commands
 - And for the Migration Phase, we’ll introduce you to the migration command.
 - We will also review what is not automatically migrated over with GitHub Actions Importer. 
 
