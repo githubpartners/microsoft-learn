@@ -1,22 +1,27 @@
-In this unit we'll be introducing you to the four commands of GitHub Actions Importer and reviewing what cannot be migrated automatically. 
+In the following lab exericse you will be provided step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
 
-In the following [lab exercise](https://github.com/actions/importer-labs) you will be provided step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
+But in the meantime, in this unit we will be reviewing the two phases of how you can approach a GitHub Actions Importer Migration: Planning and Migrating and their associated commands.
 
-But for now, let's introduce you to the commands.
+- We’ll walk through the Planning Phase of your migration and introduce you to the:
+  - Audit
+  - Forecast
+  - And dry-run commands
+- And for the Migration Phase, we’ll introduce you to the migration command.
+- We will also review what is not automatically migrated over with GitHub Actions Importer. 
 
-The commands are:
+But for now, let’s start with the planning phase of your migration.
 
-- **Audit**
-- **Forecast**
-- **Dry-run**
-- **Migrate**
+# The Planning Phase
 
-In this unit we will be walking through the following:
-- [What is the audit command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-audit-command)
-- [What is the forecast command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-forecast-command)
-- [What is the dry-run command?](https://github.com/githubpartners/microsoft-learn/edit/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#what-is-the-dry-run-command)
-- [How to run your migration](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#learn-how-to-migrate-your-environment)
-- [What is not automatically migrated?](https://github.com/githubpartners/microsoft-learn/blob/cami-actions-importer/github/migrate-cicd-pipelines-to-github-with-github-actions-importer/includes/3-How-run-GitHub-Actions-Importer-commands.md#understand-what-is-not-migrated-automatically)
+The planning phase of a migration typically starts with an analysis of your existing CI/CD usage and approach, which includes addressing such questions as:
+
+- How many pipelines are currently defined?
+- What is the typical makeup of these pipelines? Are they defined using out-of-the-box tasks, or is the product being extended to - provide custom behavior?
+- Which pipelines are the highest priority to be migrated? Should any pipelines not be migrated?
+- What type and how many runners are being used? What mix of GitHub-hosted and self-hosted runners should you select when migrating?
+
+If you find yourself leaving these questions unanswered, fear not, GitHub Actions Importer can help you find out your answers to these questions with its commands. 
+
 
 Let's get started with getting to know the ```audit``` command. 
 
@@ -89,7 +94,7 @@ If the conversion of a pipeline was only “partially successful” (that is, it
 
 Next up, we'll be tackling how to migrate your environment. 
 
-## Learn how to migrate your environment 
+# The Migration Phase
 
 You can use the ```migrate``` command to convert an existing pipeline to its equivalent action and open a pull request with the converted workflows and associated files.
 
@@ -111,7 +116,7 @@ For specific differences for each of the supported CI/CD platforms, please refer
 
 Now, let’s take a moment to review and dive a bit deeper into what is not automatically migrated with GitHub Actions Importer. 
 
-## Understand what is not migrated automatically
+# Understand what is not migrated automatically
 
 GitHub Actions Importer cannot migrate everything. It’s important to be mindful of its limitations, which include:
 
@@ -120,6 +125,9 @@ GitHub Actions Importer cannot migrate everything. It’s important to be mindfu
 - **Historical packages** are not migrated to GitHub Packages. Any steps that publish or consume pipeline artifacts and caches will be converted using the equivalent actions.
 - **Permissions for CI/CD pipelines** are not migrated automatically and will need to be manually configured.
 - **Build steps or build triggers** that are less commonly used may not be automatically converted by GitHub Actions Importer. This can be a factor for migrations involving Azure DevOps, Jenkins, and CircleCI, all of which can be extended through marketplace customizations.
+
+
+Like we had mentioned earlier, the [lab exercise](https://github.com/actions/importer-labs) will provide step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
 
 Now let’s check your knowledge on what we just learned!
 
