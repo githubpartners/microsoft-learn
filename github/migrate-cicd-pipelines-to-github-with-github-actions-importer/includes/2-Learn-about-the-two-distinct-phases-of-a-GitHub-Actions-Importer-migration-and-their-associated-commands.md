@@ -3,10 +3,10 @@ In the following lab exericse you will be provided step-by-step guidelines on ho
 But in the meantime, in this unit we will be reviewing the two phases of how you can approach a GitHub Actions Importer Migration: Planning and Migrating and their associated commands.
 
 - We’ll walk through the Planning Phase of your migration and introduce you to the:
-  - Audit
-  - Forecast
-  - And Dry-run commands
-- And for the Migration Phase, we’ll introduce you to the migration command.
+  - ```audit```
+  - ```forecast```
+  - And ```dry-run``` commands
+- And for the Migration Phase, we’ll introduce you to the ```migration``` command.
 - We will also review what is not automatically migrated over with GitHub Actions Importer. 
 
 But for now, let’s start with the planning phase of your migration.
@@ -105,14 +105,6 @@ $ gh actions-importer migrate jenkins --source-url $SOURCE_URL –target-url $TA
 Any necessary manual tasks will be included in the description of the pull request. Once these manual tasks and the code reviews are complete, the pull request can be merged and the workflow will have been successfully migrated to GitHub Actions.
 
 :::image type="content" source="../media/PR_for_Migration.jpg" alt-text="New PR once a migration is completed.":::
-
-For specific differences for each of the supported CI/CD platforms, please reference the following links:
-
-- [Azure DevOps](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-azure-pipelines-to-github-actions)
-- [CircleCI](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-circleci-to-github-actions)
-- [GitLab](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-gitlab-cicd-to-github-actions)
-- [Jenkins](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-jenkins-to-github-actions)
-- [Travis CI](https://docs.github.com/en/actions/migrating-to-github-actions/migrating-from-travis-ci-to-github-actions)
 
 Now, let’s take a moment to review and dive a bit deeper into what is not automatically migrated with GitHub Actions Importer. 
 
