@@ -118,9 +118,4 @@ GitHub Actions Importer cannot migrate everything. It’s important to be mindfu
 - **Build steps or build triggers** that are less commonly used may not be automatically converted by GitHub Actions Importer. This can be a factor for migrations involving Azure DevOps, Jenkins, and CircleCI, all of which can be extended through marketplace customizations.
 
 
-Like we had mentioned earlier, the [lab exercise](https://github.com/actions/importer-labs) will provide step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
-
-Now let’s check your knowledge on what we just learned!
-
-
-
+Like we had mentioned earlier, the upcoming [lab exercise](https://github.com/actions/importer-labs) will provide step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. Let's go there next!
