@@ -6,8 +6,7 @@ Doing individual migrations is relatively easy in isolation. However, if you hav
 
 In this module you will:
 
-- Review how to install the GitHub Actions Importer CLI extension and ensure it's up to date
-- Understand the GitHub Actions Importer commands: audit, forecast, dry-run, and migrate as well as learn what cannot be migrated automatically 
+- Learn about the two distinct phases of a GitHub Actions Importer migration and the phases' associated commands
 - Run through a mock migration lab exercise for one of the supported CI/CD platforms listed below
 
 ## Prerequisites
