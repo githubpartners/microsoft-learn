@@ -1,9 +1,8 @@
 In this module you learned about GitHub Actions Importer, how to ensure it is up to date, its supported CI/CD platforms, the commands you can run on it, and what might not be migrated automatically from your previous CI/CD environment.
 
 You learned about:
-- How to install the GitHub Actions Importer and ensure it's up to date
-- What the audit, forecast, dry-run, and migrate commands can do and what is not automatically migrated
-- How to run a mock migration through a lab exercise for a supported CI platform
+- Learn about the two distinct phases of a GitHub Actions Importer migration and the phases' associated commands
+- Run through a mock migration lab exercise for one of the supported CI/CD platforms listed below
 
 ## Learn more
 
