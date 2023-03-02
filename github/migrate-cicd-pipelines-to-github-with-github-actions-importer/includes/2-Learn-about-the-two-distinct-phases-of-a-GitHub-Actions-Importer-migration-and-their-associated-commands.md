@@ -1,12 +1,12 @@
 In the following lab exericse you will be provided step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
 
-But in the meantime, in this unit we will be reviewing the two phases of how you can approach a GitHub Actions Importer Migration: Planning and Migrating and their associated commands.
+But in the meantime, in this unit we will be reviewing the two phases of how you can approach a GitHub Actions Importer Migration: planning and migrating and their associated commands.
 
-- We’ll walk through the Planning Phase of your migration and introduce you to the:
+- We’ll walk through the planning phase of your migration and introduce you to the:
   - ```audit```
   - ```forecast```
   - And ```dry-run``` commands
-- And for the Migration Phase, we’ll introduce you to the ```migration``` command.
+- And for the migration phase, we’ll introduce you to the ```migration``` command.
 - We will also review what is not automatically migrated over with GitHub Actions Importer. 
 
 But for now, let’s start with the planning phase of your migration.
@@ -21,7 +21,6 @@ The planning phase of a migration typically starts with an analysis of your exis
 - What type and how many runners are being used? What mix of GitHub-hosted and self-hosted runners should you select when migrating?
 
 If you find yourself leaving these questions unanswered, fear not, GitHub Actions Importer can help you find out your answers to these questions with its commands. 
-
 
 Let's get started with getting to know the ```audit``` command. 
 
