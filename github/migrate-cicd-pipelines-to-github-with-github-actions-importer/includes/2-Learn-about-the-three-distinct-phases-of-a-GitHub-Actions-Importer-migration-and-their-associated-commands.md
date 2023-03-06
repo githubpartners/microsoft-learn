@@ -1,14 +1,14 @@
 In the following lab exericse you will be provided step-by-step guidelines on how to run all four commands for each of the supported CI/CD platforms. 
 
-But in the meantime, in this unit we will be reviewing the three phases of a GitHub Actions Importer Migration: planning, testing, and migrating and their associated commands.
+But in the meantime, in this unit we will be reviewing the three phases of a GitHub Actions Importer Migration: **planning, testing,** and **migrating** and their associated commands.
 
-- We’ll walk through the planning phase of your migration and introduce you to the:
+- We’ll walk through the **planning phase** of your migration and introduce you to the:
   - The ```audit```
   - And the ```forecast``` commands
-- Then we'll introduce you to the testing phase, which includes
+- Then we'll introduce you to the **testing phase**, which includes
   - The ```dry-run``` command
   - As well as custom transformers
-- And for the migration phase, we’ll introduce you to the ```migration``` command.
+- And for the **migration phase**, we’ll introduce you to the ```migration``` command.
 - And we will round things out with a review of what is not automatically migrated over with GitHub Actions Importer. 
 
 But for now, let’s start with the planning phase of your migration.
