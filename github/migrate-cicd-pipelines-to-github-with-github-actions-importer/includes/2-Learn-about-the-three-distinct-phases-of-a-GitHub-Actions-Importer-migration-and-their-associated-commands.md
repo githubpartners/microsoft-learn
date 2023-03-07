@@ -13,7 +13,7 @@ But in the meantime, in this unit we will be reviewing the three phases of a Git
 
 But for now, let’s start with the planning phase of your migration.
 
-# The planning phase
+## The planning phase
 
 The planning phase of a migration typically starts with an analysis of your existing CI/CD usage and approach, which includes addressing such questions as:
 
@@ -26,7 +26,7 @@ If you find yourself leaving these questions unanswered, fear not, GitHub Action
 
 Let's get started with getting to know the ```audit``` command. 
 
-## What is the audit command?
+### What is the audit command?
 In this section we’ll be going over the basics of the ```audit``` command with GitHub Actions Importer.
 
 The ```audit``` command does the following: 
@@ -45,7 +45,7 @@ Once you initiate the command it will provide an Audit summary report.
 
 Let’s go over the details the Audit summary report will provide you. 
 
-### What is in an Audit summary report?
+#### What is in an Audit summary report?
 
 There are four sections of the Audit summary: 
 
@@ -58,7 +58,7 @@ There are four sections of the Audit summary:
 
 Next, let's get into the ```forecast``` command. 
 
-## What is the forecast command?
+### What is the forecast command?
 
 In this section we’ll be reviewing the ```forecast``` command and walking through a Forecast report. 
 
@@ -83,7 +83,7 @@ Additionally, these metrics are presented for each runner queue defined in the s
 
 In the next section, we’ll be diving into the ```dry-run``` command. 
 
-# The testing phase
+## The testing phase
 
 The testing phase of a GitHub Actions Importer migration allows you test run what your mirgration will look like. 
 
@@ -91,7 +91,7 @@ By using the ```dry-run``` command you can see what might not be automatically c
 
 Let's first review the ```dry-run``` command.
 
-## What is the dry-run command?
+### What is the dry-run command?
 
 In this section we will review what the ```dry-run``` command does. 
 
@@ -105,7 +105,7 @@ If you have "partially successful" items you can utilize custom transformers to 
 
 Let's touch upon custom transformers in our next section.
 
-## Custom transformers
+### Custom transformers
 
 A custom transformer contains mapping logic that GitHub Actions Importer can use to transform your plugins, tasks, runner labels, or environment variables to work with GitHub Actions.
 
@@ -118,7 +118,7 @@ Once you have built custom transformers for your items that needed to be convert
 
 Next up, we'll be tackling how to migrate your environment. 
 
-# The migration phase
+## The migration phase
 
 You can use the ```migrate``` command to convert an existing pipeline to its equivalent action and open a pull request with the converted workflows and associated files.
 
@@ -132,7 +132,7 @@ Any necessary manual tasks will be included in the description of the pull reque
 
 Now, let’s take a moment to review and dive a bit deeper into what is not automatically migrated with GitHub Actions Importer. 
 
-# Understand what is not migrated automatically
+### Understand what is not migrated automatically
 
 GitHub Actions Importer cannot migrate everything. It’s important to be mindful of its limitations, which include:
 
