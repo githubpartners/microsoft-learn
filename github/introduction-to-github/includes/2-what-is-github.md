@@ -1,9 +1,5 @@
 Here, we discuss the key GitHub features you use on a daily basis to manage and contribute to software projects. 
 
-## The GitHub flow
-
-In addition to providing a platform for collaborative software development, GitHub also offers a workflow designed to optimize use of its various features. While this unit offers a cursory overview of important platform components, it's recommended that you first review [Understanding the GitHub flow](https://guides.github.com/introduction/flow/?azure-portal=true).
-
 ## Git and GitHub
 
 As you work with **Git** and **GitHub**, you may wonder about the difference between the two.
@@ -65,7 +61,7 @@ To learn more about GitHub commits, see [Committing and reviewing changes to you
 
 ## Pull Requests
 
-A **pull request** is the mechanism used to signal that the commits from one branch are ready to be merged into another branch. The developer submitting the **pull request** will often request one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) may be merged in to the base branch.
+A **pull request** is the mechanism used to signal that the commits from one branch are ready to be merged into another branch. The developer submitting the **pull request** will often request one or more reviewers to verify the code and approve the merge. These reviewers have the opportunity to comment on changes, add their own, or use the pull request itself for further discussion. Once the changes have been approved (if approval is required), the pull request's source branch (the compare branch) may be merged into the base branch.
 
 :::image type="content" source="../media/2-pull-request.png" alt-text="GitHub pull requests provide a way to get commits from one branch into another branch." border="false":::
 
@@ -130,8 +126,9 @@ To learn more, see [Fork a repo](https://docs.github.com/en/free-pro-team@latest
 
 :::image type="content" source="../media/2-github-pages.png" alt-text="GitHub Pages is a hosting engine available with your GitHub account. It can be used to host static sites generated from your repository." border="false":::
 
-GitHub Pages sites for public repositories have been built and are deployed with GitHub Actions. GitHub Actions to build and deploy private and internal repositories are available as well, depending on your GitHub plan. You can include injecting secrets in your build process, gate deployments to require approvals before publishing, or add a build check to prevent bad commits from being deployed.
+GitHub Pages sites for public repositories have been built and are deployed with GitHub Actions. You can use GitHub Actions to build and deploy private and internal repositories as well, depending on your GitHub plan. You can include injecting secrets in your build process, gate deployments to require approvals before publishing, or add a build check to prevent bad commits from being deployed.
 
 GitHub Pages track deployments instead of builds. A source branch is not required and is at the discretion of a workflow’s triggers. A deployment is required in the context of an environment (`github-pages` by default). As a result, environment protection rules are the new security mechanism for limiting deployments.
 
 To learn more, see [GitHub Pages](https://pages.github.com/?azure-portal=true).
+
