@@ -6,6 +6,7 @@
 
 - [GitHub product landing page](https://docs.microsoft.com/en-us/learn/github/): landing page for GitHub modules/learning paths on MS Learn
 - [PowerBI](https://msit.powerbi.com/groups/me/reports/3ad7a43c-5334-4086-b762-8b4bdb2741ff/ReportSectionfb7e1b32d2783b56519d?ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&refreshAccessToken=true): Dashboard data of current module content on MS Learn
+- [MS Learn Monthly Module Report](https://docs.google.com/spreadsheets/d/1XL-BPbIrsYBxCcyRt1mwHDRXq5S80fWrJp_sp3LZE2o/edit#gid=0)
 
 ## MS Learn contacts
 
