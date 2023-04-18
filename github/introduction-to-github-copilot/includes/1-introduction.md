@@ -1,6 +1,6 @@
 The future of AI programming is here.
 
-GitHub Copilot is the world's first at-scale AI developer tool that can help you write code faster and with less work.
+GitHub Copilot is the world's first at-scale AI developer tool that can help you write code faster with less work.
 
 Our research found that developers code up to 55% faster with GitHub Copilot helping generate 46% of all code, leading 75% of developers feeling more fulfilled. 
 
