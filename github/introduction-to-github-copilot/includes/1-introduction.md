@@ -21,8 +21,9 @@ By the end of this module, you'll be able to:
 ## Prerequisites
 
 - A GitHub account
-- Introduction to GitHub, an MS Learn module
+- Completed the Microsoft Learn module, Introduction to GitHub
+- Completed the Microsoft Learn module, Introduction to GitHub Administration
 - Communicate effectively on GitHub by using Markdown
-- Introduction to GitHub Administration, an MS Learn module
+
 
 Next up, let's dive into learning about GitHub Copilot.
