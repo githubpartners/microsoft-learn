@@ -12,10 +12,9 @@ Powered by OpenAI Codex, GitHub Copilot's generative pretrained language model i
 
 By the end of this module, you'll be able to:
 
-- Learn the basics about GitHub Copilot
-- Learn how to test and secure your code using GitHub Copilot
-- Enable GitHub Copilot for Business for your enterprise
-- Learn how to configure GitHub Copilot
+- Understand the differences between GitHub Copilot, GitHub Copilot X, and Github Copilot for Business
+- Learn how to get started and configure GitHub Copilot
+- Comprehend how to test and secure your code using GitHub Copilot
 - Troubleshoot GitHub Copilot
 
 ## Prerequisites
