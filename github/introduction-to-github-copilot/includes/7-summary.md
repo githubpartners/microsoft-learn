@@ -14,6 +14,7 @@ Now that you have finished this module, you should be able to:
 - [About GitHub Copilot and JetBrains IDEs](https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=jetbrains) 
 - [About GitHub Copilot and Neovim](https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=neovim#about-github-copilot-and-neovim) 
 - [About GitHub Copilot and Visual Studio](https://docs.github.com/en/copilot/getting-started-with-github-copilot?tool=visualstudio#about-github-copilot-and-visual-studio)
+- [Troubleshooting GitHub Copilot in your environment](https://docs.github.com/en/copilot/troubleshooting-github-copilot/troubleshooting-github-copilot-in-your-environment)
 
 
 ## How to provide feedback
