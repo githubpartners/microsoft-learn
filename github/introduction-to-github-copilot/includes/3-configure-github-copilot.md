@@ -1,7 +1,8 @@
 In this unit we'll be going over the following:
 
 - Signing up for GitHub Copilot
-- How to Configure GitHub Copilot with Visual Studio Code
+- Configuring GitHub Copilot with Visual Studio Code
+- Troubleshooting GitHub Copilot in Visual Studio Code
 
 Now let's dive into how to get started with Signing up for GitHub Copilot.
 
@@ -52,6 +53,21 @@ GitHub Copilot can autocomplete code as you type when you use Visual Studio Code
 
 Additionally, you can choose to enable or disable inline suggestions and specify which languages you want to enable or disable GitHub Copilot for.
 
-In the next unit, you’ll learn about troubleshooting GitHub Copilot.
+## Troubleshooting GitHub Copilot in Visual Studio Code
+
+In Visual Studio Code, the log files are useful for diagnosing connection issues. The GitHub Copilot extension stores the log files in the standard log location for Visual Studio Code extensions. The log files are found through the developer option and open extension logs folder within Visual Studio Code.
+
+In rare cases, errors might not be logged in the regular locations. If you encounter errors and there is nothing in the logs, you may try to see the logs from the process running VS Code and the extension. This allows you to view the Electron logs. These logs are found under developer and the toggle developer tools within Visual Studio Code.
+
+Network restrictions, firewalls, or your proxy may occur when connecting to GitHub Copilot. If this occurs you can follow the steps below to open a new editor with the relevant information that you can inspect yourself or share with the support team.
+
+Open the VS Code Command Palette
+For Mac: use: **Shift+Command+P**
+For Windows or Linux: **use: Ctrl+Shift+P**
+Type **Diagnostics** and then select **GitHub Copilot: Collect Diagnostics** from the list
+
+For more information on how to troubleshoot in other environments check out the Resource section of the next unit. 
+
+Next up you'll be completing an exercise utilizing GitHub Copilot and Visual Studio Code. 
 
 <!-- Do not add a unit summary or references/links -->
