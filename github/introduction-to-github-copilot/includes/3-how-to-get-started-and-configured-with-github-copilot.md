@@ -16,7 +16,7 @@ After you sign up, you will need to install an extension for your preferred envi
 
 But for this specific module we will just be reviewing extensions and configurations for Visual Studio Code since the exercise we complete in this module will use Visual Studio Code.
 
-If you are using a different environment, we will provide links to GitHub Docs under the Relevant links section at the end of this module that will review installing extensions and configuration. 
+If you are using a different environment, we will provide links to GitHub Docs under the References section at the end of this module that will review installing extensions and configuration. 
 
 
 ## Configuring GitHub Copilot in Visual Studio Code
@@ -66,7 +66,7 @@ For Mac: use: **Shift+Command+P**
 For Windows or Linux: **use: Ctrl+Shift+P**
 Type **Diagnostics** and then select **GitHub Copilot: Collect Diagnostics** from the list
 
-For more information on how to troubleshoot in other environments check out the Resource section of the next unit. 
+For more information on how to troubleshoot in other environments check out the References section of the last unit of the module. 
 
 Next up you'll be completing an exercise utilizing GitHub Copilot and Visual Studio Code. 
 
