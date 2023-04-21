@@ -14,8 +14,7 @@ By the end of this module, you'll be able to:
 
 - Understand the differences between GitHub Copilot, GitHub Copilot X, and Github Copilot for Business
 - Learn how to get started and configure GitHub Copilot
-- Comprehend how to test and secure your code using GitHub Copilot
-- Troubleshoot GitHub Copilot
+- Develop using GitHub Copilot and Visual Studio Code
 
 ## Prerequisites
 
