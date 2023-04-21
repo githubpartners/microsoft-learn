@@ -17,7 +17,10 @@ But for this specific module we will just be reviewing extensions and configurat
 
 If you are using a different environment, we will provide links to GitHub Docs under the Relevant links section at the end of this module that will review installing extensions and configuration. 
 
-### Add the Visual Studio Code extension
+
+## Configuring GitHub Copilot in Visual Studio Code
+
+### Adding the Visual Studio Code extension
 
 Here is how you can add the Visual Studio Code extension.
 
@@ -25,8 +28,6 @@ Here is how you can add the Visual Studio Code extension.
 - A popup will appear, asking to open Visual Studio Code, and then click **Open Visual Studio Code**
 - In the Extension: GitHub Copilot tab in Visual Studio Code, click **Install**
 - If you have not previously authorized Visual Studio Code in your GitHub account, you will be prompted to sign in to GitHub in Visual Studio Code
-
-## Configuring GitHub Copilot in Visual Studio Code
 
 GitHub Copilot can autocomplete code as you type when you use Visual Studio Code. After installation, you can enable or disable GitHub Copilot, and you can configure advanced settings within Visual Studio Code. 
 
