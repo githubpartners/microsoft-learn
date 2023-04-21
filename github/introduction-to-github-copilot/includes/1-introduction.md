@@ -13,7 +13,7 @@ Powered by OpenAI Codex, GitHub Copilot's generative pretrained language model i
 By the end of this module, you'll be able to:
 
 - Understand the differences between GitHub Copilot, GitHub Copilot X, and Github Copilot for Business
-- Learn how to get started and configure GitHub Copilot
+- Learn how to get started and configure with GitHub Copilot
 - Develop using GitHub Copilot and Visual Studio Code
 
 ## Prerequisites
