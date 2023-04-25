@@ -1,41 +1,17 @@
-This exercise checks your knowledge on 
-configuring code scanning for your repository. 
-​
-This GitHub exercise is graded automatically once you have attempted 
-a solution to the challenge. The results of your actions, as well as 
-helpful feedback, are provided in real-time within the `grade-learner` workflow logs. 
-​
-Here are some helpful tips before you begin the exercise:
-​
-- Read the **About this exercise** section in the exercise's 
-repository README to understand how the exercise works.
-- Follow the steps provided in the **Instructions** 
-section to successfully complete the exercise.
-- To see the results of your exercise, navigate to the **Actions** 
-tab of your cloned repository and click on the most recent run on the **Grading** workflow.
-- Stuck on what to do? Revisit the content in the last unit or 
-check out the **Useful resources** section in 
-the exercise's repository README for some additional resources.
-​
-​
->[!Note] 
-> A grading script exists under `.github/workflows/grading.yml`. 
-> You do not need to modify this workflow to complete this exercise. 
-> **Altering the contents in this workflow can break the exercise's** 
-> **ability to validate your actions, provide feedback, or grade the results**.
-​
+This exercise will walk you through how to install Copilot into a Codespace, accept suggestions from code, accept suggestions from comments
 
-This exercise is a challenge based on content covered in this module. 
-It may take several attempts to complete the exercise, you can revisit 
-previous content in this module, or navigate to some of the additional 
-resources provided as many times as you want to find the solution.
-​
+## Getting started
+
+When you click the _Start the exercise on GitHub_ button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
+
+- Follow the instructions in the repository's README to understand how the exercise works and select your preferred CI/CD platform you would like to utilize.
+
 When you've finished the exercise in GitHub, return here for:
+
 > [!div class="checklist"]
-> * A quick knowledge check
+> * A quick knowledge check 
 > * A summary of what you've learned
-> * A badge for completing this module
-​
-​
+> * To earn a badge for completing this module
+
 > [!div class="nextstepaction"]
 > [Start the exercise on GitHub](https://github.com/dkalmin/skills-copilot)
