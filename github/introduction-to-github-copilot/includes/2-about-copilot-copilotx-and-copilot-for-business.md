@@ -11,19 +11,19 @@ It draws context from comments and code to suggest individual lines and whole fu
 
 It has been trained on natural language text and source code from publicly available sources, including code in public repositories on GitHub.
 
-Research has found that GitHub Copilot has helped 96% of developers with repetitive fast, which allows them to focus on solving bigger problems and feeling more productive and fufilled in their work. 
+Research has found that GitHub Copilot has helped 96% of developers with repetitive fast, which allows them to focus on solving bigger problems and feeling more productive and fulfilled in their work. 
 
 GitHub Copilot is powered by OpenAI Codex, a generative pretrained language model created by OpenAI. It is available as an extension for Visual Studio Code, Visual Studio, Neovim, and the JetBrains suite of integrated development environments (IDEs).
 
 ## About GitHub Copilot X
 
-As the landscape of AI developer tools changes at lightening speed, GitHub wanted to ensure we remain at the cutting edge of innovation and improvements.
+As the landscape of AI developer tools changes at lighting speed, GitHub wanted to ensure we remain at the cutting edge of innovation and improvements.
 
 Introducing GitHub Copilot X. 
 
 GitHub's vision for the future of AI-powered software development.
 
-We wanted to move past the editor and evolve GitHub Copilot into a readily accessible AI assistant throughout the enire development lifecycle.
+We wanted to move past the editor and evolve GitHub Copilot into a readily accessible AI assistant throughout the entire development life cycle.
 
 Here are some features you can expect from GitHub Copilot X:
 - **A ChatGPT-like experience in your editor with GitHub Copilot Chat**
@@ -39,7 +39,7 @@ Here are some features you can expect from GitHub Copilot X:
 
 With GitHub Copilot for Business, we’re opening it up to every developer, team, organization, and enterprise.
 
-Focused on making your organization more productive, secure, and fufilled, it allows your developers to code faster and allows them to focus on more satisfying work. 
+Focused on making your organization more productive, secure, and fulfilled, it allows your developers to code faster and allows them to focus on more satisfying work. 
 
 Here are some features you can expect from Copilot for Business:
 - A more powerful AI model: New modeling algorithms improve the quality of code suggestions.
