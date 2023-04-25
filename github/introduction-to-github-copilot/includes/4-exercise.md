@@ -1,12 +1,16 @@
-This exercise will walk you through how to install Copilot into a Codespace, accept suggestions from code, accept suggestions from comments
+This exercise will walk you through the following steps:
+
+- Install GitHub Copilot using GitHub Codespaces
+- Prompt GitHub Copilot for code suggestions
+- Accept code suggestions from GitHub Copilot
 
 ## Getting started
 
-When you click the _Start the exercise on GitHub_ button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
+Clicking the _Start the exercise on GitHub_ button below will navigate you to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
 
-- Follow the instructions in the repository's README to understand how the exercise works and select your preferred CI/CD platform you would like to utilize.
+Follow the instructions in the repository's README to begin the exercise. Completing a step in the exercise will open the instructions for the next step.
 
-When you've finished the exercise in GitHub, return here for:
+When you've finished the exercise in GitHub, return back to this module for:
 
 > [!div class="checklist"]
 > * A quick knowledge check 

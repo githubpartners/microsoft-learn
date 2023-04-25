@@ -1,10 +1,7 @@
-The future of AI programming is here.
 
-GitHub Copilot is the world's first at-scale AI developer tool that can help you write code faster with less work.
+GitHub Copilot is the world's first at-scale AI developer tool that can help you write code faster with less work. GitHub Copilot draws context from comments and code to suggest individual lines and whole functions instantly.
 
-Our research found that developers code up to 55% faster with GitHub Copilot helping generate 46% of all code, leading 75% of developers feeling more fulfilled. 
-
-GitHub Copilot draws context from comments and code to suggest individual lines and whole functions instantly.
+Research has found GitHub Copilot helps developers code faster, focus on solving bigger problems, stay in the flow longer, and feel more fulfilled with their work.
 
 Powered by OpenAI Codex, GitHub Copilot's generative pretrained language model is created by OpenAI. An extension is available for Visual Studio Code, Visual Studio, Neovim, and the JetBrains suite of integrated development environments (IDEs).
 
@@ -12,16 +9,13 @@ Powered by OpenAI Codex, GitHub Copilot's generative pretrained language model i
 
 By the end of this module, you'll be able to:
 
-- Understand the differences between GitHub Copilot, GitHub Copilot X, and Github Copilot for Business
-- Learn how to get started and configure with GitHub Copilot
-- Develop using GitHub Copilot and Visual Studio Code
+- Explain what GitHub Copilot is and the advantages it provides
+- Understand the availability of GitHub Copilot for individuals and Businesses
+- Discuss the future of GitHub Copilot with Copilot X
+- Learn how to get started using GitHub Copilot and some common configurations
+- Develop using GitHub Copilot with Visual Studio Code using hands-on exercises
 
 ## Prerequisites
 
 - A GitHub account
-- Completed the Microsoft Learn module, Introduction to GitHub
-- Completed the Microsoft Learn module, Introduction to GitHub Administration
-- Communicate effectively on GitHub by using Markdown
-
-
-Next up, let's dive into learning about GitHub Copilot.
+- Basic understanding of GitHub fundamentals
