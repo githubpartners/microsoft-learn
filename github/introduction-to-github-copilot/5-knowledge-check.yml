@@ -30,25 +30,25 @@ quiz:
     - content: "GitHub Copilot can write a comment describing logic and you can add your suggested code to implement the solution."
       isCorrect: false
       explanation: "You can write a comment describing the logic you want and GitHub Copilot will immediately suggest code to implement the solution."
-  - content: “Can GitHub Copilot assist non-native English speakers and can understand other languages beyond English?”
+  - content: “What are GitHub Copilot’s supported integrated development environments extensions?”
     choices:
-    - content: “True”
-      isCorrect: true
-      explanation: “GitHub Copilot can assist non-native English speakers and can understand other languages beyond English”
-    - content: “False”
+    - content: “Visual Studio Code and Visual Studio”
       isCorrect: false
-      explanation: "GitHub Copilot can assist non-native English speakers and can understand other languages beyond English"
-  - content: “What is the first step to establish when using GitHub Copilot for Business in your enterprise?”
+      explanation: “Although these two IDEs are support by GitHub Copilot there are more IDEs the platform supports than just these two”
+    - content: “GitHub.com, Visual Studio Code, Visual Studio, Neovim, and Jetbrains”
+      isCorrect: false
+      explanation: “Although GitHub.com is supported, it does not need an extension.”
+    - content: “Visual Studio Code, Visual Studio, Neovim, and Jetbrains”
+      isCorrect:Correct
+      explanation: "Correct! All of the IDEs listed above have supported GitHub extensions."
+  - content: “What is GitHub X?”
     choices:
-    - content: “A policy”
+    - content: “GitHub's vision for the future of AI-powered software development.”
       isCorrect: true
-      explanation: “You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations”
-    - content: “Code snippets”
+      explanation: “As the landscape of AI developer tools changes at lightening speed, GitHub wanted to ensure we remain at the cutting edge of innovation and improvements.”
+    - content: “An Artificial Intelligence (AI) pair programmer that you can use to get suggestions for whole lines or entire functions right inside your editor.”
       isCorrect: false
-      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
-    - content: "Assign users"
+      explanation: "Although GitHub Copilot is a part of GitHub Copilot X, GitHub Copilot X is GitHub’s vision for the future of AI-powered software development."
+    - content: "A product focused on organizations to help them be more productive, secure, and fulfilled."
       isCorrect: false
-      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
-    - content: "Enable GitHub Copilot"
-      isCorrect: false
-      explanation: "You must first establish a policy for the use of GitHub Copilot for Business in your enterprise to use GitHub Copilot for Business in your organizations"
+      explanation: "Although GitHub Copilot for Business is a part of GitHub Copilot X, GitHub Copilot X is GitHub’s vision for the future of AI-powered software development."
