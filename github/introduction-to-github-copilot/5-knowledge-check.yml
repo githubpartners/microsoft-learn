@@ -39,7 +39,7 @@ quiz:
       isCorrect: false
       explanation: “Although GitHub.com is supported, it does not need an extension.”
     - content: “Visual Studio Code, Visual Studio, Neovim, and Jetbrains”
-      isCorrect:Correct
+      isCorrect: true
       explanation: "Correct! All of the IDEs listed above have supported GitHub extensions."
   - content: “What is GitHub X?”
     choices:
