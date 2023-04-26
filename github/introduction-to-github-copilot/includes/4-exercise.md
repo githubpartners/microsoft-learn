@@ -6,9 +6,11 @@ This exercise will walk you through the following steps:
 
 ## Getting started
 
-Clicking the _Start the exercise on GitHub_ button below will navigate you to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
+When you click the Start the exercise on GitHub button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
 
-Follow the instructions in the repository's README to begin the exercise. Completing a step in the exercise will open the instructions for the next step.
+Select the Start course button or the Use this template feature within the template repository. This will prompt you to create a new repository. We recommend creating a public repository, as private repositories will use Actions minutes. After you make your own repository from the template, wait about 20 seconds and refresh.
+
+Follow the instructions in the repository's README to understand how the exercise works, its learning objectives, and how to successfully complete the exercise.
 
 When you've finished the exercise in GitHub, return back to this module for:
 
@@ -17,5 +19,10 @@ When you've finished the exercise in GitHub, return back to this module for:
 > * A summary of what you've learned
 > * To earn a badge for completing this module
 
+>[!Note] 
+> You do not need to modify any of the workflow files to complete this exercise.
+> **Altering the contents in this workflow can break the exercise's**
+> **ability to validate your actions, provide feedback, or grade the results**.
+
 > [!div class="nextstepaction"]
-> [Start the exercise on GitHub](https://github.com/dkalmin/skills-copilot)
+> [Start the exercise on GitHub](https://github.com/skills/replace)

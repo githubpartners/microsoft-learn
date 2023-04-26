@@ -56,7 +56,8 @@ In rare cases, errors might not be logged in the regular locations. If you encou
 Network restrictions, firewalls, or your proxy may occur when connecting to GitHub Copilot. If this occurs you can follow the steps below to open a new editor with the relevant information that you can inspect yourself or share with the support team.
 
 Open the VS Code Command Palette.
-- For Mac: use: **Shift+Command+P**
+
+- For Mac: use **Shift+Command+P**
 - For Windows or Linux: **use: Ctrl+Shift+P**
 - Type **Diagnostics** and then select **GitHub Copilot: Collect Diagnostics** from the list
 

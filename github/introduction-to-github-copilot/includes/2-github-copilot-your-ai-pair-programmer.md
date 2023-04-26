@@ -20,7 +20,7 @@ GitHub Copilot started a new age of software development as an AI pair programme
 
 GitHub Copilot X extends past the editor and into a readily accessible AI assistant throughout the entire development life cycle.
 
-Here are some features you can expect from GitHub Copilot X.
+Here are some features you can expect from GitHub Copilot X coming soon.
 
 ### A ChatGPT-like experience in your editor with GitHub Copilot Chat
 
@@ -57,4 +57,4 @@ Here are some features you can expect from Copilot for Business:
 
 To learn more about GitHub Copilot for Business, check out the related links at the end of the module.
 
-In the next unit we will be learning about how to get started with GitHub Copilot and some common configurations.
+In the next unit, we will be learning about how to get started with GitHub Copilot and some common configurations.
