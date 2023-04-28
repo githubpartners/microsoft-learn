@@ -57,4 +57,4 @@ Here are some features you can expect from Copilot for Business:
 
 To learn more about GitHub Copilot for Business, check out the related links at the end of the module.
 
-In the next unit, we will be learning about how to get started with GitHub Copilot and some common configurations.
+In the next unit, we'll learn about how to get started with GitHub Copilot and some common configurations.

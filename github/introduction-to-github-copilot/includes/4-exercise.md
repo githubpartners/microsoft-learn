@@ -1,3 +1,5 @@
+:::image type="content" source="../media/gh-copilot.png" alt-text="The logo icon for the GitHub Copilot skills exercise with the copilot icon in the middle." border="false":::
+
 This exercise will walk you through the following steps:
 
 - Install GitHub Copilot using GitHub Codespaces
