@@ -4,9 +4,11 @@ GitHub Copilot X is on the horizon, and with it a new generation of more product
 
 Now that you have finished this module, you should be able to:
 
-- Understand the differences between GitHub Copilot, GitHub Copilot X, and Github Copilot for Business
-- Learn how to get started and configure with GitHub Copilot
-- Develop using GitHub Copilot and Visual Studio Code
+- Explain what GitHub Copilot is and the advantages it provides
+- Understand the availability of GitHub Copilot for individuals and Businesses 
+- Discuss the future of GitHub Copilot with Copilot X
+- Learn how to get started using GitHub Copilot and some common configurations
+- Develop using GitHub Copilot with Visual Studio Code using hands-on exercises
 
 ## References
 
