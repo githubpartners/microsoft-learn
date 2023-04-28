@@ -25,4 +25,4 @@ When you've finished the exercise in GitHub, return back to this module for:
 > **ability to validate your actions, provide feedback, or grade the results**.
 
 > [!div class="nextstepaction"]
-> [Start the exercise on GitHub](https://github.com/skills/replace)
+> [Start the exercise on GitHub](https://github.com/skills/copilot-codespaces-vscode)
