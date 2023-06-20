@@ -27,7 +27,7 @@ In this course, you will:
 3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
 
 > [!div class="nextstepaction"]
-> [Start the exercise on GitHub](https://github.com/skills/code-with-codespaces])
+> [Start the exercise on GitHub]([https://github.com/skills/code-with-codespaces])
 
 When you've finished the exercise in GitHub, return here for:
 
