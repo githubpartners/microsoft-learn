@@ -1,12 +1,33 @@
-## Exercise
+# Code with GitHub Codespaces and Visual Studio Code
+Create workflows that enable you to use Continuous Integration (CI) for your projects.
 
-This exercise will walk you through how to utilize the four GitHub Action Importer commands within one of the supported CI/CD platforms.
+## Welcome
+GitHub Codespaces is a development environment that's hosted in the cloud.
 
-## Getting started
+Who this is for: 
+- Developers, DevOps Engineers, Engineering Managers, Product Managers.
+- What you'll learn: How to create a codespace, push code from a codespace, select a custom image, and customize a codespace.
+- What you'll build: A codespace with devcontainer.json files, customizations, and personalizations.
+- Prerequisites: If you need to learn about Visual Studio Code, read Visual Studio Code Docs first.
+- How long: This course can be completed in less than an hour.
 
-When you click the _Start the exercise on GitHub_ button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
+In this course, you will:
+- Create your first codespace
+- Add a custom image
+- Customize your codespace
+- Personalize your codespace
 
-- Follow the instructions in the repository's README to understand how the exercise works and select your preferred CI/CD platform you would like to utilize.
+## How to start this course
+
+1. Right-click Start course and open the link in a new tab.
+   - In the new tab, most of the prompts will automatically fill in for you.
+   - For owner, choose your personal account or an organization to host the repository.
+   - We recommend creating a public repository, as private repositories will use Actions minutes.
+2. Scroll down and click the Create repository button at the bottom of the form.
+3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+
+> [!div class="nextstepaction"]
+> [Start the exercise on GitHub](https://github.com/skills/code-with-codespaces])
 
 When you've finished the exercise in GitHub, return here for:
 
@@ -14,8 +35,3 @@ When you've finished the exercise in GitHub, return here for:
 > * A quick knowledge check 
 > * A summary of what you've learned
 > * To earn a badge for completing this module
-
-> [!div class="nextstepaction"]
-> [Start the exercise on GitHub]([https://github.com/actions/importer-labs](https://github.com/skills/code-with-codespaces)https://github.com/skills/code-with-codespaces)
-
-
