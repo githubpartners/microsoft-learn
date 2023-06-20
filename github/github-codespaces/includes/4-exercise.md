@@ -19,7 +19,9 @@ In this course, you will:
 
 ## How to start this course
 
-1. Right-click Start course and open the link in a new tab.
+https://github.com/new?template_owner=skills&template_name=code-with-codespaces&owner=%40me&name=skills-code-with-codespaces&description=My+clone+repository&visibility=public
+
+1. Right-click Start course hyperlink and open the link in a new tab.
    - In the new tab, most of the prompts will automatically fill in for you.
    - For owner, choose your personal account or an organization to host the repository.
    - We recommend creating a public repository, as private repositories will use Actions minutes.
