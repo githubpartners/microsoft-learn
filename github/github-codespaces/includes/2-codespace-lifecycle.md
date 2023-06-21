@@ -1,25 +1,6 @@
 # What is a Codespace?
 
-GitHub Codespaces is an instant, cloud-based development environment that uses a container to provide you with common languages, tools, and utilities for development. GitHub Codespaces is also configurable, allowing you to create a customized development environment for your project. By configuring a custom development environment for your project, you can have a repeatable codespace configuration for all users of your project.
-
-Similar to Codespaces, you can also utilize github.dev. 
-
-It is important that you understand the differences between the two types of coding software before you choose which is the best fit for you or your organization. 
-
-Let’s review the difference between the two in the next section. 
-GitHub.dev vs GitHub Codespace
-The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor.
-Both github.dev and GitHub Codespaces allow you to edit your code straight from your repository. However, both have slightly different benefits, depending on your use case.
-
-## Codespace vs. github.dev
-|  | github.dev | GitHub Codespace | 
-|--------|--------|--------| 
-| Cost | Free | Free monthly quota of usage for personal accounts | 
-| Availability |  Available to everyone on GitHub.com | Available to everyone on GitHub.com | 
-| Startup | Github.dev opens instantly with a key-press and you can start using it right away without having to wait for additional configuration or installation | When you create or resume a codespace, the codespace is assigned a VM and the container is configured based on the contents of a devcontainer.json file. This setup may take a few minutes to create the development environment. |
-| Compute | There is no associated compute, so you won’t be able to build and run your code or use the integrated terminal. | With GitHub Codespaces, you get the power of a dedicated VM on which you can run and debug your application.|
-| Terminal access | None | GitHub Codespaces provides a common set of tools by default, meaning that you can use the Terminal exactly as you would in your local environment.|
-| Extensions | Only a subset of extensions that can run on the web will appear in the Extensions View and can be installed | With GitHub Codespaces, you can use most extensions from the Visual Studio Code Marketplace.|
+GitHub Codespaces is an instant, cloud-based development environment that uses a container to provide you with common languages, tools, and utilities for development. GitHub Codespaces is a configurable, allowing you to create a customized development environment for your project. By configuring a custom development environment for your project, you can have a repeatable codespace configuration for all users of your project.
 
 A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it. You can disconnect and reconnect to an active Codespace without affecting its running processes. You can stop and restart a Codespace without losing the changes that you have made to your project.
 
