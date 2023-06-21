@@ -43,13 +43,16 @@ quiz:
     - content: "/workspaces directory"
       isCorrect: true
       explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
-    - content: ""
+    - content: "/temp directory"
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
+    - content: "~/.bashrc directory"
       isCorrect: false
-      explanation: ""
-  - content: ""
+      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
+      content: Linuix directory
+      isCorrect: false
+      explanation: "After creating a Codespace, the clone is placed into the /workspaces directory."
+  - content: "" 
     choices:
     - content: ""
       isCorrect: true
