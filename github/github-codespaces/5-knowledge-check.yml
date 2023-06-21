@@ -38,7 +38,7 @@ durationInMinutes: 1
 content: |
 quiz:
   questions:
-  - content: "After creating a Codespace which directory is the clone placed?"
+  - content: "After creating a Codespace in which directory is the clone placed?"
     choices:
     - content: "/workspaces directory"
       isCorrect: true
@@ -52,14 +52,14 @@ quiz:
       content: Linuix directory
       isCorrect: false
       explanation: "After creating a Codespace, the clone is placed into the /workspaces directory."
-  - content: "" 
+  - content: "What is the maximum number of Codespaces that you can create per repository or branch?" 
     choices:
-    - content: ""
+    - content: "You can create an unlimited number of Codespaces per repository or branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time."
+    - content: "You can only create two Codespaces."
       isCorrect: false
-      explanation: ""
+      explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time"
     - content: ""
       isCorrect: false
       explanation: ""
