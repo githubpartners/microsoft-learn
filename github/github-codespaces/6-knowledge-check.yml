@@ -66,9 +66,9 @@ quiz:
       - content: "You can create a total of thirty workspaces."
       isCorrect: false
       explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
-  - content: "Which statement best describes github.dev?"
+  - content: "Which statement best describes github.dev editor?"
     choices:
-    - content: ""
+    - content: "The github.dev editor introduces a light weight editing experience that runs entirely in your web browser."
       isCorrect: true
       explanation: ""
     - content: ""
