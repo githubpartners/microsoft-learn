@@ -88,14 +88,14 @@ quiz:
     - content: "Codespace requires an internet connection, but any work will not be saved."
       isCorrect: false
       explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When reestablished, you can access  Codespace in the same state as when the connection was lost.
-  - content: ""
+  - content: "When defines a Codespace’s lifecycle?"
     choices:
-    - content: ""
+    - content: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
+    - content: "A Codespace's lifecycle begins immediately when GitHub is opened and ends when the software is closed."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
+    - content: "A Codespace's lifecycle begins when repository is created and ends when it is deleted."
       isCorrect: false
-      explanation: ""
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
