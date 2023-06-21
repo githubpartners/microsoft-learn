@@ -79,15 +79,15 @@ quiz:
       explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
   - content: "What happens when Codespace loses internet connectivity"
     choices:
-    - content: ""
+    - content: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
+    - content: "Codespace does not require an internet connection. I can access my Codespace regardless if I lose connectivity."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
+    - content: "Codespace requires an internet connection, but any work will not be saved."
       isCorrect: false
-      explanation: ""
+      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
   - content: ""
     choices:
     - content: ""
