@@ -5,6 +5,7 @@ Create workflows that enable you to use Continuous Integration (CI) for your pro
 GitHub Codespaces is a development environment that's hosted in the cloud.
 
 Who this is for: 
+
 - Developers, DevOps Engineers, Engineering Managers, Product Managers.
 - What you'll learn: How to create a codespace, push code from a codespace, select a custom image, and customize a codespace.
 - What you'll build: A codespace with devcontainer.json files, customizations, and personalizations.

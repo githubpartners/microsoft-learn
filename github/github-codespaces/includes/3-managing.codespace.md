@@ -1,16 +1,16 @@
 ## Codespace directory structure
-After creating a Codespace, the clone is placed into the /workspaces directory. This is a persistent directory placed into the container. Any changes you make inside this directory, including editing, adding, deleting files, and rebuilding the container are preserved when you stop and restart the Codespace.
+After creating a Codespace, the clone is placed into the `/workspaces` directory. This is a persistent directory placed into the container. Any changes you make inside this directory, including editing, adding, deleting files, and rebuilding the container are preserved when you stop and restart the Codespace.
 
-Outside the /workspaces directory, your Codespace contains a Linux directory structure that varies depending on the image used to build your Codespace. You can add files or make changes to files outside the /workspaces directory. For example, you can install new programs, or set up your shell configuration in a file such as ~/.bashrc. As a non-root user, you may not automatically have write access to certain directories. Most images allow root access to these directories with the sudo command.
+Outside the `/workspaces` directory, your Codespace contains a Linux directory structure that varies depending on the image used to build your Codespace. You can add files or make changes to files outside the `/workspaces` directory. For example, you can install new programs, or set up your shell configuration in a file such as `~/.bashrc`. As a non-root user, you may not automatically have write access to certain directories. Most images allow root access to these directories with the sudo command.
 
-Outside /workspaces, except the /tmp directory, Codespace directories are linked to the container’s lifecycle. Any changes are preserved when you stop and start your Codespace but are not preserved when you rebuild the container. 
+Outside `/workspaces`, except the `/tmp` directory, Codespace directories are linked to the container’s lifecycle. Any changes are preserved when you stop and start your Codespace but are not preserved when you rebuild the container. 
 
-Clearing the directories outside /workspaces ensures the rebuilt container is in the same state as it would be in a newly created Codespace. If rebuilding a container to apply configuration changes to the Codespace you're working in, any changes you have made will work the same for users creating new Codespaces with the same configuration.
+Clearing the directories outside `/workspaces` ensures the rebuilt container is in the same state as it would be in a newly created Codespace. If rebuilding a container to apply configuration changes to the Codespace you're working in, any changes you have made will work the same for users creating new Codespaces with the same configuration.
 
 If you want to make Codespaces more robust over rebuilds and across different Codespaces, you have several options.
 
 - Install programs and tools in all Codespaces created from a repository. In your dev container configuration, you can use lifecycle command properties such as postCreateCommand to run custom installation commands, or you can choose from pre-written installation commands called features.
-- Install tools or customize your setup in every Codespace you create, such as configuring your bash profile, you can link GitHub Codespaces with a dotfiles repository. The dotfiles repository is also cloned into the persistent /workspaces directory.
+- Install tools or customize your setup in every Codespace you create, such as configuring your bash profile, you can link GitHub Codespaces with a dotfiles repository. The dotfiles repository is also cloned into the persistent `/workspaces` directory.
 - Preserve specific files over a rebuild, use a devcontainer.json file to create a symlink between the files and a persistent directory within /workspaces. A symlink points to another file or folder on your computer or a connected file system. A symlink is similar to a Windows shortcut.
 
 ## Running your application
