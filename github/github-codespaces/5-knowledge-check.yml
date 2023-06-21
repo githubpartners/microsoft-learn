@@ -60,9 +60,9 @@ quiz:
     - content: "You can only create two Codespaces."
       isCorrect: false
       explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time"
-    - content: ""
+    - content: "You can create a total of ten workspaces."
       isCorrect: false
-      explanation: ""
+      explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
   - content: ""
     choices:
     - content: ""
