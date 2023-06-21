@@ -38,11 +38,11 @@ durationInMinutes: 1
 content: |
 quiz:
   questions:
-  - content: ""
+  - content: "After creating a Codespace which directory is the clone placed?"
     choices:
-    - content: ""
+    - content: "/workspaces directory"
       isCorrect: true
-      explanation: ""
+      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
     - content: ""
       isCorrect: false
       explanation: ""
