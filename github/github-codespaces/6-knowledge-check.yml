@@ -68,15 +68,15 @@ quiz:
       explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
   - content: "Which statement best describes github.dev editor?"
     choices:
-    - content: "The github.dev editor introduces a light weight editing experience that runs entirely in your web browser."
+    - content: "The github.dev editor introduces a lightweight editing experience that runs entirely in your web browser."
       isCorrect: true
-      explanation: ""
-    - content: ""
+      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
+    - content: "The github.dev is a heavyweight code editing tool that you can only install on your local hard drive."
       isCorrect: false
-      explanation: ""
-    - content: ""
+      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
+    - content: "The github.dev editor is a DOS-based coding tool that enables users to access each other's code."
       isCorrect: false
-      explanation: ""
+      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
   - content: ""
     choices:
     - content: ""
