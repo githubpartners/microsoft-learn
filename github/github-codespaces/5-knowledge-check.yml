@@ -54,7 +54,7 @@ quiz:
       explanation: "After creating a Codespace, the clone is placed into the /workspaces directory."
   - content: "What is the maximum number of Codespaces that you can create per repository or branch?" 
     choices:
-    - content: "You can create an unlimited number of Codespaces per repository or branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
+    - content: "You can create an unlimited number of Codespaces per repository or branch. However, there are limits to the number of Codespaces that you can create and run at the same time. A message will display that an existing Codespace needs to removed/deleted "
       isCorrect: true
       explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time."
     - content: "You can only create two Codespaces."
