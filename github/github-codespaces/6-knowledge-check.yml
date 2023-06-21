@@ -77,7 +77,7 @@ quiz:
     - content: "The github.dev editor is a DOS-based coding tool that enables users to access each other's code."
       isCorrect: false
       explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
-  - content: ""
+  - content: "What happens when Codespace loses internet connectivity"
     choices:
     - content: ""
       isCorrect: true
