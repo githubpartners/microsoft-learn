@@ -130,8 +130,4 @@ To learn more, see [Fork a repo](https://docs.github.com/en/free-pro-team@latest
 
 :::image type="content" source="../media/2-github-pages.png" alt-text="GitHub Pages is a hosting engine available with your GitHub account. It can be used to host static sites generated from your repository." border="false":::
 
-GitHub Pages sites for public repositories have been built and are deployed with GitHub Actions. GitHub Actions to build and deploy private and internal repositories are available as well, depending on your GitHub plan. You can include injecting secrets in your build process, gate deployments to require approvals before publishing, or add a build check to prevent bad commits from being deployed.
-
-GitHub Pages track deployments instead of builds. A source branch is not required and is at the discretion of a workflow’s triggers. A deployment is required in the context of an environment (`github-pages` by default). As a result, environment protection rules are the new security mechanism for limiting deployments.
-
 To learn more, see [GitHub Pages](https://pages.github.com/?azure-portal=true).
