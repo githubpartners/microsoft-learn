@@ -85,4 +85,6 @@ Below are the requirements to publish an action to the GitHub Marketplace. They 
      - The `name` cannot match an existing GitHub Marketplace category.
      - The `name` cannot match an existing GitHub feature.
 
-You can add the action you've created to the GitHub Marketplace by tagging it as a new release and then publishing it. There are a few guided steps in GitHub that enable you to publish a release of your action. More information on these steps can be found in the summary section at the end of this module. 
+You can add the action you've created to the GitHub Marketplace by tagging it as a new release and then publishing it. There are a few guided steps in GitHub that enable you to publish a release of your action. 
+
+Next up, an exercise walking you through writing your own GitHub JavaScript Action and automate customized tasks unique to your workflow.

@@ -15,20 +15,20 @@ content: |
 quiz:
   title: Check your knowledge
   questions:
-  - content: "You need to create a custom GitHub Action written in Ruby. Which action type would you choose?"
+  - content: "You want your action to run in a consistent and reliable environment. Which action type would you choose?"
     choices:
     - content: "JavaScript action"
       isCorrect: false
-      explanation: "Although you can write actions in JavaScript, Docker container actions are used for other languages."
+      explanation: "JavaScript actions separate the action code from the environment that is used to run the action."
     - content: "Run step"
       isCorrect: false
-      explanation: "Run steps execute terminal commands within a runner."
+      explanation: "Composite run steps actions allow you to mix multiple shell languages within the same action, not create consistent and reliable environments."
     - content: "Docker container action"
       isCorrect: true
-      explanation: "Actions written in a language other than JavaScript must be placed inside of a Docker container."
+      explanation: "Docker containers package the environment with the GitHub Actions code, meaning the action runs in a consistent and reliable environment."
     - content: "Bash script"
       isCorrect: false
-      explanation: "Bash scripts would either need to be run in Docker or as a parameter to a Run step."
+      explanation: "Bash scripts are a parameter to a Run step, not how your actions run in a consistent and reliable environment."
   - content: "Which keywords are required for a valid `action.yml` file?"
     choices:
     - content: "name, runs, composite"
@@ -54,6 +54,6 @@ quiz:
     - content: echo "::error::message=This is an error message"
       isCorrect: false
       explanation: "This is improper syntax for a workflow command."
-    - content: echo "::error::This is an error message::"
+    - content: echo "::errorThis is an error message::"
       isCorrect: false
       explanation: "This is improper syntax for a workflow command."

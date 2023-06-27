@@ -1,4 +1,4 @@
-GitHub Actions is a powerful feature that empowers you to go from code to cloud all from the comfort and convenience of your own repository. Here, you'll learn about the different types of GitHub actions and the metadata, syntax, and workflow commands to create custom GitHub actions. 
+Here, you'll learn about the different types of GitHub actions and the metadata, syntax, and workflow commands to create custom GitHub actions. GitHub Actions is a powerful feature that empowers you to go from code to cloud all from the comfort and convenience of your own repository.
 
 ## Types of GitHub actions
 
@@ -187,3 +187,4 @@ This text spans%0Aacross multiple lines
 
 In addition to workflow commands, you can set exit codes to set the status of an action. This is important because when you're working with jobs in a workflow, a failed exit code will halt all concurrent actions and cancel any future actions. If you are creating a JavaScript action, you can use the actions toolkit `@actions/core` package to log a message and set a failure exit code. If you are creating a Docker container action, you can set a failure exit code in your `entrypoint.sh` script.
 
+Next up, learn about choosing the right visibility for your action, best practices for documenting and versioning your action, and how to publish your action to the GitHub Marketplace.
