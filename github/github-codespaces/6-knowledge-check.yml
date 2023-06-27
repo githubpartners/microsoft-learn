@@ -8,33 +8,9 @@ metadata:
   author: a-a-ron
   ms.author: aastewar
   ms.topic: interactive-tutorial
-###########################################################################
-###
-### If your content is related to a product or service, apply one value from the either the ms.prod allowlist
-### or the ms.service allowlist. You can’t use both ms.prod and ms.service.
-###
-### If your content isn't about a product or service, you can omit both ms.prod and ms.service.
-###
-### The list of approved ms.prod values is here: https://review.learn.microsoft.com/help/platform/metadata-taxonomies?branch=main#msprod
-### The list of approved ms.service values is here: https://review.learn.microsoft.com/help/platform/metadata-taxonomies?branch=main#msservice
-### If you need to request new values, follow the process here: https://review.learn.microsoft.com/en-us/help/platform/metadata-allowlist-requests?branch=main
   ms.prod: TODO
   ms.service: TODO
-durationInMinutes: 1
-###########################################################################
-###
-### General guidance (https://review.docs.microsoft.com/learn-docs/docs/id-guidance-knowledge-check)
-###  - Questions are complete sentences ending with a question mark
-###  - No true/false questions
-###  - 3 answers per question
-###  - All answers about the same length
-###  - Numeric answers listed in sorted order
-###  - No "All of the above" and/or "None of the above" as answer choices
-###  - No "Not" or "Except" in questions
-###  - No second person ("you") in the questions or answers
-###  - Provide a meaningful explanation for both correct and incorrect answers
-###
-###########################################################################
+durationInMinutes: 4
 content: |
 quiz:
   questions:
@@ -45,50 +21,39 @@ quiz:
       explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
     - content: "/temp directory"
       isCorrect: false
-      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
+      explanation: "/temp directory is not the location where cloned content is placed."
     - content: "~/.bashrc directory"
       isCorrect: false
-      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
+      explanation: "~/.bashrc directory is not the location where cloned content is placed."
       content: Linuix directory
       isCorrect: false
-      explanation: "After creating a Codespace, the clone is placed into the /workspaces directory."
+      explanation: "Linuix directory is not the location where cloned content is placed."
   - content: "What is the maximum number of Codespaces that you can create per repository or branch?" 
     choices:
-    - content: "You can create an unlimited number of Codespaces per repository or branch, depending upon available space. When you reach an upper amount of resources, a message will display that an existing Codespace needs to removed/deleted before a new Codespace can be created."
-      isCorrect: true
-      explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time."
     - content: "You can only create two Codespaces."
       isCorrect: false
-      explanation: "You can have an unlimited number of Codespace per repository or even per branch. However, there are limits to the number of Codespaces you can create and run at the same time"
+      explanation: "Two is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces you can create and run at the same time"
     - content: "You can create a total of ten workspaces."
       isCorrect: false
-      explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
+      explanation: "Ten is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces that you can create and run at the same time."
       - content: "You can create a total of thirty workspaces."
       isCorrect: false
-      explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
-  - content: "Which statement best describes github.dev editor?"
-    choices:
-    - content: "The github.dev editor introduces a lightweight editing experience that runs entirely in your web browser."
+      explanation: "Thirty is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces that you can create and run at the same time."
+    - content: "You can create an unlimited number of Codespaces per repository or branch, depending upon available space. When you reach an upper amount of resources, a message will display that an existing Codespace needs to removed/deleted before a new Codespace can be created."
       isCorrect: true
-      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
-    - content: "The github.dev is a heavyweight code editing tool that you can only install on your local hard drive."
-      isCorrect: false
-      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
-    - content: "The github.dev editor is a DOS-based coding tool that enables users to access each other's code."
-      isCorrect: false
-      explanation: "The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor."
+      explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
   - content: "What happens when Codespace loses internet connectivity"
     choices:
-    - content: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When reestablished, you can access  Codespace in the same state as when the connection was lost."
+    - content: "If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
       isCorrect: true
       explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
     - content: "Codespace does not require an internet connection. I can access my Codespace regardless if I lose connectivity."
       isCorrect: false
-      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When reestablished, you can access  Codespace in the same state as when the connection was lost.
-    - content: "Codespace requires an internet connection, but any work will not be saved."
+      explanation: "Incorrect, a Codespace requires an internet connection."
+    - content: "If you lose internet connection while working on your Codespace, no changes will be saved"
       isCorrect: false
-      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When reestablished, you can access  Codespace in the same state as when the connection was lost.
-  - content: "When defines a Codespace’s lifecycle?"
+      explanation: "Incorrect, any uncommitted changes will be saved. When reestablished, you can access Codespace in the same state as when the connection was lost.
+  - content: "What defines the beginning of a Codespace’s lifecycle?"
     choices:
     - content: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
       isCorrect: true
