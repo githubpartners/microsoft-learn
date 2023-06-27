@@ -1,7 +1,6 @@
-# About GitHub Codespace
 GitHub Codespaces is a fully configured development environment hosted in the cloud. By using GitHub Codespaces, your workspace, along with all of your configured development environments, is available from any computer with access to the internet. GitHub Codespaces contains common languages, tools, and utilities for software development.
 
-## Learning objectives:
+## Learning objectives
 
 In this module, you will learn how to:
 
