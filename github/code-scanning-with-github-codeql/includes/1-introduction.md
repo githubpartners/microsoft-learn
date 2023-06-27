@@ -8,13 +8,13 @@ In this module, you will learn about the CodeQL static analysis tool and how the
 
 By the end of this module, you will be able to:
 
-* Understand CodeQL and how it analyzes code
-* Understand QL, a unique logic programming language
-* Set up CodeQL based code scanning in a GitHub repository
-* Reference a custom CodeQL query
-* Configure the language matrix in a CodeQL workflow
-* Learn how to use the CodeQL CLI to generate code scanning results and upload them to GitHub
-* Implement custom build steps
+- Understand CodeQL and how it analyzes code
+- Understand QL, a unique logic programming language
+- Set up CodeQL based code scanning in a GitHub repository
+- Reference a custom CodeQL query
+- Configure the language matrix in a CodeQL workflow
+- Learn how to use the CodeQL CLI to generate code scanning results and upload them to GitHub
+- Implement custom build steps
 
 ## Prerequisites
 
@@ -22,3 +22,5 @@ By the end of this module, you will be able to:
 - Necessary permissions to administrate your repository
 - Knowledge of GitHub Advanced Security's code scanning feature
 - Knowledge of GitHub Actions
+
+Next up, you'll learn how CodeQL is used by developers.
