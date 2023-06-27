@@ -1,25 +1,20 @@
-This exercise checks your knowledge on using GitHub to manage your dependencies.
-​
-This GitHub exercise is graded automatically once you've attempted a solution to the challenge. The results of your actions and helpful feedback are provided in real time within the `grade-learner` workflow logs.
-​
-Here are some helpful tips before you begin the exercise:
+This exercise will help walk you through how to view repository dependencies, view Dependabot alerts, and enable Dependabot security and version updates. You will also build dependencies, Dependabot alerts, pull requests to fix dependencies and version updates. 
 
-- Read the **About this exercise** section in the exercise's repository README to understand how the exercise works.
-- Follow the steps provided in the **Instructions** section to successfully complete the exercise.
-- To see the results of your exercise, go to the **Actions** tab of your cloned repository and select the most recent run on the **Grading** workflow.
-- Stuck on what to do? Revisit the content in the last unit or check out the **Useful resources** section in the exercise's repository README for more resources.
+## Getting started
 
-> [!NOTE]
-> A grading script exists under `.github/workflows/grading.yml`. You do not need to modify this workflow to complete this exercise. **Altering the contents in this workflow can break the exercise's ability to validate your actions, provide feedback, or grade the results**.
+When you click the _Start the exercise on GitHub_ button below, you'll be navigated to a public GitHub template repository that will prompt you to complete a series of small challenges. Before you can begin the exercise, complete the below tasks:
 
-This exercise is a challenge based on content covered in this module. It may take several attempts to complete the exercise, you can revisit previous content in this module, or go to some of the additional resources provided as many times as you want to find the solution.
+- Select the _Start course_ button or the _Use this template_ feature within the template repository. This will prompt you to create a new repository. We recommend creating a public repository, as private repositories will use Actions minutes.
+After you make your own repository from the template, wait about 20 seconds and refresh.
+
+- Follow the instructions in the repository's README to understand how the exercise works, its learning objectives, and how to successfully complete the exercise.
 
 When you've finished the exercise in GitHub, return here for:
-​
+
 > [!div class="checklist"]
-> - A quick knowledge check.
-> - A summary of what you've learned.
-> - A badge for completing this module.
-​
+> * A quick knowledge check 
+> * A summary of what you've learned
+> * To earn a badge for completing this module
+
 > [!div class="nextstepaction"]
-> [Start the exercise on GitHub](https://github.com/githubtraining/exercise-configure-dependabot)
+> [Start the exercise on GitHub]

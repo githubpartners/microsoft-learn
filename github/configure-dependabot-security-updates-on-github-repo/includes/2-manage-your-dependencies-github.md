@@ -1,10 +1,13 @@
+Dependabot is a GitHub tool that automates managing your repository’s dependencies. For Dependabot to work, the dependency graph must be enabled in a repository. Dependabot uses the dependency graph and the GitHub Advisory Database to provide three features:
+
+- **Dependabot alerts**: Notify you about vulnerable dependencies in public repositories.
+- **Security updates**: Automatically update or generate a pull request to update vulnerable dependencies.
+- **Version updates**: Automatically update all the packages used by your repository.
+
+In this unit you will learn about the dependency graph and the GitHub Advisory Database and how to manage your dependencies before we dive into Dependabot.
+ 
 It's common for software projects to depend on external packages or dependencies. Managing these external dependencies can consume resources and affect productivity. These dependencies can also include vulnerabilities that introduce security threats. A vulnerability is a flaw in a project’s code that can be exploited to damage the confidentiality, integrity, or availability of the project or other projects that use its code. You may not even notice vulnerabilities right away because they exist outside of the code that you work on.
 
-In this unit, you'll learn about the GitHub tools for managing your dependencies:
-
-- The dependency graph
-- The GitHub Advisory Database
-- Dependabot
 
 ## The dependency graph
 
@@ -86,13 +89,3 @@ GitHub collects information on vulnerabilities and includes it in the GitHub Adv
 - A combination of machine learning and human reviews to detect vulnerabilities in public commits on GitHub.
 - Security advisories reported on GitHub.
 - The npm Security advisories database.
-
-## Dependabot  
-
-Dependabot is a GitHub tool that automates managing your repository’s dependencies. For Dependabot to work, the dependency graph must be enabled in a repository. Dependabot uses the dependency graph and the GitHub Advisory Database to provide three features:
-
-- **Dependabot alerts**: Notify you about vulnerable dependencies in public repositories.
-- **Security updates**: Automatically update or generate a pull request to update vulnerable dependencies.
-- **Version updates**: Automatically update all the packages used by your repository.
-
-In the remaining units, you'll learn more about using Dependabot in your repository.
