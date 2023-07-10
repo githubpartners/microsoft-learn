@@ -80,6 +80,11 @@ If Codespace is inactive, or if you exit your Codespace without explicitly stopp
 
 When a Codespace times out, your data is kept from the last time your changes were saved. 
 
+## Losing the connection while using GitHub Codespaces
+A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When you reestablish the internet connection, you can access the Codespace in the same state that it was left in when the connection was lost.
+
+**NOTE: If you have an unstable internet connection, you should frequently commit and push your changes.**
+
 ## Closing or stopping a Codespace
 If you exit the Codespace without running the stop command (for example, by closing the browser tab) or leave the Codespace running without interaction, the Codespace and its running processes continue for the duration of the inactivity timeout period. The default inactivity timeout period is 30 minutes. You can define your personal timeout setting for Codespaces you create, but this may be overruled by an organization timeout policy. 
 
