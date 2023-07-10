@@ -24,6 +24,8 @@ When creating a new Codespace each time you work on a project, you should regula
 
 Repository administrators can enable GitHub Codespaces prebuilds for a repository to speed up Codespace creation.
 
+For an indepth walkthrough and step by step guidance see the two resources titled **A beginner’s guide to learning to code with GitHub Codespaces** and **Developing in codespace** in the resources section of the summary unit at the end of this module
+
 ## Codespace creation process
 
 :::image type="content" source="../media/codespaces-diagram.png" alt-text="Diagram of a github codespace and how it connects from your code editor and into a docker container.":::
@@ -33,36 +35,6 @@ When creating a GitHub Codespace, four processes must occur:
 2. A container is created
 3. Connecting to the Codespace
 4. Post-creation setup
-
-### VM and storage are assigned to your Codespace
-When creating a Codespace, a shallow clone is made of either the current repository or of the template repository if you're creating a Codespace from a template. A shadow clone is a repository created by limiting the depth of the history that duplicates from an original repository. The shallow clone enables you to have full root container access.
-
-The cloned repository saves to a Linux virtual machine (VM) that you can have as both dedicated and private. Having a dedicated VM ensures you have the entire set of computing resources from that machine. 
-
-### Creating a container
-Creating a GitHub Codespace uses a development container as the environment based on configurations defined in a devcontainer.json file or a Dockerfile. When using a blank template, or from a repository with no devcontainer.json file, Codespace employs a default image, with the appropriate languages and runtimes available.
-
-**NOTE: If you want to use Git hooks in your Codespace and apply anything in the git template directory to your Codespace, then you must set up hooks after the container is created.**
-
-Since your repository is cloned onto the host VM before the container is created, anything in the git template directory will not apply in your Codespace unless you set up hooks in your devcontainer.json configuration file using the postCreateCommand
-
-### Connecting to a Codespace
-After container creation and any other initialization has run, you can connect to Codespace one of the following four methods.
-- Web browser
-- Visual studio code
-- JetBrains IDE
-- GitHub CLI
-
-### Post-creation setup
-Once the Codespace connection is complete, the automated setup process may continue to build based on the configuration specified in the devcontainer.json file. You may see postCreateCommand and postAttachCommand run after connection completion.
-
-Once you have the Codespace complete, you may want to use Git hooks in your Codespace or set up hooks using the devcontainer.json lifecycle scripts, such as postCreateCommand.
- 
-You can enable a public dotfile repository using Codespaces. When implemented, your dotfiles will be cloned to the container and will invoke the install script. 
-
-When creating a Codespace from a repository, the repository’s entire history is copied down with a full clone. If creating a Codespace from a template, the full history of the template repository is not preserved, unless you are using the blank template. You will start with an initial commit for the contents of the template repository.
-
-**NOTE: During post-creation setup, you'll still be able to use the integrated terminal and make edits to your files, but take care to avoid any race conditions between your work and the commands that are running.**
 
 ## Saving changes in a Codespace
 When you connect to a Codespace through the web, auto-save is automatically enabled to save changes after a specific amount of time has passed. When you connect to a Codespace through Visual Studio Code running on your desktop, you must enable auto-save. 
