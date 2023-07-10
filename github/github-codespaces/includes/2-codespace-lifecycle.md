@@ -80,7 +80,7 @@ If Codespace is inactive, or if you exit your Codespace without explicitly stopp
 
 When a Codespace times out, your data is kept from the last time your changes were saved. 
 
-## Losing the connection while using GitHub Codespaces
+## Losing internet connection while using GitHub Codespaces
 A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When you reestablish the internet connection, you can access the Codespace in the same state that it was left in when the connection was lost.
 
 **NOTE: If you have an unstable internet connection, you should frequently commit and push your changes.**
