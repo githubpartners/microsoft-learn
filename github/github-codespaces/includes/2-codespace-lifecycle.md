@@ -69,6 +69,12 @@ When you connect to a Codespace through the web, auto-save is automatically enab
 
 Your work will save to a virtual machine in the cloud. You can close and stop a Codespace and return to the saved work at a later time. If you have unsaved changes, you’ll receive a prompt to save them before exiting. However, if your Codespace is deleted, then your work will be lost. To save your work, you must commit your changes and push them to your remote repository or publish your work to a new one if you created your Codespace from a template.
 
+## Opening an existing Codespace
+
+You can reopen any of your active or stopped codespaces on GitHub.com, in a JetBrains IDE, in Visual Studio Code, or by using GitHub CLI.
+
+To resume an existing Codespace you can either go to the respository where the Codespace exists and press "," key on your keyboard and **select Resume this codespace** or open https://github.com/codespaces in the browser, select the repository, and then select the existing Codespace. 
+
 ## Timeouts for a Codespace
 If Codespace is inactive, or if you exit your Codespace without explicitly stopping, the application times out after a period of inactivity and stops running. The default timeout is after 30 minutes of inactivity. You cannot customize the duration of the timeout period for new Codespaces.
 
