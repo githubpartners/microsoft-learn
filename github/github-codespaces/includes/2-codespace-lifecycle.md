@@ -26,7 +26,7 @@ Repository administrators can enable GitHub Codespaces prebuilds for a repositor
 
 For an indepth walkthrough and step by step guidance see the two resources titled **A beginner’s guide to learning to code with GitHub Codespaces** and **Developing in codespace** in the resources section of the summary unit at the end of this module
 
-## Codespace creation process
+### Codespace creation process
 
 :::image type="content" source="../media/codespaces-diagram.png" alt-text="Diagram of a github codespace and how it connects from your code editor and into a docker container.":::
 
@@ -36,23 +36,23 @@ When creating a GitHub Codespace, four processes must occur:
 3. Connecting to the Codespace
 4. Post-creation setup
 
-## Saving changes in a Codespace
+### Saving changes in a Codespace
 When you connect to a Codespace through the web, auto-save is automatically enabled to save changes after a specific amount of time has passed. When you connect to a Codespace through Visual Studio Code running on your desktop, you must enable auto-save. 
 
 Your work will save to a virtual machine in the cloud. You can close and stop a Codespace and return to the saved work at a later time. If you have unsaved changes, you’ll receive a prompt to save them before exiting. However, if your Codespace is deleted, then your work will be lost. To save your work, you must commit your changes and push them to your remote repository or publish your work to a new one if you created your Codespace from a template.
 
-## Opening an existing Codespace
+### Opening an existing Codespace
 
 You can reopen any of your active or stopped codespaces on GitHub.com, in a JetBrains IDE, in Visual Studio Code, or by using GitHub CLI.
 
 To resume an existing Codespace you can either go to the respository where the Codespace exists and press "," key on your keyboard and **select Resume this codespace** or open https://github.com/codespaces in the browser, select the repository, and then select the existing Codespace. 
 
-## Timeouts for a Codespace
+### Timeouts for a Codespace
 If Codespace is inactive, or if you exit your Codespace without explicitly stopping, the application times out after a period of inactivity and stops running. The default timeout is after 30 minutes of inactivity. You cannot customize the duration of the timeout period for new Codespaces.
 
 When a Codespace times out, your data is kept from the last time your changes were saved. 
 
-## Losing internet connection while using GitHub Codespaces
+### Losing internet connection while using GitHub Codespaces
 A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When you reestablish the internet connection, you can access the Codespace in the same state that it was left in when the connection was lost.
 
 **NOTE: If you have an unstable internet connection, you should frequently commit and push your changes.**
