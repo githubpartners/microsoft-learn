@@ -24,11 +24,6 @@ While ports can be forwarded automatically, they are not publicly accessible to 
 
 Running your application when you first land in your Codespace can make for fast inner development. As you edit, your changes are automatically saved and available on your forwarded port. To view changes, go back to the running application tab in your browser and refresh it.
 
-## Losing the connection while using GitHub Codespaces
-A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace. However, any uncommitted changes will be saved. When you reestablish the internet connection, you can access the Codespace in the same state that it was left in when the connection was lost.
-
-**NOTE: If you have an unstable internet connection, you should frequently commit and push your changes.**
-
 If you know that you will often be working offline, you can use your devcontainer.json file with the "Dev Containers" extension for VS code to build and attach to a local development container for your repository.
 
 ## Committing and pushing your changes
