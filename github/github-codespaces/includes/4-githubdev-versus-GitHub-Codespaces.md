@@ -1,13 +1,11 @@
-## GitHub.dev
-
 Similar to Codespaces, you can also utilize github.dev. 
 
 It is important that you understand the differences between the two types of coding software before you choose which is the best fit for you or your organization. 
 
-Let’s review the difference between the two in the next section. 
-GitHub.dev vs GitHub Codespace
 
-The github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor.
+One of the main differences between github.dev and GitHub Codespaces is that GitHub Codespaces provides terminal access.
+
+Meanwhile, github.dev editor introduces a lightweight editing experience that runs entirely in your browser. With the github.dev editor, you can navigate files and source code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in the editor.
 
 The github.dev editor is available to everyone for free on GitHub.com.
 
