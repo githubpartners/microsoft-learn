@@ -13,4 +13,3 @@ In this module, you will learn how to:
 
 ## Pre-requisites
 - A GitHub Account
-- Knowledge of basic computer code terminology and concepts
