@@ -1,26 +1,4 @@
-# Code with GitHub Codespaces and Visual Studio Code
-Create workflows that enable you to use Continuous Integration (CI) for your projects.
-
-## Welcome
-GitHub Codespaces is a development environment that's hosted in the cloud.
-
-Who this is for: 
-
-- Developers, DevOps Engineers, Engineering Managers, Product Managers.
-- What you'll learn: How to create a codespace, push code from a codespace, select a custom image, and customize a codespace.
-- What you'll build: A codespace with devcontainer.json files, customizations, and personalizations.
-- Prerequisites: If you need to learn about Visual Studio Code, read Visual Studio Code Docs first.
-- How long: This course can be completed in less than an hour.
-
-In this course, you will:
-- Create your first codespace
-- Add a custom image
-- Customize your codespace
-- Personalize your codespace
-
-## How to start this course
-
-https://github.com/new?template_owner=skills&template_name=code-with-codespaces&owner=%40me&name=skills-code-with-codespaces&description=My+clone+repository&visibility=public
+## How to start this exercise
 
 1. Right-click Start course hyperlink and open the link in a new tab.
    - In the new tab, most of the prompts will automatically fill in for you.
