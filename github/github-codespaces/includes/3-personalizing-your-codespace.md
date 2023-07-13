@@ -2,7 +2,7 @@ GitHub Codespaces is a dedicated environment for you. You can configure your rep
 
 ## What you can customize
 
-There are multultitude of ways for you to customize your Codespace. Let's review each one.
+There are a multitude of ways for you to customize your Codespace. Let's review each one.
 
 - **Settings Sync:** You can synchronize your Visual Studio Code settings between the desktop application and the VS Code web client.
 - **Dotfiles:** You can use a dotfiles repository to specify scripts, shell preferences, and other configurations.
@@ -18,15 +18,18 @@ There are multultitude of ways for you to customize your Codespace. Let's review
 - **Set the timeout:** A codespace will stop running after a period of inactivity. By default this period is 30 minutes, but you can specify a longer or shorter default timeout period in your personal settings on GitHub. The updated setting will apply to any new codespaces you create, or to existing codespaces the next time you start them.
 - **Configuring automatic deletion:** Inactive codespaces are automatically deleted. You can choose how long your stopped codespaces are retained, up to a maximum of 30 days.
 
-For more on how on customization and step by step instructions on how to do everything we reviewed above, check out article titled, "Personalize your codespace" in the Resources section at the end of this module. 
+For more on how on customization and step by step instructions on how to do everything we reviewed above, check out article titled, "Personalize your codespace" in the Resources section at the end of this module.
 
 ## Add to your Codespace with extensions or plugins
+
 You can add plugins and extensions within a Codespace to personalize your experience in JetBrains and VS Code.
 
 ### VS Code extensions
+
 If you work on your Codespaces in the VS Code desktop application or the web client, you can add any extensions you need from the Visual Studio Code Marketplace. For information on how extensions run in GitHub Codespaces, see Supporting Remote Development and GitHub Codespaces in the VS Code documentation.
 
 If you already use VS Code, you can use Settings Sync to automatically sync extensions, settings, themes, and keyboard shortcuts between your local instance and any Codespaces you create.
 
 ### JetBrains plugins
+
 If you work on your codespaces in a JetBrains IDE, you can add plugins from the JetBrains Marketplace.
