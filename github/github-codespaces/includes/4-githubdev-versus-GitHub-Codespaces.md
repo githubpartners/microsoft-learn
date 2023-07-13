@@ -4,7 +4,7 @@ You can use github.dev to simply navigate files and sources code repositories fr
 
 If you're wanting to do more heavy lifting like testing your code, you want to use GitHub Codespaces for that since github.dev has no compute associated with it. Because of this you won't be able to build and run your code or have terminal access. Meanwhile GitHub Codespaces you get the power of a personal Virtual Machine (VM) with terminal access, the same way you could use your local enviornment, just in the cloud. 
 
-Let's review the differences between the two with the table below. 
+Let's review the differences between Codespaces and github.dev with the table below. 
 
 ### Codespace vs. github.dev
 
