@@ -9,7 +9,7 @@ In this module, you will learn how to:
 - Describe GitHub Codespaces
 - Define the GitHub Codespace lifecycle and how to perform each step
 - Understand the different customizations you can personalize with GitHub Codespaces
-- Discern the differences between GitHub.dev and GitHub Codespaces
+- Understand when to use gitHub.dev and GitHub Codespaces
 
 ## Pre-requisites
 - A GitHub Account
