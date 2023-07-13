@@ -1,14 +1,10 @@
-In understanding GitHub Codespaces, it is also important we review github.dev, a free, lightweight editing experiences that runs entirely in your browser.
+You're probably asking yourself, when should I use GitHub Codespaces and when should I use github.dev?
 
-It is important that you understand the differences between the two types of coding software before you choose which is the best fit for you or your organization.
+You can use github.dev to simply navigate files and sources code repositories from GitHub, and make and commit code changes. You can open any repository, fork, or pull request in github.dev editor.
 
-The main difference between github.dev and GitHub Codespaces is that github.dev has no associated compute, so you won't be able to build and run your code or have terminal access. Meanwhile GitHub Codespaces you get the power of a persoanl Virtual Machine (VM) with terminal access, the same way you could use your local enviornment, just in the cloud. 
+If you're wanting to do more heavy lifting like testing your code, you want to use GitHub Codespaces for that since github.dev has no compute associated with it. Because of this you won't be able to build and run your code or have terminal access. Meanwhile GitHub Codespaces you get the power of a persoanl Virtual Machine (VM) with terminal access, the same way you could use your local enviornment, just in the cloud. 
 
-The github.dev editor provides many of the benefits of Visual Studio Code, such as search, syntax highlighting, and a source control view. You can also use Settings Sync to share your own VS Code settings with the editor.
-
-The github.dev editor runs entirely in your browser’s sandbox. The editor doesn’t clone the repository, but instead uses the GitHub Repositories extension to carry out most of the functionality that you will use. Your work is saved in the browser’s local storage until you commit it. You should commit your changes regularly to ensure that they're always accessible.
-
-You must be signed in to GitHub.com to use the github.dev editor.
+Let's review the differences between the two with the table below. 
 
 ### Codespace vs. github.dev
 
