@@ -1,0 +1,66 @@
+### YamlMime:ModuleUnit
+uid: learn.github-codespaces.knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: "TODO this field is for search engine optimization and is not user-visible; use 2-3 complete, grammatically correct sentences to describe the unit; include relevant search keywords."
+  ms.date: 5/24/2023
+  author: a-a-ron
+  ms.author: aastewar
+  ms.topic: interactive-tutorial
+  ms.prod: TODO
+  ms.service: TODO
+durationInMinutes: 4
+content: |
+quiz:
+  questions:
+  - content: "After creating a Codespace in which directory is the clone placed?"
+    choices:
+    - content: "/workspaces directory"
+      isCorrect: true
+      explanation: "After creating a Codespace, the clone is placed into the /workspace directory."
+    - content: "/temp directory"
+      isCorrect: false
+      explanation: "/temp directory is not the location where cloned content is placed."
+    - content: "~/.bashrc directory"
+      isCorrect: false
+      explanation: "~/.bashrc directory is not the location where cloned content is placed."
+    - content: Linux directory
+      isCorrect: false
+      explanation: "Linux directory is not the location where cloned content is placed."
+  - content: "What is the maximum number of Codespaces that you can create per repository or branch?" 
+    choices:
+    - content: "You can only create two Codespaces."
+      isCorrect: false
+      explanation: "Two is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces you can create and run at the same time"
+    - content: "You can create a total of ten workspaces."
+      isCorrect: false
+      explanation: "Ten is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces that you can create and run at the same time."
+    - content: "You can create a total of thirty workspaces."
+      isCorrect: false
+      explanation: "Thirty is not the maximum number of Codespaces you can create. However, there are limits to the number of Codespaces that you can create and run at the same time."
+    - content: "You can create an unlimited number of Codespaces per repository or branch, depending upon available space. When you reach an upper amount of resources, a message will display that an existing Codespace needs to removed/deleted before a new Codespace can be created."
+      isCorrect: true
+      explanation: "You can have an unlimited number of Codespaces per repository or even per branch. However, there are limits to the number of Codespaces that you can create and run at the same time."
+  - content: "What happens when Codespace loses internet connectivity"
+    choices:
+    - content: "If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
+      isCorrect: true
+      explanation: "A Codespace requires an internet connection. If the connection to the internet is lost while working in a Codespace, you will not be able to access your Codespace."
+    - content: "Codespace does not require an internet connection. I can access my Codespace regardless if I lose connectivity."
+      isCorrect: false
+      explanation: "Incorrect, a Codespace requires an internet connection."
+    - content: "If you lose internet connection while working on your Codespace, no changes will be saved"
+      isCorrect: false
+      explanation: "Incorrect, any uncommitted changes will be saved. When reestablished, you can access Codespace in the same state as when the connection was lost.
+  - content: "What defines the beginning of a Codespace’s lifecycle?"
+    choices:
+    - content: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
+      isCorrect: true
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
+    - content: "A Codespace's lifecycle begins immediately when GitHub is opened and ends when the software is closed."
+      isCorrect: false
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
+    - content: "A Codespace's lifecycle begins when repository is created and ends when it is deleted."
+      isCorrect: false
+      explanation: "A Codespace’s lifecycle begins when you create a Codespace and ends when you delete it."
