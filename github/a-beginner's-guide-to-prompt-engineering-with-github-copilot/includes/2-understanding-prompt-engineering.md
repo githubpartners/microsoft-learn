@@ -1,6 +1,6 @@
 :::image type="content" source="../media/prompt-engineering-header.png" alt-text="REPLACE-ME":::
 
-GitHub Copilot and other Generative AI coding tools are transforming the way developers approach daily coding tasks. From documenting your codebases to generating unit tests, these tools are helping to accelerate your workflows. However, just like with any emerging tech, there’s always a learning curve. As a result, it can sometimes feel frustrating when AI-powered coding assistants don’t generate the output you want. (Feel familiar?)
+GitHub Copilot and other Generative AI coding tools are transforming the way developers approach daily coding tasks. From documenting your codebases to generating unit tests, these tools are helping to accelerate your workflows. However, just like with any emerging tech, there’s always a learning curve. As a result, it can sometimes feel frustrating when AI-powered coding assistants don’t generate the output you want.
 
 It's not uncommon to feel frustrated when you don't receive the expected results, and then see examples of other developers being successful using these same tools. For example, someone using GitHub Copilot for the first time may ask it to solve a problem or provide a solution to a specific coding question only to get back an incongruent suggestion or no suggestion at all. This can be discouraging and can result in many hours tinkering with the tool and then feeling lucky if you got what you're looking for. But, as it turns out, these discouraging situations are most likely a result of using the tool wrong. In fact, there is a concept called prompt engineering that we'll explore in this module, and by using best practices, you'll be able to more accurately get the results and code suggestions you're looking for.
 
@@ -21,7 +21,7 @@ Under the hood, GitHub Copilot draws context from comments and code, instantly s
 
 Prompt engineering is the practice of giving an AI model specific instructions to produce the results you want. A prompt is a sequence of text or a line of code that can trigger a response from an AI model. These AI models will only do what you tell them to do, so the more specific the instructions the better the results will be. Being vague or simple in your instructions will often provide a wide variety of undesired results.
 
-Then same concept is true in everyday situations. For example, if you asked someone to make you a sandwich and the only instructions you gave them was, "Make me a sandwich", then it's very likely you'll get a sandwich that you didn't want. However, if instead you gave them a series of specific steps or instructions, you can get closer to your desired outcome. So, If I wanted a turkey, bacon, and avocado sandwich, I could get closer to my desired outcome with the following prompt.
+Then same concept is true in everyday situations. For example, if you asked someone to make you a sandwich and the only instructions you gave them was, "Make me a sandwich", then it's very likely you'll get a sandwich that you didn't want. However, if instead you gave them a series of specific steps or instructions, you can get closer to your desired outcome. So, If you wanted a turkey, bacon, and avocado sandwich, you could get closer to your desired outcome with the following prompt.
 
 - Open the bag of wheat bread and take two slices of the bread out of the bag
 - Lay the slices of bread side by side on the table
@@ -31,23 +31,23 @@ Then same concept is true in everyday situations. For example, if you asked some
 
 Without these detailed instructions, the desired outcome can be disappointing and frustrating. Similarly, GitHub Copilot needs clear, step-by-step instructions to generate the code that best helps you and provide you with your desired outcome.
 
-For a more code specific example, let's see what this would look like using p5.js, which is a JavaScript library for creative coding and is a fun way to create images with code. 
+For a more code specific example, let's see what this would look like using p5.js, which is a JavaScript library for creative coding and is a fun way to create images with code.
 
-### Example of a basic prompt
+### Using basic prompts
 
-Let's use GitHub Copilot to create an image of a boat using the below prompt.
+Using p5.js, let's say we want to create an image of a boat sailing on the ocean. Let's use GitHub Copilot to create an image of our boat using a basic prompt.
 
 `
 // draw a brown wooden boat on top of a blue ocean with a sun.
 `
 
-GitHub Copilot returns with the following code for the image. It's somewhat relevant but it's hard to tell if that is a boat. We can do better.
+GitHub Copilot returns with the following code for the image. It's somewhat relevant but it's hard to tell what's going on. The image looks more like a house or some structure instead of our desired boat. We can do better.
 
 :::image type="content" source="../media/simple-prompt.png" alt-text="REPLACE-ME":::
 
 Basics prompts such as this often return irrelevant suggestions—or sometimes no suggestions at all. As you learn how GitHub Copilot processes information, you can adjust the way you communicate with it and adjust your prompt to generate more accurate results. Let's try this again, but with a better prompt.
 
-### Example of a detailed prompt
+### Using detailed prompts
 
 When prompting GitHub Copilot, think of the process as having a conversation with someone: How should I break down the problem so we can solve it together? How would I approach pair programming with this person?
 
@@ -63,11 +63,13 @@ Let's expand on the above basic prompt and provide GitHub Copilot a big picture 
 */
 ```
 
-As you can see, GitHub Copilot was able to more accurately provide a result that we were looking for.
+With the better defined prompt, GitHub Copilot was able to more accurately provide a result that we were looking for.
 
 :::image type="content" source="../media/detailed-prompt.png" alt-text="REPLACE-ME":::
 
 When you provide specific details, GitHub Copilot will be able to generate more accurate code suggestions. For example, if you want GitHub Copilot to retrieve data from an API, you need to tell it what type of data you want to retrieve, how to process the data, and what API endpoint you're hoping to hit.
+
+In addition to providing detailed prompts, there are some best practices to keep in mind to further improve GitHub Copilot's ability to more accurately provide you with the best results. Here are 6 best practices for prompt crafting with GitHub Copilot. 
 
 ## 6 best practices for prompt crafting with GitHub Copilot
 
