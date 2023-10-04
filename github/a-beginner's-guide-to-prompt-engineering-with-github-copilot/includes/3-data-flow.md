@@ -6,7 +6,7 @@ Using the above image for reference, GitHub Copilot's data flow can be dissected
 
 - 1. Prompt is sent from the text editor to a proxy service
 - 2. Synthesize solutions using the OpenAI Model
-- 3. sdsdsd
+- 3. An array of prompt suggestions are sent back to the Copilot proxy service
 
 ## Step 1: Prompts are sent from the text editor to a proxy service
 
@@ -56,3 +56,4 @@ In general, the model is looking at the prompt that it was provided and then eva
 
 So that's essentially what this model is doing. It gets this encrypted prompt from the proxy service that's gone through this pre-processing scrub, decrypting it, and running it's token analysis before returning the prompt response back to the proxy service. That is the inbound data flow. These next steps go over the outbound data flow where everything goes back in the other direction.
 
+### An array of prompt suggestions are sent back to the Copilot proxy service
