@@ -167,6 +167,14 @@ steps:
 
 Notice that you use GitHub actions to check out the repository and to sign in to Azure. After that, you create the resources you need and deploy the container by using the Azure CLI.
 
+## Secure deployments
+
+You can take a more secure cloud deployment approach by configuring your workflow to request a short-lived access token directly from the cloud provider. This is because Actions supports OpenID Connect (OIDC). Without OIDC, you would need to store a credential or token as an encrypted secret in GitHub and present that secret to the cloud provider every time it runs. The new OIDC support gives you a very clear separation of the configuration that you need to manage in GitHub and the permissions that you need to manage in the cloud portal, making cloud deployments simpler to set up and more secure.
+
+You can configure the OIDC trust on your cloud provider and then update your workflows to request a short-lived access token from the cloud provider through OIDC. This means that you won’t need to add long-lived cloud credentials as GitHub secrets and worry about token expiry and rotating them. You have more granular control over which workflows can access cloud resources by using your cloud provider’s authentication (authN) and authorization (authZ) tools.
+
 ## Disable Actions workflows
 
 You can temporarily disable a GitHub Actions workflow either in the UI or through the API. This functionality allows you to stop a workflow from being triggered without having to delete the file from the repo. Later, you can easily re-enable it again from the UI or through the API.
+
+Next, we'll cover how to remove workflow artifacts from GitHub and change the default retention period.
