@@ -1,4 +1,4 @@
-GitHub Packages is a package-management service that makes it easy to publish public or private packages next to your source code.
+Next, you'll learn what a Package Repository is and when to use it. GitHub Packages is a package-management service that makes it easy to publish public or private packages next to your source code.
 
 > [!NOTE]
 > If you are not already familiar with GitHub, check out the [Introduction to GitHub](/learn/modules/introduction-to-github/) Learn module.
@@ -36,6 +36,49 @@ From complete applications to CLI utilities, containers are another form of dist
 - On a server or a cloud service
 
 :::image type="content" source="../media/2-github-packages-docker-image.png" alt-text="GitHub container image page, with image versions listing, statistics and instructions about how to install it." border="false":::
+
+## Safeguard your containers with new container signing
+
+GitHub has integrated sigstore support for container image signing into the GitHub Actions starter workflow. This means that you can sign your container images by default. Leveraging this workflow gives your users confidence that the container images they got from their container registry was the trusted code that you built and published.
+
+Cosign starts our journey with the sigstore tool for signing container images. It supports several types of signing keys and also supports adding key-value annotations to the signature. Keeping our example simple, let’s say you have a key you generated with `$ cosign generate-key-pair` that you’ve saved in your GitHub Actions repository secrets called `SIGNING_SECRET`. Then, in your Actions workflow, after you’ve built the container image, you’d sign it by doing something like:
+
+```
+...
+
+jobs:
+  build:
+    steps:
+      # ... build steps here
+
+      - uses: sigstore/cosign-installer@main
+
+      - name: Write signing key to disk (only needed for `cosign sign --key`)
+        run: echo "${{ secrets.SIGNING_SECRET }}" > cosign.key
+
+      - name: Sign container image
+        run: |
+          cosign sign --key cosign.key \
+            ghcr.io/your-org/your-repo:some-tag
+        env:
+          COSIGN_PASSWORD: ""
+```
+
+That’s it! That’s all you have to do to sign your container image in GitHub Actions and store it in GitHub Packages (or any of the other container registries cosign supports as well). You can then verify the signature when you pull the image, before a deploy:
+
+```
+$ cosign verify --key cosign.pub ghcr.io/your-org/your-repo:some-tag
+
+Verification for ghcr.io/your-org/your-repo:some-tag --
+The following checks were performed on each of these signatures:
+  - The cosign claims were validated
+  - The signatures were verified against the specified public key
+  - Any certificates were verified against the Fulcio roots.
+
+[{"critical":{"identity":{"docker-reference":"ghcr.io/your-org/your-repo"},"image":{"docker-manifest-digest":"sha256:..."},"type":"cosign container image signature"},"optional":{}}]
+```
+
+There are many other context variables you could pull in, depending on what properties you want to validate before deploying. It’s important to note another part of sigstore is fulcio, a root CA that issues signing certificates from OIDC tokens, as well as Rekor, a transparency log for certificates issued by fulcio. This means you can sign your container images with the GitHub-provided OIDC token in Actions, without provisioning or managing your own private key. This is what makes signing so easy. We can turn it on by default, because there’s no additional setup beyond adding a specific GitHub Actions workflow. This keyless signing includes Rekor, a public transparency log, meaning your username, organization name, repository name, and workflow name will be published to the public transparency log.
 
 ## Compare GitHub Packages to GitHub Releases
 
