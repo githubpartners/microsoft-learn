@@ -59,6 +59,16 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 </details>
 
+### GitHub Copilot
+[GitHub Copliot Introduction](https://learn.microsoft.com/en-us/training/modules/introduction-to-github-copilot/)
+
+<details><summary>Expand for the GitHub Copilot:</summary>
+
+  - [GitHub Copilot Fundamentals Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/copilot/)
+  - [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/)
+
+</details>
+
 ### GitHub Fundamentals
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/p0ygh4erdrmkp7)
 
@@ -83,19 +93,3 @@ Here are some helpful resources to use during your GitHub Content on Microsoft L
 
 - [Author pack](https://github.com/github/ms-learn-author-pack)
 - [Training and certification help](https://learn.microsoft.com/en-us/training/support/)
-
-## MS Learn contacts
-
-- **Thomas Petchel**: SR. Content Developer
-- **Nick Walker**: Content Strategy (DevOps/GitHub)
-- **Judy McNeil**: PM and Sr. Content Developer
-- **Brian Turner**: Sr. Manager Learn Content
-- **Bob Tabor**: Sr. Program Manager and Sr. Content Developer
-- **Helen Miller**: Sr. Instructional Designer
-- **John Papa**: Lead Cloud Developer Advocate
-
-## Hubbers resources
-
-Additional resources for GitHub employees.
-
-- [Slack channel](https://github.slack.com/archives/C0229GB8LN7)
