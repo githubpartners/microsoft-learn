@@ -6,12 +6,12 @@
 
 Learn, develop, and master essential Git and GitHub skills. Start here to jump-start your career and demonstrate foundational GitHub learning objectives through fun, interactive learning paths and modules.
 
-- [GitHub product landing page](https://docs.microsoft.com/en-us/learn/github/): landing page for GitHub modules/learning paths on MS Learn
-- [PowerBI](https://msit.powerbi.com/groups/me/reports/3ad7a43c-5334-4086-b762-8b4bdb2741ff/ReportSectionfb7e1b32d2783b56519d?ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&refreshAccessToken=true): Dashboard data of current module content on MS Learn
+- [GitHub product landing page](https://learn.microsoft.com/en-us/training/browse/?products=github): landing page for GitHub modules on MS Learn
+- [PowerBI](https://msit.powerbi.com/groups/me/reports/3ad7a43c-5334-4086-b762-8b4bdb2741ff/ReportSectionfb7e1b32d2783b56519d?ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&refreshAccessToken=true): dashboard data of current module content on MS Learn
 
 ## Learning Paths
 
-Below are the GitHub learning paths currently published on MS Learn. If you're looking for the complete module catalog, you can find it [here](https://docs.microsoft.com/en-us/users/githubtraining/collections/8p72c736z77gjp).
+Below are the GitHub learning paths currently published on MS Learn. If you're looking for the complete module catalog, you can find it [here](https://learn.microsoft.com/en-us/training/browse/?products=github&resource_type=learning%20path).
 
 ### GitHub Actions
 [Learning path landing page](https://docs.microsoft.com/en-us/users/githubtraining/collections/n5p4a5z7keznp5)
@@ -91,5 +91,4 @@ If you have content feedback or suggested changes for a Microsoft Learn module, 
 
 Here are some helpful resources to use during your GitHub Content on Microsoft Learn journey.
 
-- [Author pack](https://github.com/github/ms-learn-author-pack)
 - [Training and certification help](https://learn.microsoft.com/en-us/training/support/)
