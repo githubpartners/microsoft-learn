@@ -7,7 +7,6 @@
 Learn, develop, and master essential Git and GitHub skills. Start here to jump-start your career and demonstrate foundational GitHub learning objectives through fun, interactive learning paths and modules.
 
 - [GitHub product landing page](https://learn.microsoft.com/en-us/training/browse/?products=github): landing page for GitHub modules on MS Learn
-- [PowerBI](https://msit.powerbi.com/groups/me/reports/3ad7a43c-5334-4086-b762-8b4bdb2741ff/ReportSectionfb7e1b32d2783b56519d?ctid=72f988bf-86f1-41af-91ab-2d7cd011db47&refreshAccessToken=true): dashboard data of current module content on MS Learn
 
 ## Learning Paths
 
