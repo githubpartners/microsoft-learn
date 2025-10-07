@@ -54,7 +54,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 [Learning path GitHub Advanced Security Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/github-advanced-security-2)
 
-<details><summary>Expand for the GitHub Advanced Securuity modules:</summary>
+<details><summary>Expand for the GitHub Advanced Security modules:</summary>
 
   - [Introduction to GitHub Advanced Security](https://learn.microsoft.com/en-us/training/modules/introduction-github-advanced-security/)
   - [Configure Dependabot security updates on your GitHub repo](https://learn.microsoft.com/en-us/training/modules/configure-dependabot-security-updates-on-github-repo/)
