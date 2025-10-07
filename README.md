@@ -15,6 +15,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 ### GitHub Actions
 [Learning path GitHub Actions 1](https://learn.microsoft.com/en-us/training/paths/github-actions/)
+
 [Learning path GitHub Actions 2](https://learn.microsoft.com/en-us/training/paths/github-actions-2/)
 
 <details><summary>Expand for the GitHub Actions modules:</summary>
@@ -31,6 +32,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 ### GitHub Administration
 [Learning path GitHub fundamentals - Administration basics and product features Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/github-administration-products/)
+
 [Learning path GitHub fundamentals - Administration basics and product features Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/github-admin-2/github-admin-2)
 
 <details><summary>Expand for the GitHub Administration modules:</summary>
@@ -49,6 +51,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 ### GitHub Advanced Security
 [Learning path GitHub Advanced Security Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/github-advanced-security/)
+
 [Learning path GitHub Advanced Security Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/github-advanced-security-2)
 
 <details><summary>Expand for the GitHub Advanced Securuity modules:</summary>
@@ -66,6 +69,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 ### GitHub Copilot
 [GitHub Copilot Fundamentals Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/copilot/)
+
 [GitHub Copilot Fundamentals Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/gh-copilot-2/)
 <details><summary>Expand for the GitHub Copilot:</summary>
 
@@ -86,6 +90,7 @@ Below are the GitHub learning paths currently published on MS Learn. If you're l
 
 ### GitHub Fundamentals
 [Learning path GitHub Foundations Part 1 of 2](https://learn.microsoft.com/en-us/training/paths/github-foundations/)
+
 [Learning path GitHub Foundations Part 2 of 2](https://learn.microsoft.com/en-us/training/paths/github-foundations-2/)
 
 <details><summary>Expand for the GitHub Fundamentals modules:</summary>
