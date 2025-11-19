@@ -1,0 +1,92 @@
+name: Weekly Content Review and Comment
+
+on:
+  schedule:
+    - cron: '0 12 * * 1' # Every Monday at 12:00 UTC
+  workflow_dispatch:
+
+jobs:
+  review-issues-and-comment:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout repository (for context, not strictly necessary)
+        uses: actions/checkout@v4
+
+      - name: Gather all open issues (API call)
+        id: issue-list
+        uses: octokit/request-action@v2.x
+        with:
+          route: GET /repos/${{ github.repository }}/issues
+          parameters: |
+            state=open
+            per_page=100
+
+      - name: Categorize issues and prepare comment
+        id: summarize
+        run: |
+          echo "Parsing issues & categorizing for weekly review..."
+
+          echo '${{ steps.issue-list.outputs.data }}' > issues.json
+
+          COUNT_GRAMMAR=$(jq '[.[] | select(.title | test("grammar|spelling"; "i"))] | length' issues.json)
+          COUNT_DEPRECATED=$(jq '[.[] | select(.title | test("deprecated|outdated|codeql|dependabot|copilot projects|projects|security"; "i"))] | length' issues.json)
+          COUNT_SUGGESTED=$(jq '[.[] | select((.title | contains("[REPLACE_WITH_MODULE_TITLE]") | not) and (.title | test("update|improvement|copilot|prompt|exercise|action"; "i")))] | length' issues.json)
+          COUNT_OTHER=$(jq '[.[] | select(.title | test("broken|support|help|unable|issue|not issued|confused|experience"; "i"))] | length' issues.json)
+          COUNT_TEMPLATE=$(jq '[.[] | select(.title | contains("[REPLACE_WITH_MODULE_TITLE]"))] | length' issues.json)
+
+          REP_DEPRECATED=$(jq -r '[.[] | select(.title | test("deprecated|outdated|codeql|dependabot|copilot projects|projects|security"; "i"))][0].number // ""' issues.json)
+          REP_SUGGESTED=$(jq -r '[.[] | select((.title | contains("[REPLACE_WITH_MODULE_TITLE]") | not) and (.title | test("update|improvement|copilot|prompt|exercise|action"; "i")))][0].number // ""' issues.json)
+          REP_OTHER=$(jq -r '[.[] | select(.title | test("broken|support|help|unable|issue|not issued|confused|experience"; "i"))][0].number // ""' issues.json)
+          REP_TEMPLATE=$(jq -r '[.[] | select(.title | contains("[REPLACE_WITH_MODULE_TITLE]"))][0].number // ""' issues.json)
+
+          THIS_WEEK=$(date -u +'%Y-%m-%d')
+          COMMENT="**November 2025 Weekly Content Review Update**
+- Checked as of: $THIS_WEEK
+
+**Issue category counts this week:**
+- Grammar/Spelling: $COUNT_GRAMMAR
+- Deprecated/Outdated: $COUNT_DEPRECATED"" (e.g., #$REP_DEPRECATED)""
+- Suggested Content Updates: $COUNT_SUGGESTED"" (e.g., #$REP_SUGGESTED)""
+- Other: $COUNT_OTHER"" (e.g., #$REP_OTHER)""
+- Template-Incomplete: $COUNT_TEMPLATE"" (e.g., #$REP_TEMPLATE)""
+
+:octocat: :copilot: Mona (Copilot) has reviewed this update for a Hubber to take further action if needed.
+"
+
+          echo "$COMMENT" > comment.md
+          echo "COMMENT_PATH=comment.md" >> $GITHUB_ENV
+
+      - name: Create weekly update comment on November review issue
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          issue-number: 223
+          body-path: ${{ env.COMMENT_PATH }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+<!-- next steps
+
+Step 4: Confirm the Workflow is Active
+
+Go to your repo on GitHub.
+Click on the Actions tab.
+Look for "Weekly Content Review and Comment".
+You can also manually run it via “Run workflow” (since workflow_dispatch is enabled).
+Step 5: Check Comments on the November Review Issue
+
+The job will comment on issue number 223 ("Monthly Content Review Process for MS Learn Repository") with the updated weekly summary.
+Each Monday (or after a manual run), review the new comment for the count update.
+Requirements
+
+This workflow uses octokit/request-action for API calls, peter-evans/create-or-update-comment for posting, and requires jq (which is installed by default on GitHub’s runners).
+Make sure issue 223 exists and is the correct target for these updates.
+If issue numbers or logic changes, adjust the workflow accordingly.
+Customization Tips
+
+Adjust the regex matching logic in the jq filters to better fit your issue naming conventions.
+For other months, duplicate the workflow and update the target issue number and month text as needed.
+You can customize the schedule (the cron line) to run on a different day/time or more frequently.
+
+-->
