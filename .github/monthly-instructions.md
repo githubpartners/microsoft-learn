@@ -11,23 +11,23 @@ Step-by-step implementation guide
 1. Choose your branch and prepare directories
 - Decide your branch (example: update-monthly-review).
 - Ensure you have the following directories:
--- .github/workflows
--- .github/actions/triage-issue
+   - .github/workflows
+   - .github/actions/triage-issue
 
 2. Add the monthly triage workflow (creates current month’s triage issue and closes previous)
 - This workflow runs monthly. It ensures an issue titled “GitHub Triage: YYYY-MM” exists and closes last month’s triage issue if it is still open.
 
 3. Add the weekly triage comment workflow
 - This runs weekly and posts a comment to the current month’s triage issue with:
--- Counts by category
--- A list of each new issue in the last 7 days with one line per issue (e.g., “- #223”)
--- A note that Mona (Copilot) reviewed
+   - Counts by category
+   - A list of each new issue in the last 7 days with one line per issue (e.g., “- #223”)
+   - A note that Mona (Copilot) reviewed
 - It uses JavaScript via actions/github-script and the GitHub Search API (created:>=YYYY-MM-DD).
 
 4. Add the reusable composite action
 - Encapsulates logic to:
--- Optionally close last month’s triage issue
---Create the current month’s triage issue
+  - Optionally close last month’s triage issue
+  -Create the current month’s triage issue
 - This makes future reuse and refactoring easier.
 
 5. Add a workflow that uses the composite action
