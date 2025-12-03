@@ -1,0 +1,29 @@
+name: Monthly Triage via Composite Action
+
+on:
+  schedule:
+    - cron: '2 7 1 * *'  # 07:02 UTC on 1st day of month
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run composite triage action
+        uses: ./.github/actions/triage-issue
+        with:
+          close-previous: "true"
+          label: "triage"
+          body-template: |
+            ### Monthly GitHub Triage – {{MONTH}}
+            Auto-created via composite action.
+
+            **Goals**
+            - Classify new issues
+            - Close stale placeholders
+            - Prepare weekly summary comments
+
+            :octocat: :copilot: Automation initialized.
