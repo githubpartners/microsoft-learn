@@ -1,92 +1,136 @@
-name: Weekly Content Review and Comment
+name: Weekly Triage Issue Comment (Last 7 Days New Issues)
 
 on:
   schedule:
-    - cron: '0 12 * * 1' # Every Monday at 12:00 UTC
+    - cron: '27 13 * * 1'  # 13:27 UTC every Monday (8:27 AM EST in November)
   workflow_dispatch:
 
+permissions:
+  issues: write
+  contents: read
+
 jobs:
-  review-issues-and-comment:
+  weekly-triage-update:
     runs-on: ubuntu-latest
-    permissions:
-      issues: write
-      contents: read
     steps:
-      - name: Checkout repository (for context, not strictly necessary)
-        uses: actions/checkout@v4
-
-      - name: Gather all open issues (API call)
-        id: issue-list
-        uses: octokit/request-action@v2.x
-        with:
-          route: GET /repos/${{ github.repository }}/issues
-          parameters: |
-            state=open
-            per_page=100
-
-      - name: Categorize issues and prepare comment
-        id: summarize
+      - name: Determine date context
+        id: dates
         run: |
-          echo "Parsing issues & categorizing for weekly review..."
+          YEAR_MONTH=$(date -u +'%Y-%m')
+          START_DATE=$(date -u -d '7 days ago' +'%Y-%m-%d')
+          echo "year_month=$YEAR_MONTH" >> $GITHUB_OUTPUT
+          echo "start_date=$START_DATE" >> $GITHUB_OUTPUT
 
-          echo '${{ steps.issue-list.outputs.data }}' > issues.json
-
-          COUNT_GRAMMAR=$(jq '[.[] | select(.title | test("grammar|spelling"; "i"))] | length' issues.json)
-          COUNT_DEPRECATED=$(jq '[.[] | select(.title | test("deprecated|outdated|codeql|dependabot|copilot projects|projects|security"; "i"))] | length' issues.json)
-          COUNT_SUGGESTED=$(jq '[.[] | select((.title | contains("[REPLACE_WITH_MODULE_TITLE]") | not) and (.title | test("update|improvement|copilot|prompt|exercise|action"; "i")))] | length' issues.json)
-          COUNT_OTHER=$(jq '[.[] | select(.title | test("broken|support|help|unable|issue|not issued|confused|experience"; "i"))] | length' issues.json)
-          COUNT_TEMPLATE=$(jq '[.[] | select(.title | contains("[REPLACE_WITH_MODULE_TITLE]"))] | length' issues.json)
-
-          REP_DEPRECATED=$(jq -r '[.[] | select(.title | test("deprecated|outdated|codeql|dependabot|copilot projects|projects|security"; "i"))][0].number // ""' issues.json)
-          REP_SUGGESTED=$(jq -r '[.[] | select((.title | contains("[REPLACE_WITH_MODULE_TITLE]") | not) and (.title | test("update|improvement|copilot|prompt|exercise|action"; "i")))][0].number // ""' issues.json)
-          REP_OTHER=$(jq -r '[.[] | select(.title | test("broken|support|help|unable|issue|not issued|confused|experience"; "i"))][0].number // ""' issues.json)
-          REP_TEMPLATE=$(jq -r '[.[] | select(.title | contains("[REPLACE_WITH_MODULE_TITLE]"))][0].number // ""' issues.json)
-
-          THIS_WEEK=$(date -u +'%Y-%m-%d')
-          COMMENT="**November 2025 Weekly Content Review Update**
-- Checked as of: $THIS_WEEK
-
-**Issue category counts this week:**
-- Grammar/Spelling: $COUNT_GRAMMAR
-- Deprecated/Outdated: $COUNT_DEPRECATED"" (e.g., #$REP_DEPRECATED)""
-- Suggested Content Updates: $COUNT_SUGGESTED"" (e.g., #$REP_SUGGESTED)""
-- Other: $COUNT_OTHER"" (e.g., #$REP_OTHER)""
-- Template-Incomplete: $COUNT_TEMPLATE"" (e.g., #$REP_TEMPLATE)""
-
-:octocat: :copilot: Mona (Copilot) has reviewed this update for a Hubber to take further action if needed.
-"
-
-          echo "$COMMENT" > comment.md
-          echo "COMMENT_PATH=comment.md" >> $GITHUB_ENV
-
-      - name: Create weekly update comment on November review issue
-        uses: peter-evans/create-or-update-comment@v4
+      - name: Locate current triage issue
+        id: find-issue
+        uses: actions/github-script@v7
         with:
-          issue-number: 223
-          body-path: ${{ env.COMMENT_PATH }}
-          token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const ym = '${{ steps.dates.outputs.year_month }}';
+            const title = `GitHub Triage: ${ym}`;
 
-<!-- next steps
+            async function findIssue(title) {
+              const perPage = 100;
+              for (let page = 1; page < 50; page++) {
+                const { data } = await github.rest.issues.listForRepo({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  state: 'open',
+                  per_page: perPage,
+                  page
+                });
+                if (!data.length) break;
+                const hit = data.find(i => i.title === title);
+                if (hit) return hit;
+                if (data.length < perPage) break;
+              }
+              return null;
+            }
 
-Step 4: Confirm the Workflow is Active
+            const issue = await findIssue(title);
+            if (!issue) {
+              core.setFailed(`Current triage issue "${title}" not found. Run monthly triage workflow first.`);
+              return;
+            }
+            core.setOutput('issue_number', issue.number);
+            core.setOutput('issue_title', issue.title);
 
-Go to your repo on GitHub.
-Click on the Actions tab.
-Look for "Weekly Content Review and Comment".
-You can also manually run it via “Run workflow” (since workflow_dispatch is enabled).
-Step 5: Check Comments on the November Review Issue
+      - name: Collect new issues (last 7 days)
+        id: search
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const startDate = '${{ steps.dates.outputs.start_date }}';
+            const q = `repo:${context.repo.owner}/${context.repo.repo} is:issue is:open created:>=${startDate}`;
+            const perPage = 100;
+            let page = 1;
+            let allItems = [];
 
-The job will comment on issue number 223 ("Monthly Content Review Process for MS Learn Repository") with the updated weekly summary.
-Each Monday (or after a manual run), review the new comment for the count update.
-Requirements
+            while (true) {
+              const resp = await github.rest.search.issuesAndPullRequests({
+                q,
+                per_page: perPage,
+                page
+              });
+              const items = resp.data.items || [];
+              allItems = allItems.concat(items);
+              if (items.length < perPage || allItems.length >= 1000) break;
+              page++;
+            }
 
-This workflow uses octokit/request-action for API calls, peter-evans/create-or-update-comment for posting, and requires jq (which is installed by default on GitHub’s runners).
-Make sure issue 223 exists and is the correct target for these updates.
-If issue numbers or logic changes, adjust the workflow accordingly.
-Customization Tips
+            core.setOutput('raw_count', allItems.length);
+            core.setOutput('items_json', JSON.stringify(allItems));
 
-Adjust the regex matching logic in the jq filters to better fit your issue naming conventions.
-For other months, duplicate the workflow and update the target issue number and month text as needed.
-You can customize the schedule (the cron line) to run on a different day/time or more frequently.
+      - name: Build and post comment
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issueNumber = Number('${{ steps.find-issue.outputs.issue_number }}');
+            const startDate = '${{ steps.dates.outputs.start_date }}';
+            const ym = '${{ steps.dates.outputs.year_month }}';
+            const items = JSON.parse('${{ steps.search.outputs.items_json }}');
+            const daysBack = 7;
 
--->
+            const reTemplate = /\[REPLACE_WITH_MODULE_TITLE\]|N\/?A/i;
+            const reGrammar = /\b(grammar|spelling|typo|misspell(ed)?|proofread)\b/i;
+            const reDeprecated = /\b(deprecated|outdated|codeql|dependabot|projects?|security)\b/i;
+            const reSuggested = /\b(update|improvement|improve|copilot|prompt|exercise|action|module|enterprise)\b/i;
+            const reOther = /\b(broken|support|help|unable|issue|not issued|confused|experience|certificate)\b/i;
+
+            function categorize(title) {
+              if (reTemplate.test(title)) return 'template';
+              if (reGrammar.test(title)) return 'grammar';
+              if (reDeprecated.test(title)) return 'deprecated';
+              if (!reTemplate.test(title) && reSuggested.test(title)) return 'suggested';
+              if (reOther.test(title)) return 'other';
+              if (/update|request/i.test(title) && !reTemplate.test(title)) return 'suggested';
+              return 'other';
+            }
+
+            const buckets = { grammar: [], deprecated: [], suggested: [], other: [], template: [] };
+            for (const i of items) buckets[categorize(i.title)].push(i);
+
+            const rep = arr => arr.length ? `#${arr[0].number}` : '';
+            const todayStr = new Date().toISOString().split('T')[0];
+            const allIssueLines = items.map(i => `- #${i.number}`).join('\n');
+
+            let md = `**${ym} Weekly Triage Update (Issues opened since ${startDate})**\n`;
+            md += `- Checked as of: ${todayStr} (UTC)\n\n`;
+            md += `**Counts (last ${daysBack} days):**\n`;
+            md += `- Grammar/Spelling: ${buckets.grammar.length} ${rep(buckets.grammar)}\n`;
+            md += `- Deprecated/Outdated: ${buckets.deprecated.length} ${rep(buckets.deprecated)}\n`;
+            md += `- Suggested Content Updates: ${buckets.suggested.length} ${rep(buckets.suggested)}\n`;
+            md += `- Other: ${buckets.other.length} ${rep(buckets.other)}\n`;
+            md += `- Template-Incomplete: ${buckets.template.length} ${rep(buckets.template)}\n\n`;
+            md += `_Total new issues: ${items.length}_\n\n`;
+            md += `**Issue References (Last 7 Days):**\n${allIssueLines}\n\n`;
+            md += `:octocat: :copilot: Mona (Copilot) has reviewed these new issues.\n`;
+            md += `<!-- Search query: repo:${context.repo.owner}/${context.repo.repo} is:issue is:open created:>=${startDate} -->\n`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: md
+            });
+            core.notice(`Posted weekly triage update to #${issueNumber}.`);
