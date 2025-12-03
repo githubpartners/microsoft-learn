@@ -1,4 +1,4 @@
-Below is a consolidated, step-by-step guide and the complete, updated code to implement an automated process that:
+# Below is a consolidated, step-by-step guide and the complete, updated code to implement an automated process that:
 
 - Ensures a monthly “GitHub Triage: YYYY-MM” issue exists and closes last month’s issue if still open
 - Posts weekly comments to the current month’s triage issue, listing and categorizing issues opened in the last 7 days, with each issue reference on its own line
@@ -6,7 +6,7 @@ Below is a consolidated, step-by-step guide and the complete, updated code to im
 - Offers a workflow that uses the composite action
 - Follow the steps and use the files exactly as provided.
 
-Step-by-step implementation guide
+# Step-by-step implementation guide
 
 1. Choose your branch and prepare directories
 - Decide your branch (example: update-monthly-review).
