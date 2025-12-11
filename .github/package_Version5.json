@@ -1,0 +1,16 @@
+{
+  "name": "github-triage-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "JS-driven automation for monthly triage and weekly issue comments.",
+  "scripts": {
+    "triage": "node .github/scripts/ensureMonthlyTriage.js",
+    "weekly": "node .github/scripts/weeklyTriageComment.js"
+  },
+  "dependencies": {
+    "@octokit/core": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
