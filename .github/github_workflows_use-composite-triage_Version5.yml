@@ -1,0 +1,22 @@
+name: Monthly Triage via Composite Action
+
+on:
+  schedule:
+    - cron: '2 7 1 * *'  # 07:02 UTC on 1st day of month
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Run composite triage action
+        uses: ./.github/actions/triage-issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: githubpartners
+          REPO_NAME: microsoft-learn
