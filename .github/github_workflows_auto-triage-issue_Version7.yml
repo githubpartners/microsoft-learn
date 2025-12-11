@@ -1,0 +1,32 @@
+name: Auto Create Monthly GitHub Triage Issue (Create + Close Previous)
+
+on:
+  schedule:
+    - cron: '5 7 1 * *'  # 07:05 UTC on the 1st day of each month
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  ensure-triage-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run JS to create/close triage issue
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: githubpartners
+          REPO_NAME: microsoft-learn
+        run: node .github/scripts/ensureMonthlyTriage.js
