@@ -1,0 +1,32 @@
+name: Weekly Triage Issue Comment (Last 7 Days New Issues)
+
+on:
+  schedule:
+    - cron: '27 13 * * 1'  # 13:27 UTC every Monday (8:27 AM EST in November)
+  workflow_dispatch:
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  weekly-triage-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run JS to post weekly triage comment
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO_OWNER: githubpartners
+          REPO_NAME: microsoft-learn
+        run: node .github/scripts/weeklyTriageComment.js
