@@ -1,0 +1,87 @@
+name: Issue Triage Agent
+
+on:
+  issues:
+    types: [opened]
+
+  schedule:
+    - cron: "0 */6 * * *"
+
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode: single or all"
+        required: true
+        default: "all"
+        type: choice
+        options:
+          - all
+          - single
+
+      issue_number:
+        description: "Issue number (required if mode = single)"
+        required: false
+        type: string
+
+
+permissions:
+  issues: write
+  contents: read
+
+
+jobs:
+  triage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install gh -y
+
+      # -----------------------------
+      # SINGLE ISSUE (new issue event)
+      # -----------------------------
+      - name: Process new issue
+        if: github.event_name == 'issues'
+        run: |
+          echo "Processing issue #${{ github.event.issue.number }}"
+          python triage.py '${{ toJson(github.event.issue) }}'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------------
+      # MANUAL SINGLE ISSUE
+      # -----------------------------
+      - name: Process single issue (manual)
+        if: github.event_name == 'workflow_dispatch' && inputs.mode == 'single'
+        run: |
+          if [ -z "${{ inputs.issue_number }}" ]; then
+            echo "❌ issue_number is required for single mode"
+            exit 1
+          fi
+
+          echo "Processing manual issue #${{ inputs.issue_number }}"
+          python triage.py "${{ inputs.issue_number }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # -----------------------------
+      # BATCH MODE (scheduled + manual)
+      # -----------------------------
+      - name: Process all open issues
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'all')
+        run: |
+          echo "Fetching all open issues..."
+
+          gh issue list \
+            --state open \
+            --json number,title,body,labels \
+            > issues.json
+
+          python triage_batch.py issues.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
