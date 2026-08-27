@@ -2,7 +2,7 @@ name: MS Learn Module Update Request
 description: Use this form to submit a module update request 
 title: "MS Learn Module Update Request: [REPLACE_WITH_MODULE_TITLE]"
 labels: [MS Learn Update]
-assignees: ["a-a-ron", "chukslord1"]
+assignees: ["a-a-ron", "chukslord1", "v-carlygray", "v-antonyvieira"]
 body:
   - type: markdown
     attributes:
