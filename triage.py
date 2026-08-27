@@ -3,7 +3,11 @@ import sys
 import json
 import subprocess
 import re
-from issue_analyzer import intelligent_classify, generate_context_aware_comment
+from issue_analyzer import (
+    generate_context_aware_comment,
+    intelligent_classify,
+    is_skills_exercise_issue,
+)
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN")
 
@@ -50,6 +54,8 @@ def extract_module_mentions(text):
 
 def classify(issue):
     """Use intelligent AI-powered analysis for classification"""
+    if is_skills_exercise_issue(issue):
+        return "skills_review_needed"
     category, confidence, analysis = intelligent_classify(issue)
     issue['_analysis'] = analysis
     issue['_confidence'] = confidence
@@ -87,10 +93,19 @@ def process(issue):
         comment(issue_number, comment_text)
         add_label(issue_number, "needs-review")
 
+    elif result == "skills_review_needed":
+        comment(
+            issue_number,
+            "Skills exercise review needed: Moving this complaint to the "
+            "Skills exercise team to address.",
+        )
+        add_label(issue_number, "skills-review-needed")
+
     elif result == "needs_context":
         comment_text = generate_context_aware_comment(analysis, result)
         comment(issue_number, comment_text)
         add_label(issue_number, "needs-context")
+        close(issue_number)
 
     elif result == "spam":
         comment(issue_number,

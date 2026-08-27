@@ -2,7 +2,7 @@ name: MS Learn Module Update Request
 description: Use this form to submit a module update request 
 title: "MS Learn Module Update Request: [REPLACE_WITH_MODULE_TITLE]"
 labels: [MS Learn Update]
-assignees: ["a-a-ron", "rmallorybpc", "camihmerhar"]
+assignees: ["a-a-ron", "chukslord1", "v-carlygray", "v-antonyvieira"]
 body:
   - type: markdown
     attributes:
@@ -48,6 +48,14 @@ body:
         - "Identify security vulnerabilities in your codebase with CodeQL"
         - "Code scanning with GitHub CodeQL"
         - "GitHub administration for GitHub Advanced Security"
+  - type: input
+    id: content-url
+    attributes:
+      label: Content URL
+      description: Provide the direct Microsoft Learn URL for the content you want changed.
+      placeholder: https://learn.microsoft.com/training/modules/...
+    validations:
+      required: true
   - type: checkboxes
     id: tasks
     attributes:
