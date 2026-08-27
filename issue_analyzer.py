@@ -20,22 +20,22 @@ import json
 # ─────────────────────────────────────────────────────────────────
 _TEMPLATE_NOISE_PATTERNS = [
     # Section headers
-    r"which of the ms learn modules from the dropdown.*?\?",
-    r"additional information",
-    r"information about the requested update",
+    r"^.*which of the ms learn modules from the dropdown.*?\?\s*$",
+    r"^.*additional information\s*$",
+    r"^.*information about the requested update\s*$",
     # Checkbox options (filled or unfilled)
     r"-?\s*\[[ x]\]\s*fix a broken user experience[^\n]*",
     r"-?\s*\[[ x]\]\s*update incorrect information[^\n]*",
     r"-?\s*\[[ x]\]\s*add new content to the module[^\n]*",
     r"-?\s*\[[ x]\]\s*some other request[^\n]*",
     # Bare option lines (when the user didn't even check a box)
-    r"^\s*fix a broken user experience[^\n]*$",
-    r"^\s*update incorrect information[^\n]*$",
-    r"^\s*add new content to the module[^\n]*$",
-    r"^\s*some other request[^\n]*$",
+    r"^\s*-?\s*fix a broken user experience[^\n]*$",
+    r"^\s*-?\s*update incorrect information[^\n]*$",
+    r"^\s*-?\s*add new content to the module[^\n]*$",
+    r"^\s*-?\s*some other request[^\n]*$",
     # Placeholders / "no response" answers
     r"\[replace_with[^\]]*\]",
-    r"^\s*no response\s*$",
+    r"^\s*[*_~`]*\s*no response\s*[*_~`]*\s*$",
     r"^\s*none\s*$",
 ]
 
@@ -55,6 +55,47 @@ def _strip_template_noise(text):
 def _is_effectively_empty(text):
     """True if, after stripping template noise, there is no real user content."""
     return len(_strip_template_noise(text or "").split()) < 5
+
+
+def _module_selected_without_update_details(body):
+    """True when the issue form names a module but its details field is empty."""
+    if not body:
+        return False
+
+    module_match = re.search(
+        r"which of the ms learn modules from the dropdown.*?\?\s*"
+        r"(?P<module>.*?)\s*#+\s*additional information",
+        body,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    details_match = re.search(
+        r"#+\s*information about the requested update\s*(?P<details>.*)$",
+        body,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if not module_match or not details_match:
+        return False
+
+    module = module_match.group("module").strip(" \t\r\n*_~`")
+    details = details_match.group("details").strip(" \t\r\n*_~`")
+    has_module = bool(module) and module.lower() not in {"none", "no response"}
+    has_details = bool(details) and details.lower() not in {"none", "no response"}
+    return has_module and not has_details
+
+
+def is_skills_exercise_issue(issue):
+    """Return whether user-authored text routes to the Skills exercise team."""
+    title = issue.get("title") or ""
+    body = _strip_template_noise(issue.get("body") or "")
+    user_text = f"{title}\n{body}"
+    return bool(
+        re.search(
+            r"\bgithub\s+skills\b|\bskills(?:[-/][a-z0-9]+)+\b",
+            user_text,
+            re.IGNORECASE,
+        )
+        or re.search(r"\bexercises?\b", user_text, re.IGNORECASE)
+    )
 
 
 class IssueAnalyzer:
@@ -372,6 +413,12 @@ def intelligent_classify(issue):
     
     analyzer = IssueAnalyzer(title, body)
     analysis = analyzer.analyze()
+
+    # A module selection is useful routing information, but it is not an
+    # actionable request by itself. Close these as needs_context and invite
+    # the author to reopen once the details field contains a concrete change.
+    if _module_selected_without_update_details(body):
+        return "needs_context", analysis["confidence"], analysis
     
     # All scores are already on a 0-100 scale
     confidence    = analysis["confidence"]
@@ -468,13 +515,13 @@ Current info available:
 - Issue length: {context.get('issue_length')} words"""
     
     else:  # needs_context
-        return f"""❓ **More Context Needed**
+        return f"""❓ **Closed: More Specific Details Needed**
 
 **Analysis:**
 - Issue Type: {', '.join(issue_types) or 'Unclear'}
 - Specificity Score: {analysis.get('specificity_score', 0)}/100
 
-Please provide:
+This issue does not contain a specific action we can take, so it has been closed for now. Please reopen it when you can provide:
 1. **Direct link** to the MS Learn module or page
 2. **Specific section** affected (unit, knowledge check, section, etc.)
 3. **Current state:** What is shown/said now?

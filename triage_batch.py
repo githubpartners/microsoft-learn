@@ -4,7 +4,12 @@ import subprocess
 import re
 import sys
 from datetime import datetime
-from issue_analyzer import intelligent_classify, generate_context_aware_comment, generate_pr_description
+from issue_analyzer import (
+    generate_context_aware_comment,
+    generate_pr_description,
+    intelligent_classify,
+    is_skills_exercise_issue,
+)
 from ai_triage import ai_or_fallback
 
 REPO = os.environ.get("GITHUB_REPOSITORY")
@@ -49,6 +54,7 @@ TRIAGE_LABELS = frozenset({
     "auto-fix-attempted",
     "needs-review",
     "needs-context",
+    "skills-review-needed",
     "spam",
 })
 
@@ -139,6 +145,10 @@ def classify(issue):
     cached on the issue dict for downstream steps. The function returns the
     classification string for backward compatibility with existing callers.
     """
+    if is_skills_exercise_issue(issue):
+        issue["_confidence"] = 100
+        return "skills_review_needed"
+
     # If we've already classified this issue in this run, reuse it. This avoids
     # paying for the same LLM call twice (once during the auto_fix pre-scan,
     # once during process_issue) and avoids flaky non-determinism between calls.
@@ -1008,10 +1018,7 @@ def process_auto_fix_issue(issue, repo_path, fork_slug=None):
                     f"{validation_reason}"
                 )
 
-            comment_path = f"/tmp/pr-comment-{issue_num}.txt"
-            with open(comment_path, "w") as f:
-                f.write(comment_body)
-            gh(f'issue comment {issue_num} -F {comment_path}')
+            _post_comment(issue_num, comment_body)
             return True
         else:
             # Revert file if commit failed
@@ -1030,8 +1037,65 @@ def _post_comment(issue_num, body):
     """Post a comment via a temp file so multi-line / special-char bodies survive."""
     path = f"/tmp/triage-comment-{issue_num}.txt"
     with open(path, "w") as f:
-        f.write(body)
+        f.write(f"{body.rstrip()}\n\n<!-- issue-triage-agent -->\n")
     gh(f"issue comment {issue_num} -F {path}")
+
+
+_TRIAGE_COMMENT_MARKERS = (
+    "<!-- issue-triage-agent -->",
+    "🧠 **Auto-triage Analysis:**",
+    "🚩 **Review Needed**",
+    "❓ **More Context Needed**",
+    "❓ **Closed: More Specific Details Needed**",
+    "🗑️ **Closed:**",
+    "⚠️ I classified this as auto-fixable",
+    "This issue has been classified as",
+)
+
+
+def _delete_previous_triage_comments(issue_num):
+    """Delete earlier comments created by this triage workflow."""
+    result = subprocess.run(
+        [
+            "gh", "api", "--paginate", "--slurp",
+            f"repos/{REPO}/issues/{issue_num}/comments",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    if result.returncode != 0:
+        print(f"⚠️ Could not list previous triage comments for issue #{issue_num}: "
+              f"{result.stderr.strip()}")
+        return
+
+    try:
+        pages = json.loads(result.stdout)
+    except json.JSONDecodeError as exc:
+        print(f"⚠️ Could not parse comments for issue #{issue_num}: {exc}")
+        return
+
+    comments = [comment for page in pages for comment in page]
+    for comment in comments:
+        author = (comment.get("user") or {}).get("login")
+        body = comment.get("body") or ""
+        if author != "github-actions[bot]" or not any(
+            marker in body for marker in _TRIAGE_COMMENT_MARKERS
+        ):
+            continue
+        delete = subprocess.run(
+            [
+                "gh", "api", "--method", "DELETE",
+                f"repos/{REPO}/issues/comments/{comment['id']}",
+            ],
+            capture_output=True,
+            text=True,
+        )
+        if delete.returncode == 0:
+            print(f"🧹 Deleted previous triage comment {comment['id']} "
+                  f"from issue #{issue_num}")
+        else:
+            print(f"⚠️ Could not delete triage comment {comment['id']} "
+                  f"from issue #{issue_num}: {delete.stderr.strip()}")
 
 
 def _comment_for(issue, classification, override=None):
@@ -1058,6 +1122,8 @@ def process_issue(issue, repo_path=None, fork_slug=None):
     if decision.get("reasoning"):
         print(f"AI reasoning: {decision['reasoning'][:240]}")
     print(f"{'='*60}")
+
+    _delete_previous_triage_comments(issue_num)
 
     # Ensure triaged label
     add_label(issue_num, "triaged")
@@ -1089,9 +1155,19 @@ def process_issue(issue, repo_path=None, fork_slug=None):
         _post_comment(issue_num, _comment_for(issue, result))
         add_label(issue_num, "needs-review")
 
+    elif result == "skills_review_needed":
+        _post_comment(
+            issue_num,
+            "🧰 **Skills Exercise Review Needed**\n\n"
+            "This report concerns a GitHub Skills training or exercise. "
+            "We are moving the complaint to the Skills exercise team to address.",
+        )
+        add_label(issue_num, "skills-review-needed")
+
     elif result == "needs_context":
         _post_comment(issue_num, _comment_for(issue, result))
         add_label(issue_num, "needs-context")
+        gh(f'issue close {issue_num}')
 
     elif result == "spam":
         _post_comment(
@@ -1180,7 +1256,10 @@ def main():
             issue_num = issue.get("number", "unknown")
             print(f"❌ Error processing issue #{issue_num}: {e}")
             try:
-                gh(f'issue comment {issue_num} --body "❌ Error during triage: {str(e)[:100]}"')
+                _post_comment(
+                    issue_num,
+                    f"❌ Error during triage: {str(e)[:100]}",
+                )
             except Exception:
                 pass
 
