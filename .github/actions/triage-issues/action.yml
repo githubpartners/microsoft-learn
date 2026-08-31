@@ -1,0 +1,101 @@
+name: "triage-issue"
+description: "Composite action to create monthly triage issue and optionally close previous month"
+inputs:
+  close-previous:
+    description: "Whether to close last month’s triage issue (true/false)"
+    required: false
+    default: "true"
+  label:
+    description: "Label to apply to triage issue"
+    required: false
+    default: "triage"
+  body-template:
+    description: "Custom body template (supports {{MONTH}} placeholder)"
+    required: false
+    default: |
+      ### Monthly GitHub Triage – {{MONTH}}
+
+      This automatically generated issue tracks triage activities for {{MONTH}}.
+
+      **Purpose**
+      - Collect new issues for classification.
+      - Track placeholders.
+      - Consolidate duplicates.
+
+      **Automation**
+      - Weekly summary comments (companion workflow).
+      - Future enhancements: stale detection, cross-links.
+
+      :octocat: :copilot: Created automatically.
+runs:
+  using: "composite"
+  steps:
+    - name: Compute dates
+      id: dates
+      shell: bash
+      run: |
+        CURR=$(date -u +'%Y-%m')
+        PREV=$(date -u -d "$(date -u +%Y-%m-01) -1 month" +'%Y-%m')
+        echo "curr=$CURR" >> $GITHUB_OUTPUT
+        echo "prev=$PREV" >> $GITHUB_OUTPUT
+
+    - name: Ensure triage issue
+      uses: actions/github-script@v7
+      with:
+        script: |
+          const closePrev = (process.env.INPUT_CLOSE_PREVIOUS || 'true').toLowerCase() === 'true';
+          const label = process.env.INPUT_LABEL || 'triage';
+          const bodyTemplate = process.env.INPUT_BODY_TEMPLATE;
+          const curr = '${{ steps.dates.outputs.curr }}';
+          const prev = '${{ steps.dates.outputs.prev }}';
+          const currTitle = `GitHub Triage: ${curr}`;
+          const prevTitle = `GitHub Triage: ${prev}`;
+
+          async function findIssue(title) {
+            const perPage = 100;
+            for (let page = 1; page < 50; page++) {
+              const { data } = await github.rest.issues.listForRepo({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'all',
+                per_page: perPage,
+                page
+              });
+              if (!data.length) break;
+              const hit = data.find(i => i.title === title);
+              if (hit) return hit;
+              if (data.length < perPage) break;
+            }
+            return null;
+          }
+
+          if (closePrev) {
+            const prevIssue = await findIssue(prevTitle);
+            if (prevIssue && prevIssue.state === 'open') {
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: prevIssue.number,
+                state: 'closed'
+              });
+              core.info(`Closed previous triage issue #${prevIssue.number} (${prevTitle})`);
+            } else {
+              core.info(`Previous triage issue not open or not found (${prevTitle}).`);
+            }
+          }
+
+          const currIssue = await findIssue(currTitle);
+          if (currIssue) {
+            core.info(`Current triage issue already exists: #${currIssue.number}`);
+            return;
+          }
+
+          const body = bodyTemplate.replace(/{{MONTH}}/g, curr);
+          const created = await github.rest.issues.create({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            title: currTitle,
+            body,
+            labels: [label]
+          });
+          core.notice(`Created triage issue #${created.data.number} (${currTitle}).`);
