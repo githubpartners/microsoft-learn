@@ -1,0 +1,46 @@
+### YamlMime:Module
+uid: learn.github.control-copilot-costs-model-choice-governance
+metadata:
+  title: Control Copilot costs, model choice, and governance
+  description: Learn to monitor Copilot usage, choose models for business tasks, set spending controls, and govern agentic work with human review.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: Control Copilot costs, model choice, and governance
+summary: Learn to monitor Copilot usage, choose models for business tasks, set spending controls, and govern agentic work with human review.
+abstract: |
+  In this module, you'll:
+  - Explain what drives Copilot costs, including tokens, context, model prices, AI credits, and GitHub Actions minutes.
+  - Read usage reports, find the cause of an increase, and set spending controls.
+  - Choose a model and its settings for the task.
+  - Limit what the agent can reach and keep human review where it matters.
+  - Check AI-generated work against requirements and know when to stop.
+prerequisites: |
+  - A GitHub account.
+  - A basic understanding of GitHub repositories, branches, commits, issues, and pull requests.
+  - Familiarity with GitHub Copilot and its basic capabilities.
+iconUrl: /learn/achievements/generic-badge.svg
+ratingEnabled: true
+levels:
+- intermediate
+roles:
+- business-user
+- administrator
+- business-owner
+products:
+- github
+subjects:
+- artificial-intelligence
+units:
+- learn.github.control-copilot-costs-model-choice-governance.1-introduction
+- learn.github.control-copilot-costs-model-choice-governance.2-understand-copilot-cost-model
+- learn.github.control-copilot-costs-model-choice-governance.3-read-manage-usage
+- learn.github.control-copilot-costs-model-choice-governance.4-choose-model-operating-decision
+- learn.github.control-copilot-costs-model-choice-governance.5-control-model-operating-decision
+- learn.github.control-copilot-costs-model-choice-governance.6-apply-responsible-ai-workflows
+- learn.github.control-copilot-costs-model-choice-governance.7-knowledge-check
+- learn.github.control-copilot-costs-model-choice-governance.8-summary
+badge:
+  uid: learn.github.control-copilot-costs-model-choice-governance.badge

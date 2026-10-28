@@ -4,7 +4,7 @@ title: Knowledge check
 metadata:
   title: Knowledge check
   description: Check what you've learned.
-  ms.date: 10/27/2026
+  ms.date: 10/28/2026
   author: v-chukslord1
   ms.author: v-chukslord1
   ms.topic: interactive-tutorial
@@ -12,4 +12,90 @@ metadata:
 durationInMinutes: 5
 content: |
   [!include[](includes/8-knowledge-check.md)]
-# TODO: Add knowledge-check quiz questions.
+quiz:
+  title: Check your knowledge
+  questions:
+  - content: "A team receives many requests, but members disagree about what makes one urgent. What should happen before automating priority decisions?"
+    choices:
+    - content: "Keep priority decisions human-led while agreeing on criteria and exception ownership."
+      isCorrect: true
+      explanation: "Repeated work isn't ready for delegated priority decisions until the criteria and authority are clear. A model can summarize previous discussions, but it can't establish an agreed priority policy on the team's behalf."
+    - content: "Use a more capable model to infer a policy from previous discussions."
+      isCorrect: false
+      explanation: "Repeated work isn't ready for delegated priority decisions until the criteria and authority are clear. A model can summarize previous discussions, but it can't establish an agreed priority policy on the team's behalf."
+    - content: "Treat the requester's use of \"urgent\" as the final priority."
+      isCorrect: false
+      explanation: "Repeated work isn't ready for delegated priority decisions until the criteria and authority are clear. A model can summarize previous discussions, but it can't establish an agreed priority policy on the team's behalf."
+    - content: "Automate priority decisions first and resolve disagreements during the pilot."
+      isCorrect: false
+      explanation: "Repeated work isn't ready for delegated priority decisions until the criteria and authority are clear. A model can summarize previous discussions, but it can't establish an agreed priority policy on the team's behalf."
+  - content: "A report must cover activity from the past seven days. The agent groups issue descriptions into recurring themes. Which statement correctly describes the process?"
+    choices:
+    - content: "The themes are the inputs, and the reporting period is the output."
+      isCorrect: false
+      explanation: "Inputs are the records being processed, transformations change their form, and selection rules define coverage. A schedule determines when the workflow runs, not which period or records the report covers."
+    - content: "The schedule defines which issues count, so a separate selection rule isn't needed."
+      isCorrect: false
+      explanation: "Inputs are the records being processed, transformations change their form, and selection rules define coverage. A schedule determines when the workflow runs, not which period or records the report covers."
+    - content: "Issue records are inputs, grouping is a transformation, and the date range constrains selection."
+      isCorrect: true
+      explanation: "Inputs are the records being processed, transformations change their form, and selection rules define coverage. A schedule determines when the workflow runs, not which period or records the report covers."
+    - content: "The agent should infer the reporting period from the issue descriptions."
+      isCorrect: false
+      explanation: "Inputs are the records being processed, transformations change their form, and selection rules define coverage. A schedule determines when the workflow runs, not which period or records the report covers."
+  - content: "A workflow may propose documentation edits, but an authorized reviewer must accept them before merging. Which design best supports this requirement?"
+    choices:
+    - content: "Give the agent merge access and tell it to wait until it believes the changes are acceptable."
+      isCorrect: false
+      explanation: "The agent prepares a proposal while the controlled action remains subject to enforced review. Agent confidence doesn't replace human authorization, and a prompt alone isn't an approval gate."
+    - content: "Have it propose a pull request and configure the applicable review controls before merging."
+      isCorrect: true
+      explanation: "The agent prepares a proposal while the controlled action remains subject to enforced review. Agent confidence doesn't replace human authorization, and a prompt alone isn't an approval gate."
+    - content: "Merge the changes automatically and ask for approval afterward."
+      isCorrect: false
+      explanation: "The agent prepares a proposal while the controlled action remains subject to enforced review. Agent confidence doesn't replace human authorization, and a prompt alone isn't an approval gate."
+    - content: "Treat the creation of a pull request as evidence that a reviewer approved the changes."
+      isCorrect: false
+      explanation: "The agent prepares a proposal while the controlled action remains subject to enforced review. Agent confidence doesn't replace human authorization, and a prompt alone isn't an approval gate."
+  - content: "A team wants to find requests that lack an intake response after an agreed period, without sending the same alert on every run. Which pattern fits best?"
+    choices:
+    - content: "Reporting, because a weekly narrative alone prevents repeated alerts."
+      isCorrect: false
+      explanation: "Monitoring detects a defined condition. Avoiding repeated alerts also requires explicit state or another supported suppression mechanism."
+    - content: "Classification, because applying a category resolves the unanswered request."
+      isCorrect: false
+      explanation: "Monitoring detects a defined condition. Avoiding repeated alerts also requires explicit state or another supported suppression mechanism."
+    - content: "Review, using a publishing checklist to assess each request."
+      isCorrect: false
+      explanation: "Monitoring detects a defined condition. Avoiding repeated alerts also requires explicit state or another supported suppression mechanism."
+    - content: "Monitoring, with a defined condition, clearing rule, and repeat-alert handling."
+      isCorrect: true
+      explanation: "Monitoring detects a defined condition. Avoiding repeated alerts also requires explicit state or another supported suppression mechanism."
+  - content: "A mandatory issue source can't be retrieved during report generation. What should the specification require?"
+    choices:
+    - content: "Record the failure, notify the owner, and don't claim complete coverage."
+      isCorrect: true
+      explanation: "Failed access isn't evidence of no activity. Failure handling must preserve that distinction and provide an actionable notification. Retries need limits and a failure path."
+    - content: "Treat the missing source as having no activity so the schedule is maintained."
+      isCorrect: false
+      explanation: "Failed access isn't evidence of no activity. Failure handling must preserve that distinction and provide an actionable notification. Retries need limits and a failure path."
+    - content: "Publish a full report based on earlier themes without identifying the gap."
+      isCorrect: false
+      explanation: "Failed access isn't evidence of no activity. Failure handling must preserve that distinction and provide an actionable notification. Retries need limits and a failure path."
+    - content: "Retry indefinitely until the source becomes available."
+      isCorrect: false
+      explanation: "Failed access isn't evidence of no activity. Failure handling must preserve that distinction and provide an actionable notification. Retries need limits and a failure path."
+  - content: "A report update is technically successful, but the resulting report no longer includes required limitations. What is the best response?"
+    choices:
+    - content: "Accept the change because the Actions run succeeded."
+      isCorrect: false
+      explanation: "Regression checks protect previously accepted requirements after a change. Execution success doesn't prove that the output meets its business requirements. First inspect the changed configuration and evidence."
+    - content: "Treat it as a regression, review the change, and restore or correct the accepted behavior."
+      isCorrect: true
+      explanation: "Regression checks protect previously accepted requirements after a change. Execution success doesn't prove that the output meets its business requirements. First inspect the changed configuration and evidence."
+    - content: "Change the acceptance criteria to match the new output."
+      isCorrect: false
+      explanation: "Regression checks protect previously accepted requirements after a change. Execution success doesn't prove that the output meets its business requirements. First inspect the changed configuration and evidence."
+    - content: "Switch models immediately without reviewing the update."
+      isCorrect: false
+      explanation: "Regression checks protect previously accepted requirements after a change. Execution success doesn't prove that the output meets its business requirements. First inspect the changed configuration and evidence."
