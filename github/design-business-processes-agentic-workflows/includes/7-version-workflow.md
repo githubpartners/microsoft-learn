@@ -26,9 +26,9 @@ For each meaningful change, record:
 
 GitHub's documented update process is to edit the Markdown source, recompile, and review and commit both the source and .lock.yml files.
 
-[Image: image4 (image file unavailable)]Use the pull request's Files changed tab to inspect the proposal.
+Use the pull request's Files changed tab to inspect the proposal.
 
-Files changed shows the proposed file differences. Review instruction changes against the business requirement and ask the maintainer to explain generated configuration changes. Source:[ ](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request?utm_source=chatgpt.com)[GitHub Docs: Reviewing proposed changes](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request?utm_source=chatgpt.com).
+Files changed shows the proposed file differences. Review instruction changes against the business requirement and ask the maintainer to explain generated configuration changes. Source: [GitHub Docs: Reviewing proposed changes](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request?utm_source=chatgpt.com).
 
 You don't need to understand every generated operation to contribute. Check the wording, scope, output, approval boundaries, and evidence. Involve the appropriate owner if permissions or publication behavior expand.
 
@@ -56,13 +56,11 @@ Other small-looking changes can also affect behavior: broadening an event trigge
 
 ### **Preserve a known-good configuration**
 
-[Image: image5 (image file unavailable)]
-
 A known-good configuration is an identifiable, reviewed, and tested state with understood limitations. Record its commit, relevant dependencies or references, and validation evidence. "The version that worked last week" isn't enough.
 
 After a change, inspect both execution and output quality. Open Actions, select the workflow run, and inspect its jobs and logs.
 
-Logs provide execution evidence. This generic screenshot doesn't establish an agentic workflow or the cause of its failure. Source:[ ](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs?utm_source=chatgpt.com)[GitHub Docs: Using workflow run logs](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs?utm_source=chatgpt.com).
+Logs provide execution evidence. This generic screenshot doesn't establish an agentic workflow or the cause of its failure. Source: [GitHub Docs: Using workflow run logs](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs?utm_source=chatgpt.com).
 
 A successful run doesn't prove its report is accurate. Check that the output meets the business criteria and reached its destination. A failed run may also have produced an output before a later step failed.
 
@@ -86,11 +84,9 @@ Use this evidence to decide what to change. An outdated reference needs correcti
 
 ### **Plan how to recover**
 
-[Image: image6 (image file unavailable)]
-
 GitHub's Revert control can create a new pull request reversing a merged pull request, where available and with appropriate permissions.
 
-Revert proposes a reversal; it doesn't immediately restore operations or undo earlier outputs. Source:[ ](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/reverting-a-pull-request?utm_source=chatgpt.com)[GitHub Docs: Reverting a pull request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/reverting-a-pull-request?utm_source=chatgpt.com).
+Revert proposes a reversal; it doesn't immediately restore operations or undo earlier outputs. Source: [GitHub Docs: Reverting a pull request](https://docs.github.com/en/pull-requests/how-tos/merge-and-close-pull-requests/reverting-a-pull-request?utm_source=chatgpt.com).
 
 Restoring files doesn't retract a published report, undo a business decision, or necessarily stop a running execution. Recovery may require pausing the workflow, restoring the accepted configuration, correcting affected outputs, and retesting before resuming.
 

@@ -110,7 +110,7 @@ GitHub's report example creates an issue through a safe output. That makes the r
 
 Another design might save a file as an Actions artifact, a file or collection of files retained from a run, if an appropriate mechanism is configured.
 
-The outlined link downloads a saved artifact. This generic image doesn't show an agentic report or imply that reports are saved automatically. Source:[ ](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/downloading-workflow-artifacts?utm_source=chatgpt.com)[GitHub Docs: Downloading workflow artifacts](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/downloading-workflow-artifacts?utm_source=chatgpt.com).
+The outlined link downloads a saved artifact. This generic image doesn't show an agentic report or imply that reports are saved automatically. Source: [GitHub Docs: Downloading workflow artifacts](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/downloading-workflow-artifacts?utm_source=chatgpt.com).
 
 For an artifact route, confirm access, retrieval instructions, and retention because artifacts can expire. For any route, specify the audience and confirm successful delivery from the resulting record, not just the agent's statement.
 

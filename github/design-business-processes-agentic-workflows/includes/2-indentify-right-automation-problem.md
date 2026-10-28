@@ -26,8 +26,6 @@ The agent also needs context: the reference information used to interpret inputs
 
 ### **Define measurable criteria**
 
-[Image: image (image file unavailable)]
-
 Decide how someone will recognize a useful result before generating it. "Write a good report" isn't testable. More useful criteria include:
 
 - Required sections are present.
@@ -97,6 +95,5 @@ Some criteria are conditions of use. Authorized access, the correct audience, an
 Don't average them together. Saving time doesn't compensate for disclosing information to the wrong audience. A useful pilot decision may be to continue testing quality while withholding publication permissions.
 
 Finish the suitability assessment with a clear recommendation: proceed with a bounded pilot, improve the process first, or keep the task human-led. Include the evidence and unresolved questions so another person can understand the decision.
-
 
 

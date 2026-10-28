@@ -16,11 +16,7 @@ Then separate:
 
 - Context: The instructions used to interpret them, such as reporting requirements or approved categories.
 
-Open a repository's Issues tab to inspect the source material before deciding what the process can rely on.
-
-[Image: image2 (image file unavailable)]
-
-The Issues tab opens the request records. Inspect descriptions and discussion to understand the information your workflow would receive.
+Open a repository's Issues tab and inspect descriptions and discussion before deciding what the process can rely on.
 
 Define the scope explicitly. A report about recent issue activity may need different records from a list of all unresolved issues. An older issue can remain open without having been created in the reporting period.
 
@@ -41,8 +37,6 @@ The following illustrative map applies to the reporting use case documented by G
 | Validate | Compare the draft with reporting criteria. | Correct bounded problems or route unresolved failures. | Checks and reviewer, as designed. |
 | Deliver | Create the report in the approved destination. | Confirm delivery; don't blindly duplicate a failed attempt. | Configured output mechanism. |
 | Use | Consider recommendations during planning. | Accept, reject, or request more information. | Responsible people. |
-
-[Image: image3 (image file unavailable)]
 
 This is a business map, not a one-to-one list of technical jobs. GitHub Actions uses jobs and steps to organize execution on a runner, the environment performing the work. An implementer translates your process into those structures.
 
@@ -82,5 +76,4 @@ A handoff transfers work between the agent, a tool, or a person. For each handof
 A report stored successfully but never brought to the intended reviewer's attention may not support the business process. Similarly, an escalation that reaches an unmonitored destination doesn't establish useful human involvement.
 
 Walk through the map with the people who perform the work. Ask them to identify hidden checks, likely exceptions, and the point where they consider their part complete. Resolve disagreements before translating the map into configuration.
-
 

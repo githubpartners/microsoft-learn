@@ -29,7 +29,7 @@ Review identifies where an artifact doesn't meet a requirement. A useful finding
 
 Classification depends on category definitions. Decide whether one category, several categories, or an uncertain result is allowed. On GitHub, labels can represent categories, but a proposed category doesn't automatically create or apply a label.
 
-Select Labels to inspect the repository's categories and descriptions. The image illustrates the interface, not a required classification scheme. Source:[ ](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels?utm_source=chatgpt.com)[GitHub Docs: Managing labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels?utm_source=chatgpt.com).
+Select Labels to inspect the repository's categories and descriptions. Use them to understand that repository's classification scheme, not as a required set of categories. Source: [GitHub Docs: Managing labels](https://docs.github.com/en/issues/using-labels-and-milestones-to-track-work/managing-labels?utm_source=chatgpt.com).
 
 Escalation handles exceptions requiring authority or expertise. It shouldn't become the default route for every missing fact when a clarification question would suffice.
 
