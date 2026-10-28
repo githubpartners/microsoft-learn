@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.6-improve-systematically
+title: Improve systematically
+metadata:
+  title: Improve systematically
+  description: Learn how to improve systematically.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-improve-systematically.md)]

@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.5-connect-cost-to-value
+title: Connect cost to value
+metadata:
+  title: Connect cost to value
+  description: Learn how to connect cost to value.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/5-connect-cost-to-value.md)]

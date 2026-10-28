@@ -1,0 +1,48 @@
+### YamlMime:Module
+uid: learn.github.supervise-agentic-execution
+metadata:
+  title: Supervise agentic execution
+  description: Learn to set human control points, review and steer Copilot work, recover from failures, stop unsafe execution, and validate final results.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: Supervise agentic execution
+summary: Learn to set human control points, review and steer Copilot work, recover from failures, stop unsafe execution, and validate final results.
+abstract: |
+  In this module, you'll:
+  - Set approval, review, escalation, and acceptance gates and name who owns each one.
+  - Approve, reject, revise, or ask for clarification based on the evidence.
+  - Redirect a running session within the approved task.
+  - Find out why a task failed, then fix it or escalate it.
+  - Stop a session and keep a record for recovery.
+  - Accept a result only when the evidence supports it.
+prerequisites: |
+  - A GitHub account.
+  - A fundamental understanding of GitHub and GitHub Issues.
+  - Familiarity with GitHub Copilot and its basic capabilities.
+iconUrl: /learn/achievements/generic-badge.svg
+ratingEnabled: true
+levels:
+- intermediate
+roles:
+- business-user
+- administrator
+- business-owner
+products:
+- github
+subjects:
+- artificial-intelligence
+units:
+- learn.github.supervise-agentic-execution.1-introduction
+- learn.github.supervise-agentic-execution.2-define-human-control-points
+- learn.github.supervise-agentic-execution.3-approve-reject-revise
+- learn.github.supervise-agentic-execution.4-steer-running-workflow
+- learn.github.supervise-agentic-execution.5-recover-from-failure
+- learn.github.supervise-agentic-execution.6-stop-contain-execution
+- learn.github.supervise-agentic-execution.7-validate-output
+- learn.github.supervise-agentic-execution.8-knowledge-check
+- learn.github.supervise-agentic-execution.9-summary
+badge:
+  uid: learn.github.supervise-agentic-execution.badge

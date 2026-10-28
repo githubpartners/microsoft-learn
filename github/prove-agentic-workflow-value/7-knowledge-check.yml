@@ -1,0 +1,94 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.7-knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: Check what you've learned.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 5
+content: |
+  [!include[](includes/7-knowledge-check.md)]
+quiz:
+  title: Check your knowledge
+  questions:
+  - content: "The team wants to start the Copilot trial on Monday. Which step must happen before the first request goes to the agent?"
+    choices:
+    - content: "Pick the most capable model, so the first results look strong."
+      isCorrect: false
+      explanation: "Without a baseline and criteria set in advance, any result looks good. Targets set after the trial tend to match the results. Review <u>Questions to ask before you start a trial</u>."
+    - content: "Record the baseline for ten similar summary requests and write the acceptance checklist in the workflow's issue."
+      isCorrect: true
+      explanation: "Without a baseline and criteria set in advance, any result looks good. Targets set after the trial tend to match the results. Review <u>Questions to ask before you start a trial</u>."
+    - content: "Run the trial for a week, and then set targets that fit the results."
+      isCorrect: false
+      explanation: "Without a baseline and criteria set in advance, any result looks good. Targets set after the trial tend to match the results. Review <u>Questions to ask before you start a trial</u>."
+  - content: "The agent's run shows **Success**, and its description says \"all figures checked against data/13-figures.csv.\" No record shows which figures it checked. What do you do?"
+    choices:
+    - content: "Accept the summary, because the run succeeded and the description names the right file."
+      isCorrect: false
+      explanation: "A successful run shows that the run ended, not that the figures are right. Missing evidence makes the claim unverified, not false."
+    - content: "Reject the summary, because missing evidence means the figures are wrong."
+      isCorrect: false
+      explanation: "A successful run shows that the run ended, not that the figures are right. Missing evidence makes the claim unverified, not false."
+    - content: "Mark the claim unverified, and check the figures yourself against the version of the file you're reviewing."
+      isCorrect: true
+      explanation: "A successful run shows that the run ended, not that the figures are right. Missing evidence makes the claim unverified, not false."
+  - content: "Ten summary requests took twelve attempts. A person accepted nine of the requests. What's the acceptance rate?"
+    choices:
+    - content: "90%"
+      isCorrect: true
+      explanation: "Acceptance rate divides accepted requests by all requests: 9 / 10 = 90%. Dividing by attempts mixes two groups. Review <u>Choose consistent measures</u>."
+    - content: "75%"
+      isCorrect: false
+      explanation: "Acceptance rate divides accepted requests by all requests: 9 / 10 = 90%. Dividing by attempts mixes two groups. Review <u>Choose consistent measures</u>."
+    - content: "9 of 12 attempts, so 75% for the trial"
+      isCorrect: false
+      explanation: "Acceptance rate divides accepted requests by all requests: 9 / 10 = 90%. Dividing by attempts mixes two groups. Review <u>Choose consistent measures</u>."
+  - content: "The trial's batch cost $97, including two retries and one request nobody accepted. A person accepted nine requests. What's the fair cost per accepted outcome?"
+    choices:
+    - content: "$97 divided by 12 attempts, about $8.08."
+      isCorrect: false
+      explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
+    - content: "$97 divided by 9 accepted requests, about $10.78."
+      isCorrect: true
+      explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
+    - content: "$97 minus the cost of the unaccepted request, divided by 9."
+      isCorrect: false
+      explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
+  - content: "Three summaries in a trial kept an outlook sentence that the figures don't support. What change addresses the cause?"
+    choices:
+    - content: "Add a rule to the instructions file to source every claim or mark it as unsupported, and then test similar requests with the same checklist."
+      isCorrect: true
+      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+    - content: "Switch to a larger model and change the instructions at the same time, to fix it faster."
+      isCorrect: false
+      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+    - content: "Correct each of the three summaries by hand and keep the workflow as it is."
+      isCorrect: false
+      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+  - content: "Nine of ten summaries match their sources. One has a figure that doesn't match its source row. How do you report the result?"
+    choices:
+    - content: "Report 100% accuracy, because the wrong figure is small."
+      isCorrect: false
+      explanation: "One unsupported figure makes the output partial, however well the rest reads. Report it separately so an average doesn't hide it. Review <u>Apply the quality check to a draft comparison</u>."
+    - content: "Leave that summary out as an outlier."
+      isCorrect: false
+      explanation: "One unsupported figure makes the output partial, however well the rest reads. Report it separately so an average doesn't hide it. Review <u>Apply the quality check to a draft comparison</u>."
+    - content: "Report the unsupported figure as its own finding, and count that summary as partial."
+      isCorrect: true
+      explanation: "One unsupported figure makes the output partial, however well the rest reads. Report it separately so an average doesn't hide it. Review <u>Apply the quality check to a draft comparison</u>."
+  - content: "The trial reduced human effort, measured cost, and median time to acceptance, but accepted 9 of 10 summaries compared with 10 of 10 at baseline. What should the team do next, and which evidence supports that decision?"
+    choices:
+    - content: "Expand immediately, because lower cost and faster delivery prove ROI and preserved quality."
+      isCorrect: false
+      explanation: "The measured improvements are promising, but the unaccepted request remains unresolved. Investigate it, inspect final-output quality and boundary evidence, and then decide whether to expand, revise, or stop. The current evidence doesn’t prove ROI or preserved quality."
+    - content: "Revise or continue the limited trial while investigating the unaccepted request, checking final-output quality, and confirming the agreed limits."
+      isCorrect: true
+      explanation: "The measured improvements are promising, but the unaccepted request remains unresolved. Investigate it, inspect final-output quality and boundary evidence, and then decide whether to expand, revise, or stop. The current evidence doesn’t prove ROI or preserved quality."
+    - content: "Stop permanently, because one unaccepted request proves the workflow has no value."
+      isCorrect: false
+      explanation: "The measured improvements are promising, but the unaccepted request remains unresolved. Investigate it, inspect final-output quality and boundary evidence, and then decide whether to expand, revise, or stop. The current evidence doesn’t prove ROI or preserved quality."

@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.4-measure-operational-quality
+title: Measure operational quality
+metadata:
+  title: Measure operational quality
+  description: Learn how to measure operational quality.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/4-measure-operational-quality.md)]

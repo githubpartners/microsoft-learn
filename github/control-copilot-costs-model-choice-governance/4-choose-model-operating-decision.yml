@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.4-choose-model-operating-decision
+title: Choose a model as an operating decision
+metadata:
+  title: Choose a model as an operating decision
+  description: Learn how to choose a model as an operating decision.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/4-choose-model-operating-decision.md)]

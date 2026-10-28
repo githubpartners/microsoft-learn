@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.3-read-manage-usage
+title: Read and manage usage
+metadata:
+  title: Read and manage usage
+  description: Learn how to read and manage usage.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-read-manage-usage.md)]

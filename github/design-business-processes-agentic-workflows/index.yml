@@ -1,0 +1,49 @@
+### YamlMime:Module
+uid: learn.github.design-business-processes-agentic-workflows
+metadata:
+  title: Design business processes for agentic workflows
+  description: Learn to evaluate automation opportunities, map business processes, define decision rights, and specify and maintain GitHub Agentic Workflows.
+  ms.date: 10/28/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: Design business processes for agentic workflows
+summary: Learn to evaluate automation opportunities, map business processes, define decision rights, and specify and maintain GitHub Agentic Workflows.
+abstract: |
+  In this module, you'll:
+  - Evaluate whether a business task is suitable for agentic automation.
+  - Map the inputs, steps, decisions, exceptions, and outputs of a process.
+  - Distinguish agent-owned, human-approved, and human-only decisions.
+  - Choose a workflow pattern that fits the business need.
+  - Write a specification with clear access, validation, and completion requirements.
+  - Review, version, and recover workflow configurations.
+prerequisites: |
+  - Familiarity with the basic GitHub concepts introduced in Work orchestration with GitHub Copilot.
+  - An understanding of a business process you'd like to improve.
+
+  No programming experience or running workflow is required. The design activities can be completed in a document. Accessing private repositories or implementing a workflow requires appropriate authorization and setup.
+iconUrl: /learn/achievements/generic-badge.svg
+ratingEnabled: true
+levels:
+- intermediate
+roles:
+- business-user
+- business-analyst
+- business-owner
+products:
+- github
+subjects:
+- artificial-intelligence
+units:
+- learn.github.design-business-processes-agentic-workflows.1-introduction
+- learn.github.design-business-processes-agentic-workflows.2-indentify-right-automation-problem
+- learn.github.design-business-processes-agentic-workflows.3-map-business-process
+- learn.github.design-business-processes-agentic-workflows.4-define-decision-rights
+- learn.github.design-business-processes-agentic-workflows.5-choose-workflow-pattern
+- learn.github.design-business-processes-agentic-workflows.6-write-workflow-specification
+- learn.github.design-business-processes-agentic-workflows.7-version-workflow
+- learn.github.design-business-processes-agentic-workflows.8-knowledge-check
+- learn.github.design-business-processes-agentic-workflows.9-summary
+badge:
+  uid: learn.github.design-business-processes-agentic-workflows.badge

@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.3-approve-reject-revise
+title: Approve, reject, or revise
+metadata:
+  title: Approve, reject, or revise
+  description: Learn how to approve, reject, or revise.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-approve-reject-revise.md)]

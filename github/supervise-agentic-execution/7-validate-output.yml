@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.7-validate-output
+title: Validate output
+metadata:
+  title: Validate output
+  description: Learn how to validate output.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/7-validate-output.md)]

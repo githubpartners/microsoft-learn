@@ -1,0 +1,94 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.8-knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: Check what you've learned.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 5
+content: |
+  [!include[](includes/8-knowledge-check.md)]
+quiz:
+  title: Check your knowledge
+  questions:
+  - content: "The agent opened a pull request that updates a summary, and the reviewer approved it. Who decides whether the summary is ready for leadership?"
+    choices:
+    - content: "The reviewer, because the approval completes the review."
+      isCorrect: false
+      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
+    - content: "The report owner named in the issue, after checking the result against the acceptance criteria."
+      isCorrect: true
+      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
+    - content: "Copilot, because its pull request description says every figure matches."
+      isCorrect: false
+      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
+  - content: "The agent's pull request keeps the sentence \"The team expects all four regions to grow next quarter.\" The figures file has no data for that quarter, and the issue doesn't say whether the outlook stays. What's your first response?"
+    choices:
+    - content: "Request a revision that deletes the sentence, because the figures don't support it."
+      isCorrect: false
+      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
+    - content: "Approve, because the sentence was in the summary before the agent started."
+      isCorrect: false
+      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
+    - content: "Ask the report owner whether the outlook stays, and how to label it, before you approve or request a revision."
+      isCorrect: true
+      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
+  - content: "During an approved report update, the agent proposes an unfamiliar tool. You check that it would upload the approved figures to an external service, outside the agreed scope. The upload is awaiting authorization, and no information has been sent. What do you do?"
+    choices:
+    - content: "Withhold authorization, steer the agent back to the approved source, and escalate the broader access request. Stop if continuing could expose information or cause harm."
+      isCorrect: true
+      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
+    - content: "Authorize the tool because the report update is already approved."
+      isCorrect: false
+      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
+    - content: "Stop every session that proposes an unfamiliar tool, regardless of what the tool does or whether it is in scope."
+      isCorrect: false
+      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
+  - content: "The agent's pull request description says \"All figures now match the source.\" You find that it still calls North the region with the highest margin, although East's is higher (17.3% against 16.8%). What's the best next step?"
+    choices:
+    - content: "Ask the agent to double-check its work, and approve if it confirms."
+      isCorrect: false
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+    - content: "Post a correction that names the requirement, what you found, the change, and how to check it, and then read the whole summary again."
+      isCorrect: true
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+    - content: "Edit the sentence yourself and approve the pull request."
+      isCorrect: false
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+  - content: "You stopped a session after the agent pushed a commit that changed data/13-figures.csv. What's true now?"
+    choices:
+    - content: "Stopping the session undid the commit."
+      isCorrect: false
+      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
+    - content: "The pull request closed, so you have nothing more to do."
+      isCorrect: false
+      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
+    - content: "The commit is still there and needs review, and other runs the agent started need their own check."
+      isCorrect: true
+      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
+  - content: "Copilot code review found no issues, and every figure in the summary matches the figures file. What else must a person check before accepting?"
+    choices:
+    - content: "That the comparisons and growth statements are right, nothing outside the agreed file changed, and the summary works for leadership."
+      isCorrect: true
+      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+    - content: "Nothing, because the review and the figures agree."
+      isCorrect: false
+      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+    - content: "That the agent's description of its own work sounds confident and complete."
+      isCorrect: false
+      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+  - content: "The agent listed five figures that changed between draft 1 and the current summary. You checked three, and they match. What do you do before the list goes to the meeting organizer?"
+    choices:
+    - content: "Send the list, because every figure you checked matches."
+      isCorrect: false
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."
+    - content: "Check the other two, and compare both drafts yourself for changes the list missed."
+      isCorrect: true
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."
+    - content: "Ask Copilot to confirm that its list is complete."
+      isCorrect: false
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."

@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.6-apply-responsible-ai-workflows
+title: Apply responsible AI to workflows
+metadata:
+  title: Apply responsible AI to workflows
+  description: Learn how to apply responsible AI to workflows.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-apply-responsible-ai-workflows.md)]
