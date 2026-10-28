@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.work-orchestration-github-copilot.1-introduction
+title: Introduction
+metadata:
+  title: Introduction
+  description: Get an overview of orchestrating work with GitHub Copilot.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 3
+content: |
+  [!include[](includes/1-introduction.md)]

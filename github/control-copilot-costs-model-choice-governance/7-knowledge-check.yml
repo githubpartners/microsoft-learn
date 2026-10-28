@@ -1,0 +1,15 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.7-knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: Check what you've learned.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 5
+content: |
+  [!include[](includes/7-knowledge-check.md)]
+# TODO: Add knowledge-check quiz questions.

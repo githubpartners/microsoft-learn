@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.6-stop-contain-execution
+title: Stop and contain execution
+metadata:
+  title: Stop and contain execution
+  description: Learn how to stop and contain execution.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-stop-contain-execution.md)]

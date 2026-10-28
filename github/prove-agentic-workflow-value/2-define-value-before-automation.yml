@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.2-define-value-before-automation
+title: Define value before automation
+metadata:
+  title: Define value before automation
+  description: Learn how to define value before automation.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/2-define-value-before-automation.md)]

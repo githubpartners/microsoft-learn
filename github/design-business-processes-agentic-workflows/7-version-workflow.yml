@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.design-business-processes-agentic-workflows.7-version-workflow
+title: Version the workflow
+metadata:
+  title: Version the workflow
+  description: Learn how to version the workflow.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/7-version-workflow.md)]

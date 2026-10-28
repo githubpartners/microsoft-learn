@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.prove-agentic-workflow-value.3-inspect-run-evidence
+title: Inspect run evidence
+metadata:
+  title: Inspect run evidence
+  description: Learn how to inspect run evidence.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-inspect-run-evidence.md)]

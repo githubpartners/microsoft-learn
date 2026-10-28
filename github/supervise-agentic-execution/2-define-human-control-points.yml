@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.2-define-human-control-points
+title: Define human control points
+metadata:
+  title: Define human control points
+  description: Learn how to define human control points.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/2-define-human-control-points.md)]

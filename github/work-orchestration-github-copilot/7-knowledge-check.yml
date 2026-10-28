@@ -1,0 +1,28 @@
+### YamlMime:ModuleUnit
+uid: learn.github.work-orchestration-github-copilot.7-knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: Check what you've learned.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 5
+content: |
+  [!include[](includes/7-knowledge-check.md)]
+quiz:
+  title: Check your knowledge
+  questions:
+  - content: "TODO: Question 1"
+    choices:
+    - content: "TODO: Correct answer"
+      isCorrect: true
+      explanation: "TODO: Explanation"
+    - content: "TODO: Incorrect answer"
+      isCorrect: false
+      explanation: "TODO: Explanation"
+    - content: "TODO: Incorrect answer"
+      isCorrect: false
+      explanation: "TODO: Explanation"

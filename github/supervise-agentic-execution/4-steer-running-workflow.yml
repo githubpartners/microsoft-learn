@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.4-steer-running-workflow
+title: Steer a running workflow
+metadata:
+  title: Steer a running workflow
+  description: Learn how to steer a running workflow.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/4-steer-running-workflow.md)]

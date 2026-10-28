@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.design-business-processes-agentic-workflows.6-write-workflow-specification
+title: Write a workflow specification
+metadata:
+  title: Write a workflow specification
+  description: Learn how to write a workflow specification.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-write-workflow-specification.md)]
