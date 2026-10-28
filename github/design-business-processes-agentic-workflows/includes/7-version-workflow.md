@@ -28,6 +28,10 @@ GitHub's documented update process is to edit the Markdown source, recompile, an
 
 Use the pull request's Files changed tab to inspect the proposal.
 
+![Illustrative pull request with Files changed selected, highlighting corresponding changes to Markdown documentation and generated HTML.](../media/review-workflow-file-changes.png)
+
+This illustration shows documentation changes. For an agentic workflow, review its Markdown source and compiled .lock.yml file together.
+
 Files changed shows the proposed file differences. Review instruction changes against the business requirement and ask the maintainer to explain generated configuration changes. Source: [GitHub Docs: Reviewing proposed changes](https://docs.github.com/en/pull-requests/how-tos/review-pull-requests/reviewing-proposed-changes-in-a-pull-request?utm_source=chatgpt.com).
 
 You don't need to understand every generated operation to contribute. Check the wording, scope, output, approval boundaries, and evidence. Involve the appropriate owner if permissions or publication behavior expand.
@@ -60,6 +64,8 @@ A known-good configuration is an identifiable, reviewed, and tested state with u
 
 After a change, inspect both execution and output quality. Open Actions, select the workflow run, and inspect its jobs and logs.
 
+![Illustrative failed Actions run with Fetch source data selected and an expanded log showing an unavailable mandatory-source error.](../media/workflow-run-logs.png)
+
 Logs provide execution evidence. This generic screenshot doesn't establish an agentic workflow or the cause of its failure. Source: [GitHub Docs: Using workflow run logs](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs?utm_source=chatgpt.com).
 
 A successful run doesn't prove its report is accurate. Check that the output meets the business criteria and reached its destination. A failed run may also have produced an output before a later step failed.
@@ -83,6 +89,8 @@ Don't copy sensitive inputs into a broadly visible troubleshooting record. Link 
 Use this evidence to decide what to change. An outdated reference needs correction at its source; a delivery failure may need an operational fix. Neither necessarily requires rewriting all the instructions.
 
 ### **Plan how to recover**
+
+![Illustrative recovery sequence: pause further runs, assess affected outputs, restore reviewed configuration, correct outputs, retest, and resume.](../media/workflow-recovery-sequence.png)
 
 GitHub's Revert control can create a new pull request reversing a merged pull request, where available and with appropriate permissions.
 

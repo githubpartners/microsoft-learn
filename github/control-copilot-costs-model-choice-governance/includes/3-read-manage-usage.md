@@ -22,7 +22,7 @@ To check your usage while you work, go to **github.com/copilot**. In the lower-l
 
 For example, the Current plan section can show how many AI credits you have used and, when available for your plan, the amount used out of your allowance or budget. Use this quick view to monitor usage before starting another long or agentic task.
 
-[Image: Route: GitHub.com > Settings > Current plan. (image file unavailable)]
+![GitHub Copilot Settings showing the current plan, AI credits used, and the View plan button.](../media/copilot-current-plan-usage.png)
 
 The information shown can differ by plan and billing arrangement. For more detailed usage by model or day, open the full AI usage report described next.
 
@@ -58,7 +58,7 @@ The top of the report has two cards and two controls:
 
 Use **Usage** for the broader billing picture across GitHub products. It shows metered usage in currency, including gross and billed amounts.
 
-[Image: imagee (image file unavailable)]
+![GitHub Settings with Usage selected under Billing and licensing, showing a metered usage chart and a breakdown of gross and billed amounts.](../media/github-metered-usage-report.png)
 
 Use **AI usage** for Copilot-specific detail, including included and additional credits, model usage, and daily trends. Use the two reports together when you need to connect Copilot activity with billed usage.
 
@@ -76,7 +76,7 @@ Use **AI usage** for Copilot-specific detail, including included and additional 
 
 On the **AI usage** page, select the **Download** button to open the **Get AI Usage Report** dialog. Choose the period under **Select time frame**, and then select **Email me the report**. GitHub emails the report to the address shown in the dialog when it's ready. The following example requests a report for the current month.
 
-[Image: imagef (image file unavailable)]
+![Get AI Usage Report dialog with the current month selected and an Email me the report button.](../media/copilot-email-usage-report.png)
 
 ### Use the report to investigate and explain spending
 
@@ -292,5 +292,4 @@ Use what you learned to improve one habit at a time. Write down your answers:
 •  **Frequency:** Which tasks do you do most often? The biggest savings usually come from them.
 
 Pick one task and one to three habits from this unit to try for a week. Write down what success looks like, for example "fewer follow-up prompts to correct the code." After the week, check the AI usage report and the quality of the results. Compare cost and result quality.
-
 

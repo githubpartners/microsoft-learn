@@ -2,7 +2,7 @@
 
 An AI-assisted workflow uses AI credits and people's time to review and correct outputs. With this unit, you can put one number on the table: the cost of each accepted deliverable, including the time people spent fixing drafts.
 
-[Image: image8 (image file unavailable)]
+![Prove value, not just speed: compare work before and during the trial, verify accepted results, and weigh the full investment, including review, retries, and failed work.](../media/prove-value-not-just-speed.png)
 
 Prove value by comparing similar work, verifying accepted results, and counting the full investment.
 

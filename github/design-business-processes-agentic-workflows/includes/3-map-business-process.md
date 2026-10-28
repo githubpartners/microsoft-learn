@@ -18,6 +18,8 @@ Then separate:
 
 Open a repository's Issues tab and inspect descriptions and discussion before deciding what the process can rely on.
 
+![Illustrative documentation request with callouts identifying the input, a missing detail that needs clarification, and a reference to approved guidance.](../media/repository-issues-source-context.png)
+
 Define the scope explicitly. A report about recent issue activity may need different records from a list of all unresolved issues. An older issue can remain open without having been created in the reporting period.
 
 ### **Describe steps, transformations, and decisions**
@@ -37,6 +39,10 @@ The following illustrative map applies to the reporting use case documented by G
 | Validate | Compare the draft with reporting criteria. | Correct bounded problems or route unresolved failures. | Checks and reviewer, as designed. |
 | Deliver | Create the report in the approved destination. | Confirm delivery; don't blindly duplicate a failed attempt. | Configured output mechanism. |
 | Use | Consider recommendations during planning. | Accept, reject, or request more information. | Responsible people. |
+
+The following illustration maps a documentation workflow, including an exception branch for missing sources and a human planning decision.
+
+![Documentation process map: retrieve approved sources, check source availability, measure, analyze, validate, and deliver. Missing sources route to a person to choose an alternative source or request access before continuing.](../media/documentation-workflow-process-map.png)
 
 This is a business map, not a one-to-one list of technical jobs. GitHub Actions uses jobs and steps to organize execution on a runner, the environment performing the work. An implementer translates your process into those structures.
 
@@ -76,4 +82,3 @@ A handoff transfers work between the agent, a tool, or a person. For each handof
 A report stored successfully but never brought to the intended reviewer's attention may not support the business process. Similarly, an escalation that reaches an unmonitored destination doesn't establish useful human involvement.
 
 Walk through the map with the people who perform the work. Ask them to identify hidden checks, likely exceptions, and the point where they consider their part complete. Resolve disagreements before translating the map into configuration.
-
