@@ -18,12 +18,12 @@ In this module, you learned how to:
 
 ## Learn more
 
-- Get started with data analytics covers counts, totals, and averages.
+- [Get started with data analytics](https://learn.microsoft.com/en-us/training/modules/get-started-data-analytics/) covers counts, totals, and averages.
 
-- Using workflow run logs
+- [Using workflow run logs](https://docs.github.com/en/actions/how-tos/monitor-workflows/use-workflow-run-logs)
 
-- Copilot billing for organizations and enterprises
+- [Copilot billing for organizations and enterprises](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing)
 
-- Models and pricing for GitHub Copilot
+- [Models and pricing for GitHub Copilot](https://docs.github.com/en/copilot/reference/copilot-billing/models-and-pricing)
 
-- About GitHub Agentic Workflows
+- [About GitHub Agentic Workflows](https://docs.github.com/en/copilot/concepts/agent-capabilities/agent-powered-workflows-and-operations/about-github-agentic-workflows)

@@ -28,7 +28,7 @@ One rule keeps the whole system safe: the agent proposes, and people and setting
     **Note:** The GitHub settings above are managed in repository settings. Changing **Require approval for workflow runs** needs the administrator role. Managing rulesets needs repository admin access or a custom role with the "edit repository rules" permission. See [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
 
 
-### The approval gate in repository settings.
+### The approval gate in repository settings
 
 To decide where a gate belongs, ask:
 
@@ -40,7 +40,7 @@ To decide where a gate belongs, ask:
 
 - **Could it expose client data, personal data, or passwords and keys?**
 
-- **Does it need more access, cost, or time than the owner approved?**
+- **Does it need more access, spending, or time than the owner approved?**
 
 - **Is the requirement unclear, or did it change during the work, for example because the data owner revised the figures?**
 
@@ -54,7 +54,7 @@ Reviewing a proposed change, letting a workflow run, and accepting a finished ta
 
 ## Add a gate: a worked example
 
-GitHub already blocks some actions for you. Copilot can't merge its own pull request. Author's approval generally won’t satisfy required-approval gates (depending on ruleset configuration). 
+GitHub already blocks some actions for you. Copilot can't merge its own pull request. The author's approval generally won't satisfy required-approval gates (depending on the ruleset configuration).
 
 In the quarterly-report example shown in this unit's images, the team adds two gates before anyone assigns the task:
 
@@ -146,7 +146,6 @@ The agent starts from report/q3-summary.md. Here are the claims in it that the l
 **Try it.** The summary has four problems: one wrong number, two wrong comparisons, and one claim the figures don't support. Find them before you read on.
 
 **Answers.** Revenue should read $16.8 million, because the Total row is 16,760 thousand. East has the highest operating margin, at 17.3%, not North. West's revenue fell 2.5%, as the Change from Q2 column shows. The figures hold no Q4 numbers, so the outlook is unsupported until the report owner decides how to label it. South's $4.0 million is a rounding choice, not an error. Unit 4 treats it as a question for the report owner.
-
 
 
 

@@ -67,7 +67,7 @@ quiz:
     - content: "Write a longer, more detailed instruction."
       isCorrect: false
       explanation: "An instruction guides the agent, but it doesn't remove access. A required code owner review blocks the merge until that person approves."
-  - content: "The agent reports that every figure in a summary matches the data. The list of changed files shows that it changed the Total row in data/13-figures.csv. What do you do?"
+  - content: "The agent reports that every figure in a summary matches the data. The list of changed files shows that it changed the Total row in data/q3-figures.csv. What do you do?"
     choices:
     - content: "Approve, because the summary and the data now agree."
       isCorrect: false

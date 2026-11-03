@@ -20,12 +20,12 @@ In this module, you learned how to:
 
 ## Learn more
 
-- **Accelerate development with GitHub Copilot** covers how Copilot works from an assigned task, its security model, and pull request review.
+- [GitHub Copilot on GitHub.com and GitHub Mobile](https://docs.github.com/en/copilot/concepts/copilot-surfaces/copilot-on-github) covers how Copilot answers questions, works on tasks, and reviews pull requests.
 
-- **Copilot Agents application card** explains why people must supervise agents and check their output.
+- [Copilot Agents application card](https://docs.github.com/en/copilot/responsible-use/agents) explains why people must supervise agents and check their output.
 
-- **Best practices for using Copilot** lists the tasks that suit the agent and the tasks to keep for people.
+- [Best practices for using Copilot](https://docs.github.com/en/copilot/tutorials/cloud-agent/get-the-best-results) lists the tasks that suit the agent and the tasks to keep for people.
 
-- **Risks and mitigations** lists the built-in protections, such as the agent being unable to approve or merge its own pull request.
+- [Risks and mitigations](https://docs.github.com/en/copilot/concepts/agents/cloud-agent/risks-and-mitigations) lists the built-in protections, such as the agent being unable to approve or merge its own pull request.
 
 - Reviewing output from Copilot

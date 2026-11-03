@@ -10,7 +10,7 @@ Prove value by comparing similar work, verifying accepted results, and counting 
 
 No single report shows every cost, and a missing cost makes the workflow look cheaper than it is. Collect each cost from its own source:
 
-- **AI credits for one agent session:** the session's summary line at github.com/copilot/agents.
+- **AI credits for one agent session:** the session's summary line. Open the session from **Pick up where you left off**, below the chat box on the Copilot home page.
 
 - **AI credits by model for the month:** if you pay for your own subscription, profile picture > **Settings** > **Billing and licensing** > **AI usage**. If your organization pays, profile picture > **Copilot settings** > **Usage this cycle** shows only your total. The **billing manager** exports figures by model and the organization's costs from the AI usage report.
 

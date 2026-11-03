@@ -1,36 +1,26 @@
 # Unit 6: Responsible AI for operational workflows
 
-An agent's output isn't ready just because it reports that it meets the requirements. Accept an agent's work on evidence, and stop it the moment something looks wrong. You stay accountable for every deliverable, so you accept AI-assisted work only after you check it against its sources.
+An agent's output isn't ready just because it reports that it meets the requirements. Accept an agent's work based on evidence, and stop it the moment something looks wrong. You stay accountable for every deliverable, so you accept AI-assisted work only after you check it against its sources.
 
 Before the agent starts, the task owner defines the requirements, limits, reviewers, escalation contacts, and evidence used to accept the result.
-
-## Choose the right form of guidance or connection
-
-| **Option** | **Purpose** |
-| --- | --- |
-| Prompt | The immediate request for this task and this run. |
-| Instructions | Reusable guidance that applies within a defined scope. |
-| Skill | A reusable workflow or capability for a specific kind of task. |
-
-These options serve different purposes. None automatically authorizes a task, grants access beyond its configured permissions, guarantees correctness, or replaces evidence-based human review.
 
 ## Prepare the task requirements record
 
 Before live work, the task owner records:
 
-•  The approved repository and the files the agent may change.
+- The approved repository and the files the agent may change.
 
-•  The files the agent must not change.
+- The files the agent must not change.
 
-•  The allowed changes.
+- The allowed changes.
 
-•  The attempt limit.
+- The attempt limit.
 
-•  The reviewers.
+- The reviewers.
 
-•  The escalation contacts.
+- The escalation contacts.
 
-•  The stop triggers and immediate actions the team will follow.
+- The stop triggers and immediate actions the team will follow.
 
 Write the record in the task's issue description so the reviewers and the agent read the same text. For example:
 
@@ -42,7 +32,7 @@ Files the agent may change: report/q3-summary.md
 
 Files the agent must not change: everything in data/
 
-Allowed change: make every figure and statement match data/13-figures.csv
+Allowed change: make every figure and statement match data/q3-figures.csv
 
 Attempt limit: 2, then the report owner decides
 
@@ -62,17 +52,17 @@ Use a separate branch for each approved task and bring the change back through a
 
 Compare what the owner asked for with the actual change:
 
-1. Read the **diff**, the view that shows what changed line by line, before you rely on the agent's summary. On the pull request, select **Files changed**: lines that start with + show added text, and lines that start with - show removed text ([review the changes](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request#starting-a-review)).
+1. Read the **diff**, the view that shows what changed line by line, before you rely on the agent's summary. On the pull request, select **Files changed** (see [Starting a review](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/reviewing-proposed-changes-in-a-pull-request#starting-a-review)).
 
 1. Connect each requirement to the evidence that supports it.
 
 1. List changes outside the approved files, including the figures file and any workflow or configuration files. If there are none, record that.
 
-1. For a code change, the approved tests run under the code owner's access, or you open the linked test result. Request any missing setup or evidence.
+1. For a code change, have the approved tests run under the code owner's access or open the linked test result. Request any missing setup or evidence.
 
-1. Give unresolved findings to the person who can decide.
+1. Give unresolved findings to the task owner.
 
-For a report correction, acceptance criteria should cover the figures, comparisons, supported claims, and permitted files. Ask the owner about any missing rule, such as rounding; don't invent one.
+For a report correction, acceptance criteria should cover the figures, comparisons, supported claims, and permitted files. Ask the owner about any missing rule, such as rounding.
 
 **Worked review example:** two fictional proposals both report "every figure matches." One corrects the summary to $16.8 million. The other changes the Total row in the figures file to 16,900, so the summary matches the data. Only the first keeps the approved figures as the source. Inspect each list of changed files before you approve, and request changes on the second: restore the figures file and fix the summary.
 
@@ -82,7 +72,7 @@ The same method works for every deliverable: check the draft against the approve
 
 The accountable reviewer withholds approval for unmet requirements or unchecked changes. Ask for a correction that names the evidence, permitted files, and checks to keep. Workflow execution, pull request approval, and business acceptance are separate decisions.
 
-A draft pull request can't merge. Marking a draft as ready for review is a separate step from approving it.
+A draft pull request can't be merged. Marking a draft as ready for review is a separate step from approving it.
 
 For training-only practice, choose Comment, keep the pull request as a draft, and don't collect approvals or merge.
 
@@ -90,19 +80,19 @@ For training-only practice, choose Comment, keep the pull request as a draft, an
 
 **Transparency** means anyone can see what the agent did, with what information, and who decided what. Leave a record that someone can follow without reconstructing the chat. Include:
 
-•  The business purpose, the allowed work, the Copilot feature used, and how AI helped.
+- The business purpose, the allowed work, the Copilot feature used, and how AI helped.
 
-•  The sources and files given to the agent, and the actions it performed.
+- The sources and files given to the agent, and the actions it performed.
 
-•  The changes, checks, results, and unresolved failures.
+- The changes, checks, results, and unresolved failures.
 
-•  Assumptions and cases no one checked.
+- Assumptions and cases no one checked.
 
-•  The review and approval decisions, and who made them.
+- The review and approval decisions, and who made them.
 
-•  The known-good version, identified by the recovery owner, and the approved recovery procedure.
+- The known-good version, identified by the recovery owner, and the approved recovery procedure.
 
-Write the record in the pull request description, and link the agent session there. Withhold the merge when no one can check the evidence. A **commit** is a saved set of changes.
+Write the record in the pull request description, and link the agent session there. Withhold the merge when no one can check the evidence.
 
 On an agent commit, the **Verified** badge means GitHub verified the agent's signature for that exact commit. If its contents changed, it would be a different commit and need a new signature. The badge doesn't mean the change is correct.
 
@@ -121,4 +111,3 @@ Use your organization's existing contacts and response processes.
 Stopping doesn't undo existing changes. Follow the session management instructions to stop the session, and check separately for other workflows or outside activity.
 
 Keep the evidence without secrets, and make no further changes while the owner assesses the issue. The recovery owner decides whether to restore the known-good version through the approved recovery process.
-

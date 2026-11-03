@@ -16,7 +16,7 @@ Before you choose or change a model, check the factors that affect usage, cost, 
 
 - **What can the agent access?** Identify the files and tools the task needs. Example: only this repository and an organization-approved tool.
 
-- **Who pays?** Know which account the usage lands on. Example: the team's organization budget, owned by the billing administrator.
+- **Who pays?** Know which account the usage lands on. Example: the team's organization budget, owned by the billing manager.
 
 - **Who accepts the result?** Identify who reviews the work and who decides whether it meets the business requirements.
 
@@ -61,7 +61,7 @@ In Copilot in GitHub, hover over any model in the model menu. A card shows the m
 
 ## Use Auto and its tiers
 
-Auto chooses a model for each request based on what the request needs and on which models are available and healthy. It only picks models that your subscription includes and that your administrators allow. Auto is a good default when you're new or when your work varies. On paid subscriptions, Auto also gives a **10% discount** on the model cost in Copilot Chat, Copilot CLI, and the GitHub Copilot app.
+Auto chooses a model for each request based on what the request needs and on which models are available and healthy. It only picks models that your subscription includes and that your administrators allow.
 
 Next to the model button, **Optimized for** sets Auto's tier:
 
@@ -73,21 +73,19 @@ Next to the model button, **Optimized for** sets Auto's tier:
 
 Use Auto when:
 
-•  Your work mixes short questions and multi-step tasks in the same day.
+- Your work mixes short questions and multi-step tasks in the same day.
 
-•  You aren't sure which model fits the task.
-
-•  You want the 10% Auto discount on paid subscriptions.
+- You aren't sure which model fits the task.
 
 Pick a model yourself when:
 
-•  You compare models in a trial and need the same model for every request.
+- You compare models in a trial and need the same model for every request.
 
-•  The task needs a feature that only some models have, such as image input.
+- The task needs a feature that only some models have, such as image input.
 
-•  A task still fails after you check its requirements, context, and permissions. Use "Check the task before you step up" before changing the model or effort.
+- A task still fails after you check its requirements, context, and permissions. Use "Check the task before you step up" before changing the model or effort.
 
-•  Your team requires a specific model for the work.
+- Your team requires a specific model for the work.
 
 All three tiers can use the same models. The tier only changes which ones Auto prefers. Even on Intelligence, Auto can send a short request to a small model.
 
@@ -111,19 +109,11 @@ With Auto, you don't pick the price. Auto picks the model, and the model sets th
 
 Auto switches models only at natural break points in a conversation, or when the work changes a lot, so it doesn't throw away cached context on every message.
 
-## Understand HydraFusion
+## Understand Copilot Fusion
 
-**HydraFusion** is a research preview that goes one step further than Auto. Auto sends a request to one model. HydraFusion builds a short plan that can use several models, from different providers, for the same request. For example, a fast, cheaper model drafts a solution, and a stronger model takes over only if the draft fails a quality check.
+**Copilot Fusion** goes one step further than Auto. Auto sends a request to one model. Fusion can route one request through several models; for example, a cheaper model drafts and a stronger one reviews.
 
-- **What you pay:** the tokens of every model that takes part, each at its own standard price. That includes drafts, reviews, revisions, retries, and fallbacks, so one answer can carry the cost of several model calls.
-
-- **What you can save:** in GitHub's tests on three coding benchmarks, HydraFusion cost 36% to 67% less than Claude Opus 5, with quality from 1.5 percentage points lower to 4.9 points higher. A job that cost 100 credits on Claude Opus 5 cost about 33 to 64 credits. GitHub ran these tests offline under controlled conditions, so measure your own: run the same approved task with Auto and with HydraFusion, and compare the credits, the time, and the quality.
-
-- **Where it works best:** substantial, well-scoped coding tasks that you can give in a single prompt.
-
-HydraFusion is off by default. Check its current availability and behavior before enabling a research preview.
-
-For everyday work, start with Auto. As a research preview, HydraFusion's models, patterns, names, and availability can change.
+You choose the effort: **Standard** picks one model per task for everyday work, **High** adds orchestration across multiple models for more complex tasks, and **Max** targets the deepest reasoning. You pay each model's standard price for every model involved, so High and Max can be significantly more expensive than Standard. For everyday work on GitHub.com, start with Auto. See About [GitHub Copilot Fusion](https://docs.github.com/pt/copilot/concepts/models/copilot-fusion).
 
 ## Match the model to the work
 
@@ -139,19 +129,11 @@ Use this table to choose a starting point without paying for capability the work
 | Business path: compare report drafts or check a report against source figures | Auto on **Balance** | A versatile model if the comparison misses discrepancies |  |
 | Business path: read a usage-chart screenshot and identify the highest-usage day | A fast model with image input supported in your client | A versatile image-capable model if it misreads clear labels; verify against the report | Guessing values from unreadable labels; use the report data instead |
 
-Escalate only when checked evidence shows that the starting choice cannot meet the requirement. Evidence can include omitted source facts, inconsistent treatment of similar items, unresolved ambiguity, repeated verified discrepancies, or explanations that do not identify the supporting source. First correct missing context, permissions, and instructions. Then step up the model or effort while keeping the same task, sources, acceptance criteria, and spending boundary.
-
-## Evaluate model output as evidence
-
-Model choice can affect completeness, consistency, how well ambiguity is handled, and whether explanations help a reviewer understand the result. Require each important claim or changed figure to identify its approved source, and require the output to state uncertainty when the source is incomplete or conflicting. A fluent, convincing explanation is not proof: verify it against the source and the acceptance criteria. Learners need the evidence used for the answer, not access to a model’s private reasoning.
-
-**Reviewer check:** ask the output to identify the sources used, show calculations that can be reproduced, label assumptions, and state limitations or unresolved uncertainty. Verify each item against the approved material. An explanation can help the reviewer understand the result, but it is not proof; use observable evidence rather than a model's hidden internal reasoning.
-
 ## Choose Auto or a model
 
 1. To try the controls live, sign in to **GitHub.com** with a Copilot subscription.
 
-1. Go to **github.com/copilot**.
+1. Go to the Copilot home page.
 
 1. Below the prompt, select the model button (it shows **Auto** or the current model name).
 
@@ -159,17 +141,9 @@ Model choice can affect completeness, consistency, how well ambiguity is handled
 
 1. With **Auto** selected, select **Optimized for** and choose **Efficiency**, **Balance**, or **Intelligence**.
 
-1. Before you send, check the context:
+1. Before you send, check the context: select **+** to see the attachment options: **Files and folders...**, **Spaces...**, or **Upload from computer**. Select only sources needed for the task.
 
-  - Select **+** to see what you attach: **Files and folders...**, **Spaces...**, or **Upload from computer**. Select only sources needed for this task.
-
-  - Check the repository selector (**All repositories** by default) and narrow it to the repository the task needs.
-
-**App-only exception:** The next controls apply to the GitHub Copilot app, not the primary GitHub.com workflow.
-
-In the GitHub Copilot app, select the model control below the session prompt. It shows the model and effort, such as **Claude Sonnet 5.5 · Medium**.
-
-If **Effort** or **Context window** isn't visible in the app, turn off Auto.
+Check the repository selector (**All repositories** by default) and narrow it to the repository the task needs.
 
 ## Adjust reasoning effort and context window
 
@@ -179,20 +153,18 @@ Both can increase tokens, credits, and response time. A larger context window is
 
 Set these options before you start a session and keep them the same until it ends. Changing the model, the effort, or the context window in the middle of a session resets the cached context, so the next request processes the full context at the normal input price.
 
-To change them in the GitHub Copilot app, open the model control below the session prompt and turn off Auto. The menu shows Effort (Low, Medium, **High**, **Extra High**, Max) and Context window (for example, **328K** or **1.1M**).
+To change them in the GitHub Copilot app, open the model control below the session prompt and disable Auto. The menu shows Effort (Low, Medium, **High**, **Extra High**, Max) and Context window (for example, **328K** or **1.1M**).
 
 ## Compare the cost of the whole task
 
-Compare models on completed work that meets the same requirements. Count every model call, the context, the retries, and the time people spend reviewing. A cheap model can cost more overall if it needs many corrections.
-
-For example, in a fictional comparison, GPT-6 Luna needs three attempts at a task (3 × 1.5 = 4.5 credits) while Claude Sonnet 5.5 succeeds once (30 credits). Luna still costs less, but if the three attempts also cost a reviewer an hour, Sonnet may give better value.
+For example, in a test task, GPT-6 Luna needed three attempts to succeed (3 × 1.5 = 4.5 credits) while Claude Sonnet 5.5 succeeded on its first attempt (30 credits). Luna still costs less, but if the three attempts also cost a reviewer an hour, Sonnet may give better value.
 
 ## Check the task before you step up
 
-Before you step up, meaning switch to a more powerful model or more effort:
+Before you step up—that is, switch to a more powerful model or use more reasoning effort:
 
 1. State the requirement and how to test it.
 
 1. Check that the agent has the relevant files, the failure evidence, and the permissions it needs. Fix missing information or access first.
 
-1. Step up the model or the effort only if the clear, well-supported task sctill fails.
+1. Step up the model or the effort only if the clear, well-supported task still fails.

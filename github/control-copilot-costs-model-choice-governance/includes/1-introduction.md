@@ -14,20 +14,20 @@ In this module, you’ll follow a fictional team updating a leadership report to
 
 By the end of this module, you'll be able to:
 
-•  Explain what drives Copilot costs: tokens, context, model prices, GitHub AI Credits, and GitHub Actions minutes.
+- Explain what drives Copilot costs: tokens, context, model prices, GitHub AI Credits, and GitHub Actions minutes.
 
-•  Read usage reports, find the cause of an increase, and set spending controls.
+- Read usage reports, find the cause of an increase, and set spending controls.
 
-•  Choose a model and its settings for the task.
+- Choose a model and its settings for the task.
 
-•  Limit what the agent can reach and keep human review where it matters.
+- Limit what the agent can reach and keep human review where it matters.
 
-•  Check AI-generated work against the requirements and know when to stop.
+- Check AI-generated work against the requirements and know when to stop.
 
 ## Prerequisites
 
-•  A GitHub account
+- A GitHub account
 
-•  A basic understanding of GitHub repositories, branches, commits, issues, and pull requests
+- A basic understanding of GitHub repositories, branches, commits, issues, and pull requests
 
-•  Familiarity with GitHub Copilot and its basic capabilities
+- Familiarity with GitHub Copilot and its basic capabilities

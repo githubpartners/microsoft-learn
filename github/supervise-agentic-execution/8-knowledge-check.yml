@@ -59,7 +59,7 @@ quiz:
     - content: "Edit the sentence yourself and approve the pull request."
       isCorrect: false
       explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
-  - content: "You stopped a session after the agent pushed a commit that changed data/13-figures.csv. What's true now?"
+  - content: "You stopped a session after the agent pushed a commit that changed data/q3-figures.csv. What's true now?"
     choices:
     - content: "Stopping the session undid the commit."
       isCorrect: false
