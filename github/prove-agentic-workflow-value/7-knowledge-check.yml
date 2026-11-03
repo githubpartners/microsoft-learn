@@ -26,7 +26,7 @@ quiz:
     - content: "Run the trial for a week, and then set targets that fit the results."
       isCorrect: false
       explanation: "Without a baseline and criteria set in advance, any result looks good. Targets set after the trial tend to match the results. Review <u>Questions to ask before you start a trial</u>."
-  - content: "The agent's run shows **Success**, and its description says \"all figures checked against data/13-figures.csv.\" No record shows which figures it checked. What do you do?"
+  - content: "The agent's run shows **Success**, and its description says \"all figures checked against the source file.\" No record shows which figures it checked. What do you do?"
     choices:
     - content: "Accept the summary, because the run succeeded and the description names the right file."
       isCorrect: false

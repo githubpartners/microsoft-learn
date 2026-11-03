@@ -16,11 +16,11 @@ In this module, you’ll evaluate a fictional five-day reporting trial. You’ll
 
 ## Learning objectives
 
-By the end of this module, you are able to:
+By the end of this module, you'll be able to:
 
-- Measure how the current process performs, and set targets before a trial.
+- Measure how the current process performs and set targets before a trial.
 
-- Check that the evidence supports each claim, for the version you review.
+- Check that the evidence supports each claim for the version you review.
 
 - Calculate acceptance, rework, and recovery rates.
 

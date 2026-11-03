@@ -8,7 +8,7 @@ Teams spend time updating reports, checking documents, and preparing information
 
 Useful supervision needs more than watching the agent work. It needs agreed points where a person reviews the evidence and decides whether to approve, revise, redirect, stop, or accept the work. The task's purpose, source information, and limits guide those decisions.
 
-Your role as the person supervising the task is to decide when the agent may continue and what makes the result acceptable. The agent can prepare changes and report what it did, but you need to check whether the evidence supports its claims. If the work goes off track, you decide whether to request a correction or involve another owner.
+Your role is to decide when the agent may continue and what makes the result acceptable. The agent can prepare changes and report what it did, but you need to check whether the evidence supports its claims. If the work goes off track, you decide whether to request a correction or involve another owner.
 
 In this module, you'll follow a fictional team using GitHub Copilot to update a leadership report against approved figures. You'll move from setting human control points to responding to proposed changes, steering a session, recovering from failure, stopping unsafe work, and validating the final result.
 
@@ -16,9 +16,9 @@ In this module, you'll follow a fictional team using GitHub Copilot to update a 
 
 By the end of this module, you'll be able to:
 
-- **Set approval, review, escalation, and acceptance gates, and name who owns each one.**
+- **Set approval, review, escalation, and acceptance gates and name who owns each one.**
 
-- **Approve, reject, revise, or ask for clarification, based on the evidence.**
+- **Approve, reject, revise, or ask for clarification based on the evidence.**
 
 - **Redirect a running session within the approved task.**
 

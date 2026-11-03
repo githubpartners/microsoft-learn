@@ -20,9 +20,9 @@ By the end of this module, you'll be able to:
 
 •  Choose a model and its settings for the task.
 
-•  Limit what the agent can reach, and keep human review where it matters.
+•  Limit what the agent can reach and keep human review where it matters.
 
-•  Check AI-generated work against the requirements, and know when to stop.
+•  Check AI-generated work against the requirements and know when to stop.
 
 ## Prerequisites
 
