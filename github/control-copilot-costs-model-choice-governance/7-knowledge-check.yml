@@ -15,7 +15,7 @@ content: |
 quiz:
   title: Check your knowledge
   questions:
-  - content: "After a long chat about a report, with the figures file and two drafts attached, the report owner types \"Check it again.\" Why might this short request use many tokens?"
+  - content: "After a long chat about a report that includes the figures file and two drafts, the report owner types \"Check it again.\" Why might this short request use many tokens?"
     choices:
     - content: "GitHub bills short prompts at a higher rate per token."
       isCorrect: false
@@ -45,29 +45,29 @@ quiz:
     - content: "All three equally, because every line went up."
       isCorrect: false
       explanation: "Report updates increased by 160 credits of the 180 total. Divide by the number of tasks to see whether the team did more work or each task cost more."
-  - content: "A summary update has clear requirements, one summary, and one approved figures file. What is the best evidence-backed model-choice approach?"
+  - content: "You need Copilot to update a summary using an approved figures file. How should you choose its model settings?"
     choices:
     - content: "Start with the most powerful model because the summary goes to leadership."
       isCorrect: false
-      explanation: "Start with settings that fit the clear, well-scoped task. Verify the output against the approved figures and requirements, then step up only when checked evidence—such as missing facts, unresolved ambiguity, or repeated discrepancies—shows that the starting choice cannot meet them."
-    - content: "Change models after every response, even when the result has not been checked."
+      explanation: "Start with settings for everyday work and check the result against the approved figures. Fix unclear requirements or missing information first. Choose a more capable model or higher effort only if the task still falls short."
+    - content: "Change models after every response, even when you haven't checked the result."
       isCorrect: false
-      explanation: "Start with settings that fit the clear, well-scoped task. Verify the output against the approved figures and requirements, then step up only when checked evidence—such as missing facts, unresolved ambiguity, or repeated discrepancies—shows that the starting choice cannot meet them."
-    - content: "Start with Auto on Balance and the default effort, verify the result against the approved figures and requirements, and step up only if checked evidence shows a need."
+      explanation: "Start with settings for everyday work and check the result against the approved figures. Fix unclear requirements or missing information first. Choose a more capable model or higher effort only if the task still falls short."
+    - content: "Start with Auto on Balance or Copilot Fusion on Standard, check the result, and increase capability only if the task still falls short."
       isCorrect: true
-      explanation: "Start with settings that fit the clear, well-scoped task. Verify the output against the approved figures and requirements, then step up only when checked evidence—such as missing facts, unresolved ambiguity, or repeated discrepancies—shows that the starting choice cannot meet them."
-  - content: "The repository's instructions say \"Never change files in data/,\" and the agent can still edit any file in the repository. Which control makes sure a change to the figures can't go in unreviewed?"
+      explanation: "Start with settings for everyday work and check the result against the approved figures. Fix unclear requirements or missing information first. Choose a more capable model or higher effort only if the task still falls short."
+  - content: "You include \"Never change the approved figures\" in the prompt. How should you treat that instruction?"
     choices:
-    - content: "Repeat the instruction in every prompt, because the agent always follows instructions."
+    - content: "It removes Copilot's ability to edit the figures file."
       isCorrect: false
-      explanation: "An instruction guides the agent, but it doesn't remove access. A required code owner review blocks the merge until that person approves."
-    - content: "Make the data owner a code owner of data/ and require code owner review in a ruleset, so no change to the figures merges without that person."
+      explanation: "Instructions guide Copilot, but they don't change its access or prove that it followed them. Check which files changed and compare the result with the approved figures before accepting it."
+    - content: "It guides Copilot, but you still need to verify which files changed before accepting the result."
       isCorrect: true
-      explanation: "An instruction guides the agent, but it doesn't remove access. A required code owner review blocks the merge until that person approves."
-    - content: "Write a longer, more detailed instruction."
+      explanation: "Instructions guide Copilot, but they don't change its access or prove that it followed them. Check which files changed and compare the result with the approved figures before accepting it."
+    - content: "It guarantees that every figure in the final summary is correct."
       isCorrect: false
-      explanation: "An instruction guides the agent, but it doesn't remove access. A required code owner review blocks the merge until that person approves."
-  - content: "The agent reports that every figure in a summary matches the data. The list of changed files shows that it changed the Total row in data/q3-figures.csv. What do you do?"
+      explanation: "Instructions guide Copilot, but they don't change its access or prove that it followed them. Check which files changed and compare the result with the approved figures before accepting it."
+  - content: "The agent reports that every figure in a summary matches the data. The list of changed files shows that it changed the Total row in the approved figures file. What do you do?"
     choices:
     - content: "Approve, because the summary and the data now agree."
       isCorrect: false
@@ -89,47 +89,14 @@ quiz:
     - content: "The summary, the figures file, and the client's contract for extra context."
       isCorrect: false
       explanation: "Attach only the sources the task needs. Extra drafts add input tokens, and confidential files the task doesn't need add risk."
-  - content: "A team wants a repeatable release-note workflow that Copilot should load only for release tasks. Which option fits?"
-    choices:
-    - content: "Put the whole workflow in every prompt."
-      isCorrect: false
-      explanation: "A skill packages task-specific instructions and supporting resources for a repeatable workflow that is loaded when relevant. A prompt is immediate, and MCP is for external tools or context."
-    - content: "Create a skill for the release-note workflow."
-      isCorrect: true
-      explanation: "A skill packages task-specific instructions and supporting resources for a repeatable workflow that is loaded when relevant. A prompt is immediate, and MCP is for external tools or context."
-    - content: "Add an MCP server, even though no external system is needed."
-      isCorrect: false
-      explanation: "A skill packages task-specific instructions and supporting resources for a repeatable workflow that is loaded when relevant. A prompt is immediate, and MCP is for external tools or context."
-  - content: "A reviewer needs to compare one report with a current, approved policy export from a system outside the repository. The task needs no live updates or actions. What is the best starting point?"
-    choices:
-    - content: "Attach the approved export and limit the task to that file."
-      isCorrect: true
-      explanation: "A current approved file is sufficient for a one-time read-only comparison. Use MCP when repeated access to current external information or approved tool actions justifies a governed connection."
-    - content: "Configure a persistent MCP connection with every available tool."
-      isCorrect: false
-      explanation: "A current approved file is sufficient for a one-time read-only comparison. Use MCP when repeated access to current external information or approved tool actions justifies a governed connection."
-    - content: "Ask the model to recall the policy."
-      isCorrect: false
-      explanation: "A current approved file is sufficient for a one-time read-only comparison. Use MCP when repeated access to current external information or approved tool actions justifies a governed connection."
   - content: "A more capable model gives a confident explanation for a changed figure but does not identify the source row. What should the reviewer do?"
     choices:
     - content: "Accept it because the explanation is detailed."
       isCorrect: false
-      explanation: "A convincing explanation is not proof. The reviewer needs source-linked evidence and explicit uncertainty, not access to private model reasoning."
-    - content: "Ask to see the model’s private reasoning."
+      explanation: "A confident explanation doesn't prove that a figure is correct. Check it against the approved source and record anything the available evidence can't confirm."
+    - content: "Ask the model for a longer explanation instead of checking the source."
       isCorrect: false
-      explanation: "A convincing explanation is not proof. The reviewer needs source-linked evidence and explicit uncertainty, not access to private model reasoning."
+      explanation: "A confident explanation doesn't prove that a figure is correct. Check it against the approved source and record anything the available evidence can't confirm."
     - content: "Require the source row, verify the figure, and record uncertainty if the source is incomplete."
       isCorrect: true
-      explanation: "A convincing explanation is not proof. The reviewer needs source-linked evidence and explicit uncertainty, not access to private model reasoning."
-  - content: "A report update is approved as one task, but the agent also finds an unrelated formatting issue. Which branch strategy provides the strongest control?"
-    choices:
-    - content: "Make both changes directly on the default branch."
-      isCorrect: false
-      explanation: "A separate task branch keeps the approved scope isolated and lets reviewers verify the exact changes, checks, and evidence before merging. Direct default-branch changes bypass that review point, and unrelated work on the same branch obscures scope and makes rollback and approval harder."
-    - content: "Put both changes on one branch so reviewers see everything together."
-      isCorrect: false
-      explanation: "A separate task branch keeps the approved scope isolated and lets reviewers verify the exact changes, checks, and evidence before merging. Direct default-branch changes bypass that review point, and unrelated work on the same branch obscures scope and makes rollback and approval harder."
-    - content: "Use a separate task branch and reviewed pull request for the approved report update, and handle the unrelated issue separately."
-      isCorrect: true
-      explanation: "A separate task branch keeps the approved scope isolated and lets reviewers verify the exact changes, checks, and evidence before merging. Direct default-branch changes bypass that review point, and unrelated work on the same branch obscures scope and makes rollback and approval harder."
+      explanation: "A confident explanation doesn't prove that a figure is correct. Check it against the approved source and record anything the available evidence can't confirm."

@@ -15,39 +15,39 @@ content: |
 quiz:
   title: Check your knowledge
   questions:
-  - content: "The agent opened a pull request that updates a summary, and the reviewer approved it. Who decides whether the summary is ready for leadership?"
+  - content: "You are the report owner. A reviewer has approved Copilot's proposed changes to a summary. What must you do before the summary is ready for leadership?"
     choices:
-    - content: "The reviewer, because the approval completes the review."
+    - content: "Treat the reviewer's approval as acceptance of the business result."
       isCorrect: false
-      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
-    - content: "The report owner named in the issue, after checking the result against the acceptance criteria."
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+    - content: "Check the summary against the agreed acceptance criteria and record your decision."
       isCorrect: true
-      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
-    - content: "Copilot, because its pull request description says every figure matches."
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+    - content: "Accept Copilot's statement that every figure matches without checking."
       isCorrect: false
-      explanation: "Review and acceptance are separate gates. The reviewer's approval lets the change merge, and the named owner accepts the result using evidence. Review Name the human owner."
-  - content: "The agent's pull request keeps the sentence \"The team expects all four regions to grow next quarter.\" The figures file has no data for that quarter, and the issue doesn't say whether the outlook stays. What's your first response?"
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+  - content: "Your checklist allows only claims supported by approved sources. The summary predicts growth next quarter, but the approved figures contain no data for that quarter. What should you do?"
     choices:
-    - content: "Request a revision that deletes the sentence, because the figures don't support it."
+    - content: "Keep the prediction because it was in the summary before Copilot started."
       isCorrect: false
-      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
-    - content: "Approve, because the sentence was in the summary before the agent started."
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+    - content: "Accept the prediction if it sounds reasonable."
       isCorrect: false
-      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
-    - content: "Ask the report owner whether the outlook stays, and how to label it, before you approve or request a revision."
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+    - content: "Mark the prediction as unsupported and withhold acceptance until the summary meets the checklist."
       isCorrect: true
-      explanation: "The requirement doesn't say what happens to the outlook, so clarify before you judge the agent's work. Deleting it could remove content the owner wants. Review Choose the response that resolves the problem."
-  - content: "During an approved report update, the agent proposes an unfamiliar tool. You check that it would upload the approved figures to an external service, outside the agreed scope. The upload is awaiting authorization, and no information has been sent. What do you do?"
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+  - content: "Your task allows Copilot to update one named report. It proposes editing a second report and is waiting for your approval. What should you do?"
     choices:
-    - content: "Withhold authorization, steer the agent back to the approved source, and escalate the broader access request. Stop if continuing could expose information or cause harm."
+    - content: "Decline the extra edit and direct Copilot back to the approved report."
       isCorrect: true
-      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
-    - content: "Authorize the tool because the report update is already approved."
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
+    - content: "Approve the extra edit because the original report update was approved."
       isCorrect: false
-      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
-    - content: "Stop every session that proposes an unfamiliar tool, regardless of what the tool does or whether it is in scope."
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
+    - content: "Remove the file limit so Copilot can decide which reports need changes."
       isCorrect: false
-      explanation: "Approval of the report update doesn't authorize an out-of-scope upload. Because the action is waiting and no information has been sent, withhold authorization and steer back within scope while the owner considers the access request. Stop and escalate if continuing could cause harm. An unfamiliar tool alone isn't a stop trigger. Review Check unexpected tool use."
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
   - content: "The agent's pull request description says \"All figures now match the source.\" You find that it still calls North the region with the highest margin, although East's is higher (17.3% against 16.8%). What's the best next step?"
     choices:
     - content: "Ask the agent to double-check its work, and approve if it confirms."
@@ -59,28 +59,28 @@ quiz:
     - content: "Edit the sentence yourself and approve the pull request."
       isCorrect: false
       explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
-  - content: "You stopped a session after the agent pushed a commit that changed data/q3-figures.csv. What's true now?"
+  - content: "You stopped a session after the agent saved a change to the approved figures file on GitHub. What's true now?"
     choices:
-    - content: "Stopping the session undid the commit."
+    - content: "Stopping the session restored the original figures."
       isCorrect: false
-      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
-    - content: "The pull request closed, so you have nothing more to do."
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+    - content: "Stopping the session stopped every activity the agent started, so no further checks are needed."
       isCorrect: false
-      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
-    - content: "The commit is still there and needs review, and other runs the agent started need their own check."
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+    - content: "The saved change still needs review, and you must check any other activities the agent started separately."
       isCorrect: true
-      explanation: "Stopping keeps pushed commits and doesn't prove that separate processes stopped. Review Stop a Copilot session on GitHub."
-  - content: "Copilot code review found no issues, and every figure in the summary matches the figures file. What else must a person check before accepting?"
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+  - content: "Automated checks report no issues, and every figure in the summary matches the approved figures. What else must a person check before accepting it?"
     choices:
     - content: "That the comparisons and growth statements are right, nothing outside the agreed file changed, and the summary works for leadership."
       isCorrect: true
-      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
     - content: "Nothing, because the review and the figures agree."
       isCorrect: false
-      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
     - content: "That the agent's description of its own work sounds confident and complete."
       isCorrect: false
-      explanation: "Matching numbers and a clean automated review don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
   - content: "The agent listed five figures that changed between draft 1 and the current summary. You checked three, and they match. What do you do before the list goes to the meeting organizer?"
     choices:
     - content: "Send the list, because every figure you checked matches."

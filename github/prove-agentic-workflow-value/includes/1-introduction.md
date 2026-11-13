@@ -30,10 +30,6 @@ By the end of this module, you'll be able to:
 
 ## Prerequisites
 
-### Required knowledge
-
-Before starting the module, you should have:
-
 - A GitHub account
 
 - A fundamental understanding of repositories, GitHub Issues, and pull requests

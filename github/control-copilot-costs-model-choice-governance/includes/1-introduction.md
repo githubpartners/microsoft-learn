@@ -8,13 +8,15 @@ Teams spend time reading requests, preparing reports, and checking documents aga
 
 Copilot costs depend on the model, the information it processes, and the work it performs. Your role is to choose settings that fit the task, monitor usage, and decide what source-linked evidence makes the result acceptable. Spending fewer credits is useful only when the work still meets the requirements and leaves the approved sources unchanged.
 
-In this module, you’ll follow a fictional team updating a leadership report to match its approved figures. You’ll use that task to investigate usage, choose a model, set boundaries for agentic work, identify the people with decision authority, and check the result before accepting it. The examples connect cost, risk, evidence, and accountability.
+This module builds on Work orchestration with GitHub Copilot and focuses on the cost and governance consequences of those orchestration choices.
+
+In this module, you'll follow a fictional team updating a leadership report to match its approved figures. You'll use that task to investigate usage, choose a model, set boundaries for agentic work, identify the people with decision authority, and check the result before accepting it. The examples connect cost, risk, evidence, and accountability.
 
 ## Learning objectives
 
 By the end of this module, you'll be able to:
 
-- Explain what drives Copilot costs: tokens, context, model prices, GitHub AI Credits, and GitHub Actions minutes.
+- Explain what drives Copilot costs: tokens, context, model prices, GitHub AI Credits, and compute usage from Actions runners and cloud sandboxes.
 
 - Read usage reports, find the cause of an increase, and set spending controls.
 

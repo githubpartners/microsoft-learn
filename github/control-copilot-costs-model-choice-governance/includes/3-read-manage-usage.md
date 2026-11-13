@@ -4,13 +4,13 @@ When Copilot usage rises, compare the report with completed work before changing
 
 ## Who decides what
 
-Live actions in this module need specific people:
+In this module, specific people take the live actions:
 
 - The **task owner** decides what the task needs and accepts the result. For a report update, this could be the report owner.
 
 - The **session operator** starts and directs the agent's work.
 
-- The **billing administrator** changes spending controls.
+- The **billing manager** changes spending controls.
 
 - The **repository administrator** changes repository settings.
 
@@ -18,57 +18,55 @@ Live actions in this module need specific people:
 
 ## Check your usage while you work
 
-To check your usage while you work, go to the Copilot home page. Two places show your usage: the Copilot home page and the settings page.
+To check your usage while you work, open [Copilot settings](https://github.com/settings/copilot) on GitHub.com. Under **Usage**, check your AI credit consumption for the current billing period.
 
-- Next to the prompt box, select the gauge icon to view your AI credits used this month.
+You can also check your usage on the [Copilot home page](https://github.com/copilot):
 
-    ![GitHub Copilot showing AI credits used](../media/github-copilot-credits-used.png)
+- Select **Settings**. Under **Current plan**, select **View plan** to review the AI credits you used for the current cycle with extra details.
 
-- In the lower-left corner, select **Settings**. Under **Current plan**, click on **View plan** to review the AI credits used for the current cycle with extra details.
+    ![GitHub Copilot Settings showing the current plan, AI credit usage, and the View plan button.](../media/copilot-current-plan-usage.png)
 
-    ![GitHub Copilot Settings showing the current plan, AI credits used, and the View plan button.](../media/copilot-current-plan-usage.png)
+- As a visual shortcut, a gauge icon next to the prompt box opens the **Monthly limit** panel, which shows how many AI credits you used this month.
 
-For example, the Current plan section can show how many AI credits you have used and, when available for your plan, the amount used out of your allowance or budget. Use this quick view to monitor usage before starting another long or agentic task.
+    ![The Monthly limit panel showing monthly AI credit usage.](../media/github-copilot-credits-used.png)
 
-The information shown can differ by plan and billing arrangement. For more detailed usage by model or day, open the full AI usage report described next.
+For example, the Current plan section can show how many AI credits you have used and, when available for your plan, how much of your allowance or budget you've used. Use this quick view to monitor usage before starting another long or agentic task.
+
+What the **Current plan** section shows differs by plan and billing arrangement. For more detailed usage by model or day, open the full AI usage report in the next section.
 
 ## Open the full AI usage report
 
 The full report shows usage by model or by day. Where you open it depends on your plan and role. For all routes, sign in to **GitHub.com** first.
 
-**Individual plan (Copilot Pro or Copilot Pro+):**
+**Individual plan (Copilot Free, Copilot Pro, Copilot Pro+, or Copilot Max):**
 
-1. In the upper-right corner of any page, select your profile picture, and then select **Settings**.
+1. Open [your billing overview](https://github.com/settings/billing).
 
-1. In the left sidebar, under **Code, planning, and automation**, select **Copilot**, and then select **Features**.
-
-1. In the **Usage** section, review **Included usage** and **Additional usage**, and then select **View details**.
-
-The **AI usage** report opens. You can also open it from the left sidebar: under **Access**, expand **Billing and licensing**, and then select **AI usage**.
+2. Under **Access**, expand **Billing and licensing**, and then select **AI usage**.
 
 **Other plans and roles:**
 
-- **Copilot Business or Copilot Enterprise member:** select your profile picture > **Copilot settings**. Under **Usage**, review **Usage this cycle**. **Usage billed to** names the account that pays.
+- **Copilot Business or Copilot Enterprise member:** open Copilot settings. Under **Usage**, review **Usage this cycle**. **Usage billed to** names the account that pays.
 
-- **Organization owner with billing access:** open the organization > **Settings**. Under **Access**, open **Billing & Licensing**, and then select **AI usage**.
+- **Organization owner with billing access:** open the organization > **Settings**. Under **Access**, open **Billing and licensing**, and then select **AI usage**.
 
-- **Enterprise owner or billing manager:** open the enterprise > **Billing & Licensing** > **AI usage**.
+- **Enterprise owner or billing manager:** open the enterprise > **Billing and licensing** > **AI usage**.
 
-Account-wide reports need a billing role; anyone can see their own usage. If you can't open an account-wide report, use a shared copy or the fictional data in this unit.
+Anyone can see their own usage, but account-wide reports need a billing role. If you can't open an account-wide report, use a shared copy or the fictional data in this unit.
 
 ## Read the AI usage report
 
-The top of the report has two cards and two controls:
+The top of the report has two cards and two controls, which the following sections describe.
 
 ### Compare Usage and AI usage
 
 Use **Usage** for the broader billing picture across GitHub products. It shows metered usage in currency, including gross and billed amounts.
 
-![GitHub Settings with Usage selected under Billing and licensing, showing a metered usage chart and a breakdown of gross and billed amounts.](../media/github-metered-usage-report.png)
+![The Usage page under Billing and licensing, with a metered usage chart and gross and billed amounts.](../media/github-metered-usage-report.png)
 
 Use **AI usage** for Copilot-specific detail, including included and additional credits, model usage, and daily trends. Use the two reports together when you need to connect Copilot activity with billed usage.
 
-![Interface: GitHub.com — Settings > Billing and licensing > AI usage. The outlines mark the sidebar item, the Models and Days toggle, and the period selector. ](../media/copilot-ai-usage-report.png)
+![The AI usage report under Billing and licensing, with the Models and Days toggle and the period selector.](../media/copilot-ai-usage-report.png)
 
 - **Included credits** shows how many credits you used out of your allowance and when it resets.
 
@@ -76,11 +74,11 @@ Use **AI usage** for Copilot-specific detail, including included and additional 
 
 - **Models** and **Days** switch the chart between usage per model and usage per day. Select **Days** to see the usage trend across the period and spot the days when usage jumped.
 
-- The period selector (it shows the current month, such as **Oct 2026**) offers **Current month**, **Last month**, **This year**, and **Last year**.
+- The period selector shows the current month, such as **Oct 2026**, and offers **Current month**, **Last month**, **This year**, and **Last year**.
 
 ### Request an emailed usage report
 
-On the **AI usage** page, select the **Download** button to open the **Get AI Usage Report** dialog. Choose the period under **Select time frame**, and then select **Email me the report**. GitHub emails the report to the address shown in the dialog when it's ready. The following example requests a report for the current month.
+On the **AI usage** page, select **Get usage report** to open the **Get AI Usage Report** dialog. Choose the period under **Select time frame**, and then select **Email me the report**. GitHub emails the report to the address the dialog shows when the report is ready. The following example requests a report for the current month.
 
 ![Get AI Usage Report dialog with the current month selected and an Email me the report button.](../media/copilot-email-usage-report.png)
 
@@ -88,9 +86,9 @@ On the **AI usage** page, select the **Download** button to open the **Get AI Us
 
 Open the report in a spreadsheet, such as Excel, to compare equal-length periods and spot usage increases. You can also use it in a presentation to team leads, alongside completed-work records and measured time spent doing similar work without AI. The usage report alone doesn't show time saved or what the work would have cost without AI.
 
-Use only an organization-approved tool and data you're allowed to share. Try these prompts with an approved copy of the report:
+Use only an organization-approved tool and data your organization permits you to share. Try these prompts with an approved copy of the report:
 
-- **Find issues:** "Compare these two weeks. Using the available fields, show total credits and the largest increases by day or model. Separate facts from possible causes and list what to investigate next."
+- **Find increases:** "Compare these two weeks. Using the available fields, show total credits and the largest increases by day or model. Separate facts from possible causes and list what to investigate next."
 
 - **Compare average usage:** "Using this report and our completed-task counts for the same work and dates, identify missing counts and prepare the data needed to compare the weeks. Don't count report rows as tasks."
 
@@ -111,27 +109,31 @@ Compare two periods of the same length that involve similar work, and remember t
 | Report updates | 100 | 580 |
 | Total | 300 | 800 |
 
-In this example, report updates explain 480 of the 500-credit increase, so investigate that work first. The table shows where usage grew, but not why. Check four possible causes: more tasks, a change to a more expensive model, more context per request, or failed attempts that had to run again.
+In this example, report updates explain 480 of the 500-credit increase, so investigate that work first. The table shows where usage grew, but not why. Check four possible causes: more tasks, a change to a more expensive model, more context per request, or retries after failed attempts.
 
 ### When usage increases
 
 When usage rises, compare the work before changing a setting. Check whether requests included more context, required more attempts, used a different model, or ran autonomously for longer. Then adjust the cause: narrow unnecessary context, improve the prompt or checks to reduce retries, choose a model that fits the task, or shorten and monitor autonomous work. Confirm that the adjusted workflow still meets the same requirements.
 
-The task owner knows how many tasks finished each week. Divide the credits by that number. If each completed task costs about the same as before, the team did more work.
+The task owner knows how many tasks finished each week. Divide each week's credits by that number. If each completed task costs about the same as before, the team did more work.
 
 If each task costs more, look at the model, the context, and the retries.
 
-For Copilot work, the agent's session—one continuous stretch of work on a task—shows the model and the credits used for each step:
+The agent's session shows the model and the AI credits for each response:
 
 1. On GitHub.com, open the repository, select **Pull requests**, and then open the agent's pull request.
 
-2. In the **Conversation** timeline, find the entry "Copilot created this pull request from a session" and select **View session**.
+2. In the **Conversation** timeline, find the entry **Copilot started work on behalf of** your username, and select **View session**.
 
-    - You can also open the session from the Copilot home page under **Pick up where you left off**, below the chat box.
+    - You can also open the session under **Sessions** in the Copilot sidebar or from the repository's **Agents** tab.
 
-3. Under each Copilot response, read the model name and the credits it used, for example **Claude Sonnet 5.5 · 16.1 AI credits**.
+3. For a response, check **View message info** to see the model and AI credits. To display the tooltip with a mouse, point to the response and then to the icon. If you can't access the tooltip, you can still review session totals in the next step, but they don't identify individual responses.
 
-![Interface: GitHub.com — Copilot agent session, opened from a pull request or the session list on the Copilot home page. The line under each response names the model and AI credits used. ](../media/copilot-model-credit-usage.png)
+    ![Copilot agent response with View message info showing the model and AI credits used.](../media/copilot-model-credit-usage.png)
+
+4. Select the session title to open its details. **Session spend** shows the total AI credits, and **Tokens** shows the input and output tokens. Use these totals alongside response details, when available, to distinguish one costly response from a long session.
+
+    ![Copilot session details showing the Tokens section and the Session spend row.](../media/copilot-session-details.png)
 
 If you can't open a session, use the example report. You don't need to start a new agent task.
 
@@ -139,61 +141,37 @@ If you can't open a session, use the example report. You don't need to start a n
 
 Watch for these signals, and ask the matching question:
 
-- **A powerful model or high reasoning effort:** does the task need that capability?
+- **A powerful model or high reasoning effort:** Does the task need that capability?
 
-- **A large Code Review model line:** do automatic reviews run more often than the team needs?
+- **A large Code Review model line:** Do automatic reviews run more often than the team needs?
 
-- **Fixes started from security alerts:** **Assign to Copilot** on a code scanning alert, a security problem GitHub found in the code, starts a fix with no confirmation, and each fix uses AI credits. Did the team agree who starts them?
+- **Automations without a limit:** Each trigger can start another session. Does the automation have appropriate AI credit limits?
 
 Compare the cost of completed work with its quality and value.
 
-## Choose when and how deeply Copilot reviews
-
-To check or change your personal review settings:
-
-1. On GitHub.com, select your profile picture > **Settings**.
-
-2. In the left sidebar, under **Code, planning, and automation**, select **Copilot**, and then select **Code review**.
-
-3. Under **Review automations**, set the three triggers:
-
-    - **Automatic Copilot code review** requests a review on every pull request you open.
-
-    - **Review new pushes** reviews again after each new push to a pull request that Copilot has already reviewed.
-
-    - **Review draft pull requests** reviews pull requests that are still drafts.
-
-4. Under **Review effort**, open **Review effort level** and choose the default depth.
-
-The effort levels are **Lite** ("Efficient review, low cost") for routine, well-scoped changes and **Balanced** ("Deep analysis, moderate cost") for changes that touch security or many files. Balanced can also use more Actions minutes. **Max** ("Most thorough, high cost") is for more important and risky tasks.
-
-During frequent draft revisions, disable **Review draft pull requests** and request a review when the draft is ready. Review effort is a separate setting from the model's reasoning effort and from the Auto tier.
-
-A repository administrator can set a **ruleset**: a rule that requires reviews or checks before changes join the project. Your personal settings can't disable those reviews. All three review levels still need a human to assess the result.
-
 ## Choose a spending control
 
-The **billing manager** sets these controls. Bring them four answers: who pays, which usage to limit, the amount, and what must happen when usage reaches the limit. A **cost center** groups users or resources for billing.
+The **billing manager** sets these controls. Give the billing manager four answers: who pays, which usage to limit, the amount, and what must happen when usage reaches the limit. A **cost center** groups users or resources for billing.
 
 A cost center budget is separate from a person's budget.
 
-**Keep the controls separate:** checking usage shows what has already been consumed; an alert notifies people when a threshold is reached; an enforced spending limit stops the covered paid usage at the limit. A budget does not always stop work—some budgets only alert unless stop-at-limit enforcement is enabled, and the effect depends on the budget scope.
+Each control does something different. Checking usage shows what Copilot work has already used. An alert tells people when usage reaches a set level. An enforced spending limit stops the paid usage it covers at the limit. A budget doesn't always stop work. Some budgets only send alerts unless you configure them to stop usage at the limit, and the effect depends on what the budget covers.
 
 Pick the control by what you need to limit:
 
 - **One person's billed usage:** a **user-level budget**. It always stops usage at the limit and adds no credits. It can stop the person even while pooled credits remain.
 
-- **Paid usage beyond included credits:** an **organization or cost center budget**, or an **enterprise spending limit**. Alerts don't stop usage; the administrator decides whether each budget stops usage when its limit is reached.
+- **Paid usage beyond included credits:** an **organization or cost center budget**, or an **enterprise spending limit**. Alerts don't stop usage; the administrator decides whether each budget stops usage when usage reaches its limit.
 
-- **Any charge beyond included credits:** disable the **AI credits paid usage** policy. It's enabled by default for organizations and enterprises, and disabling it doesn't share the pool fairly among people.
+- **Any charge beyond included credits:** disable the **AI credits paid usage** policy. GitHub enables it by default for organizations and enterprises, and disabling it doesn't share the pool fairly among people.
 
-- **Expensive models:** **model policies**. Disabled models aren't available to users or to Auto. Policies don't cover code review and don't cap spending.
+- **Expensive models:** **model policies**. When an enterprise or organization Disabled models aren't available to users, to Auto, or to Copilot Fusion. Enterprise administrators can also disable a model for Copilot Fusion only. Model policies don't cover code review and don't cap spending.
 
-For example, a $5 user budget that the billing manager sets before usage begins lets that user spend up to 500 credits. Usage stops at the limit. Copilot doesn't switch to a cheaper model.
+For example, the billing manager can set a $5 USD user budget before usage begins. GitHub calculates the equivalent AI credit limit using its [current conversion rate](https://docs.github.com/en/copilot/concepts/billing-and-usage/organizations-and-enterprises/billing#how-can-i-control-costs-with-budgets). Usage stops at the limit. Copilot doesn't switch to a cheaper model.
 
 Reviews that the organization pays for need an organization, cost center, or enterprise control instead.
 
-A new budget only counts usage after you create it. It can't cap usage that already happened earlier in the month.
+A new budget counts only the usage that occurs after you create it. It can't cap usage from earlier in the month.
 
 ## Set up a budget for your account
 
@@ -201,43 +179,61 @@ Choose the route for the account that pays for your usage. If your organization 
 
 - **Personal:** select your profile picture > **Settings** > under **Access**, expand **Billing and licensing** > **Budgets and alerts**.
 
-- **Organization:** open the organization > **Settings** > under **Access**, select **Billing & Licensing** > **Budgets and alerts**.
+- **Organization:** open the organization > **Settings** > under **Access**, select **Billing and licensing** > **Budgets and alerts**.
 
-- **Enterprise:** open the enterprise > select the **Billing & Licensing** tab > **Budgets and alerts**.
+- **Enterprise:** open the enterprise > select the **Billing and licensing** tab > **Budgets and alerts**.
 
 The available scopes differ: a personal budget covers your account, organization budgets stay within that organization, and enterprise AI credit budgets can cover the enterprise, an organization, a cost center, or users.
 
-From **Budgets and alerts**:
-
 **Shortcut:** on the AI usage report or in your Copilot settings, select **Edit budget** next to **Additional usage**.
+
+From **Budgets and alerts**:
 
 1. Select **New budget**.
 
-1. Under **Budget type**, select **AI credits budget** (called **Bundled AI credits budget** in some account views). Select **Next: Configure budget** if shown.
+2. Under **Budget type**, select **AI credits budget** (called **Bundled AI credits budget** in some account views). If **Next: Configure budget** appears, select it.
 
-1. Under **Budget scope**, choose what the budget covers. For a personal budget, confirm **Account**, as shown in the following image.
+3. Under **Budget scope**, choose what the budget covers. For a personal budget, confirm **Account**, as the following image shows.
 
-1. Under **Budget**, enter the **Budget amount**.
+4. Under **Budget**, enter the **Budget amount** in USD.
 
-1. Select **Stop usage when budget limit is reached** if usage must stop at the limit.
+5. Select **Stop usage when budget limit is reached** if usage must stop at the limit.
 
-1. Under **Alerts**, select **Receive budget threshold alerts** and configure recipients if available.
+6. Under **Alerts**, select **Receive budget threshold alerts**, and then choose who receives them, if that option is available.
 
-1. Select **Create budget**. For practice only, select **Cancel** instead.
+7. Select **Create budget**. For practice only, select **Cancel** instead.
 
-![Interface: GitHub.com — Budgets and alerts > New budget > Configure budget. Confirm the budget scope and stop setting before saving. ](../media/copilot-budget-and-alerts.png)
+![Account budget form with the Budget amount field, the Stop usage when budget limit is reached checkbox, and Create budget.](../media/copilot-budget-amount-stop-usage.png)
 
 After you save, the budget appears in the **Budgets and alerts** list with its spend and status. With threshold alerts enabled, GitHub sends emails and shows a banner on GitHub.com when spending reaches 75%, 90%, and 100% of the budget.
 
 ## Set limits on autonomous runs
 
-An autonomous run can make many credit-consuming model calls, so agree on when it must stop before it starts. A Copilot session stops after at most 59 minutes, and a repository administrator can set a shorter limit.
+Set a stopping condition before an autonomous run: each run can make multiple credit-consuming model calls, and a time limit doesn't cap credits. GitHub Actions sessions have a maximum runtime; cloud sandbox sessions follow a different lifecycle.
 
-A time limit doesn't cap credits and doesn't undo **commits**, the saved sets of changes, that the agent already pushed. A user-level budget caps everything billed to one person, not each run.
+A **Copilot automation** starts a session on a schedule or repository event. You can set AI credit limits per run, day, week, or month. Automations can use MCP tools and, when permitted, merge pull requests or mark them ready for review. Shared automations are visible to anyone with read access; GitHub bills the repository owner and shows Copilot as the author.
 
-For example, a team updating a report could agree on **two monitored attempts** and name who can stop the run. An attempt is one full try at the task.
+Time limits don't undo commits or cap a person's total usage; a user-level budget applies across all usage billed to that person.
 
-This is a team agreement: write the limit and the name of the person who stops the run in the task's issue, the to-do item on GitHub that describes the task, and add "Stop after two unsuccessful attempts" to the prompt. GitHub doesn't count attempts for you, so the session operator counts the sessions under **Pick up where you left off**, below the chat box on the Copilot home page.
+For example, a team might allow two attempts and name who can stop the run. Record the limit and contact in the task issue, and add "Stop after two unsuccessful attempts" to the prompt. GitHub doesn't count attempts; the session operator tracks sessions in the repository's **Agents** tab.
+
+### Configure automation credit limits
+
+You need write access to a private or internal repository where you can use Copilot cloud agent and automations.
+
+1. In the repository, select **Agents**, and then select **Automations** in the sidebar.
+
+2. Edit an approved automation. For a new approved task, select **Create automation** > **Create manually**.
+
+3. Under **AI credit limits**, enter limits in **Per run**, **Daily**, **Weekly**, or **Monthly**. A blank field means no limit.
+
+4. Review the configuration before saving it. If you're only practicing, select **Cancel**.
+
+![Automation form with the Per run, Daily, Weekly, and Monthly AI credit limit fields.](../media/copilot-automation-credit-limits.png)
+
+**Per run** stops an active run at its limit (minimum: 30 AI credits). **Daily**, **Weekly**, and **Monthly** block new runs at their limits but don't stop an active run.
+
+Limits reset at 00:00 UTC: daily, every Monday, or on the first day of the month. Combine a per-run limit with a period limit when you need both controls.
 
 ## Habits that keep usage down
 
@@ -255,17 +251,17 @@ A good prompt has four parts:
 
 - **A stopping condition**: your definition of done. Agree on the attempt limit before starting.
 
-These pairs show the difference. Nobody measured their usage outcomes. A **path** is a file's location in the repository, such as its folder and file name.
+These pairs show the difference. Nobody measured how much each prompt uses. A **path** is a file's location in the repository, such as its folder and file name.
 
 - **Vague prompt:** "Fix the summary and improve anything else you find."  
-**Focused prompt:** "Update report/q3-summary.md so every figure matches data/q3-figures.csv. Change only that file. For each changed figure, name the row it comes from in the pull request description. Stop at the agreed attempt limit."
+  **Focused prompt:** "Update report/q3-summary.md so every figure matches data/q3-figures.csv. Change only that file. For each changed figure, name the row it comes from in the pull request description. Stop at the agreed attempt limit."
 
 - **Vague feedback:** "The result needs another update. Try again."  
-**Specific feedback:** "The summary still says North had the highest operating margin. The figures show East at 17.3% and North at 16.8%. Correct that sentence, keep the other changes, and list what you changed."
+  **Specific feedback:** "The summary still says North had the highest operating margin. The figures show East at 17.3% and North at 16.8%. Correct that sentence, keep the other changes, and list what you changed."
 
-A vague prompt makes the agent search the whole repository, and every file it reads adds input tokens.
+A vague prompt can lead the agent to search more files, adding input tokens.
 
-The prompt "In report/q3-summary.md, the West sentence says revenue grew. Check it against the West row in data/q3-figures.csv and propose a fix" costs less than asking Copilot to check every report in the repository.
+The prompt "In report/q3-summary.md, the West sentence says revenue grew. Check it against the West row in data/q3-figures.csv and propose a fix" can use fewer tokens than asking Copilot to check every report in the repository.
 
 A useful prompt can be longer than a vague one. Scope, evidence, and a stopping condition reduce unnecessary exploration and corrections.
 
@@ -274,14 +270,6 @@ A useful prompt can be longer than a vague one. Scope, evidence, and a stopping 
 Stay in the same chat while you make small corrections to the same task, because the earlier messages are useful context there. Start a new chat when you switch to unrelated work, when you finish a phase such as planning, or when answers get slower or miss earlier details.
 
 Carry forward only the checked decisions, relevant sources, limits, and open questions. Compare total credits and correction attempts to confirm that starting fresh helps without losing necessary context.
-
-### Add automatic checks the agent can run
-
-Agents can give different answers to the same request, and in a long task one wrong step leads to the next. Automatic checks tell the agent right away whether a change works, so it corrects itself early instead of building on a mistake. Tests check that the change behaves as expected, and security checks catch risky code and leaked passwords.
-
-- **Team agreement:** add "Run the tests before you finish" to the prompt.
-
-- **GitHub setting:** Copilot's validation tools stay enabled: CodeQL code scanning, Copilot code review, secret scanning, and dependency vulnerability checks. The setting needs the administrator role.
 
 ### Make a personal improvement plan
 
@@ -293,4 +281,4 @@ Use what you learned to improve one habit at a time. Write down your answers:
 
 - **Frequency:** Which tasks do you do most often? The biggest savings usually come from them.
 
-Pick one task and one to three habits from this unit to try for a week. Write down what success looks like, for example "fewer follow-up prompts to correct the code." After the week, check the AI usage report and the quality of the results. Compare cost and result quality.
+Pick one task and one to three habits from this unit to try for a week. Write down what success looks like, for example, "fewer follow-up prompts to correct the code." After the week, check the AI usage report and the quality of the results. Compare cost and result quality.

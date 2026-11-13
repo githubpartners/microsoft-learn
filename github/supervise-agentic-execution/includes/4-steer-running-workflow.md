@@ -18,19 +18,17 @@ Summarize what failed, the evidence, and the permitted fix in the new prompt. **
 
 2. Below the prompt box, select the repository button and choose the approved repository. Next to it, select the branch button and choose the approved base branch. The base branch decides which version of the files the agent starts from.
 
-3. In the prompt box ("Give Copilot a background task to work on"), check that the agent button shows **Agent: Copilot** when you point to it.
+3. In the prompt box ("Give Copilot a background task to work on"), hover over the agent button or move keyboard focus to it. Check that its tooltip reads **Agent: Copilot**.
 
 4. Enter the approved task. Include the correction, the files that may change, the limits to keep, the checks to run, and when to stop or escalate to an owner. Press **Enter** to submit.
 
-![The Copilot task prompt. The prompt box, Give Copilot a background task to work on, and the repository and branch buttons below it are outlined in red together. The left sidebar lists Home, My sessions, Needs attention, and Sessions.](../media/start-agent-from-agents-page.png)
+5. On the Copilot home page, open the new task under **Pick up where you left off**, below the chat box. Check its repository and activity. For changes, Copilot works on a new branch based on the branch you selected.
 
-**The Copilot task prompt. The repository and branch below the prompt decide where the agent works.**
+   ![Copilot home page showing the chat prompt and an idle session under Pick up where you left off.](../media/copilot-home-session-list.png)
 
-1. On the Copilot home page, open the new task under **Pick up where you left off**, below the chat box. Check its repository and activity. For changes, Copilot works on a new branch based on the branch you selected.
+6. When the session finishes, select the arrow next to the branch name below the session log to view the changed files. If the session already has a pull request, select **View pull request**. If it doesn't and the result is ready for review, select **Create pull request**.
 
-2. When the session finishes, select the arrow next to the branch name below the session log to view the changed files. If the session already has a pull request, select **View pull request**. If it doesn't and the result is ready for review, select **Create pull request**.
-
-![The bottom of a finished session: a bar with the arrow to view changed files, the branch name, and View pull request, above the prompt box What would you like to do next. View pull request is outlined in red.](../media/review-agent-session-changes.png)
+![The end of a finished session with the changed-files arrow and View pull request.](../media/review-agent-session-changes.png)
 
 **The end of a finished session. The arrow shows the changed files, and the prompt box sends a follow-up to the agent.**
 
@@ -40,13 +38,17 @@ Review the pull request before anyone accepts the result.
 
 Steering requires repository write access and a session you started. It keeps the session and the work done so far. A restart opens a new session. Both steering and restarting use AI credits.
 
-1. On the Copilot home page, below the chat box, check **Pick up where you left off** for the list of sessions and select your task.
+Each session runs in the environment chosen when it starts. A **cloud session** runs in a **cloud sandbox**, an isolated environment that GitHub hosts. An **Actions session** runs in a GitHub Actions job.
 
-2. Read its latest activity. While the agent is running, enter the correction and the limits that still apply.
+1. Go to your Copilot home page at `github.com/copilot`. Under **Pick up where you left off**, select your task. If it isn't listed, select **View all**.
 
-3. Press **Enter**, or select the **Send now** arrow beside the prompt. Check that your message appears in the session.
+2. Read its latest activity. While the session's status reads **Working**, enter the correction and the limits that still apply in the prompt box.
 
-4. Read the next activity and the resulting changes to see whether the correction took effect.
+3. Press **Enter**, or select the arrow beside the prompt. While the agent is working, the arrow's tooltip reads **Steer active turn**. Check that your message appears in the session.
+
+4. Read the next activity and the resulting changes to see whether the correction took effect. In a cloud session, select **Changes** above the prompt to inspect the edits. The control shows how many lines the agent added and removed.
+
+![A Copilot session with a steering message, the Changes control above the prompt, and a Create pull request button.](../media/copilot-steering-message-changes.png)
 
 The agent reads your message after it finishes its current action. If continuing is unsafe, stop the session instead of waiting.
 
@@ -58,15 +60,20 @@ The agent reads your message after it finishes its current action. If continuing
 
 - **Scope change:** adds work and needs the task owner's decision, in its own issue. **Example:** "Also draft the leadership slides from the summary."
 
+Work that expands without that decision is **scope creep**: the task grows one small request at a time, and nobody decided to expand it.
+
 ### Keep the limits visible
 
-Limits that apply to every task belong in the repository's custom instructions file, .github/copilot-instructions.md, which Copilot reads on every request. Limits for one task belong in the task's issue.
+Limits that apply to every task belong in the repository custom instructions file (`.github/copilot-instructions.md`), which Copilot reads on every request. Limits for one task belong in the task's issue.
 
 ### Send a focused steering message
 
 For example, when correcting a report, a useful steering message is:
 
-Use only the figures in data/q3-figures.csv. Leave the outlook sentence as it is until the report owner decides. Keep changes within report/q3-summary.md. Don't change anything in data/q3-figures.csv. Report any figure that doesn't match before you continue.
+- Use only the figures in `data/q3-figures.csv`, and don't edit that file.
+- Change only `report/q3-summary.md`.
+- Leave the outlook sentence as it is until the report owner decides.
+- Before you continue, report any figure that doesn't match.
 
 After you send the message, check the changed files to see whether the agent followed it.
 

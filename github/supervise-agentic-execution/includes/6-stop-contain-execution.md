@@ -12,33 +12,37 @@ Examples include:
 - Another client's data in the output
 - Repeated runs without useful progress
 
-Stopping prevents further work in that session, but it doesn't undo changes already made or necessarily stop separate processes. **Containment** means preserving evidence, reviewing existing changes, and checking other activity the agent may have started.
+Stopping prevents further work in the current turn, but it doesn't undo changes already made or necessarily stop separate processes. **Containment** means preserving evidence, reviewing existing changes, and checking other activity the agent may have started.
 
 ## Stop a Copilot session on GitHub
 
-Stopping requires repository write access and a session you started. If you can't stop it yourself, follow the steps under “If you can't stop the session.”
+Stopping requires repository write access and a session you started. Before you act, confirm that you have the right account, repository, and task.
 
-1. On the Copilot home page, below the chat box, check **Pick up where you left off** for the list of sessions and select the active task.
+1. Go to your Copilot home page at `github.com/copilot`. Under **Pick up where you left off**, select the active task. If it isn't listed, select **View all**.
 
 2. **Check the session log to confirm that it's the right task. Copy the session URL and any pull request link. You'll need them for the evidence record and the recovery decision.**
 
-3. Below the session log, select **Stop session**, the square stop icon beside the send arrow.
+3. In a cloud session, select **Stop generating**, the square stop icon in the prompt box.
 
-![A running session's prompt box with the square Stop session icon outlined in red next to the Send now arrow.](../media/stop-running-agent-session.png)
+    ![A running Copilot session with the square Stop generating icon next to the steering arrow.](../media/copilot-stop-generating.png)
 
-**The Stop session icon appears next to the send arrow while the agent works.**
+4. Confirm that the status changes from **Working** to **Idle**. Select the session title to see **Session status** and **Environment**.
 
-1. Confirm that the session shows **Copilot's work was cancelled**. Select **View run** and check that the Actions run and its job show **Cancelled**.
+5. Select **Changes** to inspect the work that remains. In a cloud session, edits stay in the session's sandbox until someone selects **Create pull request**. When the sandbox shuts down, it saves a snapshot so you can resume the session.
 
-2. **Check the changes that remain before deciding what to do next.**
+Also check the repository's pull requests and branches for changes that already left the sandbox. Stopping doesn't undo commits the agent already pushed.
+
+Stopping ends the current turn, not the session. The session stays in your **Sessions** list as **Idle**, and it can accept a follow-up message. Record in the task's issue that nobody resumes it before the task owner makes the recovery decision.
+
+For an Actions session, use **View run** to inspect its run status. The status labels described earlier apply to cloud sessions, so an Actions session might show different labels.
 
 ## If you can't stop the session
 
-If you can't stop the session, the person who started it stops it. Use the contact method listed in the task's issue.
+If you see a risk but can't stop the session because you lack access, didn't start the session, or can't find the stop control, escalate the risk so that the person who started the session stops it. Use the contact method listed in the task's issue.
 
 1. **Record what happened.** Save the session link, what went wrong, and when you saw it. Include any pull request and run links. Keep sensitive details in the team's approved private location, and share only a link with people allowed to see them.
 
-2. **Request a stop.** Contact the person who started it and the task owner. Explain what went wrong and ask them to check any other work the agent started. If nobody responds, contact the backup person or the team's emergency contact. **Don't** wait for a routine **review** if data could be exposed or harm could occur.
+2. **Request a stop.** Contact the person who started the session and the task owner. Explain what went wrong and ask them to check any other work the agent started. If nobody responds, contact the backup person or the team's emergency contact. **Don't** wait for a routine **review** if data could be exposed or harm could occur.
 
 3. **Don't approve the affected work.** Don't accept the result or approve further actions while the problem is unresolved. Don't grant the agent more access.
 
@@ -48,19 +52,27 @@ Record who is handling the problem, what stopped, and what still needs attention
 
 ## Check what else is still running
 
-Another Actions workflow or an outside process needs separate attention. Cancelling an Actions run also requires repository write access:
+Another GitHub Actions workflow or an external process needs separate attention. Canceling an Actions run also requires repository write access:
 
 1. In the repository, select the **Actions** tab.
 
-2. **In the left sidebar, select the workflow, and then open the queued or running run.**
+2. In the list of workflows, select the one you need, for example **Copilot cloud agent**, and then open the queued or running run.
 
-3. In the upper-right corner, select **Cancel workflow**.
+3. On the run's page, select **Cancel workflow**.
 
 4. **Check the resulting run and job states.**
 
-Cancellation isn't always immediate. A workflow can set some jobs to keep running even after cancellation. If the run keeps going, involve the workflow owner.
+Cancellation isn't always immediate. A workflow can set some jobs to keep running even after someone cancels the run. If the run keeps going, involve the workflow owner.
+
+## Stop an automation from starting more sessions
+
+To disable the automation that started a session, open the repository's **Agents** tab, and then in the sidebar, select **Automations**. Anyone with write access can disable a shared automation. Only its creator can see or disable a personal automation.
+
+Disabling future triggers doesn't replace stopping an active session. Check for other automations it triggered, and contact the creator if a personal automation isn't visible to you.
 
 ## Keep evidence and agree on recovery
+
+Record what stopped, what's still active, and what may already have reached another person or system, such as a summary someone forwarded.
 
 Keep sensitive evidence in the team's approved restricted location, and keep passwords and keys out of issues and prompts.
 

@@ -48,28 +48,28 @@ quiz:
     - content: "9 of 12 attempts, so 75% for the trial"
       isCorrect: false
       explanation: "Acceptance rate divides accepted requests by all requests: 9 / 10 = 90%. Dividing by attempts mixes two groups. Review <u>Choose consistent measures</u>."
-  - content: "The trial's batch cost $97, including two retries and one request nobody accepted. A person accepted nine requests. What's the fair cost per accepted outcome?"
+  - content: "The trial's batch cost $97 USD, including two retries and one request nobody accepted. A person accepted nine requests. What's the fair cost per accepted outcome?"
     choices:
-    - content: "$97 divided by 12 attempts, about $8.08."
+    - content: "$97 USD divided by 12 attempts, about $8.08 USD."
       isCorrect: false
       explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
-    - content: "$97 divided by 9 accepted requests, about $10.78."
+    - content: "$97 USD divided by 9 accepted requests, about $10.78 USD."
       isCorrect: true
       explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
-    - content: "$97 minus the cost of the unaccepted request, divided by 9."
+    - content: "$97 USD minus the cost of the unaccepted request, divided by 9."
       isCorrect: false
       explanation: "Retries and unaccepted work still cost money, so they stay in the batch, and you divide by the outcomes a person accepted. Review <u>Include the whole cost boundary</u>."
   - content: "Three summaries in a trial kept an outlook sentence that the figures don't support. What change addresses the cause?"
     choices:
-    - content: "Add a rule to the instructions file to source every claim or mark it as unsupported, and then test similar requests with the same checklist."
+    - content: "Add \"Name a source for every claim or mark it unsupported\" to the prompt, then check similar requests with the same checklist."
       isCorrect: true
-      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
-    - content: "Switch to a larger model and change the instructions at the same time, to fix it faster."
+      explanation: "Change one instruction at a time and check whether it reduces unsupported claims. Changing the model and prompt together hides which helped, while fixing summaries by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+    - content: "Switch to a larger model and rewrite the prompt at the same time, to fix it faster."
       isCorrect: false
-      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+      explanation: "Change one instruction at a time and check whether it reduces unsupported claims. Changing the model and prompt together hides which helped, while fixing summaries by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
     - content: "Correct each of the three summaries by hand and keep the workflow as it is."
       isCorrect: false
-      explanation: "The same problem recurs with one cause, so one change to the instructions addresses it. Changing two things at once hides which one helped, and fixing by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
+      explanation: "Change one instruction at a time and check whether it reduces unsupported claims. Changing the model and prompt together hides which helped, while fixing summaries by hand leaves the cause in place. Review <u>Match the change to the cause</u>."
   - content: "Nine of ten summaries match their sources. One has a figure that doesn't match its source row. How do you report the result?"
     choices:
     - content: "Report 100% accuracy, because the wrong figure is small."

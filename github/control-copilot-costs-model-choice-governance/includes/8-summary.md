@@ -6,11 +6,11 @@ Copilot costs, model choice, access, and review are connected decisions. Use the
 
 In this module, you learned how to:
 
-- Explain how tokens, context, model prices, AI credits, and Actions minutes affect usage, and tell features apart from the options inside them.
+- Explain how tokens, context, model prices, AI credits, and compute costs affect usage, and tell features apart from the options inside them.
 
 - Check usage, investigate an increase, and choose separate controls for a person's billed usage, for additional charges, and for when to stop one task.
 
-- Compare models by price for the same work and by the quality of completed work, and use Auto and its tiers.
+- Compare models by price for the same work and by the quality of completed work, and use Auto tiers and Copilot Fusion effort levels.
 
 - Use modes, permissions, and review rules to restrict actions and enforce human approval.
 
@@ -32,13 +32,13 @@ Before accepting:
 
 - Review the task branch and pull request for unrelated or unauthorized changes.
 
-- Verify important claims and figures against their named approved sources; record uncertainty.
+- Verify important claims and figures against their named approved sources, and record any uncertainty.
 
-- Confirm required checks and eligible human reviews are complete.
+- Confirm that required checks and eligible human reviews are complete.
 
-- Have the accountable task owner accept the business result. Copilot output, tool access, and automated checks do not replace that decision.
+- Have the accountable task owner accept the business result. Copilot output, tool access, and automated checks don't replace that decision.
 
-**Use the checklist as one connected decision:** define the task, choose the model, permit only necessary sources and tools, set spending and stopping boundaries, review the evidence and changes, and keep the accountable human responsible for acceptance.
+Use the checklist as one connected decision: define the task, choose the model, permit only necessary sources and tools, set spending and stopping boundaries, review the evidence and changes, and keep the accountable human responsible for acceptance.
 
 ## Learn more
 

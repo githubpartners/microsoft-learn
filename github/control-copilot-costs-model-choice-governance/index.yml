@@ -12,7 +12,7 @@ title: Control Copilot costs, model choice, and governance
 summary: Learn to monitor Copilot usage, choose models for business tasks, set spending controls, and govern agentic work with human review.
 abstract: |
   In this module, you'll:
-  - Explain what drives Copilot costs, including tokens, context, model prices, AI credits, and GitHub Actions minutes.
+  - Explain what drives Copilot costs, including tokens, context, model prices, AI credits, and compute usage from Actions runners and cloud sandboxes.
   - Read usage reports, find the cause of an increase, and set spending controls.
   - Choose a model and its settings for the task.
   - Limit what the agent can reach and keep human review where it matters.

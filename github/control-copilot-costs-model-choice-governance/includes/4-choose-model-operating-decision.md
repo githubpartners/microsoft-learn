@@ -1,170 +1,163 @@
 # Unit 4: Choose a model for the task
 
-Compare models by the cost of producing a result that meets the same requirements, not by price alone. A cheaper response may need more corrections; a more expensive model may add cost without improving the result.
+Compare models by the cost of producing a result that meets the same requirements, not by price alone. A cheaper model may need more corrections, and a more expensive model may add cost without improving the result.
 
-For example, ask the model to correct a summary using only the approved figures. Track credits and attempts, and check every changed figure before accepting the result. A model change doesn't authorize broader access, changes to the source figures, or spending beyond the agreed limits.
+For example, give each model the same task: correct a summary using only the approved figures. Track credits and attempts, and check every changed figure before you accept the result. A model change doesn't authorize broader access, changes to the source figures, or spending beyond the agreed limits.
 
 ## Questions to ask before you start a task
 
-Before you choose or change a model, check the factors that affect usage, cost, and risk. These example answers show how to scope a task.
+Before you compare models, define an equivalent task and decide how to measure an acceptable result:
 
 - **What does "done" look like?** A clear stopping point keeps the agent on task. Example: every figure in a report matches the approved source, and every statement about growth or **margin** (the share of revenue left after costs) is right in direction and size.
 
-- **How will I check the result?** If you can't check it, you can't accept it. Example: compare each changed figure with its row in the figures file, and read the whole report again, including lines the agent didn't change.
+- **Which costs will you compare?** Give each model the same task and track credits, retries, and human review effort until the result meets the requirements.
 
-- **Is it one task or several?** Mixed work carries old context into every request. Example: one task, match the report to the figures. Removing the client's name is a separate task with its own issue.
+- **Is it one task or several?** Mixed work carries old context into every request. For example, matching the report to the figures and removing a client's name are separate tasks.
 
-- **What can the agent access?** Identify the files and tools the task needs. Example: only this repository and an organization-approved tool.
-
-- **Who pays?** Know which account the usage lands on. Example: the team's organization budget, owned by the billing manager.
-
-- **Who accepts the result?** Identify who reviews the work and who decides whether it meets the business requirements.
+- **Who pays?** Find out which account pays for the usage. Example: the team's organization budget, owned by the billing manager.
 
 ## Know the three groups of models
 
-The model menu in Copilot in GitHub sorts models into three groups. The names come from the menu itself:
+The model menu in Copilot in GitHub sorts models into three groups. The names don't tell you each model's price, so check the rates before comparing costs:
 
-- **Fast and cost-efficient** (lightweight models): optimized for speed and lower cost.
+- **Fast and cost-efficient** (lightweight models): favor speed and lower cost.
 
 - **Versatile and highly intelligent** (mid-tier models): balance speed with capability.
 
-- **Most powerful at complex tasks** (reasoning models): designed for work that needs greater reasoning capability.
+- **Most powerful at complex tasks** (reasoning models): support work that needs greater reasoning capability.
 
-![Interface: GitHub.com — Copilot in GitHub model menu. Select the model button below the prompt. ](../media/copilot-model-capability-cost-comparison.png)
+![The Copilot model picker open, showing the Fast and cost-efficient and Versatile and highly intelligent model groups.](../media/copilot-model-picker.png)
 
 ## Compare prices for the same work
 
-Model names and prices change often, so this module uses four example models, one or two from each group, as a reference for cost and use. Your model menu may show different models. Check supported Copilot models, then compare them the same way.
+Model names and prices change often. The following table and its related cost examples use fictional model names and illustrative prices and credit amounts, not current offerings or rates. Check the models and prices available in your Copilot model menu, and compare them the same way.
 
-The table shows what one job costs on each example model: **100,000 input tokens and 10,000 output tokens**, with no cached input. That's roughly a long chat with a few attached files.
+The table shows what one request costs on each example model: 100,000 input tokens and 10,000 output tokens, with no cached input. That's about the size of a long chat with a few attached files.
 
 | **Example model** | **Group** | **Price per 1M tokens (input / output)** | **Cost of the same job** | **AI credits** |
 | --- | --- | --- | --- | --- |
-| GPT-6 Luna | Fast and cost-efficient | $0.10 / $0.50 | $0.015 | 1.5 |
-| Claude Sonnet 5.5 | Versatile and highly intelligent | $2.00 / $10.00 | $0.30 | 30 |
-| GPT-6.1 Sol (Pro+) | Most powerful at complex tasks | $2.00 / $10.00 | $0.30 | 30 |
-| GPT-6 Astra (Pro+) | Most powerful at complex tasks | $10.00 / $50.00 | $1.50 | 150 |
+| Example Fast Model A | Fast and cost-efficient | $0.10 USD / $0.50 USD | $0.015 USD | 1.5 |
+| Example Versatile Model B | Versatile and highly intelligent | $2.00 USD / $10.00 USD | $0.30 USD | 30 |
+| Example Reasoning Model C | Most powerful at complex tasks | $2.00 USD / $10.00 USD | $0.30 USD | 30 |
+| Example Reasoning Model D | Most powerful at complex tasks | $10.00 USD / $50.00 USD | $1.50 USD | 150 |
 
 What the examples show:
 
-- **The same job costs 100 times more on GPT-6 Astra (150 credits) than on GPT-6 Luna (1.5 credits).** Save the most expensive models for work that clearly needs them.
+- **The same job costs 100 times more on Example Reasoning Model D (150 credits) than on Example Fast Model A (1.5 credits).** Save the most expensive models for work that clearly needs them.
 
-- **"Most powerful" doesn't always mean "most expensive."** GPT-6.1 Sol costs the same as Claude Sonnet 5.5 for the same tokens.
+- **"Most powerful" doesn't always mean "most expensive."** Example Reasoning Model C costs the same as Example Versatile Model B for the same tokens.
 
-- **Long context costs more.** Some models charge a higher rate when a request goes above an input threshold. For example, GPT-6 Astra doubles its input price above 272,000 input tokens.
+- **Long context costs more.** Some models charge a higher rate when a request goes above an input threshold. For example, suppose Example Reasoning Model D doubles its input price above 272,000 input tokens.
 
 ## Check a model's price before you choose it
 
-In Copilot in GitHub, hover over any model in the model menu. A card shows the model's description, its **Cost / 1M tokens** in AI credits (input, cached input, and output), and its **Max context**. 100 credits equal $1.
+In Copilot in GitHub, hover over any model in the model menu. A card shows the model's description, its **Cost / 1M tokens** in AI credits (input, cached input, and output), and its **Max context**. See [GitHub's AI credits documentation](https://docs.github.com/en/copilot/concepts/billing-and-usage/individuals/billing) for the current USD conversion rate.
 
-![Interface: GitHub.com — Copilot in GitHub model price card. Hover over a model in the model menu to see its token prices and maximum context. ](../media/copilot-model-selection-menu.png)
+![Claude Sonnet 5.5 price card showing input, cached input, and output costs per million tokens, plus maximum context.](../media/copilot-model-token-prices.png)
 
 ## Use Auto and its tiers
 
-Auto chooses a model for each request based on what the request needs and on which models are available and healthy. It only picks models that your subscription includes and that your administrators allow.
+The Auto tier and selected model affect what you pay. Availability varies by client. If your model menu shows **Copilot Fusion** instead of **Auto**, see [Use Copilot Fusion and its effort levels](#use-copilot-fusion-and-its-effort-levels).
 
-Next to the model button, **Optimized for** sets Auto's tier:
+In the model menu, select the tier name in the **Auto** row, such as **Balance**, to open **Optimized for** and set Auto's tier:
 
-- **Efficiency** ("Prioritizes speed and efficiency") fits short, routine requests where low cost matters most.
+- **Efficiency** favors lower cost for routine requests.
 
-- **Balance** ("Balances speed and intelligence") fits everyday work and is a good starting point.
+- **Balance** balances speed and intelligence for everyday work.
 
-- **Intelligence** ("Prioritizes intelligence") fits multi-step work that needs greater reasoning.
+- **Intelligence** prioritizes capability and can select a higher-priced model.
 
-Use Auto when:
+All three tiers can use the same models, so no tier guarantees a fixed price. For a cost trial, select a specific model to keep the comparison consistent. Before you move to a more capable model or higher effort.
 
-- Your work mixes short questions and multi-step tasks in the same day.
+![The Auto model menu with Balance selected under Optimized for, alongside Efficiency and Intelligence.](../media/copilot-auto-tier-menu.png)
 
-- You aren't sure which model fits the task.
-
-Pick a model yourself when:
-
-- You compare models in a trial and need the same model for every request.
-
-- The task needs a feature that only some models have, such as image input.
-
-- A task still fails after you check its requirements, context, and permissions. Use "Check the task before you step up" before changing the model or effort.
-
-- Your team requires a specific model for the work.
-
-All three tiers can use the same models. The tier only changes which ones Auto prefers. Even on Intelligence, Auto can send a short request to a small model.
-
-![Interface: GitHub.com — Copilot in GitHub, Optimized for menu beside Auto. ](../media/copilot-auto-model-selection-tiers.png)
-
-To see which model Auto used, hover over the response in Copilot Chat or the GitHub Copilot app, or read the line at the end of a Copilot response.
+On GitHub.com, hover over a Copilot response to see which model Auto used.
 
 ### What affects the cost of an Auto request
 
-With Auto, you don't pick the price. Auto picks the model, and the model sets the price. Four things decide what a request costs:
+These factors affect what an Auto request costs:
 
-- **The model Auto picks.** You pay that model's token prices. A short question routed to a fast model costs a fraction of the same question routed to a powerful model.
+- **The model Auto picks.** The model's token prices affect what you pay. When Auto routes a short question to a fast model, the question costs a fraction of what it costs when Auto routes it to a powerful model.
 
 - **The tier.** It changes which models Auto prefers, so it changes the price. It doesn't cap the cost.
 
 - **The tokens.** Your message, attachments, the conversation history, and the answer all count, the same as with a model you pick yourself.
 
-- **The Auto discount.** 10% off the model cost on paid subscriptions.
+**Example:** Suppose you send the same job (100,000 input tokens and 10,000 output tokens) twice with Auto. For the first request, Auto picks Example Fast Model A, for an illustrative cost of 1.5 credits. For the second, Auto picks Example Versatile Model B, for an illustrative cost of 30 credits. The tokens and the setting are the same, but the second request costs twenty times as much because Auto chose a different model.
 
-**Example:** you send the same job (100,000 input tokens and 10,000 output tokens) twice with Auto. For the first request, Auto picks GPT-6 Luna: 1.5 credits, minus 10%, is **1.35 credits**. For the second, a request that needs more reasoning, Auto picks Claude Sonnet 5.5: 30 credits, minus 10%, is **27 credits**. Same tokens, same setting, twenty times the cost, because Auto chose a different model.
+Auto switches models only at natural breakpoints in a conversation, or when the work changes significantly, so it doesn't discard cached context with every message.
 
-Auto switches models only at natural break points in a conversation, or when the work changes a lot, so it doesn't throw away cached context on every message.
+## Use Copilot Fusion and its effort levels
 
-## Understand Copilot Fusion
+Availability varies by client. Select **Copilot Fusion** in the model menu when your client offers it.
 
-**Copilot Fusion** goes one step further than Auto. Auto sends a request to one model. Fusion can route one request through several models; for example, a cheaper model drafts and a stronger one reviews.
+Copilot Fusion can use more than one model for a request, so compare the cost of each effort level with the quality of the result.
 
-You choose the effort: **Standard** picks one model per task for everyday work, **High** adds orchestration across multiple models for more complex tasks, and **Max** targets the deepest reasoning. You pay each model's standard price for every model involved, so High and Max can be significantly more expensive than Standard. For everyday work on GitHub.com, start with Auto. See About [GitHub Copilot Fusion](https://docs.github.com/pt/copilot/concepts/models/copilot-fusion).
+Choose an effort level in the model menu:
+
+- **Standard** balances cost, quality, and speed, and fits everyday work. Copilot Fusion uses one model for each task.
+
+- **High** fits substantial, well-scoped tasks where extra model calls can be worth the extra time and AI credits.
+
+- **Max** fits tasks that need the deepest reasoning and most thorough analysis.
+
+Standard is available on every plan. High and Max are available on Copilot Pro+, Copilot Max, Copilot Business, and Copilot Enterprise. If Max doesn't appear, a policy might disable a model that it needs.
+
+### What affects the cost of a Copilot Fusion request
+
+You pay for each model Copilot Fusion uses, at that model's standard rate. There's no separate charge for Copilot Fusion. Because High and Max can use more than one model for a request, the same task can use more AI credits than it does on Standard. To see which models Copilot Fusion used, hover over the effort level name below the response.
+
+Like Auto, Copilot Fusion switches models only at natural breakpoints in a conversation, or when the work changes significantly. It also keeps the main conversation on the same model whenever possible, so the conversation keeps its cached context. Models that assist, such as a reviewer, receive only the context they need.
 
 ## Match the model to the work
 
-Use this table to choose a starting point without paying for capability the work does not need. Follow the business path first: drafting from approved sources, correcting a summary, comparing reports, and checking figures. The coding examples remain useful technical references, but they are not the main decision path. Compare credits, retries, review effort, and the quality of source-linked evidence against the same requirements.
+Use this table to choose a starting point without paying for capability the work doesn't need. Follow the business path: drafting from approved sources, correcting a summary, comparing reports, and checking figures. Compare credits, retries, review effort, and the quality of source-linked evidence against the same requirements.
+
+In the table, **Auto or Copilot Fusion** means Auto on **Balance** or Copilot Fusion on **Standard**, depending on what's available in your client.
 
 | **Task examples** | **Start with** | **Step up to** | **Avoid** |
 | --- | --- | --- | --- |
-| Technical example: summarize a short document, explain code, or fix formatting | Auto on **Efficiency**, or a fast model such as GPT-6 Luna | A versatile model if the answer misses important points | Powerful models: they can cost up to 100 times more for no gain |
-| Business path: draft standard content from approved sources | Auto on **Balance** | A versatile model such as Claude Sonnet 5.5 |  |
-| Business path: update a summary to match approved figures | Auto on **Balance**, or Claude Sonnet 5.5 | GPT-6.1 Sol if the task needs deeper reasoning | Starting on the most expensive model |
-| Technical example: plan a feature, make an architecture decision, or debug an unclear failure | Auto on **Intelligence**, or GPT-6.1 Sol | GPT-6 Astra, or another model in the Most powerful group |  |
-| Technical example: run a long autonomous coding task with continuous planning and verification | GPT-6.1 Sol | GPT-6 Astra for the hardest long tasks |  |
-| Business path: compare report drafts or check a report against source figures | Auto on **Balance** | A versatile model if the comparison misses discrepancies |  |
-| Business path: read a usage-chart screenshot and identify the highest-usage day | A fast model with image input supported in your client | A versatile image-capable model if it misreads clear labels; verify against the report | Guessing values from unreadable labels; use the report data instead |
+| Business path: draft standard content from approved sources | Auto or Copilot Fusion | A versatile model | None |
+| Business path: update a summary to match approved figures | Auto, Copilot Fusion, or a versatile model | A reasoning model if the task needs deeper reasoning | Starting on the most expensive model |
+| Business path: compare report drafts or check a report against source figures | Auto or Copilot Fusion | A versatile model if the comparison misses discrepancies | None |
+| Business path: read a usage-chart screenshot and identify the highest-usage day | A fast model that supports image input in your client | A versatile image-capable model if it misreads clear labels; verify against the report | Guessing values from unreadable labels; use the report data instead |
 
 ## Choose Auto or a model
 
-1. To try the controls live, sign in to **GitHub.com** with a Copilot subscription.
+1. To try the controls live, sign in to **GitHub.com** with an account that has a Copilot subscription.
 
-1. Go to the Copilot home page.
+1. In the upper-right corner of any page, select the Copilot icon.
 
-1. Below the prompt, select the model button (it shows **Auto** or the current model name).
+1. Below the prompt, select the model button. It shows **Auto** and its tier, or the current model name.
 
 1. Hover over a model to read its price card, and then select **Auto** or a model.
 
-1. With **Auto** selected, select **Optimized for** and choose **Efficiency**, **Balance**, or **Intelligence**.
+1. After you select **Auto**, select the tier name in the **Auto** row. Under **Optimized for**, choose **Efficiency**, **Balance**, or **Intelligence**.
 
-1. Before you send, check the context: select **+** to see the attachment options: **Files and folders...**, **Spaces...**, or **Upload from computer**. Select only sources needed for the task.
+1. Before you send, check the context: select **+** to see the attachment options, including **Files and folders**, **Upload from computer**, **Repository**, and **Space**. Select only the sources the task needs.
 
-Check the repository selector (**All repositories** by default) and narrow it to the repository the task needs.
+To work in one repository, select the **Chat** button below the prompt. It shows the chat's scope, for example **Chat (Personal)**. Under **Work in a repository**, select the repository the task needs.
 
 ## Adjust reasoning effort and context window
 
-Start with the model's default effort and context window. Before raising effort, follow "Check the task before you step up." Raise the context window only when the relevant material doesn't fit.
+Start with the model's default effort and context window. Before you raise the effort, check the task's requirements, test criteria, relevant files, failure evidence, and permissions. Raise the context window only when the relevant material doesn't fit.
 
-Both can increase tokens, credits, and response time. A larger context window is capacity, not a count of tokens used: you pay for the tokens processed, at the long-context rate when a request crosses the model's threshold.
+Both can increase tokens, credits, and response time. A larger context window is capacity, not a count of the tokens you use: you pay for the tokens Copilot processes, at the long-context rate when a request crosses the model's threshold.
 
 Set these options before you start a session and keep them the same until it ends. Changing the model, the effort, or the context window in the middle of a session resets the cached context, so the next request processes the full context at the normal input price.
 
-To change them in the GitHub Copilot app, open the model control below the session prompt and disable Auto. The menu shows Effort (Low, Medium, **High**, **Extra High**, Max) and Context window (for example, **328K** or **1.1M**).
+To change them in the GitHub Copilot app, open the model control below the session prompt and select a specific model instead of Copilot Fusion. The menu shows Effort (Low, Medium, High, Extra High, Max) and Context window (for example, **328K** or **1.1M**).
 
 ## Compare the cost of the whole task
 
-For example, in a test task, GPT-6 Luna needed three attempts to succeed (3 × 1.5 = 4.5 credits) while Claude Sonnet 5.5 succeeded on its first attempt (30 credits). Luna still costs less, but if the three attempts also cost a reviewer an hour, Sonnet may give better value.
+For example, suppose Example Fast Model A needs three attempts to succeed (3 × 1.5 = 4.5 credits) while Example Versatile Model B succeeds on its first attempt (30 credits). Model A still costs less, but if the three attempts also cost a reviewer an hour, Model B may give better value.
 
 ## Check the task before you step up
 
-Before you step up—that is, switch to a more powerful model or use more reasoning effort:
+Before you step up:
 
 1. State the requirement and how to test it.
 
 1. Check that the agent has the relevant files, the failure evidence, and the permissions it needs. Fix missing information or access first.
 
-1. Step up the model or the effort only if the clear, well-supported task still fails.
+1. Step up the model or the effort only if the task still fails after you complete the first two steps.

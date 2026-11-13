@@ -1,6 +1,6 @@
 # **Unit 6: Improve Systematically**
 
-When reports repeatedly include unsupported outlook statements, a team can use run evidence to investigate the cause. With this unit, you can make a workflow better one small, measured change at a time, so you know which change helped.
+When reports repeatedly include unsupported outlook statements, a team can use evidence from runs to investigate the cause. With this unit, you can make a workflow better with one small, measured change at a time, so you know which change helped.
 
 When a workflow fails repeatedly, use the data and the run records to look for the cause. Check its context, permissions, tools, instructions, model output, and business requirements. Treat your explanation as something to test, not a proven cause.
 
@@ -14,7 +14,7 @@ When failed requests point to different causes, split them into separate pattern
 
 Fix each recurring problem at its cause, and then check the matching measure on the next similar requests:
 
-- **Claims without a source**, such as an unsupported forecast: add "Name the source for every claim, or mark it as unsupported" to `.github/copilot-instructions.md`. This requires a commit and write access to the repository. Check accuracy.
+- **Claims without a source**, such as an unsupported forecast: add "Name the source for every claim, or mark it as unsupported" to the repository custom instructions file (`.github/copilot-instructions.md`). This requires a commit and write access to the repository. Check accuracy.
 
 - **Missing context**, such as a draft nobody attached: attach it in the issue or the prompt. Check completeness.
 
@@ -32,7 +32,7 @@ Keep every check enabled. Turning a check off improves the numbers by **hiding**
 
 - An **approval gate** requires a person's authorization before a significant action. The task owner decides in advance which actions need it.
 
-- A **workflow boundary** defines the permitted data, files, actions, time limits, and spending. GitHub settings cover part of it: passwords and keys, connected tools, and budgets. Write the rest, such as "never change files in data/," as a team agreement in the workflow's issue.
+- A **workflow boundary** defines the permitted data, files, actions, time limits, and spending. GitHub settings cover part of it: secrets (stored credentials such as passwords and access tokens), connected tools, and budgets. Write the rest, such as a rule that the agent never changes files in the `data/` folder, as a team agreement in the workflow's issue.
 
 - An **escalation rule** names who handles exceptions and when the work must stop.
 
@@ -58,16 +58,24 @@ Where you can, change one main factor at a time. If you change two things and th
 
 - The permissions, the gates, and the owner.
 
-- The date and configuration commit; the technical reviewer records the commit.
+- The date of the change and the configuration commit, which the technical reviewer records.
 
 - The acceptance criteria and the rollback plan.
 
 Then test new, similar requests with the same definitions, time period, checklist, groups, and costs across all attempts.
 
-Keep a small **regression set**: five to ten past requests with accepted answers. After each change, run them again and compare the outputs with the accepted ones. If a change improves the new requests but breaks the old ones, you find out before the team does.
+Treat each change to the instructions, an agent file, or the workflow as a new version. Record the commit that holds it in the change record, so you can compare results version by version and return to the last version that worked.
 
-Inputs change too. For example, if a data owner revises a report's source figures, check the report again with the same checklist as the first review, and record which version of the figures you checked by identifying its commit. Acceptance against the old figures doesn't carry over to the new ones.
+Copilot Automations can propose improvements to prompts, tools, or triggers based on outcomes. By default, a person reviews each proposal and decides whether to apply or dismiss it. To find proposals on GitHub.com, open the repository, select **Agents**, select **Automations** in the sidebar, and then open the automation.
 
-For a code review trial, record the review effort, the automatic triggers, and the number of reviews that actually ran. Copilot code review settings are at **profile picture > Settings > Copilot > Code review**. A lower total can mean fewer reviews ran, not that reviews became more efficient, so compare cost per accepted outcome with the same quality requirements.
+During a controlled trial, review every proposal yourself before it applies. If the automation offers an option that applies proposals without review, such as **Automatically apply proposed prompt improvements**, keep it turned off, so each change has a recorded date and owner.
+
+Automations aren't committed to the repository. Record the revision from the automation's revision history rather than a configuration commit. Treat each applied proposal as a separate change, and measure its effect before applying the next one.
+
+Keep a small set of five to ten past requests with accepted answers. After each change, run them again and compare the outputs with the accepted ones. If a change improves the new requests but breaks the old ones, you find out before the team does.
+
+Inputs change too. When Copilot Memory is available and enabled, it can carry repository facts and personal preferences between runs, so context can change even when your team hasn't edited the task or its sources. If a data owner revises a report's source figures, check the report again with the same checklist as the first review, and record which version of the figures you checked by identifying its commit. Acceptance against the old figures doesn't carry over to the new ones.
+
+For repository facts, record whether **Allow Copilot to store and retrieve repository facts** is enabled in **Settings** > **Copilot** > **Memory**. If results shift without a prompt or source change, review the memories listed there.
 
 For scheduled work, record the actual runs over the same period, including runs that produced no accepted result. The technical reviewer needs access to change repository configuration. The owner decides whether to keep, revise, stop, or escalate each change.

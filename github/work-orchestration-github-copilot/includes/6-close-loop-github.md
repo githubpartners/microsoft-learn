@@ -84,7 +84,7 @@ During review, consider both the implementation and the reasoning behind it:
 
 - Does the implementation introduce technical debt?
 
-Copilot can assist with this process, but approval should remain an intentional human decision.
+By default, Copilot code review leaves a Comment review. An administrator can enable Copilot approvals at the enterprise, organization, or repository level. When enabled, a Copilot approval counts toward required approvals. Keep the review and business acceptance decisions clear in your process.
 
 ## **Capture assumptions and unresolved work**
 

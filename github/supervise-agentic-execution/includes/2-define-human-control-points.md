@@ -6,7 +6,7 @@ An agent can prepare a deliverable, but a person decides whether it's ready to g
 
 ## Decide where a person must intervene
 
-One rule keeps the whole system safe: the agent proposes, and people and settings accept. Gates are where that acceptance happens. At each **gate**, someone decides whether the work can move forward.
+A key principle helps reduce risk: the agent proposes, and people accept. That acceptance happens at **gates**. At each gate, someone decides whether the work can proceed. GitHub settings can enforce some of those decisions.
 
 **Acceptance criteria** are the conditions the result must meet, such as "every number matches the figures file." Some gates are GitHub settings that block the work until a person acts. Others are team agreements that you write, with the person who decides, in the task's issue.
 
@@ -22,10 +22,10 @@ One rule keeps the whole system safe: the agent proposes, and people and setting
 
 - **Acceptance gate:** has the named owner accepted the agreed outcome? Ask for the acceptance criteria, the supporting evidence, and the named person's decision. **Team agreement:** the owner posts the decision as a comment on the pull request.
 
-    ![The repository's Require approval for workflow runs setting, with its description and the warning that workflows without approval may give unreviewed code written by Copilot write access to the repository or its Actions secrets. The On switch is outlined in red.](../media/repository-approval-ruleset.png)
+    ![The Require approval for workflow runs setting, turned On.](../media/repository-approval-ruleset.png)
 
 
-    **Note:** The GitHub settings above are managed in repository settings. Changing **Require approval for workflow runs** needs the administrator role. Managing rulesets needs repository admin access or a custom role with the "edit repository rules" permission. See [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
+    **Note:** The setting's warning explains why it stays on: without approval, unreviewed code written by Copilot could get write access to the repository or its Actions secrets. The GitHub settings above are managed in repository settings. Changing **Require approval for workflow runs** needs the administrator role. Managing rulesets needs repository admin access or a custom role with the "edit repository rules" permission. See [About rulesets](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-rulesets/about-rulesets).
 
 
 ### The approval gate in repository settings
@@ -35,8 +35,6 @@ To decide where a gate belongs, ask:
 - **Is the next action permanent or slow to reverse, such as merging a change into the main files or deleting a file?**
 
 - **Does it affect another system, a workflow, permissions, or data outside the task, such as the approved figures?**
-
-- **Does it add or update a dependency, outside code such as an open-source library that a project needs to run? That code runs inside your organization, and Copilot can download libraries by default.**
 
 - **Could it expose client data, personal data, or passwords and keys?**
 
@@ -50,17 +48,27 @@ If any answer is yes, put a gate there and name the task owner. A gate costs a s
 
 Reviewing a proposed change, letting a workflow run, and accepting a finished task are three separate decisions. Each one has its own gate.
 
-![Three human decisions: authorize the action within agreed access and limits; review the Q3 summary against approved figures; and have the named report owner accept the outcome. Ask the owner about unclear requirements, and stop and contain unsafe activity. Approval to act isn't acceptance of the result.](../media/execution-review-approval-gates.png)
+![Diagram of three separate human decisions: authorize the action, review the Q3 summary, and accept the outcome.](../media/execution-review-approval-gates.png)
 
 ## Add a gate: a worked example
 
-GitHub already blocks some actions for you. Copilot can't merge its own pull request. The author's approval generally won't satisfy required-approval gates (depending on the ruleset configuration).
+GitHub already blocks some actions for you. Copilot can't push to the **default branch**, the main version of the files. By default, Copilot code review leaves a Comment review, and its review doesn't count toward required approvals. Administrators can enable Copilot approvals at the enterprise, organization, or repository level. When enabled, a Copilot approval counts toward required approvals.
 
 In the quarterly-report example shown in this unit's images, the team adds two gates before anyone assigns the task:
 
-1. **A review gate, as a GitHub setting.** Create an **Active** ruleset for the branch receiving the changes, in the repository's settings **Settings > Rulesets**. Enable **Require a pull request before merging**, set **Required approvals** to 1, and leave the bypass list empty. GitHub then blocks merging until an eligible reviewer approves. You need repository admin access or a custom role with "edit repository rules" permission. On GitHub Free, rulesets are available only in public repositories.
+1. **A review gate, as a GitHub setting.** A ruleset makes GitHub block merging until an eligible reviewer approves. To set one up for the branch that receives the changes:
 
-    ![The new ruleset form in the repository's settings. The Require a pull request before merging checkbox is selected and outlined in red, and Required approvals below it is set to 1.](../media/branch-ruleset-and-acceptance-gate.png)
+    - **Check access and plan.** You need repository admin access or a custom role with the "edit repository rules" permission. Rulesets also depend on your plan. For example, on GitHub Free they're available only in public repositories.
+
+    - **Configure the ruleset.** In the repository's **Settings**, select **Rulesets**, and create a branch ruleset. Set its enforcement status to **Active** and then select **Create** to save it.
+
+    - **Require one approval.** Select **Require a pull request before merging**, and set **Required approvals** to 1.
+
+
+
+    - **Keep Copilot approvals out of the count.** Copilot approvals are off by default, but an organization owner or enterprise administrator can turn them on across repositories. Before you rely on this gate, confirm in the repository's Copilot code review settings that Copilot approvals don't count toward merge requirements.
+
+    ![The new ruleset form with Require a pull request before merging selected and Required approvals set to 1.](../media/branch-ruleset-and-acceptance-gate.png)
 
 2. **An acceptance gate, as a team agreement.** The report owner adds one line to the **task's** issue: "Done only when the report owner posts the acceptance as a comment on the pull request." GitHub **doesn't** block anything here. The line works because everyone can read it, and the pull request shows whether the comment exists.
 
@@ -104,12 +112,11 @@ The report owner writes the roles, the scope, and the limits in the task's issue
 
 Add the approved task agreement to the issue before assigning it to Copilot.
 
-![Issue 1, Update the Q3 summary so it matches the approved figures, opened by octo-learner. The description holds the task agreement, and the line Done only when the report owner posts the acceptance as a comment on the pull request is outlined in red. The right sidebar shows Assignees with no one assigned and an Assign to Agent button.](../media/issue-task-agreement.png)
+![The Q3 summary issue with the task agreement in its description, no assignee, and an Assign to Agent button in the sidebar.](../media/issue-task-agreement.png)
+
 1. When the report owner approves the agreement and the team is ready, hand the task to the agent. In the issue's right sidebar, select **Assign to Agent**.
 
 2. In the **Assign agent to issue** dialog, which is in preview, check the repository, and add anything that applies to this run only in **Optional prompt**. Then select **Assign**. Assigning starts a session and uses AI credits, so do it only for an approved task.
-
-  ![The Assign agent to issue dialog, marked Preview. It explains that the agent uses the issue description, comments, and any additional prompt. Below the Optional prompt box are the repository octo-learner/quarterly-report-review, a branch button, an agent button, and the model set to Auto. The Assign button is outlined in red.](../media/assign-agent-to-issue-dialog.png)
 
 The agreement uses three ideas you'll see again:
 
@@ -129,7 +136,7 @@ Keep the original limits in place while the owner decides.
 
 You don't need this section to follow the module. It shows the two files behind the quarterly-report example, so you can do the checks from the later units yourself.
 
-The team's source of truth is data/q3-figures.csv. Here are its approved Q3 figures by region. Revenue is in thousands of US dollars.
+The team's source of truth is data/q3-figures.csv. Here are its approved Q3 figures by region. Revenue is in thousands of USD.
 
 | Region | Q3 revenue (thousands) | Change from Q2 | Operating margin |
 |---|---|---|---|
@@ -141,12 +148,8 @@ The team's source of truth is data/q3-figures.csv. Here are its approved Q3 figu
 
 The agent starts from report/q3-summary.md. Here are the claims in it that the later units check:
 
-> Q3 revenue reached $16.9 million, up 4.2% from Q2. North grew revenue 9.5% to $4.8 million and had the highest operating margin of any region, at 16.8%. South grew revenue 1.8% to $4.0 million. West grew revenue 2.5% to $2.8 million. The team expects all four regions to grow in Q4.
+> Q3 revenue reached $16.9 million USD, up 4.2% from Q2. North grew revenue 9.5% to $4.8 million USD and had the highest operating margin of any region, at 16.8%. South grew revenue 1.8% to $4.0 million USD. West grew revenue 2.5% to $2.8 million USD. The team expects all four regions to grow in Q4.
 
 **Try it.** The summary has four problems: one wrong number, two wrong comparisons, and one claim the figures don't support. Find them before you read on.
 
-**Answers.** Revenue should read $16.8 million, because the Total row is 16,760 thousand. East has the highest operating margin, at 17.3%, not North. West's revenue fell 2.5%, as the Change from Q2 column shows. The figures hold no Q4 numbers, so the outlook is unsupported until the report owner decides how to label it. South's $4.0 million is a rounding choice, not an error. Unit 4 treats it as a question for the report owner.
-
-
-
-
+**Answers.** Revenue should read $16.8 million USD, because the Total row shows 16,760 thousand. East has the highest operating margin, at 17.3%, not North. West's revenue fell 2.5%, as the Change from Q2 column shows. The figures contain no Q4 numbers, so the outlook is unsupported until the report owner decides how to label it. South's $4.0 million USD is a rounding choice, not an error. The Recover from failure unit treats it as a question for the report owner.

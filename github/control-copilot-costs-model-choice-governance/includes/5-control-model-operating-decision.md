@@ -2,59 +2,75 @@
 
 Limit the agent's access to what the task requires. For example, checking a report against approved figures doesn't require client contracts or passwords.
 
-Decide what the agent may read, change, and run. **Least privilege** means giving the agent only the access the task needs. Low-risk actions that someone approved and that you can reverse can run automatically, but riskier actions need a human's approval.
+Decide what the agent may read, change, and run. **Least privilege** means giving the agent only the access the task needs. Low-risk actions that someone approved, and that you can undo, can run on their own. Riskier actions need a person's approval.
 
 ## Check the agent's access
 
-For a report update, provide the report and its approved source. Exclude client contracts, other clients' files, passwords, or other repositories unless the task requires them. Check these boundaries before you start:
+For a report update, give the agent the report and its approved source. Leave out client contracts, other clients' files, passwords, and other repositories unless the task requires them. Check these boundaries before you start:
 
-- **Repository and files:** allow changes only to the files the task needs, for example report/q3-summary.md. Team agreement: list allowed files in the task's issue. Check the actual changed files before accepting the work.
+- **Repository and files:** allow changes only to the files the task needs, for example report/q3-summary.md. Team agreement: list allowed files in the task's issue. Before you accept the work, check which files the agent actually changed.
 
-- **Tools and actions:** allow only what the agent needs to inspect, edit, and test the fix. GitHub setting: the repository administrator limits connected tools and internet access. In the Copilot app, choose **Always ask**. By default, Copilot's internet access allows the locations used to install tools, packages, and libraries, so a task can add outside code. Blocking those downloads needs the administrator role and stops tasks that need a library to build or test.
+- **Tools and actions:** allow only what the agent needs to inspect, edit, and test the fix. GitHub setting: the repository administrator limits connected tools and internet access. On GitHub.com, choose **Always ask** under **Tool permissions**. By default, Copilot's internet access allows the locations used to install tools, packages, and libraries, so a task can add outside code. Only a repository administrator can block those downloads, and blocking them stops tasks that need outside code to build or test.
 
-- **Connected services and credentials:** withhold everything the task doesn't need. For credentials, see "Protect secrets and personal information."
+- **Connected services and credentials:** don't give the agent anything the task doesn't need. Credentials are passwords, keys, and other sign-in secrets. For credentials, see [Protect secrets and personal information](#protect-secrets-and-personal-information).
 
 - **Approval settings:** keep human approval for riskier actions. GitHub setting: the repository administrator keeps **Require approval for workflow runs** enabled.
 
-An administrator can review the repository's agent and ruleset settings before work starts.
+The repository administrator can review the repository's agent and access settings before work starts.
 
-Check the actual environment. Restrictions on Copilot in the cloud don't automatically apply to agents in the Copilot app or an editor. Each feature supports a different set of policies.
+After you select a repository on GitHub.com, check the **Environment** menu below the prompt. It offers **Cloud**, **Actions**, and **Remote**. Where environment choices are available, GitHub selects **Cloud** by default and runs the session in a cloud sandbox.
+
+![Copilot prompt with the Environment menu open, listing Cloud, Actions, and Remote.](../media/copilot-environment-menu.png)
+
+Without write access to a repository, your Copilot use there is read-only.
 
 GitHub builds these protections into **Copilot in the cloud**, the agent that runs on GitHub:
 
-- Copilot in the cloud can't push directly to the **default branch**, the main version of the files. It works on a separate branch; changes need human review and a merge to enter the main version. See [Building guardrails for Copilot in the cloud](https://docs.github.com/en/copilot/tutorials/cloud-agent/build-guardrails#adapt-rulesets).
+- Copilot in the cloud can't push directly to the **default branch**, the main version of the files. It works on a separate branch, and its changes reach the main version only after a person reviews and merges them, unless someone gives a Copilot automation the tool to merge pull requests.
 
-- It gets only the secrets added for it, not the repository's or organization's other secrets.
+- It gets only the secrets an administrator adds for it, not the repository's or organization's other secrets.
 
 - Workflows on its pull requests wait for approval from someone with write access.
 
 - A firewall limits its internet access by default.
 
-- Its commits name Copilot as the author and the person who asked as a co-author, with a link to the session log.
+- For a task you start, its commits name Copilot as the author and you as a co-author, with a link to the session log. Actions by a shared automation show Copilot as the author, not one requester.
 
-You still review every change and every request for more access.
+You still review every change and every request for more access, because these protections limit what the agent can do. They don't show that its work is right.
 
 ## Choose the mode and tool permissions
 
-In the GitHub Copilot app, the mode menu below the session prompt controls how independently the agent works. Consider the usage implications:
+The mode you choose affects usage as well as oversight:
 
 - **Interactive:** guide each stage and catch misunderstandings before they lead to more paid work.
 
-- **Assisted:** lets safe commands run without asking and still asks about the rest.
+- **Plan (GitHub Copilot app):** planning uses credits, but reviewing the approach first can avoid unnecessary implementation and retries.
 
-- **Plan:** planning uses credits, but reviewing the approach first can avoid unnecessary implementation and retries.
-
-- **Autopilot:** more independent work can mean more model calls before you intervene. Agree on scope and a stopping condition before starting.
+- **Autopilot:** more independent work can mean more model calls before you intervene. Agree on scope and a stopping condition before you start.
 
 For example, a task to correct report figures doesn't include preparing new leadership slides. Reviewing the plan can catch that extra work before the agent spends credits preparing it. No mode guarantees lower cost: compare total usage for a result that meets the requirements.
 
-Tool permissions decide whether the agent asks you before it runs a tool, such as a command or a connected service. In the GitHub Copilot app, they're in the mode menu below the session prompt:
+Tool permissions decide whether the agent asks you before it runs a tool, such as a command or a connected service. On GitHub.com, they're in the same menu as the mode, under **Tool permissions**:
 
 - **Always ask** asks every time. Use it while you learn and for higher-risk work.
 
-- **Approve all** runs tools without asking. Use it only for a bounded, approved task in a constrained environment.
+- **Assisted** automatically approves tool requests that pass a safety check and asks you about the rest. The menu marks this option as experimental.
 
-The less often the agent stops, the more these permissions and the repository's settings have to do the controlling.
+- **Allow all** runs tools without asking. Use it only for a bounded, approved task in a constrained environment.
+
+To set these controls on GitHub.com:
+
+1. In the upper-right corner of any page, select the Copilot icon.
+
+1. In the prompt box, select the **Mode** button, which shows the current mode, such as **Interactive**.
+
+1. Select **Tool permissions**, and then select **Always ask**, **Assisted**, or **Allow all**.
+
+1. To change the mode, open the **Mode** menu again and select **Interactive** or **Autopilot**.
+
+![Copilot prompt with the Mode menu open and the Tool permissions options Always ask, Assisted, and Allow all.](../media/copilot-mode-tool-permissions.png)
+
+The less often the agent stops, the more you rely on these permissions and the repository's settings for control.
 
 Tool permissions don't override enforced policies. Pausing for approval doesn't cap tokens, because the model work before the pause already counts.
 
@@ -87,7 +103,7 @@ These options solve different problems. None automatically authorizes a task, gr
 
 ### When to use an MCP server
 
-Suppose the approved source is a frequently updated policy system outside the repository. Use an approved MCP connection when the team repeatedly needs current records or controlled tool actions and a maintained connection is worth governing. If the task is a one-time comparison and an approved, current export contains everything needed, attaching that file is usually sufficient and avoids a persistent connection. Before using MCP, resolve who may access the source, what data may be shared with Copilot, which tools are read-only or can take action, who approves those actions, and how the connection’s model calls or services affect cost. Prefer the narrowest approved tools and data needed for the task.
+Suppose the approved source is a frequently updated policy system outside the repository. Use an approved MCP connection when the team repeatedly needs current records or controlled tool actions and a maintained connection is worth governing. If the task is a one-time comparison and an approved, current export contains everything the task needs, attaching that file is usually sufficient and avoids a persistent connection. Before using MCP, resolve who may access the source, what data your team may share with Copilot, which tools are read-only or can take action, who approves those actions, and how the connection's model calls or services affect cost. Prefer the narrowest approved tools and data the task needs.
 
 ## Separate guidance, permissions, and review
 
@@ -97,19 +113,19 @@ Instructions guide the agent, but the agent may not follow them every time. Two 
 
 - **Task instructions guide** the assigned work, for example "change only report/q3-summary.md." You write them in the issue or the prompt.
 
-- **Permissions and policies enforce** what the agent can access and do, for example by withholding deployment credentials. GitHub setting: the repository administrator manages passwords, keys, and connected tools, and the organization owner manages [Copilot policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
+- **Permissions and policies enforce** what the agent can access and do, for example by withholding deployment credentials. GitHub setting: the repository administrator manages secrets and connected tools, and the organization owner manages [Copilot policies](https://docs.github.com/en/copilot/how-tos/administer-copilot/manage-for-organization/manage-policies).
 
-- **Required reviews and checks enforce** the merge rules: the merge waits until they pass. GitHub setting: the repository administrator adds them in **Settings** > **Rules** > **Rulesets**.
+- **Required reviews and checks enforce** the merge requirements: the merge waits until they pass. The repository administrator configures them in the repository settings.
 
 **Merging** adds the pull request's changes to the project. A required review can block the merge, but it can't stop the agent from making the edit.
 
 A **code owner** is a person or team that a repository designates to review specified files.
 
-**Example review rule:** the change needs two different authorized human reviewers: a code owner and a second reviewer. Neither may have collaborated with Copilot. In this example, people who start or help steer the agent's task count as collaborators. Follow stricter rules in real repositories.
+**Example review rule:** the change needs two different authorized human reviewers: a code owner and a second reviewer. Neither may have collaborated with Copilot. In this example, people who start or help steer the agent's task count as collaborators. If a real repository has stricter rules, follow those.
 
-A rule decides whether a code owner must approve. A rule that requires the example's reviews before a merge, including review from the code owners, goes into the repository's settings and needs the administrator role.
+A rule decides whether a code owner must approve. In the repository's settings, the repository administrator adds a rule that requires the example's reviews, including review from the code owners, before a merge.
 
-Also find out who can skip the rule. The rule only counts reviews, so the team checks that each reviewer is eligible. The repository administrator configures the required reviewers and checks in the ruleset.
+Also find out who can skip the requirement. It only counts reviews, so the team checks that each reviewer is eligible. The repository administrator configures the required reviewers and checks in the repository settings.
 
 ## Reuse instructions, context, and agents
 
@@ -117,51 +133,38 @@ Relevant context helps control both usage and risk: unnecessary files can expose
 
 Choose reusable guidance and context according to their purpose. Reusable context doesn't replace access controls.
 
+### Add task context with mentions
+
+Use `@` mentions in Copilot Chat to attach specific files, folders, issues, pull requests, discussions, or repositories as context. In the prompt box, type `@`, choose a category such as **Files and folders** or **Issues**, and then select the resource. Repeat for each source you need, and then write the request and its limits.
+
+![Screenshot of the Copilot Chat prompt box on GitHub.com with @ typed, showing the Repositories, Files and folders, Issues, Pull requests, and Discussions menu.](../media/copilot-at-mentions-context-menu.png)
+
+For the report task, type `@`, select **Files and folders**, select the repository that contains the report, and then select report/q3-summary.md. Repeat the steps to add data/q3-figures.csv, and use **Issues** to add the task issue. Ask Copilot to match the summary to the approved figures and change only the summary. 
+
+Mentions don't bypass access controls or authorize changes. Include only approved sources the task needs; extra context can expose unnecessary information and add token costs.
+
 ### Put standing rules in instruction files
 
-Treat the file as a short project map of recurring limits, naming rules, output expectations, and checks. Have a person review the instructions.
+Keep recurring limits and checks in the instruction file, and put one-off requests in the issue. Have a person review the instructions and remove outdated rules.
 
 Split the text like this:
 
 | **Where** | **What belongs there** | **What the team writes there** |
 | --- | --- | --- |
 | .github/copilot-instructions.md | Standing rules for all work in the repository | "The approved figures are in data/. Never edit them. If a number in a report doesn't match, stop and list the sentence, both values, and the source row." |
-| .github/instructions/NAME.instructions.md | Standing rules for some files only, chosen with an applyTo pattern | For leadership summaries in report/: "Write amounts as $16.8 million, growth as a change from the prior quarter, and name the region in every claim." |
-| The issue assigned to Copilot | The one task: what changes, which files, which figures, and the evidence the reviewer needs | "Make every figure in report/q3-summary.md match data/q3-figures.csv before Thursday's leadership review. Change only that file. In the pull request, list each changed figure as old value, new value, and source row." |
+| The issue you assign to Copilot | The one task: what changes, which files, which figures, and the evidence the reviewer needs | "Make every figure in report/q3-summary.md match data/q3-figures.csv before Thursday's leadership review. Change only that file. In the pull request, list each changed figure as old value, new value, and source row." |
 
 Committing additions or changes to any of these files requires write access.
 
-A path-specific file starts with a short header that names the files it covers. For the team's reports:
-
----
-
-applyTo: "report/**/*.md"
-
----
-
-- Show money in millions with one decimal place and percentages with one decimal place.
-
-- Follow the team's writing guide in docs/style-guide.md.
-
-- Never name a client in a file under report/drafts/.
-
-Keep a writing guide, glossary, or report template in the repository and name its path in the instructions, so the guidance lives in one place and Copilot can open it while it works. Copilot also reads AGENTS.md files, where the nearest file in the folder tree applies.
-
-### Share rules across repositories
-
-For rules that many repositories share, use organization instructions:
-
-- **Organization instructions:** organization owners on Copilot Business or Copilot Enterprise add them in the organization's **Settings** > **Copilot** > **Custom instructions**. They apply to Copilot in GitHub, Copilot code review, and Copilot cloud agent, all on GitHub.com, with lower priority than repository instructions.
-
-In Copilot Chat, attach the repository that contains shared instructions when the task needs those rules as context.
+Keep a writing guide, glossary, or report template in the repository and name its path in the instructions, so the guidance lives in one place and Copilot can open it while it works.
 
 ### Keep the plan in a Copilot Space
 
 For work that continues across chats, keep one checked plan, such as plan.md, in the repository. Record decisions, approved sources, file limits, and open questions. Saving it requires write access. Add the plan to a Copilot Space so each new chat can use the maintained version.
 
-A Copilot Space is a saved collection of context that you chat against. You can add repositories, files, issues, pull requests, notes, and uploads. Files from GitHub stay up to date in the Space as they change, so a plan.md committed to the repository is always current there.
+A Copilot Space keeps a set of sources for your chats. You can add repositories, files, issues, pull requests, notes, and uploads. Files from GitHub stay up to date in the Space as they change, so when you commit plan.md to the repository, the Space keeps it current.
 
-Anyone with a Copilot license can use Spaces, and organization-owned Spaces can be shared using GitHub permissions. Chatting in a Space still uses AI credits.
+Anyone with a Copilot license can use Spaces, and organizations can share their Spaces using GitHub permissions. Chatting in a Space still uses AI credits.
 
 To set up a Space, follow this quarterly-report example shown in the screenshot:
 
@@ -171,20 +174,15 @@ To set up a Space, follow this quarterly-report example shown in the screenshot:
 
 1. Select **Add sources** > **Link files, pull requests, and issues**.
 
-1. Paste the address of each source, selecting **Add another** between them: plan.md, data/q3-figures.csv, report/q3-summary.md, and issue #1. Then select **Add**.  
-![Interface: GitHub.com — Copilot Spaces. This Q3 work Space includes the plan, figures, summary, and task as sources. ](../media/github-copilot-space-context.png)
+1. Paste the address of each source, and select **Add another** between them: plan.md, data/q3-figures.csv, report/q3-summary.md, and issue #1. Then select **Add**.
+
+    ![Interface: GitHub.com — Copilot Spaces. This Q3 work Space includes the plan, figures, summary, and task as sources. ](../media/github-copilot-space-context.png)
 
 1. Type your next instruction in the chat box at the top of the Space.
 
-When the report owner adds a new open question to plan.md, the next chat in the Space already knows it, with no upload. A teammate who opens the shared Space starts from the same plan.
+When the report owner adds a new open question to plan.md, the next chat in the Space already knows about it, and no one needs to upload anything. A teammate who opens the shared Space starts from the same plan.
 
 The new chat knows only what the Space holds, so check plan.md before you rely on it.
-
-### Let Copilot Memory learn the repository
-
-Copilot Memory lets Copilot keep facts it learns about a repository and use them in later tasks. Copilot in the cloud, Copilot code review, and Copilot CLI can use it. Each fact stays with its repository, and Copilot deletes a fact after 28 days if nothing uses it.
-
-Copilot Memory is available on all paid Copilot subscriptions. It's on by default for individual subscriptions. For Copilot Business and Copilot Enterprise, an administrator must enable the policy first. It learns facts on its own, so your decisions and standing rules still belong in the instruction files and the plan.
 
 ### Give each kind of work its own agent
 
@@ -202,63 +200,57 @@ A typical round runs like this. The report owner, as orchestrator, assigns the c
 
 After the reviewer approves that pull request, client-redactor prepares the version that goes out.
 
-The agents don't hand work to each other: the orchestrator moves it, and each handoff is a point where a person checks the result. A person reviews and approves every pull request, so no change goes in on another agent's word.
+The agents don't hand work to each other: the orchestrator moves it, and each handoff is a point where a person checks the result. A person reviews and approves every pull request, so no change goes in only because another agent says it's right.
 
 Each agent is a Markdown file in .github/agents/, with a short header and its instructions:
 
+```markdown
 ---
-
 name: figures-checker
-
 description: Checks a report against the approved figures and lists every mismatch
-
 tools: ["read", "search"]
-
 ---
 
 Compare every figure in the report with data/q3-figures.csv. For each mismatch, give the sentence, the value in the report, the value in the figures, and the source row. Don't change any file.
+```
 
-Leaving edit out of the tools list means this agent can't change files. That's least privilege applied to an agent: the checker only needs to read. If you leave out tools entirely, the agent gets every available tool.
+When you leave "edit" out of the tools list, this agent can't change files. That's least privilege applied to an agent: the checker only needs to read. If you leave the tools line out of the header, the agent gets every available tool.
 
 ### Hand an issue to a custom agent
 
-Use a browser signed in to GitHub.com with write access to the repository.
+In a browser, sign in to GitHub.com with an account that has write access to the repository.
 
-1. Open the issue, and in the right sidebar select **Assign to Agent**.
+1. Open the issue, and then in the right sidebar, select **Assign to Agent**.
 
-1. In the **Assign agent to issue** dialog, select the agent button next to the branch button. The menu lists **Copilot** under **Agents**, and the repository's agents under **Custom agents**.
+2. In the **Assign agent to issue** dialog, select the agent button next to the branch button. The menu lists **Copilot** under **Agents**, and the repository's agents under **Custom agents**.
 
-1. Select the agent for this task, for example **figures-checker**.
+3. Select the agent for this task, for example **figures-checker**.
 
-   ![GitHub dialog for assigning an agent to an issue, including the repository, branch, agent, model, and optional prompt.](../media/assign-copilot-agent-to-issue.png)
+4. In **Optional prompt**, add anything that applies to this run only. Standing rules stay in the instruction files.
 
-1. In **Optional prompt**, add anything that applies to this run only. Standing rules stay in the instruction files.
-
-1. Select **Assign**. The session starts and uses AI credits, so assign only an approved task.
+5. Select **Assign**. The session starts and uses AI credits, so assign only an approved task.
 
 ### Create a custom agent
 
 Committing a new agent to the repository requires write access.
 
-1. Go to the Copilot home page.
+1. Open the repository and select the **Agents** tab.
 
-1. In the prompt box, select the repository and, optionally, a branch.
+2. In the prompt box, select the agent button, and then select **Create a custom agent**. GitHub opens a new file, my-agent.agent.md, in .github/agents on the main branch. The template has empty name and description lines and placeholder instructions.
 
-1. Open the menu and select **Create an agent**. GitHub opens a template file, my-agent.agent.md, in the .github/agents folder.
+3. In the file name field, rename the file after the agent's job, for example figures-checker.agent.md.
 
-1. Rename the file after the agent's job, for example figures-checker.agent.md. File names can use letters, numbers, dots, hyphens, and underscores.
+4. Complete the name and description lines, and write the agent's instructions in place of the placeholder.
 
-1. Fill in the header: description is required; name and tools are optional. Below the header, write the agent's instructions.
-
-1. Commit the file and merge it into the default branch. The agent then appears in the agent menu.
+5. Select **Commit changes**. In the dialog, select the option to commit directly to the main branch.
 
 An organization can also share agents with all its repositories from its .github or .github-private repository.
 
 ### Use instructions and custom agents in VS Code
 
-You can also reuse instructions and limit tools in **Visual Studio Code (VS Code)**. Put shared project guidance in .github/copilot-instructions.md, or use targeted instruction files for particular files or tasks. A custom agent can combine task-specific instructions with a reusable tool selection.
+You can also reuse instructions and limit tools in Visual Studio Code (VS Code). Put shared project guidance in .github/copilot-instructions.md, or use targeted instruction files for particular files or tasks. A custom agent can combine task-specific instructions with a reusable tool selection.
 
-Tool availability and approval are separate: making a tool available doesn't bypass approval settings. The tools and instruction formats supported can differ by the agent selected in VS Code.
+Tool availability and approval are separate: making a tool available doesn't bypass approval settings. The available tools and instruction formats can differ depending on which agent you select in VS Code.
 
 ## Protect secrets and personal information
 
@@ -268,8 +260,6 @@ For example, remove a client's name from a report before sharing it outside the 
 
 If the agent needs a secret, an authorized administrator configures it in the repository's agent secrets before the work starts. Keep secret values out of prompts.
 
-**Content exclusion** keeps specified files out of Copilot's context, but its coverage varies by feature. It needs Copilot Business or Copilot Enterprise, and it doesn't apply to agent mode in editors.
-
 If the agent asks for sensitive data or broader access, stop and follow your organization's escalation process.
 
 ## Keep human approval in the process
@@ -278,14 +268,17 @@ If the agent asks for sensitive data or broader access, stop and follow your org
 
 Different approvals authorize different decisions. On one pull request, they come in this order:
 
-- Someone with write access checks any workflow changes and approves the waiting workflows.
+1. Someone with write access checks any workflow changes and approves the waiting workflows with **Approve and run workflows** in the pull request's merge box.
 
-- Automated checks and Copilot code review add results and comments. They're evidence, not approval.
+1. Automated checks and Copilot code review add results and comments. They're evidence, not approval.
 
-- Eligible reviewers approve the pull request, and the task owner accepts the business result.
+1. Eligible reviewers approve the pull request, and the task owner accepts the business result.
 
-Keep these approvals apart. When the task owner accepts the result, that isn't a pull request approval. The task owner may also review the pull request if they meet the reviewer-eligibility rules described in "Example review rule."
+Keep these approvals apart. When the task owner accepts the result, that isn't a pull request approval. The task owner may also review the pull request if they meet the reviewer-eligibility rules in the example review rule under [Separate guidance, permissions, and review](#separate-guidance-permissions-and-review).
 
-Copilot code review leaves a Comment review, even when it says **Approval recommended**, and comments don't count toward required approvals. A repository setting can let Copilot approve pull requests. For this example, keep it disabled: in the repository's Settings > Copilot > Code review, leave **Allow Copilot to approve pull requests** disabled.
+**Approval recommended** comments don't count toward required approvals. For this example, keep Copilot approvals disabled so the designated human reviewers satisfy the rule:
 
-An administrator configures the review requirement in the repository's ruleset.
+1. Open **Settings** > **Copilot** > **Code review** > **Approvals**.
+2. Keep **Allow Copilot to approve pull requests** disabled.
+
+An administrator configures the review requirement in the repository settings.
