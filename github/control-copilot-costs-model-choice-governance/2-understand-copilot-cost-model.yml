@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.2-understand-copilot-cost-model
+title: Understand the Copilot cost model
+metadata:
+  title: Understand the Copilot cost model
+  description: Learn how to understand the Copilot cost model.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/2-understand-copilot-cost-model.md)]

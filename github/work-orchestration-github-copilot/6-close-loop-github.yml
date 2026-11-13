@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.work-orchestration-github-copilot.6-close-loop-github
+title: Close the loop in GitHub
+metadata:
+  title: Close the loop in GitHub
+  description: Bring GitHub Copilot work back into GitHub for review and delivery.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/6-close-loop-github.md)]

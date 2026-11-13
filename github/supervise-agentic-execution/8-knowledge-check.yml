@@ -1,0 +1,94 @@
+### YamlMime:ModuleUnit
+uid: learn.github.supervise-agentic-execution.8-knowledge-check
+title: Knowledge check
+metadata:
+  title: Knowledge check
+  description: Check what you've learned.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 5
+content: |
+  [!include[](includes/8-knowledge-check.md)]
+quiz:
+  title: Check your knowledge
+  questions:
+  - content: "You are the report owner. A reviewer has approved Copilot's proposed changes to a summary. What must you do before the summary is ready for leadership?"
+    choices:
+    - content: "Treat the reviewer's approval as acceptance of the business result."
+      isCorrect: false
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+    - content: "Check the summary against the agreed acceptance criteria and record your decision."
+      isCorrect: true
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+    - content: "Accept Copilot's statement that every figure matches without checking."
+      isCorrect: false
+      explanation: "Review and acceptance are separate gates. As report owner, you check the evidence against the business requirements and record whether you accept the result. Review Name the human owner."
+  - content: "Your checklist allows only claims supported by approved sources. The summary predicts growth next quarter, but the approved figures contain no data for that quarter. What should you do?"
+    choices:
+    - content: "Keep the prediction because it was in the summary before Copilot started."
+      isCorrect: false
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+    - content: "Accept the prediction if it sounds reasonable."
+      isCorrect: false
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+    - content: "Mark the prediction as unsupported and withhold acceptance until the summary meets the checklist."
+      isCorrect: true
+      explanation: "The checklist requires evidence for each claim. An unsupported prediction doesn't meet that requirement, even if it appeared in an earlier draft. Review Choose the response that resolves the problem."
+  - content: "Your task allows Copilot to update one named report. It proposes editing a second report and is waiting for your approval. What should you do?"
+    choices:
+    - content: "Decline the extra edit and direct Copilot back to the approved report."
+      isCorrect: true
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
+    - content: "Approve the extra edit because the original report update was approved."
+      isCorrect: false
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
+    - content: "Remove the file limit so Copilot can decide which reports need changes."
+      isCorrect: false
+      explanation: "The approval covers only the named report. Declining the extra edit and restating the file limit keeps the work within the agreed scope. Review Keep the boundary while changing direction."
+  - content: "The agent's pull request description says \"All figures now match the source.\" You find that it still calls North the region with the highest margin, although East's is higher (17.3% against 16.8%). What's the best next step?"
+    choices:
+    - content: "Ask the agent to double-check its work, and approve if it confirms."
+      isCorrect: false
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+    - content: "Post a correction that names the requirement, what you found, the change, and how to check it, and then read the whole summary again."
+      isCorrect: true
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+    - content: "Edit the sentence yourself and approve the pull request."
+      isCorrect: false
+      explanation: "The agent's confirmation isn't evidence, and editing it yourself makes you a collaborator, so your approval no longer counts as independent. A specific correction fixes the cause, and a full reread catches other wrong statements. Review Work through a failed requirement."
+  - content: "You stopped a session after the agent saved a change to the approved figures file on GitHub. What's true now?"
+    choices:
+    - content: "Stopping the session restored the original figures."
+      isCorrect: false
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+    - content: "Stopping the session stopped every activity the agent started, so no further checks are needed."
+      isCorrect: false
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+    - content: "The saved change still needs review, and you must check any other activities the agent started separately."
+      isCorrect: true
+      explanation: "Stopping a session doesn't undo changes already saved or guarantee that other activities have stopped. Review the saved changes and follow the agreed recovery process. Review Stop a Copilot session on GitHub."
+  - content: "Automated checks report no issues, and every figure in the summary matches the approved figures. What else must a person check before accepting it?"
+    choices:
+    - content: "That the comparisons and growth statements are right, nothing outside the agreed file changed, and the summary works for leadership."
+      isCorrect: true
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+    - content: "Nothing, because the review and the figures agree."
+      isCorrect: false
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+    - content: "That the agent's description of its own work sounds confident and complete."
+      isCorrect: false
+      explanation: "Passing automated checks and matching numbers don't cover comparisons, scope, or business fit. A person checks those. Review Connect each requirement to evidence."
+  - content: "The agent listed five figures that changed between draft 1 and the current summary. You checked three, and they match. What do you do before the list goes to the meeting organizer?"
+    choices:
+    - content: "Send the list, because every figure you checked matches."
+      isCorrect: false
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."
+    - content: "Check the other two, and compare both drafts yourself for changes the list missed."
+      isCorrect: true
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."
+    - content: "Ask Copilot to confirm that its list is complete."
+      isCorrect: false
+      explanation: "A list that reads well can still leave out a change, and Copilot's confirmation isn't evidence. Check each figure against its source, and check for omissions. Review Tell supported output from plausible output."

@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.work-orchestration-github-copilot.3-choose-right-session-mode
+title: Choose the right session mode
+metadata:
+  title: Choose the right session mode
+  description: Choose the GitHub Copilot session mode that fits the task.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-choose-right-session-mode.md)]

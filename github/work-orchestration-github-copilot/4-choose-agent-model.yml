@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.work-orchestration-github-copilot.4-choose-agent-model
+title: Choose the agent and model
+metadata:
+  title: Choose the agent and model
+  description: Choose the agent and model for a GitHub Copilot session.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/4-choose-agent-model.md)]

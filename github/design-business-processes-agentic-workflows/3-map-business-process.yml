@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.design-business-processes-agentic-workflows.3-map-business-process
+title: Map the business process
+metadata:
+  title: Map the business process
+  description: Learn how to map the business process.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/3-map-business-process.md)]

@@ -1,0 +1,43 @@
+### YamlMime:Module
+uid: learn.github.work-orchestration-github-copilot
+metadata:
+  title: "Work orchestration with GitHub Copilot"
+  description: Learn to orchestrate work with GitHub Copilot by choosing the working surface, session mode, agent, and model, managing session context, and closing the loop in GitHub.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: "Work orchestration with GitHub Copilot"
+summary: Learn to orchestrate work with GitHub Copilot by choosing the working surface, session mode, agent, and model, managing session context, and closing the loop in GitHub.
+abstract: |
+  In this module, you will:
+  - Choose the working surface for a task
+  - Choose the right session mode
+  - Choose the agent and model
+  - Manage session context
+  - Close the loop in GitHub
+prerequisites: |
+  - A GitHub account with access to GitHub Copilot
+iconUrl: /training/achievements/github/work-orchestration-github-copilot.svg
+ratingEnabled: true
+levels:
+- intermediate
+roles:
+- developer
+- devops-engineer
+products:
+- github
+subjects:
+- devops
+units:
+- learn.github.work-orchestration-github-copilot.1-introduction
+- learn.github.work-orchestration-github-copilot.2-choose-working-surface
+- learn.github.work-orchestration-github-copilot.3-choose-right-session-mode
+- learn.github.work-orchestration-github-copilot.4-choose-agent-model
+- learn.github.work-orchestration-github-copilot.5-manage-session-context
+- learn.github.work-orchestration-github-copilot.6-close-loop-github
+- learn.github.work-orchestration-github-copilot.7-knowledge-check
+- learn.github.work-orchestration-github-copilot.8-summary
+badge:
+  uid: learn.github.work-orchestration-github-copilot.badge

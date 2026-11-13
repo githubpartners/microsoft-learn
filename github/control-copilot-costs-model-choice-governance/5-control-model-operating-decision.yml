@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.control-copilot-costs-model-choice-governance.5-control-model-operating-decision
+title: Control model operating decisions
+metadata:
+  title: Control model operating decisions
+  description: Learn how to control model operating decisions.
+  ms.date: 10/27/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/5-control-model-operating-decision.md)]

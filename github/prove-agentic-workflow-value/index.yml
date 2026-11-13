@@ -1,0 +1,47 @@
+### YamlMime:Module
+uid: learn.github.prove-agentic-workflow-value
+metadata:
+  title: Prove agentic workflow value
+  description: Learn to establish a baseline, verify run evidence, measure quality and cost per accepted result, and improve agentic workflows through controlled trials.
+  ms.date: 10/28/2026
+  author: v-antonyvieira
+  ms.author: v-antonyvieira
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+title: Prove agentic workflow value
+summary: Learn to establish a baseline, verify run evidence, measure quality and cost per accepted result, and improve agentic workflows through controlled trials.
+abstract: |
+  In this module, you'll:
+  - Measure how the current process performs and set targets before a trial.
+  - Check that the evidence supports each claim for the version you review.
+  - Calculate acceptance, rework, and recovery rates.
+  - Calculate the cost of each accepted result.
+  - Make one change at a time and measure its effect.
+prerequisites: |
+  - A GitHub account.
+  - A fundamental understanding of repositories, GitHub Issues, and pull requests.
+  - Basic familiarity with GitHub Actions workflows and run records.
+  - Familiarity with GitHub Copilot and its basic capabilities.
+iconUrl: /learn/achievements/generic-badge.svg
+ratingEnabled: true
+levels:
+- intermediate
+roles:
+- business-user
+- business-analyst
+- business-owner
+products:
+- github
+subjects:
+- artificial-intelligence
+units:
+- learn.github.prove-agentic-workflow-value.1-introduction
+- learn.github.prove-agentic-workflow-value.2-define-value-before-automation
+- learn.github.prove-agentic-workflow-value.3-inspect-run-evidence
+- learn.github.prove-agentic-workflow-value.4-measure-operational-quality
+- learn.github.prove-agentic-workflow-value.5-connect-cost-to-value
+- learn.github.prove-agentic-workflow-value.6-improve-systematically
+- learn.github.prove-agentic-workflow-value.7-knowledge-check
+- learn.github.prove-agentic-workflow-value.8-summary
+badge:
+  uid: learn.github.prove-agentic-workflow-value.badge

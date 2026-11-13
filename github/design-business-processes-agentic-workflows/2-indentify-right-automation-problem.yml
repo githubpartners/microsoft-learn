@@ -1,0 +1,14 @@
+### YamlMime:ModuleUnit
+uid: learn.github.design-business-processes-agentic-workflows.2-indentify-right-automation-problem
+title: Identify the right automation problem
+metadata:
+  title: Identify the right automation problem
+  description: Learn how to identify the right automation problem.
+  ms.date: 10/27/2026
+  author: v-chukslord1
+  ms.author: v-chukslord1
+  ms.topic: interactive-tutorial
+  ms.prod: learning-azure
+durationInMinutes: 8
+content: |
+  [!include[](includes/2-indentify-right-automation-problem.md)]
